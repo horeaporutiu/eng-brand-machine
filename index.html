@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🚀 Eng Brand Machine — Miro Developer Brand</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+          background: #0d1117; color: #c9d1d9; min-height: 100vh; }
+
+  /* ── Header ── */
+  header { background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+            border-bottom: 1px solid #30363d; padding: 28px 40px; }
+  header h1 { font-size: 2.4rem; font-weight: 800;
+               background: linear-gradient(90deg, #FFD700, #FF6B6B, #bc8cff);
+               -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  header .subtitle { color: #8b949e; margin-top: 6px; font-size: 0.95rem; }
+  header .miro-badge { display: inline-block; background: #FFD700; color: #111;
+                        font-weight: 700; font-size: 0.75rem; border-radius: 20px;
+                        padding: 3px 10px; margin-top: 10px; }
+
+  /* ── Stats bar ── */
+  .stats-bar { display: flex; gap: 16px; padding: 16px 40px; background: #161b22;
+                border-bottom: 1px solid #21262d; flex-wrap: wrap; }
+  .stat { background: #21262d; border-radius: 8px; padding: 10px 18px; text-align: center; }
+  .stat .num { font-size: 1.6rem; font-weight: 700; color: #FFD700; }
+  .stat .label { font-size: 0.72rem; color: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  /* ── Main layout ── */
+  main { padding: 30px 40px; max-width: 1400px; margin: 0 auto; }
+  h2 { font-size: 1.25rem; color: #e6edf3; margin: 32px 0 16px; padding-bottom: 8px;
+        border-bottom: 1px solid #21262d; }
+
+  /* ── Miro Recommendations ── */
+  .recs-section { background: linear-gradient(135deg, #1a1025 0%, #0d1117 100%);
+                   border: 1px solid #6e40c9; border-radius: 14px; padding: 28px;
+                   margin-bottom: 36px; }
+  .recs-section h2 { border-bottom-color: #6e40c9; color: #e6edf3; margin-top: 0; }
+  .recs-intro { color: #8b949e; font-size: 0.9rem; margin-bottom: 20px; }
+  .recs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 16px; }
+  .rec-card { background: #161b22; border: 1px solid #30363d; border-radius: 10px;
+               padding: 18px; position: relative; transition: border-color .2s, transform .2s; }
+  .rec-card:hover { border-color: #bc8cff; transform: translateY(-2px); }
+  .rec-num { position: absolute; top: 14px; right: 14px; background: #6e40c9;
+              color: #fff; border-radius: 50%; width: 26px; height: 26px; display: flex;
+              align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; }
+  .rec-topic { font-size: 0.72rem; color: #bc8cff; font-weight: 600; text-transform: uppercase;
+                letter-spacing: 0.5px; margin-bottom: 6px; }
+  .rec-title { font-size: 1rem; font-weight: 700; color: #e6edf3; margin-bottom: 10px; line-height: 1.4; }
+  .rec-desc { font-size: 0.84rem; color: #8b949e; line-height: 1.55; margin-bottom: 10px; }
+  .rec-demo { font-size: 0.82rem; color: #c9d1d9; background: #21262d; border-radius: 6px;
+               padding: 8px 10px; margin-bottom: 10px; line-height: 1.5; }
+  .rec-meta { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 8px; }
+  .rec-format { background: #1f6feb22; color: #58a6ff; border-radius: 4px;
+                 padding: 2px 8px; font-size: 0.75rem; }
+  .rec-cta { color: #3fb950; font-size: 0.78rem; font-style: italic; }
+  .inspired { font-size: 0.75rem; color: #6e7681; border-top: 1px solid #21262d;
+               padding-top: 8px; margin-top: 4px; }
+  .inspired ul { margin: 4px 0 0 14px; }
+  .inspired li { margin-bottom: 2px; }
+
+  /* ── Blog Post Draft ── */
+  .view-draft-btn { background: #e8720c; color: #fff; border: none; border-radius: 20px;
+                    font-size: 0.82rem; font-weight: 700; padding: 8px 16px; cursor: pointer;
+                    margin-top: 12px; width: 100%; transition: background .15s; }
+  .view-draft-btn:hover { background: #ff8c2a; }
+  .post-draft { display: none; margin-top: 14px; border-top: 1px solid #30363d; padding-top: 14px; }
+  .post-draft.open { display: block; }
+  .post-hero { background: linear-gradient(135deg, #1a0a2e 0%, #0d1117 100%);
+               border: 1px solid #6e40c9; border-radius: 8px; padding: 20px; margin-bottom: 12px; }
+  .post-hero-label { font-size: 0.7rem; color: #bc8cff; text-transform: uppercase;
+                     letter-spacing: 0.5px; font-weight: 600; margin-bottom: 6px; }
+  .post-hero-prompt { font-family: "SFMono-Regular", Consolas, monospace; font-size: 0.78rem;
+                      color: #8b949e; line-height: 1.5; }
+  .post-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+  .post-tag { background: #161b22; color: #58a6ff; border: 1px solid #1f6feb44;
+              border-radius: 12px; font-size: 0.72rem; padding: 2px 8px; }
+  .post-meta-bar { font-size: 0.75rem; color: #8b949e; margin-bottom: 12px;
+                   border-bottom: 1px solid #21262d; padding-bottom: 8px; }
+  .post-body h2 { font-size: 1rem; color: #e6edf3; margin: 16px 0 8px; padding-bottom: 4px;
+                  border-bottom: 1px solid #21262d; }
+  .post-body h3 { font-size: 0.9rem; color: #c9d1d9; margin: 12px 0 6px; }
+  .post-body p { font-size: 0.85rem; color: #8b949e; line-height: 1.6; margin-bottom: 10px; }
+  .post-body ul, .post-body ol { font-size: 0.85rem; color: #8b949e; margin: 0 0 10px 20px; line-height: 1.6; }
+  .post-body li { margin-bottom: 4px; }
+  .post-body strong { color: #c9d1d9; }
+  .post-body em { color: #bc8cff; font-style: italic; }
+  .image-callout { background: #1a1025; border: 1px solid #6e40c922; border-left: 3px solid #bc8cff;
+                   border-radius: 6px; padding: 10px 14px; margin: 12px 0; font-size: 0.82rem;
+                   color: #8b949e; line-height: 1.5; }
+  .image-callout strong { color: #bc8cff; }
+  .copy-draft-btn { background: #1a4a2e; color: #3fb950; border: 1px solid #3fb95044;
+                    border-radius: 6px; font-size: 0.82rem; font-weight: 700; padding: 8px 16px;
+                    cursor: pointer; margin-top: 10px; width: 100%; transition: background .15s; }
+  .copy-draft-btn:hover { background: #1f6b3a; }
+
+  /* ── Topic cards ── */
+  .topics-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; margin-bottom: 30px; }
+  .topic-card { background: #161b22; border: 1px solid #21262d; border-radius: 10px; padding: 16px; transition: border-color .2s; }
+  .topic-card:hover { border-color: #58a6ff; }
+  .topic-header { font-size: 1rem; font-weight: 700; color: #e6edf3; margin-bottom: 12px;
+                   display: flex; justify-content: space-between; align-items: center; }
+  .count { background: #1f6feb; color: #fff; border-radius: 12px; padding: 2px 8px;
+             font-size: 0.75rem; font-weight: 600; }
+  .article-item { padding: 8px 0; border-bottom: 1px solid #21262d; }
+  .article-item:last-child { border-bottom: none; }
+  .article-item a { color: #58a6ff; text-decoration: none; font-size: 0.87rem; line-height: 1.4; }
+  .article-item a:hover { text-decoration: underline; color: #79c0ff; }
+  .meta { font-size: 0.73rem; color: #8b949e; margin-top: 3px; }
+  .badge { background: #1f6feb22; color: #58a6ff; border-radius: 4px; padding: 1px 5px; font-size: 0.7rem; }
+
+  /* ── Table ── */
+  table { width: 100%; border-collapse: collapse; background: #161b22; border-radius: 10px;
+           overflow: hidden; border: 1px solid #21262d; margin-bottom: 30px; }
+  thead th { background: #21262d; padding: 11px 14px; text-align: left; font-size: 0.78rem;
+              text-transform: uppercase; letter-spacing: 0.5px; color: #8b949e; }
+  tbody tr { border-top: 1px solid #21262d; transition: background .15s; }
+  tbody tr:hover { background: #1c2128; }
+  td { padding: 9px 14px; font-size: 0.84rem; }
+  td a { color: #58a6ff; text-decoration: none; }
+  td a:hover { text-decoration: underline; }
+  .rank { color: #8b949e; font-weight: 700; font-size: 1rem; width: 38px; }
+  .score { color: #3fb950; font-weight: 600; }
+  .source-badge { background: #21262d; border-radius: 4px; padding: 2px 6px; font-size: 0.74rem; white-space: nowrap; }
+
+  /* ── Sources ── */
+  .sources-section { background: #161b22; border: 1px solid #21262d; border-radius: 10px; padding: 20px; margin-bottom: 30px; }
+  .source-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .source-label { min-width: 190px; font-size: 0.84rem; color: #c9d1d9; }
+  .bar-wrap { flex: 1; background: #21262d; border-radius: 4px; height: 20px; }
+  .bar { background: linear-gradient(90deg, #FFD700, #FF6B6B); border-radius: 4px; height: 20px;
+          display: flex; align-items: center; padding-left: 8px; color: #111; font-size: 0.74rem;
+          font-weight: 700; min-width: 30px; }
+
+  /* ── Reddit section ── */
+  .reddit-section { background: linear-gradient(135deg, #1a0f0f 0%, #0d1117 100%);
+                     border: 1px solid #ff4500; border-radius: 14px; padding: 28px; margin-bottom: 36px; }
+  .reddit-section h2 { border-bottom-color: #ff4500; color: #e6edf3; margin-top: 0; }
+  .reddit-badge { background: #ff450022; color: #ff6b35; border: 1px solid #ff450044; }
+  .reddit-card { border-color: #ff450033; }
+  .reddit-card:hover { border-color: #ff4500; }
+  .reddit-count { background: #ff4500; }
+  .reddit-score { color: #ff6b35; font-weight: 700; }
+  .ratio { background: #1a2a1a; color: #3fb950; border-radius: 4px;
+            padding: 1px 5px; font-size: 0.7rem; margin-left: 6px; }
+
+  /* ── Reddit config panel ── */
+  .reddit-config { background: #12080a; border: 1px solid #ff450055; border-radius: 10px;
+                    padding: 16px 20px; margin-bottom: 20px; }
+  .reddit-config-title { font-size: 0.78rem; font-weight: 700; color: #ff6b35;
+                           text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+  .sub-checkboxes { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+  .sub-check-label { display: flex; align-items: center; gap: 5px; font-size: 0.78rem;
+                      color: #c9d1d9; background: #1a1010; border: 1px solid #ff450033;
+                      border-radius: 16px; padding: 3px 10px; cursor: pointer;
+                      transition: border-color .15s, background .15s; user-select: none; }
+  .sub-check-label:hover { border-color: #ff4500; background: #220d0d; }
+  .sub-check-label input { accent-color: #ff4500; cursor: pointer; }
+  .reddit-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+  .reddit-controls input[type=text] { background: #1a1010; border: 1px solid #ff450044;
+                                        border-radius: 6px; color: #c9d1d9; font-size: 0.83rem;
+                                        padding: 6px 10px; outline: none; width: 220px; }
+  .reddit-controls input[type=text]:focus { border-color: #ff6b35; }
+  .reddit-controls select { background: #1a1010; border: 1px solid #ff450044; border-radius: 6px;
+                              color: #c9d1d9; font-size: 0.83rem; padding: 6px 10px; outline: none; cursor: pointer; }
+  .reddit-controls select:focus { border-color: #ff6b35; }
+  .fetch-btn { background: #ff4500; color: #fff; border: none; border-radius: 6px;
+                font-size: 0.85rem; font-weight: 700; padding: 7px 18px; cursor: pointer;
+                transition: background .15s, transform .1s; }
+  .fetch-btn:hover { background: #ff6b35; }
+  .fetch-btn:active { transform: scale(0.97); }
+  .fetch-btn:disabled { background: #7a3020; cursor: not-allowed; opacity: 0.7; }
+  .fetch-status { font-size: 0.8rem; color: #8b949e; font-style: italic; }
+  .loading-spinner { display: inline-block; width: 12px; height: 12px; border: 2px solid #ff450044;
+                      border-top-color: #ff4500; border-radius: 50%; animation: spin .7s linear infinite;
+                      margin-right: 6px; vertical-align: middle; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  footer { text-align: center; padding: 24px; color: #484f58; font-size: 0.78rem;
+            border-top: 1px solid #21262d; margin-top: 20px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🚀 Eng Brand Machine</h1>
+  <p class="subtitle">Real-time engineering trends from 37 sources · 341 articles · February 19, 2026 at 14:59</p>
+  <span class="miro-badge">✦ Miro Developer Brand Intelligence</span>
+</header>
+
+<div class="stats-bar">
+  <div class="stat"><div class="num">341</div><div class="label">Articles Analyzed</div></div>
+  <div class="stat"><div class="num">37</div><div class="label">Live Sources</div></div>
+  <div class="stat"><div class="num">12</div><div class="label">Topics Tracked</div></div>
+  <div class="stat"><div class="num">🤖 AI / ML</div><div class="label">Hottest Topic</div></div>
+  <div class="stat"><div class="num">200</div><div class="label">Articles on #1 Topic</div></div>
+</div>
+
+<main>
+
+  <div class="recs-section">
+    <h2>✦ Top 5 Content Recommendations for Miro&apos;s Developer Brand</h2>
+    <p class="recs-intro">Generated from 341 articles across 37 sources — each recommendation is anchored to what engineers are actually reading today.</p>
+    <div class="recs-grid">
+      
+        <div class="rec-card">
+          <div class="rec-num">#1</div>
+          <div class="rec-topic">🤖 AI / ML</div>
+          <div class="rec-title">How to Map Your AI Agent Architecture in Miro</div>
+          <div class="rec-desc">A step-by-step guide showing engineering teams how to visualize LLM pipelines, RAG architectures, and multi-agent systems on a Miro board — making complex AI stacks legible to every stakeholder.</div>
+          <div class="rec-demo"><strong>🎬 Demo:</strong> Live Miro board with a RAG pipeline diagram: data ingestion → chunking → vector DB → retriever → LLM → output. Clickable nodes link to real code.</div>
+          <div class="rec-meta">
+            <span class="rec-format">📄 Blog Post + Free Template</span>
+            <span class="rec-cta">Download the AI Architecture Template →</span>
+          </div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>An AI CEO finally said something honest</li><li>jmail.world</li></ul></div>
+          <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
+          <div class="post-draft">
+            <div class="post-hero">
+              <div class="post-hero-label">🎨 Hero Image Prompt (Midjourney / DALL-E)</div>
+              <div class="post-hero-prompt">A glowing RAG pipeline architecture diagram on a dark background, luminous arrows flowing from document corpus through vector database to large language model, isometric tech illustration, purple and cyan color palette, ultra-detailed</div>
+            </div>
+            <div class="post-tags"><span class="post-tag">#ai</span><span class="post-tag">#llm</span><span class="post-tag">#rag</span><span class="post-tag">#agent-architecture</span><span class="post-tag">#miro-templates</span><span class="post-tag">#machine-learning</span></div>
+            <div class="post-meta-bar">⏱ 6 min read &nbsp;·&nbsp; 🔍 Map your RAG pipeline and multi-agent AI architecture in Miro — a step-by-step guide for engineering teams building LLM systems.</div>
+            <div class="post-body">
+<p>Your AI architecture document is already out of date. The moment you finished that Confluence page describing your RAG pipeline, a teammate added a re-ranking step, swapped the vector database, and introduced a second agent loop. Keeping everyone — product, design, leadership — aligned on what your AI system <em>actually</em> does has become a full-time job that nobody signed up for.</p>
+
+<h2>Why the Existing Approach Fails</h2>
+<p>Most teams default to one of two paths: dense technical diagrams buried in Notion that only the original author can decode, or live whiteboard sessions that evaporate the moment the meeting ends. Neither scales. With LLM architectures evolving weekly — new models, new orchestration frameworks, new retrieval strategies — your diagrams need to be living documents, not frozen snapshots.</p>
+<p>The real problem isn't complexity. It's that your documentation toolchain was designed for static content in a world that demands dynamic collaboration.</p>
+
+<h2>The Miro Framework: Map Your AI Stack in 5 Steps</h2>
+<ol>
+  <li><strong>Start with the data journey.</strong> Draw every stage from raw data ingestion to output: source → chunking → embedding → vector store → retriever → LLM → response. Don't skip preprocessing — it's where most production bugs hide.</li>
+  <li><strong>Layer in your infrastructure.</strong> Add swim lanes for model serving, monitoring, and feedback loops. Use a consistent color code: green for stable/live, yellow for in-flight, red for known issues or technical debt.</li>
+  <li><strong>Link to code, not just diagrams.</strong> Every node in Miro holds a hyperlink. Attach the GitHub file, PR, or experiment run directly so engineers jump from diagram to implementation in one click.</li>
+  <li><strong>Annotate decisions, not just mechanics.</strong> Use sticky notes for "why we chose this" — model selection rationale, chunking strategy trade-offs, latency budgets. Your future self will thank you.</li>
+  <li><strong>Run async design reviews.</strong> Share the board, enable comments, and let people question and suggest changes without scheduling yet another meeting.</li>
+</ol>
+
+<div class="image-callout">
+  <strong>🎨 Mid-Post Image Suggestion</strong><br>
+  <em>AI prompt:</em> "A multi-agent system diagram showing three specialized AI agents (retriever, reasoner, synthesizer) exchanging messages via a shared memory store, dark background with luminous connection arrows, isometric perspective, cyan and violet color scheme"
+</div>
+
+<h2>Practical Workflow: Keeping the Board Alive</h2>
+<p>Assign one engineer per sprint as the "architecture steward." Their job: 15 minutes before the sprint retro, update the Miro board with any changes. Use Miro's comment notifications to automatically loop in stakeholders. For multi-agent systems, create a separate frame per agent with clear input/output contracts visible at a glance.</p>
+<p>Teams that implement this consistently report two outcomes: product managers stop asking "how does the AI actually work?" in stand-up, and new engineers onboard to the AI stack in days, not weeks. When something breaks at 2 AM, your on-call engineer can navigate the architecture map directly to the failing component instead of grep-ing through Slack history.</p>
+<p>The best AI systems aren't just well-built — they're well-explained. <em>Download the free Miro AI Architecture Template and have your RAG pipeline mapped in under an hour.</em></p>
+</div>
+            <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
+          </div>
+        </div>
+        <div class="rec-card">
+          <div class="rec-num">#2</div>
+          <div class="rec-topic">🦀 Languages</div>
+          <div class="rec-title">Rust Ownership &amp; Borrowing, Visualized: Teaching Hard Concepts with Miro</div>
+          <div class="rec-desc">How developer advocates and educators use Miro to turn notoriously complex language concepts (ownership, lifetimes, async) into interactive visual explainers that engineers actually bookmark.</div>
+          <div class="rec-demo"><strong>🎬 Demo:</strong> An animated Miro board stepping through a Rust ownership example — stack frames, heap allocations, and borrow checker rules all drawn out live.</div>
+          <div class="rec-meta">
+            <span class="rec-format">📄 Educational Post + Interactive Board</span>
+            <span class="rec-cta">Open the interactive explainer →</span>
+          </div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>Lazuli: Nintendo GameCube emulator in Rust, boots multiple games</li><li>Qwen 3.5 goes bankrupt on Vending-Bench 2</li></ul></div>
+          <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
+          <div class="post-draft">
+            <div class="post-hero">
+              <div class="post-hero-label">🎨 Hero Image Prompt (Midjourney / DALL-E)</div>
+              <div class="post-hero-prompt">Rust programming language ownership diagram with stack and heap memory visualized as glowing labeled boxes, ownership arrows moving between scopes, mutable and immutable borrow markers, dark background with rust-orange and steel-blue color scheme</div>
+            </div>
+            <div class="post-tags"><span class="post-tag">#rust</span><span class="post-tag">#programming</span><span class="post-tag">#ownership</span><span class="post-tag">#visualization</span><span class="post-tag">#miro-templates</span><span class="post-tag">#languages</span></div>
+            <div class="post-meta-bar">⏱ 7 min read &nbsp;·&nbsp; 🔍 Teach Rust&#x27;s ownership and borrowing model with interactive Miro visualizations — turn the borrow checker into an approachable, visual concept for your team.</div>
+            <div class="post-body">
+<p>Rust's ownership system is one of the most powerful ideas in systems programming — and one of the most difficult to teach. The borrow checker enforces rules that are logically consistent and learnable, but deeply counterintuitive to engineers who've spent years working in garbage-collected languages. The result: learning Rust takes longer than it should, not because the concepts are inherently hard, but because most learning resources are primarily textual in a domain where visuals make everything click faster.</p>
+
+<h2>Why Text-Based Rust Education Falls Short</h2>
+<p>The Rust book is excellent. The rustlings exercises are well-designed. And yet, engineers routinely report spending days fighting the borrow checker on concepts that, once explained visually, become immediately intuitive. "A value can have only one owner" is an abstract statement. A diagram showing a value moving from one stack frame to another — and disappearing from the first — is a mental model that sticks.</p>
+<p>The problem extends beyond individual learning. Teams adopting Rust need shared mental models: what does it mean to "move" a value in a code review? How do you reason about lifetimes in an API design? When is an <em>Arc&lt;Mutex&lt;T&gt;&gt;</em> the right choice? These conversations are faster and more productive when the team shares a visual vocabulary.</p>
+
+<h2>The Miro Framework: Visualizing Rust Concepts</h2>
+<ol>
+  <li><strong>Ownership diagrams.</strong> For each code example, draw the stack and heap side by side. Show values as labeled boxes. Draw arrows for ownership. When a move happens, redraw the arrow to its new owner and visually erase it from the previous one. The borrow checker's rules become self-evident.</li>
+  <li><strong>Borrow visualizations.</strong> Show immutable borrows as read-only arrows (multiple allowed simultaneously). Show mutable borrows as exclusive arrows (only one at a time, blocks immutable borrows). This visual makes the borrow checker's invariants immediately legible.</li>
+  <li><strong>Lifetime scope diagrams.</strong> Draw scopes as nested boxes. Show a borrow's lifetime as a colored region that must not outlive the value it borrows. Lifetime annotation syntax suddenly makes sense when you can see what the <em>'a</em> represents spatially.</li>
+  <li><strong>Async ownership flow.</strong> For async Rust, draw a timeline showing when ownership moves across await points. Show which values must be Send and why. This is the visualization that unlocks async Rust for engineers who've been stuck.</li>
+  <li><strong>Pattern decision tree.</strong> A flowchart for "which smart pointer should I use?" — from simple owned values through <em>Box</em>, <em>Rc</em>, <em>Arc</em>, <em>Mutex</em> — with decision criteria at each fork. Teams use this in code reviews to align on ownership patterns.</li>
+</ol>
+
+<div class="image-callout">
+  <strong>🎨 Mid-Post Image Suggestion</strong><br>
+  <em>AI prompt:</em> "Rust borrow checker visualization showing stack and heap memory as glowing labeled boxes, ownership transfer arrows between scopes, mutable borrow shown as exclusive red arrow, immutable borrows as shared blue arrows, dark background, rust-orange and steel-blue palette"
+</div>
+
+<h2>Team Adoption: Visual Rust Reviews</h2>
+<p>Engineering teams adopting Rust report that the biggest accelerator isn't better documentation — it's better communication patterns. Starting a "visual Rust review" practice — where complex ownership or lifetime questions get drawn out on the Miro board before being answered in text — dramatically reduces the time senior Rust engineers spend unblocking teammates.</p>
+<p>The board also serves as a growing library. Every time a tricky ownership pattern gets solved visually, the diagram stays on the board as a reference. After six months, you have a custom visual Rust guide tailored to the exact patterns your codebase uses.</p>
+<p>The borrow checker isn't your enemy — it's a collaborator that rewards clear thinking. <em>Open the interactive Rust Ownership Explainer and see the concepts click in a way they never did in a text editor.</em></p>
+</div>
+            <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
+          </div>
+        </div>
+        <div class="rec-card">
+          <div class="rec-num">#3</div>
+          <div class="rec-topic">☁️ Cloud / Infra</div>
+          <div class="rec-title">Kubernetes Architecture Diagrams That Actually Stay Up to Date</div>
+          <div class="rec-desc">Most K8s architecture docs go stale in days. This post shows how platform teams use Miro&#x27;s live embed + diagram features to keep cluster topology, service maps, and resource flows always current.</div>
+          <div class="rec-demo"><strong>🎬 Demo:</strong> An interactive Miro board with K8s namespace layout, pod communication, and HPA configs. Arrows update with sticky note annotations from the on-call engineer.</div>
+          <div class="rec-meta">
+            <span class="rec-format">📄 Tutorial + Template</span>
+            <span class="rec-cta">Grab the K8s Miro Template →</span>
+          </div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>44.6% of my firewall&#x27;s flow table is Brazilian port-scan traffic and the scanning pattern suggests these ISPs are compromised at the infrastructure level, not just individual devices</li><li>Following the Notepad++ incident, as an industry, we need to take several steps back and REALLY look at things.</li></ul></div>
+          <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
+          <div class="post-draft">
+            <div class="post-hero">
+              <div class="post-hero-label">🎨 Hero Image Prompt (Midjourney / DALL-E)</div>
+              <div class="post-hero-prompt">Kubernetes cluster architecture diagram with glowing nodes representing pods, services, ingress, and namespaces, floating in a dark space environment, connected by illuminated network paths, technical illustration, teal and blue palette</div>
+            </div>
+            <div class="post-tags"><span class="post-tag">#kubernetes</span><span class="post-tag">#cloud</span><span class="post-tag">#infrastructure</span><span class="post-tag">#k8s</span><span class="post-tag">#miro-templates</span><span class="post-tag">#platform-engineering</span></div>
+            <div class="post-meta-bar">⏱ 5 min read &nbsp;·&nbsp; 🔍 Keep Kubernetes architecture diagrams accurate and up-to-date with Miro — live annotations, team collaboration, and always-current cluster topology.</div>
+            <div class="post-body">
+<p>Kubernetes documentation has a half-life measured in sprint cycles. You update the architecture diagram, merge the PR, and by the time the next on-call rotation starts, three new services have been added, a namespace was restructured, and the HPA configs everyone agreed on last quarter have been quietly changed. The diagram in your wiki is now a liability, not an asset.</p>
+
+<h2>Why Static K8s Docs Always Go Stale</h2>
+<p>The root cause is a mismatch between how Kubernetes moves and how documentation tools work. Wikis and Confluence are document stores — they're great for stable reference material, terrible for representing infrastructure that changes daily. When the cost of updating a diagram is high (find the tool, open the file, re-export, re-upload, update the link), people stop updating it. That's not a discipline problem; it's a tooling problem.</p>
+<p>Additionally, K8s architecture involves multiple stakeholder perspectives simultaneously: cluster topology matters to SREs, service communication maps matter to backend engineers, and resource quota summaries matter to platform teams. No single static diagram serves all three audiences.</p>
+
+<h2>The Miro Framework: Living K8s Architecture in 4 Layers</h2>
+<ol>
+  <li><strong>Layer 1 — Cluster topology.</strong> One frame per cluster (production, staging, dev). Show namespaces as swim lanes, node groups as colored regions. Sticky notes carry current node counts and instance types.</li>
+  <li><strong>Layer 2 — Service communication map.</strong> Draw your services, their ports, and the protocols between them. Color edges by traffic type: internal gRPC, external HTTP, async event streams. Link each service to its Helm chart.</li>
+  <li><strong>Layer 3 — HPA and resource configs.</strong> A simple table frame per namespace: service name, CPU request/limit, memory request/limit, current HPA min/max. Update it in the Miro board, then copy to your YAML. One source of truth.</li>
+  <li><strong>Layer 4 — On-call annotations.</strong> During incidents, on-call engineers drop timestamped sticky notes directly on the affected component. After the post-mortem, those notes become permanent annotations — institutional memory baked into the diagram.</li>
+</ol>
+
+<div class="image-callout">
+  <strong>🎨 Mid-Post Image Suggestion</strong><br>
+  <em>AI prompt:</em> "Kubernetes namespace swim lane layout showing pods, services, ingress controllers and config maps as glowing icons, dark terminal background with teal highlights, real-time annotation sticky notes overlaid on affected components"
+</div>
+
+<h2>Team Adoption: The Friday Update Ritual</h2>
+<p>The platform teams who stick with this approach all share one habit: a recurring 15-minute calendar block every Friday afternoon titled "Update the K8s board." It's not a meeting — it's a solo ritual. The engineer who touched the cluster that week spends 15 minutes reflecting changes in Miro. After three sprints, the board becomes the team's most-visited resource, displacing the wiki entirely.</p>
+<p>Pair this with a Miro board link in your runbook template, and every incident starts with a visual overview of the affected system — not a frantic search for documentation that may or may not be accurate.</p>
+<p>Platform teams spend too much time answering "how does our infrastructure work?" questions. <em>Grab the Kubernetes Architecture Template and let the diagram answer for you.</em></p>
+</div>
+            <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
+          </div>
+        </div>
+        <div class="rec-card">
+          <div class="rec-num">#4</div>
+          <div class="rec-topic">🌐 Web / Frontend</div>
+          <div class="rec-title">Frontend Architecture Maps: How to Onboard Engineers in Half the Time</div>
+          <div class="rec-desc">Miro as the missing layer between your code and your docs — showing how frontend teams map component hierarchies, data flow, and routing so new engineers hit the ground running.</div>
+          <div class="rec-demo"><strong>🎬 Demo:</strong> React app architecture: routing tree, state management layers (Zustand/Redux), API boundaries — all in one scrollable Miro board with code links.</div>
+          <div class="rec-meta">
+            <span class="rec-format">📄 Blog Post + Template</span>
+            <span class="rec-cta">See the Frontend Architecture Template →</span>
+          </div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>A very beginner first personal website.</li><li>Qwen3.5-397B-A17B is out!!</li></ul></div>
+          <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
+          <div class="post-draft">
+            <div class="post-hero">
+              <div class="post-hero-label">🎨 Hero Image Prompt (Midjourney / DALL-E)</div>
+              <div class="post-hero-prompt">React frontend architecture map showing component hierarchy tree, state management layers, and API boundaries as glowing connected nodes on dark background, colorful lines connecting components, modern web development visualization</div>
+            </div>
+            <div class="post-tags"><span class="post-tag">#frontend</span><span class="post-tag">#react</span><span class="post-tag">#architecture</span><span class="post-tag">#onboarding</span><span class="post-tag">#miro-templates</span><span class="post-tag">#web-development</span></div>
+            <div class="post-meta-bar">⏱ 6 min read &nbsp;·&nbsp; 🔍 Cut frontend onboarding time in half with a Miro architecture map — component hierarchies, data flow, and routing all in one collaborative board.</div>
+            <div class="post-body">
+<p>The first week for a new frontend engineer follows a predictable arc: clone the repo, spend two hours getting the dev environment running, then spend two more hours trying to understand why there are four different state management patterns in the same codebase, who owns which components, and where the API calls actually live. By day three, they're productive. By week two, they're slowing down senior engineers with questions that a good architecture map would have answered immediately.</p>
+
+<h2>Why Frontend Architecture Is Hardest to Document</h2>
+<p>Backend systems have decades of tooling for architecture visualization — ERDs, service maps, flow diagrams. Frontend architecture has almost none, despite being just as complex. A modern React application involves routing trees, state management layers, component hierarchies, API boundaries, and build pipeline configuration — and the relationships between all of these are implicit in the code, not visible anywhere else.</p>
+<p>The result: frontend architecture lives entirely in senior engineers' heads. When they leave, the knowledge leaves with them. When you hire, onboarding takes weeks that should take days. And when you need a significant refactor, you're flying blind — unable to see the full blast radius before making the change.</p>
+
+<h2>The Miro Framework: Frontend Architecture in 4 Views</h2>
+<ol>
+  <li><strong>The routing tree.</strong> Draw every route in your application as a tree. Mark which routes are public vs. authenticated, which are lazy-loaded, and which share layouts. New engineers can see the entire navigation structure at a glance.</li>
+  <li><strong>State management topology.</strong> Map your state: global store (Zustand, Redux, Jotai), server state (React Query, SWR), local component state, and URL state. Draw which components read from and write to each state source. This is the view that prevents the "why is this component re-rendering?" debug session.</li>
+  <li><strong>API boundaries and data flow.</strong> Show which components fetch data, which transform it, and which display it. Draw the API endpoints they call. This view is gold during onboarding and indispensable during debugging.</li>
+  <li><strong>Component ownership map.</strong> Organize components by team or feature area. Mark which are shared design system components, which are feature-specific, and which are currently being refactored. Prevents accidental coupling between feature teams.</li>
+</ol>
+
+<div class="image-callout">
+  <strong>🎨 Mid-Post Image Suggestion</strong><br>
+  <em>AI prompt:</em> "React application architecture map with component hierarchy tree on the left, state management topology in the center, and API boundary diagram on the right, connected by glowing data flow arrows, dark mode visualization, blue and purple palette"
+</div>
+
+<h2>Team Adoption: The Living Frontend Docs Habit</h2>
+<p>Frontend architecture boards work best when updated continuously rather than in big batches. The habit to build: any PR that adds a new route, introduces a new state pattern, or changes a major component boundary includes a Miro board update in the PR checklist. It takes five minutes per PR and means the board is always accurate.</p>
+<p>Use the board in sprint planning to identify coupling risks before they become bugs. Use it in architecture reviews to give stakeholders a visual before committing to a refactor. And use it in onboarding — new frontend engineers report that a good architecture board cuts their ramp-up time in half.</p>
+<p>Great frontend teams build great documentation habits. <em>Get the Frontend Architecture Template and give your next new hire the map they wish they had on day one.</em></p>
+</div>
+            <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
+          </div>
+        </div>
+        <div class="rec-card">
+          <div class="rec-num">#5</div>
+          <div class="rec-topic">🔐 Security</div>
+          <div class="rec-title">Collaborative Threat Modeling on Miro: A Developer&#x27;s Guide</div>
+          <div class="rec-desc">Security doesn&#x27;t have to happen in silos. This guide shows dev teams how to run STRIDE threat modeling sessions in Miro — mapping trust boundaries, attack surfaces, and mitigations together in real time.</div>
+          <div class="rec-demo"><strong>🎬 Demo:</strong> Live threat model for a typical SaaS app: user → API gateway → auth service → DB. Each node color-coded by risk level, with mitigation sticky notes.</div>
+          <div class="rec-meta">
+            <span class="rec-format">📄 Workshop Guide + Template</span>
+            <span class="rec-cta">Run your first threat model session →</span>
+          </div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>Org is banning Notepad++</li><li>Why Are People Like This?</li></ul></div>
+          <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
+          <div class="post-draft">
+            <div class="post-hero">
+              <div class="post-hero-label">🎨 Hero Image Prompt (Midjourney / DALL-E)</div>
+              <div class="post-hero-prompt">STRIDE threat model diagram on a dark background, nodes representing API gateway, auth service, and database with red threat arrows and green mitigation shields overlaid, security visualization, dark mode, red and green palette</div>
+            </div>
+            <div class="post-tags"><span class="post-tag">#security</span><span class="post-tag">#threat-modeling</span><span class="post-tag">#stride</span><span class="post-tag">#devsecops</span><span class="post-tag">#miro-templates</span><span class="post-tag">#appsec</span></div>
+            <div class="post-meta-bar">⏱ 8 min read &nbsp;·&nbsp; 🔍 Run collaborative STRIDE threat modeling sessions in Miro — map attack surfaces, trust boundaries, and mitigations with your whole engineering team.</div>
+            <div class="post-body">
+<p>Security reviews are too often a checkbox at the end of a project — a rushed 30-minute meeting where a security engineer skims an architecture doc they've never seen before and signs off under deadline pressure. The result: real threats get missed, mitigations are bolted on as afterthoughts, and the security team gets blamed when something breaks in production. The problem isn't lack of expertise. It's lack of shared context.</p>
+
+<h2>Why Siloed Security Reviews Fail</h2>
+<p>Traditional threat modeling — STRIDE, PASTA, attack trees — is powerful on paper and painful in practice. The tools are often heavyweight (dedicated software with steep learning curves), the output is hard to share (dense Word documents nobody reads), and the process is designed for security specialists, not the development teams who need to act on the findings.</p>
+<p>When security happens in a silo, developers see it as a blocker, not a collaborator. Threat models sit in a security team's shared drive, disconnected from the architecture diagrams developers actually use. Mitigations get forgotten. The same vulnerabilities get introduced sprint after sprint.</p>
+
+<h2>The Miro STRIDE Framework: 6 Steps to Collaborative Threat Modeling</h2>
+<ol>
+  <li><strong>Start with your data flow diagram.</strong> Draw every component, data store, external actor, and trust boundary on a Miro board. This is the shared foundation everyone in the room works from.</li>
+  <li><strong>Apply STRIDE categories.</strong> For each component and data flow, add color-coded sticky notes: Spoofing (red), Tampering (orange), Repudiation (yellow), Information Disclosure (purple), Denial of Service (blue), Elevation of Privilege (pink).</li>
+  <li><strong>Run the async review phase.</strong> Share the board 48 hours before the session. Let engineers, product managers, and the security team add their own threat notes asynchronously. You walk into the meeting with richer input than any single expert could generate alone.</li>
+  <li><strong>Score and prioritize threats.</strong> In the live session, use Miro voting to score threats by likelihood × impact. The board updates in real time, giving you a prioritized risk register by the end of the meeting.</li>
+  <li><strong>Map mitigations to components.</strong> For each high-priority threat, add a green sticky with the mitigation strategy and the engineering owner. This becomes your security backlog.</li>
+  <li><strong>Link to code and tickets.</strong> Connect each mitigation sticky to the relevant Jira ticket or GitHub issue. The threat model stays connected to actual remediation work.</li>
+</ol>
+
+<div class="image-callout">
+  <strong>🎨 Mid-Post Image Suggestion</strong><br>
+  <em>AI prompt:</em> "STRIDE threat model showing SaaS components — API gateway, auth service, user database — with colored threat annotation sticky notes (red, orange, yellow, purple, blue, pink) and green mitigation shields, dark security dashboard aesthetic"
+</div>
+
+<h2>Team Adoption: Threat Modeling as a Sprint Ritual</h2>
+<p>The teams that make threat modeling stick don't treat it as a project milestone — they treat it as a recurring sprint ritual. Every time a new feature introduces a data flow, API, or third-party integration, a 45-minute threat modeling session is automatically scheduled. The Miro board template is already there; you just add a new frame for the new feature.</p>
+<p>After three months, something shifts in the team culture: developers start thinking about trust boundaries during design, not after implementation. Security stops being a gate and becomes a design input. And when an auditor asks "how do you manage security risk?", you open the Miro board instead of scrambling for documentation.</p>
+<p>Security built collaboratively is security that actually holds. <em>Run your first STRIDE threat modeling session in Miro — the template takes 5 minutes to set up.</em></p>
+</div>
+            <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="reddit-section">
+    <h2>🔴 Reddit — Interactive Subreddit Feed</h2>
+    <p class="recs-intro">Select subreddits, set a time filter, and click Fetch to pull live data directly from Reddit's public API.</p>
+
+    <div class="reddit-config">
+      <div class="reddit-config-title">⚙ Subreddits to fetch</div>
+      <div class="sub-checkboxes" id="sub-checkboxes">
+        <label class="sub-check-label">
+          <input type="checkbox" class="sub-check" value="programming" checked>
+          r/programming
+        </label><label class="sub-check-label">
+          <input type="checkbox" class="sub-check" value="MachineLearning" checked>
+          r/MachineLearning
+        </label><label class="sub-check-label">
+          <input type="checkbox" class="sub-check" value="webdev" checked>
+          r/webdev
+        </label><label class="sub-check-label">
+          <input type="checkbox" class="sub-check" value="devops" checked>
+          r/devops
+        </label><label class="sub-check-label">
+          <input type="checkbox" class="sub-check" value="netsec" checked>
+          r/netsec
+        </label><label class="sub-check-label">
+          <input type="checkbox" class="sub-check" value="javascript" checked>
+          r/javascript
+        </label><label class="sub-check-label">
+          <input type="checkbox" class="sub-check" value="Python" checked>
+          r/Python
+        </label><label class="sub-check-label">
+          <input type="checkbox" class="sub-check" value="rust" checked>
+          r/rust
+        </label><label class="sub-check-label">
+          <input type="checkbox" class="sub-check" value="golang" checked>
+          r/golang
+        </label><label class="sub-check-label">
+          <input type="checkbox" class="sub-check" value="kubernetes" checked>
+          r/kubernetes
+        </label><label class="sub-check-label">
+          <input type="checkbox" class="sub-check" value="aws" checked>
+          r/aws
+        </label><label class="sub-check-label">
+          <input type="checkbox" class="sub-check" value="softwarearchitecture" checked>
+          r/softwarearchitecture
+        </label><label class="sub-check-label">
+          <input type="checkbox" class="sub-check" value="ExperiencedDevs" checked>
+          r/ExperiencedDevs
+        </label><label class="sub-check-label">
+          <input type="checkbox" class="sub-check" value="LocalLLaMA" checked>
+          r/LocalLLaMA
+        </label><label class="sub-check-label">
+          <input type="checkbox" class="sub-check" value="datascience" checked>
+          r/datascience
+        </label><label class="sub-check-label">
+          <input type="checkbox" class="sub-check" value="reactjs" checked>
+          r/reactjs
+        </label><label class="sub-check-label">
+          <input type="checkbox" class="sub-check" value="frontend" checked>
+          r/frontend
+        </label><label class="sub-check-label">
+          <input type="checkbox" class="sub-check" value="sysadmin" checked>
+          r/sysadmin
+        </label>
+      </div>
+      <div class="reddit-controls">
+        <input type="text" id="custom-sub" placeholder="Add custom: vim, cpp, ..." />
+        <select id="time-filter">
+          <option value="day">Today</option>
+          <option value="week" selected>This Week</option>
+          <option value="month">This Month</option>
+          <option value="year">This Year</option>
+          <option value="all">All Time</option>
+        </select>
+        <button class="fetch-btn" id="fetch-btn" onclick="fetchReddit()">🔴 Fetch Reddit</button>
+        <span class="fetch-status" id="fetch-status"></span>
+      </div>
+    </div>
+
+    <div id="reddit-results">
+      <!-- JS will render results here on load -->
+      <div style="text-align:center;padding:40px;color:#484f58;">
+        <div class="loading-spinner"></div> Loading Reddit data...
+      </div>
+    </div>
+  </div>
+
+  <h2>🔥 Trending Topics Across Engineering</h2>
+  <div class="topics-grid">
+    
+        <div class="topic-card">
+          <div class="topic-header">🤖 AI / ML <span class="count">200</span></div>
+          
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/ExperiencedDevs/comments/1r6olcv/an_ai_ceo_finally_said_something_honest/" target="_blank">An AI CEO finally said something honest</a>
+              <div class="meta">🔴 r/ExperiencedDevs <span class="badge">⬆ 22881</span> Feb 16</div>
+            </div>
+            <div class="article-item">
+              <a href="https://i.redd.it/79467cc976jg1.png" target="_blank">jmail.world</a>
+              <div class="meta">🔴 r/webdev <span class="badge">⬆ 4370</span> Feb 13</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.pcgamer.com/software/platforms/open-source-game-engine-godot-is-drowning-in-ai-slop-code-contributions-i-dont-know-how-long-we-can-keep-it-up/" target="_blank">Open-source game engine Godot is drowning in &#x27;AI slop&#x27; code contributions: &#x27;I don&#x27;t know how long we can keep it up&#x27;</a>
+              <div class="meta">🔴 r/programming <span class="badge">⬆ 2830</span> Feb 18</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/sysadmin/comments/1r3wgjt/our_ai_transformation_cost_seven_figures_and/" target="_blank">our &#x27;ai transformation&#x27; cost seven figures and delivered a chatgpt wrapper</a>
+              <div class="meta">🔴 r/sysadmin <span class="badge">⬆ 2192</span> Feb 13</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/sysadmin/comments/1r6s2cq/psa_develop_a_healthy_suspicion_of_your_fellow/" target="_blank">PSA: Develop a healthy suspicion of your fellow /r/sysadmin</a>
+              <div class="meta">🔴 r/sysadmin <span class="badge">⬆ 1470</span> Feb 17</div>
+            </div>
+        </div>
+        <div class="topic-card">
+          <div class="topic-header">🔧 Engineering <span class="count">45</span></div>
+          
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/sysadmin/comments/1r7lq7t/i_will_happily_spend_hours_combing_through_logs/" target="_blank">I will happily spend hours combing through logs to call someone out</a>
+              <div class="meta">🔴 r/sysadmin <span class="badge">⬆ 1309</span> Feb 17</div>
+            </div>
+            <div class="article-item">
+              <a href="https://pudding.cool/2026/02/womens-sizing/" target="_blank">Sizing chaos</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 678</span> Feb 18</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/sysadmin/comments/1r2y66e/hahahaha_adobe/" target="_blank">hahahaha adobe</a>
+              <div class="meta">🔴 r/sysadmin <span class="badge">⬆ 560</span> Feb 12</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/sysadmin/comments/1r5bd3a/asus_shut_down_their_support_portal_in_germany/" target="_blank">ASUS shut down their support portal in Germany and Austria</a>
+              <div class="meta">🔴 r/sysadmin <span class="badge">⬆ 483</span> Feb 15</div>
+            </div>
+            <div class="article-item">
+              <a href="https://lwn.net/SubscriberLink/1057561/bddc1e61152fadf6/" target="_blank">Evolving Git for the next decade</a>
+              <div class="meta">🔴 r/programming <span class="badge">⬆ 466</span> Feb 14</div>
+            </div>
+        </div>
+        <div class="topic-card">
+          <div class="topic-header">🦀 Languages <span class="count">32</span></div>
+          
+            <div class="article-item">
+              <a href="https://i.redd.it/d6sg1m9bkbjg1.png" target="_blank">Lazuli: Nintendo GameCube emulator in Rust, boots multiple games</a>
+              <div class="meta">🔴 r/rust <span class="badge">⬆ 673</span> Feb 13</div>
+            </div>
+            <div class="article-item">
+              <a href="https://i.redd.it/dj0x1zeo9wjg1.png" target="_blank">Qwen 3.5 goes bankrupt on Vending-Bench 2</a>
+              <div class="meta">🔴 r/LocalLLaMA <span class="badge">⬆ 661</span> Feb 16</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/devops/comments/1r31kvd/had_devops_interviews_at_amazon_google_apple_here/" target="_blank">Had DevOps interviews at Amazon, Google, Apple. Here are the questions</a>
+              <div class="meta">🔴 r/devops <span class="badge">⬆ 511</span> Feb 12</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7427730451626262530" target="_blank">Ralph Giles has died (Xiph.org| Rust@Mozilla | Ghostscript)</a>
+              <div class="meta">🔴 r/rust <span class="badge">⬆ 480</span> Feb 13</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/rust/comments/1r3nrju/moss_a_linuxcompatible_rust_async_kernel_3_months/" target="_blank">Moss: a Linux-compatible Rust async kernel, 3 months on</a>
+              <div class="meta">🔴 r/rust <span class="badge">⬆ 394</span> Feb 13</div>
+            </div>
+        </div>
+        <div class="topic-card">
+          <div class="topic-header">☁️ Cloud / Infra <span class="count">20</span></div>
+          
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/sysadmin/comments/1r8m3oq/446_of_my_firewalls_flow_table_is_brazilian/" target="_blank">44.6% of my firewall&#x27;s flow table is Brazilian port-scan traffic and the scanning pattern suggests these ISPs are compromised at the infrastructure level, not just individual devices</a>
+              <div class="meta">🔴 r/sysadmin <span class="badge">⬆ 1020</span> Feb 19</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/sysadmin/comments/1r3w6ud/following_the_notepad_incident_as_an_industry_we/" target="_blank">Following the Notepad++ incident, as an industry, we need to take several steps back and REALLY look at things.</a>
+              <div class="meta">🔴 r/sysadmin <span class="badge">⬆ 955</span> Feb 13</div>
+            </div>
+            <div class="article-item">
+              <a href="https://i.redd.it/j7v2y4vcogjg1.jpeg" target="_blank">This Valentine with Kubernetes!</a>
+              <div class="meta">🔴 r/kubernetes <span class="badge">⬆ 851</span> Feb 14</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/sysadmin/comments/1r47jab/getting_into_it_before_everything_as_a_service/" target="_blank">Getting into IT before everything as a service</a>
+              <div class="meta">🔴 r/sysadmin <span class="badge">⬆ 638</span> Feb 14</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/sysadmin/comments/1r2ux9i/vent_getting_tired_of_unseriousimposter_it/" target="_blank">[VENT] Getting tired of unserious/imposter IT leadership.</a>
+              <div class="meta">🔴 r/sysadmin <span class="badge">⬆ 535</span> Feb 12</div>
+            </div>
+        </div>
+        <div class="topic-card">
+          <div class="topic-header">🌐 Web / Frontend <span class="count">18</span></div>
+          
+            <div class="article-item">
+              <a href="https://i.redd.it/7cfsq826nijg1.png" target="_blank">A very beginner first personal website.</a>
+              <div class="meta">🔴 r/webdev <span class="badge">⬆ 1591</span> Feb 14</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/LocalLLaMA/comments/1r656d7/qwen35397ba17b_is_out/" target="_blank">Qwen3.5-397B-A17B is out!!</a>
+              <div class="meta">🔴 r/LocalLLaMA <span class="badge">⬆ 793</span> Feb 16</div>
+            </div>
+            <div class="article-item">
+              <a href="https://modern-css.com/" target="_blank">Modern CSS is a website that shows you how to write modern CSS code</a>
+              <div class="meta">🔴 r/frontend <span class="badge">⬆ 676</span> Feb 15</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/gallery/1r2xotu" target="_blank">Minimax M2.5 Officially Out</a>
+              <div class="meta">🔴 r/LocalLLaMA <span class="badge">⬆ 511</span> Feb 12</div>
+            </div>
+            <div class="article-item">
+              <a href="https://i.redd.it/68batbzt2ejg1.jpeg" target="_blank">Thanks for all the love and support! But the website&#x27;s still up.</a>
+              <div class="meta">🔴 r/webdev <span class="badge">⬆ 406</span> Feb 14</div>
+            </div>
+        </div>
+        <div class="topic-card">
+          <div class="topic-header">🔐 Security <span class="count">11</span></div>
+          
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/sysadmin/comments/1r3doyu/org_is_banning_notepad/" target="_blank">Org is banning Notepad++</a>
+              <div class="meta">🔴 r/sysadmin <span class="badge">⬆ 1069</span> Feb 13</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/sysadmin/comments/1r691da/why_are_people_like_this/" target="_blank">Why Are People Like This?</a>
+              <div class="meta">🔴 r/sysadmin <span class="badge">⬆ 748</span> Feb 16</div>
+            </div>
+            <div class="article-item">
+              <a href="https://code.claude.com/docs/en/legal-and-compliance" target="_blank">Anthropic officially bans using subscription auth for third party use</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 475</span> Feb 19</div>
+            </div>
+            <div class="article-item">
+              <a href="https://chromereleases.googleblog.com/2026/02/stable-channel-update-for-desktop_13.html" target="_blank">Zero-day CSS: CVE-2026-2441 exists in the wild</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 353</span> Feb 18</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/reactjs/comments/1r5ek4n/i_compared_nextjs_16_and_tanstack_start_with/" target="_blank">I compared Next.js 16 and TanStack Start with actual data instead of opinions. Here&#x27;s what I found.</a>
+              <div class="meta">🔴 r/reactjs <span class="badge">⬆ 146</span> Feb 15</div>
+            </div>
+        </div>
+        <div class="topic-card">
+          <div class="topic-header">⚡ Performance <span class="count">5</span></div>
+          
+            <div class="article-item">
+              <a href="https://i.redd.it/w5cmgsui52kg1.gif" target="_blank">BoltFFI: a high-performance Rust bindings generator (up to 1,000× vs UniFFI microbenchmarks)</a>
+              <div class="meta">🔴 r/rust <span class="badge">⬆ 373</span> Feb 17</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/ExperiencedDevs/comments/1r3u5gu/this_cant_be_right/" target="_blank">This can&#x27;t be right...</a>
+              <div class="meta">🔴 r/ExperiencedDevs <span class="badge">⬆ 203</span> Feb 13</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/Python/comments/1r7hms8/til_facebooks_cinder_is_now_a_standalone_cpython/" target="_blank">TIL: Facebook&#x27;s Cinder is now a standalone CPython extension</a>
+              <div class="meta">🔴 r/Python <span class="badge">⬆ 56</span> Feb 17</div>
+            </div>
+            <div class="article-item">
+              <a href="https://github.blog/news-insights/octoverse/what-the-fastest-growing-tools-reveal-about-how-software-is-being-built/" target="_blank">What the fastest-growing tools reveal about how software is being built</a>
+              <div class="meta">🔵 GitHub Blog  Tue, 03 Fe</div>
+            </div>
+            <div class="article-item">
+              <a href="https://engineering.fb.com/2026/01/12/web/css-at-scale-with-stylex/" target="_blank">CSS at Scale With StyleX</a>
+              <div class="meta">🔵 Engineering at Meta  Mon, 12 Ja</div>
+            </div>
+        </div>
+        <div class="topic-card">
+          <div class="topic-header">🎨 Dev Experience <span class="count">3</span></div>
+          
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/sysadmin/comments/1r7cigo/700_floppies/" target="_blank">700 Floppies</a>
+              <div class="meta">🔴 r/sysadmin <span class="badge">⬆ 762</span> Feb 17</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/datascience/comments/1r40g4p/what_differentiates_a_high_impact_analytics/" target="_blank">What differentiates a high impact analytics function from one that just produces dashboards?</a>
+              <div class="meta">🔴 r/datascience <span class="badge">⬆ 61</span> Feb 13</div>
+            </div>
+            <div class="article-item">
+              <a href="https://en.wikipedia.org/wiki/Voith_Schneider_Propeller" target="_blank">Voith Schneider Propeller</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 34</span> Feb 15</div>
+            </div>
+        </div>
+  </div>
+
+  <h2>📊 Top Stories Right Now</h2>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Title</th><th>Source</th><th>Score</th><th>Topic</th><th>Date</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="rank">1</td>
+          <td><a href="https://www.reddit.com/r/ExperiencedDevs/comments/1r6olcv/an_ai_ceo_finally_said_something_honest/" target="_blank">An AI CEO finally said something honest</a></td>
+          <td><span class="source-badge">🔴 r/ExperiencedDevs</span></td>
+          <td class="score">22881</td>
+          <td>🤖 AI / ML</td>
+          <td>Feb 16</td>
+        </tr>
+        <tr>
+          <td class="rank">2</td>
+          <td><a href="https://i.redd.it/79467cc976jg1.png" target="_blank">jmail.world</a></td>
+          <td><span class="source-badge">🔴 r/webdev</span></td>
+          <td class="score">4370</td>
+          <td>🤖 AI / ML</td>
+          <td>Feb 13</td>
+        </tr>
+        <tr>
+          <td class="rank">3</td>
+          <td><a href="https://www.pcgamer.com/software/platforms/open-source-game-engine-godot-is-drowning-in-ai-slop-code-contributions-i-dont-know-how-long-we-can-keep-it-up/" target="_blank">Open-source game engine Godot is drowning in &#x27;AI slop&#x27; code contributions: &#x27;I don&#x27;t know how long we can keep it up&#x27;</a></td>
+          <td><span class="source-badge">🔴 r/programming</span></td>
+          <td class="score">2830</td>
+          <td>🤖 AI / ML</td>
+          <td>Feb 18</td>
+        </tr>
+        <tr>
+          <td class="rank">4</td>
+          <td><a href="https://www.reddit.com/r/sysadmin/comments/1r3wgjt/our_ai_transformation_cost_seven_figures_and/" target="_blank">our &#x27;ai transformation&#x27; cost seven figures and delivered a chatgpt wrapper</a></td>
+          <td><span class="source-badge">🔴 r/sysadmin</span></td>
+          <td class="score">2192</td>
+          <td>🤖 AI / ML</td>
+          <td>Feb 13</td>
+        </tr>
+        <tr>
+          <td class="rank">5</td>
+          <td><a href="https://i.redd.it/7cfsq826nijg1.png" target="_blank">A very beginner first personal website.</a></td>
+          <td><span class="source-badge">🔴 r/webdev</span></td>
+          <td class="score">1591</td>
+          <td>🌐 Web / Frontend</td>
+          <td>Feb 14</td>
+        </tr>
+        <tr>
+          <td class="rank">6</td>
+          <td><a href="https://www.reddit.com/r/sysadmin/comments/1r6s2cq/psa_develop_a_healthy_suspicion_of_your_fellow/" target="_blank">PSA: Develop a healthy suspicion of your fellow /r/sysadmin</a></td>
+          <td><span class="source-badge">🔴 r/sysadmin</span></td>
+          <td class="score">1470</td>
+          <td>🤖 AI / ML</td>
+          <td>Feb 17</td>
+        </tr>
+        <tr>
+          <td class="rank">7</td>
+          <td><a href="https://www.reddit.com/r/sysadmin/comments/1r7lq7t/i_will_happily_spend_hours_combing_through_logs/" target="_blank">I will happily spend hours combing through logs to call someone out</a></td>
+          <td><span class="source-badge">🔴 r/sysadmin</span></td>
+          <td class="score">1309</td>
+          <td>🔧 Engineering</td>
+          <td>Feb 17</td>
+        </tr>
+        <tr>
+          <td class="rank">8</td>
+          <td><a href="https://open.substack.com/pub/engrlog/p/why-skip-the-code-ship-the-binary?r=779hy&amp;amp;utm_campaign=post&amp;amp;utm_medium=web&amp;amp;showWelcomeOnShare=true" target="_blank">Why “Skip the Code, Ship the Binary” Is a Category Error</a></td>
+          <td><span class="source-badge">🔴 r/programming</span></td>
+          <td class="score">1222</td>
+          <td>🤖 AI / ML</td>
+          <td>Feb 16</td>
+        </tr>
+        <tr>
+          <td class="rank">9</td>
+          <td><a href="https://www.reddit.com/r/sysadmin/comments/1r3doyu/org_is_banning_notepad/" target="_blank">Org is banning Notepad++</a></td>
+          <td><span class="source-badge">🔴 r/sysadmin</span></td>
+          <td class="score">1069</td>
+          <td>🔐 Security</td>
+          <td>Feb 13</td>
+        </tr>
+        <tr>
+          <td class="rank">10</td>
+          <td><a href="https://techcrunch.com/2026/02/12/spotify-says-its-best-developers-havent-written-a-line-of-code-since-december-thanks-to-ai/" target="_blank">Spotify says its best developers haven&#x27;t written a line of code since December, thanks to AI</a></td>
+          <td><span class="source-badge">🔴 r/programming</span></td>
+          <td class="score">1037</td>
+          <td>🤖 AI / ML</td>
+          <td>Feb 13</td>
+        </tr>
+        <tr>
+          <td class="rank">11</td>
+          <td><a href="https://www.reddit.com/r/sysadmin/comments/1r8m3oq/446_of_my_firewalls_flow_table_is_brazilian/" target="_blank">44.6% of my firewall&#x27;s flow table is Brazilian port-scan traffic and the scanning pattern suggests these ISPs are compromised at the infrastructure level, not just individual devices</a></td>
+          <td><span class="source-badge">🔴 r/sysadmin</span></td>
+          <td class="score">1020</td>
+          <td>☁️ Cloud / Infra</td>
+          <td>Feb 19</td>
+        </tr>
+        <tr>
+          <td class="rank">12</td>
+          <td><a href="https://www.reddit.com/r/ExperiencedDevs/comments/1r89vhp/whats_the_mood_at_your_company/" target="_blank">What’s the mood at your company?</a></td>
+          <td><span class="source-badge">🔴 r/ExperiencedDevs</span></td>
+          <td class="score">1004</td>
+          <td>🤖 AI / ML</td>
+          <td>Feb 18</td>
+        </tr>
+        <tr>
+          <td class="rank">13</td>
+          <td><a href="https://www.reddit.com/r/sysadmin/comments/1r3w6ud/following_the_notepad_incident_as_an_industry_we/" target="_blank">Following the Notepad++ incident, as an industry, we need to take several steps back and REALLY look at things.</a></td>
+          <td><span class="source-badge">🔴 r/sysadmin</span></td>
+          <td class="score">955</td>
+          <td>☁️ Cloud / Infra</td>
+          <td>Feb 13</td>
+        </tr>
+        <tr>
+          <td class="rank">14</td>
+          <td><a href="https://www.reddit.com/r/webdev/comments/1r3umod/a_matplotlib_maintainer_closed_a_pull_request/" target="_blank">A Matplotlib maintainer closed a pull request made by an AI. The &quot;AI&quot; went on to publish a rant-filled blog post about the &quot;human&quot; maintainer.</a></td>
+          <td><span class="source-badge">🔴 r/webdev</span></td>
+          <td class="score">907</td>
+          <td>🤖 AI / ML</td>
+          <td>Feb 13</td>
+        </tr>
+        <tr>
+          <td class="rank">15</td>
+          <td><a href="https://i.redd.it/j7v2y4vcogjg1.jpeg" target="_blank">This Valentine with Kubernetes!</a></td>
+          <td><span class="source-badge">🔴 r/kubernetes</span></td>
+          <td class="score">851</td>
+          <td>☁️ Cloud / Infra</td>
+          <td>Feb 14</td>
+        </tr>
+        <tr>
+          <td class="rank">16</td>
+          <td><a href="https://www.reddit.com/r/LocalLLaMA/comments/1r656d7/qwen35397ba17b_is_out/" target="_blank">Qwen3.5-397B-A17B is out!!</a></td>
+          <td><span class="source-badge">🔴 r/LocalLLaMA</span></td>
+          <td class="score">793</td>
+          <td>🌐 Web / Frontend</td>
+          <td>Feb 16</td>
+        </tr>
+        <tr>
+          <td class="rank">17</td>
+          <td><a href="https://www.reddit.com/r/sysadmin/comments/1r7cigo/700_floppies/" target="_blank">700 Floppies</a></td>
+          <td><span class="source-badge">🔴 r/sysadmin</span></td>
+          <td class="score">762</td>
+          <td>🎨 Dev Experience</td>
+          <td>Feb 17</td>
+        </tr>
+        <tr>
+          <td class="rank">18</td>
+          <td><a href="https://i.redd.it/4sewtkexf2kg1.png" target="_blank">I gave 12 LLMs $2,000 and a food truck. Only 4 survived.</a></td>
+          <td><span class="source-badge">🔴 r/LocalLLaMA</span></td>
+          <td class="score">750</td>
+          <td>🤖 AI / ML</td>
+          <td>Feb 17</td>
+        </tr>
+        <tr>
+          <td class="rank">19</td>
+          <td><a href="https://www.reddit.com/r/sysadmin/comments/1r691da/why_are_people_like_this/" target="_blank">Why Are People Like This?</a></td>
+          <td><span class="source-badge">🔴 r/sysadmin</span></td>
+          <td class="score">748</td>
+          <td>🔐 Security</td>
+          <td>Feb 16</td>
+        </tr>
+        <tr>
+          <td class="rank">20</td>
+          <td><a href="https://i.redd.it/4rozb901icjg1.jpeg" target="_blank">The gap between open-weight and proprietary model intelligence is as small as it has ever been, with Claude Opus 4.6 and GLM-5&#x27;</a></td>
+          <td><span class="source-badge">🔴 r/LocalLLaMA</span></td>
+          <td class="score">744</td>
+          <td>🤖 AI / ML</td>
+          <td>Feb 14</td>
+        </tr></tbody>
+  </table>
+
+  <h2>📡 Source Coverage (37 sources)</h2>
+  <div class="sources-section">
+        <div class="source-row">
+          <div class="source-label">dev.to</div>
+          <div class="bar-wrap"><div class="bar" style="width:100%">45</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">Hacker News</div>
+          <div class="bar-wrap"><div class="bar" style="width:64%">29</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/programming</div>
+          <div class="bar-wrap"><div class="bar" style="width:33%">15</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/webdev</div>
+          <div class="bar-wrap"><div class="bar" style="width:33%">15</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/rust</div>
+          <div class="bar-wrap"><div class="bar" style="width:33%">15</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/ExperiencedDevs</div>
+          <div class="bar-wrap"><div class="bar" style="width:33%">15</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/sysadmin</div>
+          <div class="bar-wrap"><div class="bar" style="width:33%">15</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/LocalLLaMA</div>
+          <div class="bar-wrap"><div class="bar" style="width:28%">13</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/golang</div>
+          <div class="bar-wrap"><div class="bar" style="width:26%">12</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">Stack Overflow Blog</div>
+          <div class="bar-wrap"><div class="bar" style="width:17%">8</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">GitHub Blog</div>
+          <div class="bar-wrap"><div class="bar" style="width:17%">8</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">Cloudflare Blog</div>
+          <div class="bar-wrap"><div class="bar" style="width:17%">8</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">Engineering at Meta</div>
+          <div class="bar-wrap"><div class="bar" style="width:17%">8</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">Martin Fowler</div>
+          <div class="bar-wrap"><div class="bar" style="width:17%">8</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">ByteByteGo</div>
+          <div class="bar-wrap"><div class="bar" style="width:17%">8</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">InfoQ</div>
+          <div class="bar-wrap"><div class="bar" style="width:17%">8</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">The New Stack</div>
+          <div class="bar-wrap"><div class="bar" style="width:17%">8</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">DZone</div>
+          <div class="bar-wrap"><div class="bar" style="width:17%">8</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">Smashing Magazine</div>
+          <div class="bar-wrap"><div class="bar" style="width:17%">8</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">Lobste.rs</div>
+          <div class="bar-wrap"><div class="bar" style="width:17%">8</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">CSS-Tricks</div>
+          <div class="bar-wrap"><div class="bar" style="width:17%">8</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/MachineLearning</div>
+          <div class="bar-wrap"><div class="bar" style="width:17%">8</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/devops</div>
+          <div class="bar-wrap"><div class="bar" style="width:17%">8</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/Python</div>
+          <div class="bar-wrap"><div class="bar" style="width:17%">8</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/kubernetes</div>
+          <div class="bar-wrap"><div class="bar" style="width:13%">6</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/datascience</div>
+          <div class="bar-wrap"><div class="bar" style="width:13%">6</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">JavaScript Weekly</div>
+          <div class="bar-wrap"><div class="bar" style="width:8%">4</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">Node Weekly</div>
+          <div class="bar-wrap"><div class="bar" style="width:8%">4</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">Frontend Focus</div>
+          <div class="bar-wrap"><div class="bar" style="width:8%">4</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">DB Weekly</div>
+          <div class="bar-wrap"><div class="bar" style="width:8%">4</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">Golang Weekly</div>
+          <div class="bar-wrap"><div class="bar" style="width:8%">4</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/netsec</div>
+          <div class="bar-wrap"><div class="bar" style="width:8%">4</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/aws</div>
+          <div class="bar-wrap"><div class="bar" style="width:6%">3</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/reactjs</div>
+          <div class="bar-wrap"><div class="bar" style="width:6%">3</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/javascript</div>
+          <div class="bar-wrap"><div class="bar" style="width:4%">2</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/frontend</div>
+          <div class="bar-wrap"><div class="bar" style="width:4%">2</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/softwarearchitecture</div>
+          <div class="bar-wrap"><div class="bar" style="width:2%">1</div></div>
+        </div></div>
+
+</main>
+<footer>Built with ❤️ at the hackathon · Eng Brand Machine · February 19, 2026 at 14:59</footer>
+
+<script>
+// ── Topic classifier (mirrors Python TOPIC_KEYWORDS) ──────────────────────
+const TOPIC_KEYWORDS = {
+  "🤖 AI / ML":        ["ai", "machine learning", "llm", "gpt", "neural", "ml", "deep learning",
+                         "openai", "claude", "gemini", "model", "transformer", "rag", "vector",
+                         "embedding", "agent", "copilot", "diffusion", "inference", "fine-tun"],
+  "☁️ Cloud / Infra":  ["cloud", "aws", "azure", "gcp", "kubernetes", "k8s", "serverless",
+                         "lambda", "container", "docker", "terraform", "infra", "platform"],
+  "🔐 Security":       ["security", "vulnerability", "exploit", "cve", "auth", "zero-day",
+                         "breach", "encryption", "firewall", "hack", "phishing", "malware", "zero trust"],
+  "⚡ Performance":    ["performance", "latency", "throughput", "optimization", "benchmark",
+                         "profiling", "cache", "fast", "speed", "scalab"],
+  "🦀 Languages":      ["rust", "go", "golang", "python", "javascript", "typescript", "java",
+                         "swift", "kotlin", "wasm", "webassembly", "zig", "elixir", "ruby"],
+  "🛠️ DevOps / SRE":  ["devops", "ci/cd", "cicd", "pipeline", "deployment", "gitops",
+                         "monitoring", "observability", "logging", "sre", "platform engineer"],
+  "🗄️ Databases":      ["database", "postgres", "mysql", "mongodb", "redis", "sql", "nosql",
+                         "vector db", "sqlite", "elasticsearch", "kafka", "streaming", "graph db"],
+  "🌐 Web / Frontend": ["react", "vue", "angular", "nextjs", "svelte", "css", "frontend",
+                         "browser", "web", "html", "graphql", "rest", "http", "wasm"],
+  "📱 Mobile":         ["ios", "android", "mobile", "swift", "flutter", "react native"],
+  "🏗️ Architecture":   ["architecture", "microservices", "design pattern", "ddd", "event",
+                         "distributed", "system design", "monolith", "refactor", "domain"],
+  "🧪 Testing / QA":   ["test", "testing", "qa", "unit test", "e2e", "coverage", "playwright",
+                         "cypress", "jest", "quality"],
+  "🎨 Dev Experience": ["dx", "developer experience", "tooling", "ide", "vscode", "editor",
+                         "productivity", "workflow", "developer tool"],
+};
+
+function classifyTopic(title, body) {
+  const text = (title + " " + (body || "")).toLowerCase();
+  for (const [topic, keywords] of Object.entries(TOPIC_KEYWORDS)) {
+    for (const kw of keywords) {
+      if (text.includes(kw)) return topic;
+    }
+  }
+  return "🔧 Engineering";
+}
+
+// ── Helpers ───────────────────────────────────────────────────────────────
+function setStatus(msg, loading) {
+  const el = document.getElementById("fetch-status");
+  el.innerHTML = loading
+    ? `<span class="loading-spinner"></span>${msg}`
+    : msg;
+}
+
+function escHtml(s) {
+  return String(s)
+    .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+function fmtDate(utc) {
+  if (!utc) return "";
+  const d = new Date(utc * 1000);
+  return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+}
+
+// ── Post draft toggle / copy ──────────────────────────────────────────────
+function toggleDraft(btn) {
+  const draft = btn.nextElementSibling;
+  draft.classList.toggle('open');
+  btn.textContent = draft.classList.contains('open')
+    ? '📝 Hide Post Draft ↑'
+    : '📝 View Full Post Draft ↓';
+}
+
+function copyDraft(btn) {
+  const body = btn.previousElementSibling.querySelector('.post-body');
+  const text = body.innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const orig = btn.textContent;
+    btn.textContent = '✅ Copied!';
+    setTimeout(() => btn.textContent = orig, 2000);
+  }).catch(() => {
+    btn.textContent = '⚠ Copy failed — select text manually';
+  });
+}
+
+// ── Main fetch + render ───────────────────────────────────────────────────
+async function fetchReddit() {
+  const btn = document.getElementById("fetch-btn");
+  btn.disabled = true;
+
+  const subs = [...document.querySelectorAll(".sub-check:checked")].map(el => el.value);
+  const customRaw = document.getElementById("custom-sub").value.trim();
+  if (customRaw) {
+    customRaw.split(",").forEach(s => { const t = s.trim(); if (t) subs.push(t); });
+  }
+  if (subs.length === 0) {
+    setStatus("⚠ No subreddits selected.");
+    btn.disabled = false;
+    return;
+  }
+
+  const filter = document.getElementById("time-filter").value;
+  setStatus(`Fetching ${subs.length} subreddit${subs.length > 1 ? "s" : ""}...`, true);
+
+  const results = await Promise.all(subs.map(sub =>
+    fetch(`https://www.reddit.com/r/${sub}/top.json?t=${filter}&limit=25`, {
+      headers: { "Accept": "application/json" }
+    })
+    .then(r => r.ok ? r.json() : Promise.reject(r.status))
+    .then(d => ({ sub, posts: d.data?.children || [] }))
+    .catch(() => ({ sub, posts: [] }))
+  ));
+
+  // Flatten & deduplicate by post id
+  const seen = new Set();
+  const allPosts = [];
+  const bySubreddit = {};
+
+  for (const { sub, posts } of results) {
+    bySubreddit[sub] = [];
+    for (const child of posts) {
+      const p = child.data;
+      if (!p || !p.title || p.is_video || (p.score || 0) < 50) continue;
+      if (seen.has(p.id)) continue;
+      seen.add(p.id);
+      const post = {
+        id: p.id,
+        title: p.title,
+        url: p.url || `https://reddit.com${p.permalink}`,
+        comments_url: `https://reddit.com${p.permalink}`,
+        score: p.score || 0,
+        comments: p.num_comments || 0,
+        upvote_ratio: p.upvote_ratio || 0,
+        date: fmtDate(p.created_utc),
+        source: `r/${sub}`,
+        topic: classifyTopic(p.title, (p.selftext || "").slice(0, 300)),
+      };
+      allPosts.push(post);
+      bySubreddit[sub].push(post);
+    }
+  }
+
+  allPosts.sort((a, b) => b.score - a.score);
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const top15 = allPosts.slice(0, 15);
+
+  let tableRows = "";
+  top15.forEach((p, i) => {
+    const ratio = p.upvote_ratio
+      ? `<span class="ratio">${Math.round(p.upvote_ratio * 100)}% up</span>`
+      : "";
+    tableRows += `
+    <tr>
+      <td class="rank">${i + 1}</td>
+      <td>
+        <a href="${escHtml(p.url)}" target="_blank">${escHtml(p.title)}</a>
+        <div class="meta">
+          <a href="${escHtml(p.comments_url)}" target="_blank" style="color:#ff6b6b">
+            💬 ${p.comments} comments
+          </a>
+        </div>
+      </td>
+      <td><span class="source-badge reddit-badge">${escHtml(p.source)}</span></td>
+      <td class="score reddit-score">⬆ ${p.score} ${ratio}</td>
+      <td>${escHtml(p.topic)}</td>
+      <td>${escHtml(p.date)}</td>
+    </tr>`;
+  });
+
+  // Per-subreddit cards (top 9 subs by total score)
+  const subEntries = Object.entries(bySubreddit)
+    .filter(([_, posts]) => posts.length > 0)
+    .sort((a, b) => b[1].reduce((s, p) => s + p.score, 0) - a[1].reduce((s, p) => s + p.score, 0))
+    .slice(0, 9);
+
+  let subCards = "";
+  for (const [sub, posts] of subEntries) {
+    const top3 = posts.slice(0, 3);
+    let items = "";
+    for (const p of top3) {
+      items += `
+      <div class="article-item">
+        <a href="${escHtml(p.url)}" target="_blank">${escHtml(p.title)}</a>
+        <div class="meta">⬆ ${p.score} · 💬 ${p.comments} · ${escHtml(p.date)}</div>
+      </div>`;
+    }
+    subCards += `
+    <div class="topic-card reddit-card">
+      <div class="topic-header">r/${escHtml(sub)} <span class="count reddit-count">${posts.length}</span></div>
+      ${items}
+    </div>`;
+  }
+
+  const totalSubs = subEntries.length;
+  const html = `
+    <h3 style="color:#ff6b35;font-size:0.95rem;margin:16px 0 10px">
+      Top Posts Across All Subreddits (${allPosts.length} posts · ${totalSubs} subs)
+    </h3>
+    <table>
+      <thead>
+        <tr><th>#</th><th>Title</th><th>Subreddit</th><th>Score</th><th>Topic</th><th>Date</th></tr>
+      </thead>
+      <tbody>${tableRows}</tbody>
+    </table>
+    <h3 style="color:#ff6b35;font-size:0.95rem;margin:20px 0 10px">By Subreddit</h3>
+    <div class="topics-grid">${subCards}</div>
+  `;
+
+  document.getElementById("reddit-results").innerHTML = html;
+
+  const filterLabel = document.getElementById("time-filter").selectedOptions[0].text;
+  setStatus(`✅ ${allPosts.length} posts from ${totalSubs} subreddits · ${filterLabel}`);
+  btn.disabled = false;
+}
+
+document.addEventListener("DOMContentLoaded", fetchReddit);
+</script>
+</body>
+</html>
