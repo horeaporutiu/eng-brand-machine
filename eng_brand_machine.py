@@ -7,15 +7,18 @@ Hackathon POC - 2026
 
 import requests
 import feedparser
-from datetime import datetime
+from datetime import datetime, timedelta
 from collections import defaultdict
 import html as html_lib
 
 # ─── CONFIG ────────────────────────────────────────────────────────────────────
 
 HN_TOP_STORIES_URL = "https://hacker-news.firebaseio.com/v0/topstories.json"
+HN_ASK_URL         = "https://hacker-news.firebaseio.com/v0/askstories.json"
+HN_SHOW_URL        = "https://hacker-news.firebaseio.com/v0/showstories.json"
 HN_ITEM_URL        = "https://hacker-news.firebaseio.com/v0/item/{}.json"
 DEVTO_API_URL      = "https://dev.to/api/articles"
+GITHUB_SEARCH_URL  = "https://api.github.com/search/repositories"
 
 RSS_FEEDS = [
     # Engineering blogs
@@ -39,8 +42,32 @@ RSS_FEEDS = [
     ("Golang Weekly",         "https://golangweekly.com/rss/"),
     # Community
     ("Lobste.rs",             "https://lobste.rs/rss"),
+    ("Lobste.rs/programming", "https://lobste.rs/t/programming.rss"),
+    ("Lobste.rs/security",    "https://lobste.rs/t/security.rss"),
+    ("Lobste.rs/distributed", "https://lobste.rs/t/distributed.rss"),
     # Design/frontend
     ("CSS-Tricks",            "https://css-tricks.com/feed/"),
+    # High-signal company engineering blogs
+    ("Stripe Engineering",    "https://stripe.com/blog/engineering/rss"),
+    ("Shopify Engineering",   "https://shopify.engineering/blog.atom"),
+    ("Slack Engineering",     "https://slack.engineering/feed/"),
+    ("Spotify Engineering",   "https://engineering.atspotify.com/feed/"),
+    ("DoorDash Engineering",  "https://doordash.engineering/feed/"),
+    ("Canva Engineering",     "https://canva.dev/blog/engineering/feed/"),
+    ("Discord Engineering",   "https://discord.com/blog/rss"),
+    ("AWS Blog",              "https://aws.amazon.com/blogs/aws/feed/"),
+    ("Google Cloud Blog",     "https://cloud.google.com/blog/rss"),
+    ("Databricks Blog",       "https://www.databricks.com/blog/feed"),
+    ("HashiCorp Blog",        "https://www.hashicorp.com/blog/feed.xml"),
+    # High-signal newsletters
+    ("Pragmatic Engineer",    "https://newsletter.pragmaticengineer.com/feed"),
+    ("TLDR Newsletter",       "https://tldr.tech/rss"),
+    ("Quastor",               "https://www.quastor.org/feed"),
+    ("Architecture Notes",    "https://architecturenotes.co/rss/"),
+    # Hashnode community tag feeds
+    ("Hashnode/devops",       "https://hashnode.com/n/devops/rss"),
+    ("Hashnode/ai",           "https://hashnode.com/n/ai/rss"),
+    ("Hashnode/programming",  "https://hashnode.com/n/programming/rss"),
 ]
 
 # Reddit subreddits — fetched via JSON API (no auth needed, just User-Agent)
@@ -709,6 +736,70 @@ def fetch_reddit(time_filter="week", limit=15):
     return articles
 
 
+def fetch_hn_ask_show(limit=20):
+    """Fetch Ask HN and Show HN stories — surfaces project launches and community debates."""
+    print("  Fetching HN Ask + Show HN...")
+    articles = []
+    for label, url in [("Ask HN", HN_ASK_URL), ("Show HN", HN_SHOW_URL)]:
+        try:
+            ids = requests.get(url, timeout=8).json()[:limit]
+            for item_id in ids:
+                try:
+                    item = requests.get(HN_ITEM_URL.format(item_id), timeout=5).json()
+                    if item and item.get("title"):
+                        articles.append({
+                            "title": item.get("title", ""),
+                            "url": item.get("url", f"https://news.ycombinator.com/item?id={item_id}"),
+                            "score": item.get("score", 0),
+                            "source": label, "source_icon": "🟠",
+                            "topic": classify_topic(item.get("title", "")),
+                            "comments_url": f"https://news.ycombinator.com/item?id={item_id}",
+                            "comments": item.get("descendants", 0),
+                            "date": datetime.fromtimestamp(item.get("time", 0)).strftime("%b %d") if item.get("time") else "",
+                        })
+                except Exception:
+                    continue
+        except Exception as e:
+            print(f"  ⚠️  {label} error: {e}")
+    print(f"  ✅ HN Ask/Show: {len(articles)} items")
+    return articles
+
+
+def fetch_github_trending(limit=25):
+    """Fetch trending repos created in the past week using GitHub Search API (no auth needed)."""
+    print("  Fetching GitHub Trending...")
+    articles = []
+    try:
+        week_ago = (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%d")
+        resp = requests.get(
+            GITHUB_SEARCH_URL,
+            params={"q": f"created:>{week_ago}", "sort": "stars", "order": "desc", "per_page": limit},
+            headers={"User-Agent": "EngBrandMachine/1.0", "Accept": "application/vnd.github.v3+json"},
+            timeout=10,
+        )
+        if resp.status_code == 403:
+            print("  ⚠️  GitHub Trending: rate limited, skipping")
+            return articles
+        for repo in resp.json().get("items", []):
+            desc = (repo.get("description") or "")[:120]
+            topics_text = " ".join(repo.get("topics", []))
+            title = f"{repo['full_name']} — {desc}" if desc else repo["full_name"]
+            articles.append({
+                "title": title,
+                "url": repo["html_url"],
+                "score": repo.get("stargazers_count", 0),
+                "source": "GitHub Trending", "source_icon": "⚫",
+                "topic": classify_topic(repo.get("name", ""), desc + " " + topics_text),
+                "comments_url": repo["html_url"],
+                "comments": repo.get("open_issues_count", 0),
+                "date": repo.get("created_at", "")[:10],
+            })
+    except Exception as e:
+        print(f"  ⚠️  GitHub Trending error: {e}")
+    print(f"  ✅ GitHub Trending: {len(articles)} repos")
+    return articles
+
+
 def count_topics(articles):
     counts = defaultdict(int)
     for a in articles:
@@ -1331,8 +1422,10 @@ def main():
 
     all_articles = []
     all_articles.extend(fetch_hn_top(30))
+    all_articles.extend(fetch_hn_ask_show(20))
     all_articles.extend(fetch_devto(20))
     all_articles.extend(fetch_rss_feeds())
+    all_articles.extend(fetch_github_trending(25))
     reddit_articles = fetch_reddit()
     all_articles.extend(reddit_articles)
 
