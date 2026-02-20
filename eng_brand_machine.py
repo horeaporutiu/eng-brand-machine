@@ -1446,7 +1446,7 @@ def main():
     print("\n🎨 Generating HTML...")
     html = generate_html(all_articles, topic_counts, miro_recs)
 
-    output_path = "/Users/horeaporutiu/eng-brand-machine/index.html"
+    output_path = "index.html"
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"✅ Saved → {output_path}")
