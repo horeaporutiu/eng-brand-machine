@@ -185,16 +185,16 @@
 
 <header>
   <h1>🚀 Eng Brand Machine</h1>
-  <p class="subtitle">Real-time engineering trends from 31 sources · 336 articles · March 10, 2026 at 00:27</p>
+  <p class="subtitle">Real-time engineering trends from 31 sources · 336 articles · March 10, 2026 at 06:19</p>
   <span class="miro-badge">✦ Miro Developer Brand Intelligence</span>
 </header>
 
 <div class="stats-bar">
   <div class="stat"><div class="num">336</div><div class="label">Articles Analyzed</div></div>
   <div class="stat"><div class="num">31</div><div class="label">Live Sources</div></div>
-  <div class="stat"><div class="num">12</div><div class="label">Topics Tracked</div></div>
+  <div class="stat"><div class="num">11</div><div class="label">Topics Tracked</div></div>
   <div class="stat"><div class="num">🤖 AI / ML</div><div class="label">Hottest Topic</div></div>
-  <div class="stat"><div class="num">191</div><div class="label">Articles on #1 Topic</div></div>
+  <div class="stat"><div class="num">190</div><div class="label">Articles on #1 Topic</div></div>
 </div>
 
 <main>
@@ -309,7 +309,7 @@
             <span class="rec-format">📄 Tutorial + Template</span>
             <span class="rec-cta">Grab the K8s Miro Template →</span>
           </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>i built a social platform where everything vanishes after 24 hours</li><li>I&#x27;m tired...</li></ul></div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>I&#x27;m tired...</li><li>Why Your Kubernetes Cluster Breaks 18 Minutes After a Successful Deployment</li></ul></div>
           <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
           <div class="post-draft">
             <div class="post-hero">
@@ -348,6 +348,54 @@
         </div>
         <div class="rec-card">
           <div class="rec-num">#4</div>
+          <div class="rec-topic">🦀 Languages</div>
+          <div class="rec-title">Rust Ownership &amp; Borrowing, Visualized: Teaching Hard Concepts with Miro</div>
+          <div class="rec-desc">How developer advocates and educators use Miro to turn notoriously complex language concepts (ownership, lifetimes, async) into interactive visual explainers that engineers actually bookmark.</div>
+          <div class="rec-demo"><strong>🎬 Demo:</strong> An animated Miro board stepping through a Rust ownership example — stack frames, heap allocations, and borrow checker rules all drawn out live.</div>
+          <div class="rec-meta">
+            <span class="rec-format">📄 Educational Post + Interactive Board</span>
+            <span class="rec-cta">Open the interactive explainer →</span>
+          </div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>jshachm/pi-rs — 基于pi-mono，rust轻量化版本</li><li>The “JVG algorithm” only wins on tiny numbers</li></ul></div>
+          <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
+          <div class="post-draft">
+            <div class="post-hero">
+              <div class="post-hero-label">🎨 Hero Image Prompt (Midjourney / DALL-E)</div>
+              <div class="post-hero-prompt">Rust programming language ownership diagram with stack and heap memory visualized as glowing labeled boxes, ownership arrows moving between scopes, mutable and immutable borrow markers, dark background with rust-orange and steel-blue color scheme</div>
+            </div>
+            <div class="post-tags"><span class="post-tag">#rust</span><span class="post-tag">#programming</span><span class="post-tag">#ownership</span><span class="post-tag">#visualization</span><span class="post-tag">#miro-templates</span><span class="post-tag">#languages</span></div>
+            <div class="post-meta-bar">⏱ 7 min read &nbsp;·&nbsp; 🔍 Teach Rust&#x27;s ownership and borrowing model with interactive Miro visualizations — turn the borrow checker into an approachable, visual concept for your team.</div>
+            <div class="post-body">
+<p>Rust's ownership system is one of the most powerful ideas in systems programming — and one of the most difficult to teach. The borrow checker enforces rules that are logically consistent and learnable, but deeply counterintuitive to engineers who've spent years working in garbage-collected languages. The result: learning Rust takes longer than it should, not because the concepts are inherently hard, but because most learning resources are primarily textual in a domain where visuals make everything click faster.</p>
+
+<h2>Why Text-Based Rust Education Falls Short</h2>
+<p>The Rust book is excellent. The rustlings exercises are well-designed. And yet, engineers routinely report spending days fighting the borrow checker on concepts that, once explained visually, become immediately intuitive. "A value can have only one owner" is an abstract statement. A diagram showing a value moving from one stack frame to another — and disappearing from the first — is a mental model that sticks.</p>
+<p>The problem extends beyond individual learning. Teams adopting Rust need shared mental models: what does it mean to "move" a value in a code review? How do you reason about lifetimes in an API design? When is an <em>Arc&lt;Mutex&lt;T&gt;&gt;</em> the right choice? These conversations are faster and more productive when the team shares a visual vocabulary.</p>
+
+<h2>The Miro Framework: Visualizing Rust Concepts</h2>
+<ol>
+  <li><strong>Ownership diagrams.</strong> For each code example, draw the stack and heap side by side. Show values as labeled boxes. Draw arrows for ownership. When a move happens, redraw the arrow to its new owner and visually erase it from the previous one. The borrow checker's rules become self-evident.</li>
+  <li><strong>Borrow visualizations.</strong> Show immutable borrows as read-only arrows (multiple allowed simultaneously). Show mutable borrows as exclusive arrows (only one at a time, blocks immutable borrows). This visual makes the borrow checker's invariants immediately legible.</li>
+  <li><strong>Lifetime scope diagrams.</strong> Draw scopes as nested boxes. Show a borrow's lifetime as a colored region that must not outlive the value it borrows. Lifetime annotation syntax suddenly makes sense when you can see what the <em>'a</em> represents spatially.</li>
+  <li><strong>Async ownership flow.</strong> For async Rust, draw a timeline showing when ownership moves across await points. Show which values must be Send and why. This is the visualization that unlocks async Rust for engineers who've been stuck.</li>
+  <li><strong>Pattern decision tree.</strong> A flowchart for "which smart pointer should I use?" — from simple owned values through <em>Box</em>, <em>Rc</em>, <em>Arc</em>, <em>Mutex</em> — with decision criteria at each fork. Teams use this in code reviews to align on ownership patterns.</li>
+</ol>
+
+<div class="image-callout">
+  <strong>🎨 Mid-Post Image Suggestion</strong><br>
+  <em>AI prompt:</em> "Rust borrow checker visualization showing stack and heap memory as glowing labeled boxes, ownership transfer arrows between scopes, mutable borrow shown as exclusive red arrow, immutable borrows as shared blue arrows, dark background, rust-orange and steel-blue palette"
+</div>
+
+<h2>Team Adoption: Visual Rust Reviews</h2>
+<p>Engineering teams adopting Rust report that the biggest accelerator isn't better documentation — it's better communication patterns. Starting a "visual Rust review" practice — where complex ownership or lifetime questions get drawn out on the Miro board before being answered in text — dramatically reduces the time senior Rust engineers spend unblocking teammates.</p>
+<p>The board also serves as a growing library. Every time a tricky ownership pattern gets solved visually, the diagram stays on the board as a reference. After six months, you have a custom visual Rust guide tailored to the exact patterns your codebase uses.</p>
+<p>The borrow checker isn't your enemy — it's a collaborator that rewards clear thinking. <em>Open the interactive Rust Ownership Explainer and see the concepts click in a way they never did in a text editor.</em></p>
+</div>
+            <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
+          </div>
+        </div>
+        <div class="rec-card">
+          <div class="rec-num">#5</div>
           <div class="rec-topic">🔐 Security</div>
           <div class="rec-title">Collaborative Threat Modeling on Miro: A Developer&#x27;s Guide</div>
           <div class="rec-desc">Security doesn&#x27;t have to happen in silos. This guide shows dev teams how to run STRIDE threat modeling sessions in Miro — mapping trust boundaries, attack surfaces, and mitigations together in real time.</div>
@@ -391,54 +439,6 @@
 <p>The teams that make threat modeling stick don't treat it as a project milestone — they treat it as a recurring sprint ritual. Every time a new feature introduces a data flow, API, or third-party integration, a 45-minute threat modeling session is automatically scheduled. The Miro board template is already there; you just add a new frame for the new feature.</p>
 <p>After three months, something shifts in the team culture: developers start thinking about trust boundaries during design, not after implementation. Security stops being a gate and becomes a design input. And when an auditor asks "how do you manage security risk?", you open the Miro board instead of scrambling for documentation.</p>
 <p>Security built collaboratively is security that actually holds. <em>Run your first STRIDE threat modeling session in Miro — the template takes 5 minutes to set up.</em></p>
-</div>
-            <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
-          </div>
-        </div>
-        <div class="rec-card">
-          <div class="rec-num">#5</div>
-          <div class="rec-topic">🦀 Languages</div>
-          <div class="rec-title">Rust Ownership &amp; Borrowing, Visualized: Teaching Hard Concepts with Miro</div>
-          <div class="rec-desc">How developer advocates and educators use Miro to turn notoriously complex language concepts (ownership, lifetimes, async) into interactive visual explainers that engineers actually bookmark.</div>
-          <div class="rec-demo"><strong>🎬 Demo:</strong> An animated Miro board stepping through a Rust ownership example — stack frames, heap allocations, and borrow checker rules all drawn out live.</div>
-          <div class="rec-meta">
-            <span class="rec-format">📄 Educational Post + Interactive Board</span>
-            <span class="rec-cta">Open the interactive explainer →</span>
-          </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>jshachm/pi-rs — 基于pi-mono，rust轻量化版本</li><li>The Secret Life of JavaScript: The Scroll</li></ul></div>
-          <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
-          <div class="post-draft">
-            <div class="post-hero">
-              <div class="post-hero-label">🎨 Hero Image Prompt (Midjourney / DALL-E)</div>
-              <div class="post-hero-prompt">Rust programming language ownership diagram with stack and heap memory visualized as glowing labeled boxes, ownership arrows moving between scopes, mutable and immutable borrow markers, dark background with rust-orange and steel-blue color scheme</div>
-            </div>
-            <div class="post-tags"><span class="post-tag">#rust</span><span class="post-tag">#programming</span><span class="post-tag">#ownership</span><span class="post-tag">#visualization</span><span class="post-tag">#miro-templates</span><span class="post-tag">#languages</span></div>
-            <div class="post-meta-bar">⏱ 7 min read &nbsp;·&nbsp; 🔍 Teach Rust&#x27;s ownership and borrowing model with interactive Miro visualizations — turn the borrow checker into an approachable, visual concept for your team.</div>
-            <div class="post-body">
-<p>Rust's ownership system is one of the most powerful ideas in systems programming — and one of the most difficult to teach. The borrow checker enforces rules that are logically consistent and learnable, but deeply counterintuitive to engineers who've spent years working in garbage-collected languages. The result: learning Rust takes longer than it should, not because the concepts are inherently hard, but because most learning resources are primarily textual in a domain where visuals make everything click faster.</p>
-
-<h2>Why Text-Based Rust Education Falls Short</h2>
-<p>The Rust book is excellent. The rustlings exercises are well-designed. And yet, engineers routinely report spending days fighting the borrow checker on concepts that, once explained visually, become immediately intuitive. "A value can have only one owner" is an abstract statement. A diagram showing a value moving from one stack frame to another — and disappearing from the first — is a mental model that sticks.</p>
-<p>The problem extends beyond individual learning. Teams adopting Rust need shared mental models: what does it mean to "move" a value in a code review? How do you reason about lifetimes in an API design? When is an <em>Arc&lt;Mutex&lt;T&gt;&gt;</em> the right choice? These conversations are faster and more productive when the team shares a visual vocabulary.</p>
-
-<h2>The Miro Framework: Visualizing Rust Concepts</h2>
-<ol>
-  <li><strong>Ownership diagrams.</strong> For each code example, draw the stack and heap side by side. Show values as labeled boxes. Draw arrows for ownership. When a move happens, redraw the arrow to its new owner and visually erase it from the previous one. The borrow checker's rules become self-evident.</li>
-  <li><strong>Borrow visualizations.</strong> Show immutable borrows as read-only arrows (multiple allowed simultaneously). Show mutable borrows as exclusive arrows (only one at a time, blocks immutable borrows). This visual makes the borrow checker's invariants immediately legible.</li>
-  <li><strong>Lifetime scope diagrams.</strong> Draw scopes as nested boxes. Show a borrow's lifetime as a colored region that must not outlive the value it borrows. Lifetime annotation syntax suddenly makes sense when you can see what the <em>'a</em> represents spatially.</li>
-  <li><strong>Async ownership flow.</strong> For async Rust, draw a timeline showing when ownership moves across await points. Show which values must be Send and why. This is the visualization that unlocks async Rust for engineers who've been stuck.</li>
-  <li><strong>Pattern decision tree.</strong> A flowchart for "which smart pointer should I use?" — from simple owned values through <em>Box</em>, <em>Rc</em>, <em>Arc</em>, <em>Mutex</em> — with decision criteria at each fork. Teams use this in code reviews to align on ownership patterns.</li>
-</ol>
-
-<div class="image-callout">
-  <strong>🎨 Mid-Post Image Suggestion</strong><br>
-  <em>AI prompt:</em> "Rust borrow checker visualization showing stack and heap memory as glowing labeled boxes, ownership transfer arrows between scopes, mutable borrow shown as exclusive red arrow, immutable borrows as shared blue arrows, dark background, rust-orange and steel-blue palette"
-</div>
-
-<h2>Team Adoption: Visual Rust Reviews</h2>
-<p>Engineering teams adopting Rust report that the biggest accelerator isn't better documentation — it's better communication patterns. Starting a "visual Rust review" practice — where complex ownership or lifetime questions get drawn out on the Miro board before being answered in text — dramatically reduces the time senior Rust engineers spend unblocking teammates.</p>
-<p>The board also serves as a growing library. Every time a tricky ownership pattern gets solved visually, the diagram stays on the board as a reference. After six months, you have a custom visual Rust guide tailored to the exact patterns your codebase uses.</p>
-<p>The borrow checker isn't your enemy — it's a collaborator that rewards clear thinking. <em>Open the interactive Rust Ownership Explainer and see the concepts click in a way they never did in a text editor.</em></p>
 </div>
             <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
           </div>
@@ -535,51 +535,51 @@
   <div class="topics-grid">
     
         <div class="topic-card">
-          <div class="topic-header">🤖 AI / ML <span class="count">191</span></div>
+          <div class="topic-header">🤖 AI / ML <span class="count">190</span></div>
           
             <div class="article-item">
               <a href="https://github.com/karpathy/autoresearch" target="_blank">karpathy/autoresearch — AI agents running research on single-GPU nanochat training automatically</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 16166</span> 2026-03-06</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 18060</span> 2026-03-06</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/twostraws/SwiftUI-Agent-Skill" target="_blank">twostraws/SwiftUI-Agent-Skill — SwiftUI agent skill for Claude Code, Codex, and other AI tools.</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1603</span> 2026-03-05</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1641</span> 2026-03-05</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/duoan/TorchCode" target="_blank">duoan/TorchCode — 🔥 LeetCode for PyTorch — practice implementing softmax, attention, GPT-2 and more from scratch with instant auto-grading</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1414</span> 2026-03-04</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1455</span> 2026-03-04</div>
+            </div>
+            <div class="article-item">
+              <a href="https://github.com/HKUDS/CLI-Anything" target="_blank">HKUDS/CLI-Anything — CLI-Anything: Making ALL Software Agent-Native</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1354</span> 2026-03-08</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/viperrcrypto/Siftly" target="_blank">viperrcrypto/Siftly — Local Twitter/X bookmark organizer with AI categorization and mindmap visualization</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1271</span> 2026-03-04</div>
-            </div>
-            <div class="article-item">
-              <a href="https://github.com/cyxzdev/Uncodixfy" target="_blank">cyxzdev/Uncodixfy — the holly uncodexify instructions - letting GPT create uncodexified UI</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1221</span> 2026-03-06</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1298</span> 2026-03-04</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🔧 Engineering <span class="count">65</span></div>
+          <div class="topic-header">🔧 Engineering <span class="count">69</span></div>
           
             <div class="article-item">
-              <a href="https://github.com/BigBodyCobain/Shadowbroker" target="_blank">BigBodyCobain/Shadowbroker — Open-source intelligence for the global theater. Track everything from the corporate/private jets of the wealthy, and sp</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1038</span> 2026-03-05</div>
+              <a href="https://github.com/jackwener/twitter-cli" target="_blank">jackwener/twitter-cli — A CLI for Twitter/X — feed, bookmarks, and user timeline in terminal</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1189</span> 2026-03-05</div>
             </div>
             <div class="article-item">
-              <a href="https://github.com/jackwener/twitter-cli" target="_blank">jackwener/twitter-cli — A CLI for Twitter/X — feed, bookmarks, and user timeline in terminal</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1017</span> 2026-03-05</div>
+              <a href="https://github.com/BigBodyCobain/Shadowbroker" target="_blank">BigBodyCobain/Shadowbroker — Open-source intelligence for the global theater. Track everything from the corporate/private jets of the wealthy, and sp</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1151</span> 2026-03-05</div>
             </div>
             <div class="article-item">
               <a href="https://www.pv-magazine.com/2025/06/20/ireland-coal-free-ends-coal-power-generation-moneypoint/" target="_blank">Ireland shuts last coal plant, becomes 15th coal-free country in Europe (2025)</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 841</span> Mar 09</div>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 923</span> Mar 09</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/Flowseal/tg-ws-proxy" target="_blank">Flowseal/tg-ws-proxy — Local SOCKS5 proxy server for partial bypassing of Telegram loading</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 731</span> 2026-03-04</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 741</span> 2026-03-04</div>
             </div>
             <div class="article-item">
               <a href="https://news.ycombinator.com/item?id=47296547" target="_blank">Ask HN: How to be alone?</a>
-              <div class="meta">🟠 Ask HN <span class="badge">⬆ 639</span> Mar 08</div>
+              <div class="meta">🟠 Ask HN <span class="badge">⬆ 646</span> Mar 08</div>
             </div>
         </div>
         <div class="topic-card">
@@ -587,15 +587,11 @@
           
             <div class="article-item">
               <a href="https://news.ycombinator.com/item?id=47300329" target="_blank">Ask HN: Please restrict new accounts from posting</a>
-              <div class="meta">🟠 Ask HN <span class="badge">⬆ 685</span> Mar 08</div>
+              <div class="meta">🟠 Ask HN <span class="badge">⬆ 693</span> Mar 08</div>
             </div>
             <div class="article-item">
               <a href="https://dev.to/devteam/join-the-2026-wecoded-challenge-and-celebrate-underrepresented-voices-in-tech-through-writing--4828" target="_blank">Join the 2026 WeCoded Challenge and Celebrate Underrepresented Voices in Tech Through Writing &amp; Frontend Art 🎨!</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 141</span> 2026-03-06</div>
-            </div>
-            <div class="article-item">
-              <a href="https://www.rs-online.com/designspark/restoring-a-sun-sparcstation-ipx-part-1-psu-and-nvram" target="_blank">Restoring a Sun SPARCstation IPX part 1: PSU and NVRAM (2020)</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 89</span> Mar 09</div>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 145</span> 2026-03-06</div>
             </div>
             <div class="article-item">
               <a href="https://dev.to/link2twenty/react-singletons-arent-as-evil-as-you-think-44m8" target="_blank">React: Singletons aren&#x27;t as evil as you think</a>
@@ -603,16 +599,16 @@
             </div>
             <div class="article-item">
               <a href="https://dev.to/gabrielenache/composition-pattern-in-react-1i52" target="_blank">Composition Pattern in React</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 19</span> 2026-03-07</div>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 20</span> 2026-03-07</div>
+            </div>
+            <div class="article-item">
+              <a href="https://dev.to/tico/mapping-the-territory-3n55" target="_blank">Mapping the Territory</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 7</span> 2026-03-09</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">☁️ Cloud / Infra <span class="count">16</span></div>
+          <div class="topic-header">☁️ Cloud / Infra <span class="count">15</span></div>
           
-            <div class="article-item">
-              <a href="https://dev.to/iamovi/i-built-a-social-platform-where-everything-vanishes-after-24-hours-3imk" target="_blank">i built a social platform where everything vanishes after 24 hours</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 229</span> 2026-03-03</div>
-            </div>
             <div class="article-item">
               <a href="https://dev.to/restu_muhammad_d32f98b653/im-tired-2d99" target="_blank">I&#x27;m tired...</a>
               <div class="meta">🟣 dev.to <span class="badge">⬆ 5</span> 2026-03-08</div>
@@ -629,17 +625,45 @@
               <a href="https://blog.cloudflare.com/client-dynamic-path-mtu-discovery/" target="_blank">Ending the &quot;silent drop&quot;: how Dynamic Path MTU Discovery makes the Cloudflare One Client more resilient</a>
               <div class="meta">🔵 Cloudflare Blog  Thu, 05 Ma</div>
             </div>
+            <div class="article-item">
+              <a href="https://blog.cloudflare.com/faster-sase-proxy-mode-quic/" target="_blank">A QUICker SASE client: re-building Proxy Mode</a>
+              <div class="meta">🔵 Cloudflare Blog  Thu, 05 Ma</div>
+            </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🔐 Security <span class="count">8</span></div>
+          <div class="topic-header">🦀 Languages <span class="count">9</span></div>
+          
+            <div class="article-item">
+              <a href="https://github.com/jshachm/pi-rs" target="_blank">jshachm/pi-rs — 基于pi-mono，rust轻量化版本</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 586</span> 2026-03-04</div>
+            </div>
+            <div class="article-item">
+              <a href="https://scottaaronson.blog/?p=9615" target="_blank">The “JVG algorithm” only wins on tiny numbers</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 50</span> Mar 10</div>
+            </div>
+            <div class="article-item">
+              <a href="https://dev.to/aaron_rose_0787cc8b4775a0/the-secret-life-of-javascript-the-scroll-58jf" target="_blank">The Secret Life of JavaScript: The Scroll</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 20</span> 2026-03-08</div>
+            </div>
+            <div class="article-item">
+              <a href="https://dev.to/ssj256x/building-a-declarative-json-extraction-engine-with-pythons-annotated-types-jq-and-pydantic-4fka" target="_blank">Building a Declarative JSON Extraction Engine with Python’s Annotated Types, jq and Pydantic</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 3</span> 2026-03-09</div>
+            </div>
+            <div class="article-item">
+              <a href="https://dev.to/krishna_sapkota/building-a-reaction-time-test-in-javascript-4o9o" target="_blank">Building a Reaction Time Test in JavaScript</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 2</span> 2026-03-08</div>
+            </div>
+        </div>
+        <div class="topic-card">
+          <div class="topic-header">🔐 Security <span class="count">7</span></div>
           
             <div class="article-item">
               <a href="https://github.com/hicode002/qualcomm_gbl_exploit_poc" target="_blank">hicode002/qualcomm_gbl_exploit_poc — Unlocking qualcomm bootloader via gbl exploit.</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 643</span> 2026-03-04</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 656</span> 2026-03-04</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/vulhunt-re/vulhunt" target="_blank">vulhunt-re/vulhunt — Vulnerability detection framework by Binarly&#x27;s REsearch team</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 499</span> 2026-03-05</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 517</span> 2026-03-05</div>
             </div>
             <div class="article-item">
               <a href="https://dev.to/theoriginalbpc/advice-id-send-back-in-time-technology-in-2026-and-four-lessons-for-my-high-school-self-2elj" target="_blank">Advice I’d Send Back in Time: Technology in 2026 and Four Lessons for My High School Self</a>
@@ -652,30 +676,6 @@
             <div class="article-item">
               <a href="https://www.infoq.com/news/2026/03/mcp-csharp-v1/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank">Microsoft Launches MCP C# SDK v1.0, Bringing Full Support for Latest Protocol Specification</a>
               <div class="meta">🔵 InfoQ  Mon, 09 Ma</div>
-            </div>
-        </div>
-        <div class="topic-card">
-          <div class="topic-header">🦀 Languages <span class="count">8</span></div>
-          
-            <div class="article-item">
-              <a href="https://github.com/jshachm/pi-rs" target="_blank">jshachm/pi-rs — 基于pi-mono，rust轻量化版本</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 564</span> 2026-03-04</div>
-            </div>
-            <div class="article-item">
-              <a href="https://dev.to/aaron_rose_0787cc8b4775a0/the-secret-life-of-javascript-the-scroll-58jf" target="_blank">The Secret Life of JavaScript: The Scroll</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 19</span> 2026-03-08</div>
-            </div>
-            <div class="article-item">
-              <a href="https://dev.to/ssj256x/building-a-declarative-json-extraction-engine-with-pythons-annotated-types-jq-and-pydantic-4fka" target="_blank">Building a Declarative JSON Extraction Engine with Python’s Annotated Types, jq and Pydantic</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 3</span> 2026-03-09</div>
-            </div>
-            <div class="article-item">
-              <a href="https://dev.to/krishna_sapkota/building-a-reaction-time-test-in-javascript-4o9o" target="_blank">Building a Reaction Time Test in JavaScript</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 2</span> 2026-03-08</div>
-            </div>
-            <div class="article-item">
-              <a href="https://blog.cloudflare.com/pingora-oss-smuggling-vulnerabilities/" target="_blank">Fixing request smuggling vulnerabilities in Pingora OSS deployments</a>
-              <div class="meta">🔵 Cloudflare Blog  Mon, 09 Ma</div>
             </div>
         </div>
         <div class="topic-card">
@@ -703,27 +703,23 @@
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🎨 Dev Experience <span class="count">6</span></div>
+          <div class="topic-header">🗄️ Databases <span class="count">4</span></div>
           
             <div class="article-item">
-              <a href="https://dev.to/grahamthedev/3-words-worth-a-billion-dollars-drift-to-determinism-dride-dej" target="_blank">3 words worth a billion dollars: Drift to Determinism (DriDe)</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 111</span> 2026-03-07</div>
+              <a href="https://github.com/steipete/discrawl" target="_blank">steipete/discrawl — cli for discord with sqlite backend</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 473</span> 2026-03-07</div>
             </div>
             <div class="article-item">
-              <a href="https://dev.to/devteam/top-7-featured-dev-posts-of-the-week-2of0" target="_blank">Top 7 Featured DEV Posts of the Week</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 54</span> 2026-03-03</div>
+              <a href="https://www.paradedb.com/blog/optimizing-top-k" target="_blank">Optimizing Top K in Postgres</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 21</span> Mar 08</div>
             </div>
             <div class="article-item">
-              <a href="https://durdraw.org/" target="_blank">Durdraw – ANSI art editor for Unix-like systems</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 35</span> Mar 09</div>
+              <a href="https://blog.bytebytego.com/p/strong-consistency-in-databases-promises" target="_blank">Strong Consistency In Databases: Promises and Costs</a>
+              <div class="meta">🔵 ByteByteGo  Thu, 26 Fe</div>
             </div>
             <div class="article-item">
-              <a href="https://simplestats.io/blog/server-side-analytics-laravel" target="_blank">Show HN: SimpleStats – Server-side Laravel analytics, immune to ad blockers</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 2</span> Mar 09</div>
-            </div>
-            <div class="article-item">
-              <a href="https://dev.to/delimit/catching-breaking-api-changes-before-they-reach-production-4n7k" target="_blank">Catching Breaking API Changes Before They Reach Production</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 2</span> 2026-03-09</div>
+              <a href="https://planetscale.com/blog/video-conferencing-with-postgres" target="_blank">Video Conferencing with Postgres</a>
+              <div class="meta">🔵 Lobste.rs  Mon, 09 Ma</div>
             </div>
         </div>
   </div>
@@ -738,7 +734,7 @@
           <td class="rank">1</td>
           <td><a href="https://github.com/karpathy/autoresearch" target="_blank">karpathy/autoresearch — AI agents running research on single-GPU nanochat training automatically</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">16166</td>
+          <td class="score">18060</td>
           <td>🤖 AI / ML</td>
           <td>2026-03-06</td>
         </tr>
@@ -746,7 +742,7 @@
           <td class="rank">2</td>
           <td><a href="https://github.com/twostraws/SwiftUI-Agent-Skill" target="_blank">twostraws/SwiftUI-Agent-Skill — SwiftUI agent skill for Claude Code, Codex, and other AI tools.</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1603</td>
+          <td class="score">1641</td>
           <td>🤖 AI / ML</td>
           <td>2026-03-05</td>
         </tr>
@@ -754,63 +750,63 @@
           <td class="rank">3</td>
           <td><a href="https://github.com/duoan/TorchCode" target="_blank">duoan/TorchCode — 🔥 LeetCode for PyTorch — practice implementing softmax, attention, GPT-2 and more from scratch with instant auto-grading</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1414</td>
+          <td class="score">1455</td>
           <td>🤖 AI / ML</td>
           <td>2026-03-04</td>
         </tr>
         <tr>
           <td class="rank">4</td>
-          <td><a href="https://github.com/viperrcrypto/Siftly" target="_blank">viperrcrypto/Siftly — Local Twitter/X bookmark organizer with AI categorization and mindmap visualization</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1271</td>
-          <td>🤖 AI / ML</td>
-          <td>2026-03-04</td>
-        </tr>
-        <tr>
-          <td class="rank">5</td>
-          <td><a href="https://github.com/cyxzdev/Uncodixfy" target="_blank">cyxzdev/Uncodixfy — the holly uncodexify instructions - letting GPT create uncodexified UI</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1221</td>
-          <td>🤖 AI / ML</td>
-          <td>2026-03-06</td>
-        </tr>
-        <tr>
-          <td class="rank">6</td>
           <td><a href="https://github.com/HKUDS/CLI-Anything" target="_blank">HKUDS/CLI-Anything — CLI-Anything: Making ALL Software Agent-Native</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1107</td>
+          <td class="score">1354</td>
           <td>🤖 AI / ML</td>
           <td>2026-03-08</td>
         </tr>
         <tr>
-          <td class="rank">7</td>
-          <td><a href="https://news.ycombinator.com/item?id=47282777" target="_blank">Tell HN: I&#x27;m 60 years old. Claude Code has re-ignited a passion</a></td>
-          <td><span class="source-badge">🟠 Ask HN</span></td>
-          <td class="score">1059</td>
+          <td class="rank">5</td>
+          <td><a href="https://github.com/viperrcrypto/Siftly" target="_blank">viperrcrypto/Siftly — Local Twitter/X bookmark organizer with AI categorization and mindmap visualization</a></td>
+          <td><span class="source-badge">⚫ GitHub Trending</span></td>
+          <td class="score">1298</td>
           <td>🤖 AI / ML</td>
-          <td>Mar 07</td>
+          <td>2026-03-04</td>
+        </tr>
+        <tr>
+          <td class="rank">6</td>
+          <td><a href="https://github.com/cyxzdev/Uncodixfy" target="_blank">cyxzdev/Uncodixfy — the holly uncodexify instructions - letting GPT create uncodexified UI</a></td>
+          <td><span class="source-badge">⚫ GitHub Trending</span></td>
+          <td class="score">1245</td>
+          <td>🤖 AI / ML</td>
+          <td>2026-03-06</td>
+        </tr>
+        <tr>
+          <td class="rank">7</td>
+          <td><a href="https://github.com/jackwener/twitter-cli" target="_blank">jackwener/twitter-cli — A CLI for Twitter/X — feed, bookmarks, and user timeline in terminal</a></td>
+          <td><span class="source-badge">⚫ GitHub Trending</span></td>
+          <td class="score">1189</td>
+          <td>🔧 Engineering</td>
+          <td>2026-03-05</td>
         </tr>
         <tr>
           <td class="rank">8</td>
           <td><a href="https://github.com/BigBodyCobain/Shadowbroker" target="_blank">BigBodyCobain/Shadowbroker — Open-source intelligence for the global theater. Track everything from the corporate/private jets of the wealthy, and sp</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1038</td>
+          <td class="score">1151</td>
           <td>🔧 Engineering</td>
           <td>2026-03-05</td>
         </tr>
         <tr>
           <td class="rank">9</td>
-          <td><a href="https://github.com/jackwener/twitter-cli" target="_blank">jackwener/twitter-cli — A CLI for Twitter/X — feed, bookmarks, and user timeline in terminal</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1017</td>
-          <td>🔧 Engineering</td>
-          <td>2026-03-05</td>
+          <td><a href="https://news.ycombinator.com/item?id=47282777" target="_blank">Tell HN: I&#x27;m 60 years old. Claude Code has re-ignited a passion</a></td>
+          <td><span class="source-badge">🟠 Ask HN</span></td>
+          <td class="score">1062</td>
+          <td>🤖 AI / ML</td>
+          <td>Mar 07</td>
         </tr>
         <tr>
           <td class="rank">10</td>
           <td><a href="https://www.pv-magazine.com/2025/06/20/ireland-coal-free-ends-coal-power-generation-moneypoint/" target="_blank">Ireland shuts last coal plant, becomes 15th coal-free country in Europe (2025)</a></td>
           <td><span class="source-badge">🟠 Hacker News</span></td>
-          <td class="score">841</td>
+          <td class="score">923</td>
           <td>🔧 Engineering</td>
           <td>Mar 09</td>
         </tr>
@@ -818,47 +814,47 @@
           <td class="rank">11</td>
           <td><a href="https://github.com/op7418/Claude-to-IM-skill" target="_blank">op7418/Claude-to-IM-skill — Bridge Claude Code / Codex to IM platforms — chat with AI coding agents from Telegram, Discord, or Feishu/Lark.</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">751</td>
+          <td class="score">784</td>
           <td>🤖 AI / ML</td>
           <td>2026-03-05</td>
         </tr>
         <tr>
           <td class="rank">12</td>
-          <td><a href="https://github.com/tanishqkumar/ssd" target="_blank">tanishqkumar/ssd — A lightweight inference engine supporting speculative speculative decoding (SSD). </a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">734</td>
-          <td>🤖 AI / ML</td>
-          <td>2026-03-04</td>
-        </tr>
-        <tr>
-          <td class="rank">13</td>
           <td><a href="https://github.com/Flowseal/tg-ws-proxy" target="_blank">Flowseal/tg-ws-proxy — Local SOCKS5 proxy server for partial bypassing of Telegram loading</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">731</td>
+          <td class="score">741</td>
           <td>🔧 Engineering</td>
           <td>2026-03-04</td>
         </tr>
         <tr>
+          <td class="rank">13</td>
+          <td><a href="https://github.com/tanishqkumar/ssd" target="_blank">tanishqkumar/ssd — A lightweight inference engine supporting speculative speculative decoding (SSD). </a></td>
+          <td><span class="source-badge">⚫ GitHub Trending</span></td>
+          <td class="score">737</td>
+          <td>🤖 AI / ML</td>
+          <td>2026-03-04</td>
+        </tr>
+        <tr>
           <td class="rank">14</td>
-          <td><a href="https://news.ycombinator.com/item?id=47300329" target="_blank">Ask HN: Please restrict new accounts from posting</a></td>
-          <td><span class="source-badge">🟠 Ask HN</span></td>
-          <td class="score">685</td>
-          <td>🌐 Web / Frontend</td>
-          <td>Mar 08</td>
+          <td><a href="https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills" target="_blank">FreedomIntelligence/OpenClaw-Medical-Skills — The largest open-source medical AI skills library for OpenClaw🦞.</a></td>
+          <td><span class="source-badge">⚫ GitHub Trending</span></td>
+          <td class="score">725</td>
+          <td>🤖 AI / ML</td>
+          <td>2026-03-08</td>
         </tr>
         <tr>
           <td class="rank">15</td>
-          <td><a href="https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills" target="_blank">FreedomIntelligence/OpenClaw-Medical-Skills — The largest open-source medical AI skills library for OpenClaw🦞.</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">646</td>
-          <td>🤖 AI / ML</td>
-          <td>2026-03-08</td>
+          <td><a href="https://news.ycombinator.com/item?id=47300329" target="_blank">Ask HN: Please restrict new accounts from posting</a></td>
+          <td><span class="source-badge">🟠 Ask HN</span></td>
+          <td class="score">693</td>
+          <td>🌐 Web / Frontend</td>
+          <td>Mar 08</td>
         </tr>
         <tr>
           <td class="rank">16</td>
           <td><a href="https://github.com/hicode002/qualcomm_gbl_exploit_poc" target="_blank">hicode002/qualcomm_gbl_exploit_poc — Unlocking qualcomm bootloader via gbl exploit.</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">643</td>
+          <td class="score">656</td>
           <td>🔐 Security</td>
           <td>2026-03-04</td>
         </tr>
@@ -866,7 +862,7 @@
           <td class="rank">17</td>
           <td><a href="https://news.ycombinator.com/item?id=47296547" target="_blank">Ask HN: How to be alone?</a></td>
           <td><span class="source-badge">🟠 Ask HN</span></td>
-          <td class="score">639</td>
+          <td class="score">646</td>
           <td>🔧 Engineering</td>
           <td>Mar 08</td>
         </tr>
@@ -874,7 +870,7 @@
           <td class="rank">18</td>
           <td><a href="https://github.com/imbue-bit/OpenClaw-PwnKit" target="_blank">imbue-bit/OpenClaw-PwnKit — Get shell to almost any OpenClaw host machine.</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">598</td>
+          <td class="score">639</td>
           <td>🔧 Engineering</td>
           <td>2026-03-08</td>
         </tr>
@@ -882,17 +878,17 @@
           <td class="rank">19</td>
           <td><a href="https://github.com/jshachm/pi-rs" target="_blank">jshachm/pi-rs — 基于pi-mono，rust轻量化版本</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">564</td>
+          <td class="score">586</td>
           <td>🦀 Languages</td>
           <td>2026-03-04</td>
         </tr>
         <tr>
           <td class="rank">20</td>
-          <td><a href="https://github.com/ahmadawais/chartli" target="_blank">ahmadawais/chartli — CLI that turns plain numbers into terminal charts. ascii, spark, bars, columns, heatmap, unicode, braille, svg. </a></td>
+          <td><a href="https://github.com/karpathy/agenthub" target="_blank">karpathy/agenthub — GitHub is for humans. AgentHub is for agents. First use case is for autoresearch but it&#x27;s a lot more general than that. </a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">509</td>
+          <td class="score">561</td>
           <td>🤖 AI / ML</td>
-          <td>2026-03-05</td>
+          <td>2026-03-09</td>
         </tr></tbody>
   </table>
 
@@ -1024,7 +1020,7 @@
         </div></div>
 
 </main>
-<footer>Built with ❤️ at the hackathon · Eng Brand Machine · March 10, 2026 at 00:27</footer>
+<footer>Built with ❤️ at the hackathon · Eng Brand Machine · March 10, 2026 at 06:19</footer>
 
 <script>
 // ── Topic classifier (mirrors Python TOPIC_KEYWORDS) ──────────────────────
