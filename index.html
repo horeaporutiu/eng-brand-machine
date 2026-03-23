@@ -185,12 +185,12 @@
 
 <header>
   <h1>🚀 Eng Brand Machine</h1>
-  <p class="subtitle">Real-time engineering trends from 31 sources · 338 articles · March 23, 2026 at 00:34</p>
+  <p class="subtitle">Real-time engineering trends from 31 sources · 337 articles · March 23, 2026 at 06:31</p>
   <span class="miro-badge">✦ Miro Developer Brand Intelligence</span>
 </header>
 
 <div class="stats-bar">
-  <div class="stat"><div class="num">338</div><div class="label">Articles Analyzed</div></div>
+  <div class="stat"><div class="num">337</div><div class="label">Articles Analyzed</div></div>
   <div class="stat"><div class="num">31</div><div class="label">Live Sources</div></div>
   <div class="stat"><div class="num">12</div><div class="label">Topics Tracked</div></div>
   <div class="stat"><div class="num">🤖 AI / ML</div><div class="label">Hottest Topic</div></div>
@@ -201,7 +201,7 @@
 
   <div class="recs-section">
     <h2>✦ Top 5 Content Recommendations for Miro&apos;s Developer Brand</h2>
-    <p class="recs-intro">Generated from 338 articles across 31 sources — each recommendation is anchored to what engineers are actually reading today.</p>
+    <p class="recs-intro">Generated from 337 articles across 31 sources — each recommendation is anchored to what engineers are actually reading today.</p>
     <div class="recs-grid">
       
         <div class="rec-card">
@@ -396,48 +396,49 @@
         </div>
         <div class="rec-card">
           <div class="rec-num">#5</div>
-          <div class="rec-topic">🎨 Dev Experience</div>
-          <div class="rec-title">Developer Onboarding Boards That Don&#x27;t Suck</div>
-          <div class="rec-desc">The best onboarding experience a new engineer can get: a Miro board that maps the entire system, annotated with &#x27;start here&#x27; paths, gotchas, and links to code — built by the team, for the team.</div>
-          <div class="rec-demo"><strong>🎬 Demo:</strong> Day 1 onboarding board: team structure → codebase map → dev environment setup → first PR checklist → who to ask for what.</div>
+          <div class="rec-topic">🔐 Security</div>
+          <div class="rec-title">Collaborative Threat Modeling on Miro: A Developer&#x27;s Guide</div>
+          <div class="rec-desc">Security doesn&#x27;t have to happen in silos. This guide shows dev teams how to run STRIDE threat modeling sessions in Miro — mapping trust boundaries, attack surfaces, and mitigations together in real time.</div>
+          <div class="rec-demo"><strong>🎬 Demo:</strong> Live threat model for a typical SaaS app: user → API gateway → auth service → DB. Each node color-coded by risk level, with mitigation sticky notes.</div>
           <div class="rec-meta">
-            <span class="rec-format">📄 Template + Blog Post</span>
-            <span class="rec-cta">Get the Engineering Onboarding Template →</span>
+            <span class="rec-format">📄 Workshop Guide + Template</span>
+            <span class="rec-cta">Run your first threat model session →</span>
           </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>Get Started on Dev.to! A Beginner&#x27;s Guide to Engage with the Community!</li><li>Top 7 Featured DEV Posts of the Week</li></ul></div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>A Copy-Paste Bug That Broke PSpice AES-256 Encryption</li><li>The way CTRL-C in Postgres CLI cancels queries is incredibly hack-y</li></ul></div>
           <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
           <div class="post-draft">
             <div class="post-hero">
               <div class="post-hero-label">🎨 Hero Image Prompt (Midjourney / DALL-E)</div>
-              <div class="post-hero-prompt">Developer onboarding board showing team structure, codebase map, and first PR checklist as interconnected glowing nodes, warm amber paths guiding a new engineer through their first week on dark background, welcoming tech visualization</div>
+              <div class="post-hero-prompt">STRIDE threat model diagram on a dark background, nodes representing API gateway, auth service, and database with red threat arrows and green mitigation shields overlaid, security visualization, dark mode, red and green palette</div>
             </div>
-            <div class="post-tags"><span class="post-tag">#developer-experience</span><span class="post-tag">#onboarding</span><span class="post-tag">#dx</span><span class="post-tag">#documentation</span><span class="post-tag">#miro-templates</span><span class="post-tag">#engineering</span></div>
-            <div class="post-meta-bar">⏱ 5 min read &nbsp;·&nbsp; 🔍 Build developer onboarding boards in Miro that new engineers actually use — codebase maps, first-PR checklists, and who-to-ask guides all in one place.</div>
+            <div class="post-tags"><span class="post-tag">#security</span><span class="post-tag">#threat-modeling</span><span class="post-tag">#stride</span><span class="post-tag">#devsecops</span><span class="post-tag">#miro-templates</span><span class="post-tag">#appsec</span></div>
+            <div class="post-meta-bar">⏱ 8 min read &nbsp;·&nbsp; 🔍 Run collaborative STRIDE threat modeling sessions in Miro — map attack surfaces, trust boundaries, and mitigations with your whole engineering team.</div>
             <div class="post-body">
-<p>The first PR a new engineer merges should happen in their first week. In most organizations, it happens in their third. The gap isn't talent — it's friction. Friction from a dev environment setup that requires tribal knowledge to get working. Friction from a codebase with no map. Friction from not knowing which Slack channel to ask for help without feeling like you're bothering someone. Good onboarding eliminates friction. Most onboarding just documents it.</p>
+<p>Security reviews are too often a checkbox at the end of a project — a rushed 30-minute meeting where a security engineer skims an architecture doc they've never seen before and signs off under deadline pressure. The result: real threats get missed, mitigations are bolted on as afterthoughts, and the security team gets blamed when something breaks in production. The problem isn't lack of expertise. It's lack of shared context.</p>
 
-<h2>Why Most Onboarding Documentation Doesn't Work</h2>
-<p>Engineering onboarding docs share a universal failure mode: they're written by senior engineers who've forgotten what it's like to not know things, last updated during a sprint where someone had too much spare time, and structured around what the team thought was important rather than what a new person needs to know first.</p>
-<p>The other failure mode is format. Long markdown docs in a wiki require a level of contextual understanding to parse that the new engineer doesn't yet have. "Set up your local environment by following CONTRIBUTING.md" is useless when you don't know what any of the tools mentioned are or why you need them.</p>
+<h2>Why Siloed Security Reviews Fail</h2>
+<p>Traditional threat modeling — STRIDE, PASTA, attack trees — is powerful on paper and painful in practice. The tools are often heavyweight (dedicated software with steep learning curves), the output is hard to share (dense Word documents nobody reads), and the process is designed for security specialists, not the development teams who need to act on the findings.</p>
+<p>When security happens in a silo, developers see it as a blocker, not a collaborator. Threat models sit in a security team's shared drive, disconnected from the architecture diagrams developers actually use. Mitigations get forgotten. The same vulnerabilities get introduced sprint after sprint.</p>
 
-<h2>The Miro Framework: The Engineering Onboarding Board</h2>
+<h2>The Miro STRIDE Framework: 6 Steps to Collaborative Threat Modeling</h2>
 <ol>
-  <li><strong>The "Start Here" path.</strong> A visual, numbered trail through the board — like a guided tour — that explicitly sequences the information a new engineer needs. Start: team structure and who to ask for what. Then: codebase overview. Then: dev environment setup with screenshots. Then: first PR checklist.</li>
-  <li><strong>The codebase map.</strong> A diagram showing the major repositories, their purposes, and how they relate. Link each box to the actual GitHub repo. Color codes: green = stable/mature, yellow = active development, red = known issues / scheduled for refactor. New engineers instantly know which areas to explore and which to approach with caution.</li>
-  <li><strong>The "who to ask" guide.</strong> A Miro frame with team members, their areas of ownership, and their preferred contact method. Eliminates the anxiety of "am I asking the right person?" that slows down new engineers for their first month.</li>
-  <li><strong>First PR checklist.</strong> A visual checklist of everything needed before opening a PR: linting, tests passing, docs updated, PR template filled out, code review assigned. Interactive checkboxes appreciated.</li>
-  <li><strong>Gotchas and institutional knowledge.</strong> A frame just for "things we wish someone had told us" — the surprising behavior in the deployment pipeline, the Slack channel that sounds unrelated but is actually important, the testing shortcut that saves 20 minutes. Crowdsourced from the whole team.</li>
+  <li><strong>Start with your data flow diagram.</strong> Draw every component, data store, external actor, and trust boundary on a Miro board. This is the shared foundation everyone in the room works from.</li>
+  <li><strong>Apply STRIDE categories.</strong> For each component and data flow, add color-coded sticky notes: Spoofing (red), Tampering (orange), Repudiation (yellow), Information Disclosure (purple), Denial of Service (blue), Elevation of Privilege (pink).</li>
+  <li><strong>Run the async review phase.</strong> Share the board 48 hours before the session. Let engineers, product managers, and the security team add their own threat notes asynchronously. You walk into the meeting with richer input than any single expert could generate alone.</li>
+  <li><strong>Score and prioritize threats.</strong> In the live session, use Miro voting to score threats by likelihood × impact. The board updates in real time, giving you a prioritized risk register by the end of the meeting.</li>
+  <li><strong>Map mitigations to components.</strong> For each high-priority threat, add a green sticky with the mitigation strategy and the engineering owner. This becomes your security backlog.</li>
+  <li><strong>Link to code and tickets.</strong> Connect each mitigation sticky to the relevant Jira ticket or GitHub issue. The threat model stays connected to actual remediation work.</li>
 </ol>
 
 <div class="image-callout">
   <strong>🎨 Mid-Post Image Suggestion</strong><br>
-  <em>AI prompt:</em> "Developer onboarding journey map with numbered stages — team introduction, codebase tour, environment setup, first PR — connected by warm glowing trail on dark background, sticky notes with tips and gotchas attached to each stage, friendly tech illustration"
+  <em>AI prompt:</em> "STRIDE threat model showing SaaS components — API gateway, auth service, user database — with colored threat annotation sticky notes (red, orange, yellow, purple, blue, pink) and green mitigation shields, dark security dashboard aesthetic"
 </div>
 
-<h2>Team Adoption: The Board Built by the Team, for the Team</h2>
-<p>The secret to an onboarding board that stays useful: every new engineer, during their first two weeks, adds at least one thing to the "gotchas" frame that they wish they'd known earlier. This creates a flywheel — the board gets more useful with each hire, and new engineers contribute to the team from their very first week.</p>
-<p>Assign the most recent new engineer as the "onboarding board maintainer." They're best positioned to know what's missing or misleading, and the responsibility gives them ownership of a team artifact from day one.</p>
-<p>The best onboarding experience is one that new engineers wish they'd had at every previous company. <em>Get the Engineering Onboarding Template and give your next hire the start they deserve.</em></p>
+<h2>Team Adoption: Threat Modeling as a Sprint Ritual</h2>
+<p>The teams that make threat modeling stick don't treat it as a project milestone — they treat it as a recurring sprint ritual. Every time a new feature introduces a data flow, API, or third-party integration, a 45-minute threat modeling session is automatically scheduled. The Miro board template is already there; you just add a new frame for the new feature.</p>
+<p>After three months, something shifts in the team culture: developers start thinking about trust boundaries during design, not after implementation. Security stops being a gate and becomes a design input. And when an auditor asks "how do you manage security risk?", you open the Miro board instead of scrambling for documentation.</p>
+<p>Security built collaboratively is security that actually holds. <em>Run your first STRIDE threat modeling session in Miro — the template takes 5 minutes to set up.</em></p>
 </div>
             <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
           </div>
@@ -538,51 +539,51 @@
           
             <div class="article-item">
               <a href="https://github.com/HKUDS/ClawTeam" target="_blank">HKUDS/ClawTeam — ClawTeam: Agent Swarm Intelligence (One Command → Full Automation)</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 2815</span> 2026-03-17</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 2947</span> 2026-03-17</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/VoltAgent/awesome-codex-subagents" target="_blank">VoltAgent/awesome-codex-subagents — A collection of 130+ specialized Codex subagents covering a wide range of development use cases.</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 2063</span> 2026-03-17</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 2130</span> 2026-03-17</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/danveloper/flash-moe" target="_blank">danveloper/flash-moe — Running a big model on a small laptop</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1179</span> 2026-03-18</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1339</span> 2026-03-18</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/dontbesilent2025/dbskill" target="_blank">dontbesilent2025/dbskill — dontbesilent 的商业诊断 Skills for Claude Code</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 890</span> 2026-03-20</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1046</span> 2026-03-20</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/mattprusak/autoresearch-genealogy" target="_blank">mattprusak/autoresearch-genealogy — Structured prompts, vault templates, and archive guides for AI-assisted genealogy research. Built for Claude Code.</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 877</span> 2026-03-18</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 881</span> 2026-03-18</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🔧 Engineering <span class="count">58</span></div>
+          <div class="topic-header">🔧 Engineering <span class="count">60</span></div>
           
             <div class="article-item">
               <a href="https://github.com/MiniMax-AI/skills" target="_blank">MiniMax-AI/skills</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1739</span> 2026-03-17</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 2381</span> 2026-03-17</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/math-inc/OpenGauss" target="_blank">math-inc/OpenGauss</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1019</span> 2026-03-19</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1029</span> 2026-03-19</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/lxf746/any-auto-register" target="_blank">lxf746/any-auto-register</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 976</span> 2026-03-18</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1006</span> 2026-03-18</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/ghostty-org/ghostling" target="_blank">ghostty-org/ghostling — A minimum viable terminal emulator built on top of the libghostty C API. Ex minimo, infinita nascuntur. 👻🐣</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 701</span> 2026-03-20</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 721</span> 2026-03-20</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/BryanLunduke/DoesItAgeVerify" target="_blank">BryanLunduke/DoesItAgeVerify — The age verification status of Open Source Operating Systems</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 698</span> 2026-03-18</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 711</span> 2026-03-18</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🌐 Web / Frontend <span class="count">33</span></div>
+          <div class="topic-header">🌐 Web / Frontend <span class="count">32</span></div>
           
             <div class="article-item">
               <a href="https://dev.to/matheusmaldaner/anki-on-my-wrist-3gi6" target="_blank">Anki On My Wrist</a>
@@ -590,7 +591,7 @@
             </div>
             <div class="article-item">
               <a href="https://refrax.website/" target="_blank">Show HN: Refrax – my Arc Browser replacement I made from scratch</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 2</span> Mar 22</div>
+              <div class="meta">🟠 Show HN <span class="badge">⬆ 4</span> Mar 22</div>
             </div>
             <div class="article-item">
               <a href="https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-actions/" target="_blank">GitHub for Beginners: Getting started with GitHub Actions</a>
@@ -606,11 +607,11 @@
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🦀 Languages <span class="count">19</span></div>
+          <div class="topic-header">🦀 Languages <span class="count">18</span></div>
           
             <div class="article-item">
               <a href="https://www.projectnomad.us" target="_blank">Project Nomad – Knowledge That Never Goes Offline</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 349</span> Mar 22</div>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 407</span> Mar 22</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/pagel-s/termcraft" target="_blank">Show HN: Termcraft – Terminal-first 2D sandbox survival in Rust</a>
@@ -621,20 +622,20 @@
               <div class="meta">🟣 dev.to <span class="badge">⬆ 75</span> 2026-03-18</div>
             </div>
             <div class="article-item">
+              <a href="https://community.firstinspires.org/first-lego-education-partnership-update" target="_blank">First and Lego Education Partnership Update</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 39</span> Mar 19</div>
+            </div>
+            <div class="article-item">
               <a href="https://dev.to/aaron_rose_0787cc8b4775a0/the-secret-life-of-go-error-handling-part-2-5eo1" target="_blank">The Secret Life of Go: Error Handling (Part 2)</a>
               <div class="meta">🟣 dev.to <span class="badge">⬆ 29</span> 2026-03-20</div>
             </div>
-            <div class="article-item">
-              <a href="https://community.firstinspires.org/first-lego-education-partnership-update" target="_blank">First and Lego Education Partnership Update</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 14</span> Mar 19</div>
-            </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">☁️ Cloud / Infra <span class="count">13</span></div>
+          <div class="topic-header">☁️ Cloud / Infra <span class="count">12</span></div>
           
             <div class="article-item">
               <a href="https://github.com/ccbkkb/MicroWARP" target="_blank">ccbkkb/MicroWARP — 🚀 An 800KB RAM ultra-lightweight Cloudflare WARP SOCKS5 proxy in Docker. 仅需 800KB 内存的纯内核态 Cloudflare WARP 代理 - Docker</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 379</span> 2026-03-21</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 513</span> 2026-03-21</div>
             </div>
             <div class="article-item">
               <a href="https://dev.to/bigabou007dev/i-built-a-mobile-devops-dashboard-because-managing-docker-from-my-phone-shouldnt-require-ssh-4j6n" target="_blank">I built a mobile DevOps dashboard because managing Docker from my phone shouldn&#x27;t require SSH</a>
@@ -654,35 +655,15 @@
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🎨 Dev Experience <span class="count">7</span></div>
+          <div class="topic-header">🔐 Security <span class="count">6</span></div>
           
             <div class="article-item">
-              <a href="https://dev.to/francistrdev/get-started-on-devto-a-beginners-guide-to-engage-with-the-community-4ach" target="_blank">Get Started on Dev.to! A Beginner&#x27;s Guide to Engage with the Community!</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 100</span> 2026-03-20</div>
+              <a href="https://jtsylve.blog/post/2026/03/18/PSpice-Encryption-Weakness" target="_blank">A Copy-Paste Bug That Broke PSpice AES-256 Encryption</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 26</span> Mar 19</div>
             </div>
             <div class="article-item">
-              <a href="https://dev.to/devteam/top-7-featured-dev-posts-of-the-week-5pn" target="_blank">Top 7 Featured DEV Posts of the Week</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 89</span> 2026-03-17</div>
-            </div>
-            <div class="article-item">
-              <a href="https://dev.to/wynandpieters/weve-seen-this-movie-before-3719" target="_blank">We&#x27;ve Seen This Movie Before</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 52</span> 2026-03-19</div>
-            </div>
-            <div class="article-item">
-              <a href="https://giovannicarlino04.itch.io/icarus" target="_blank">Show HN: A C/C++ IDE written in C from scratch with zero dependencies</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 8</span> Mar 22</div>
-            </div>
-            <div class="article-item">
-              <a href="https://news.ycombinator.com/item?id=47480759" target="_blank">SparkVSR: Video Super-Resolution You Can Control with Keyframes</a>
-              <div class="meta">🟠 Ask HN <span class="badge">⬆ 2</span> Mar 22</div>
-            </div>
-        </div>
-        <div class="topic-card">
-          <div class="topic-header">🔐 Security <span class="count">5</span></div>
-          
-            <div class="article-item">
-              <a href="https://composio.dev/content/openclaw-security-and-vulnerabilities" target="_blank">OpenClaw is a security nightmare dressed up as a daydream</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 279</span> Mar 22</div>
+              <a href="https://neon.com/blog/ctrl-c-in-psql-gives-me-the-heebie-jeebies" target="_blank">The way CTRL-C in Postgres CLI cancels queries is incredibly hack-y</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 5</span> Mar 20</div>
             </div>
             <div class="article-item">
               <a href="https://news.ycombinator.com/item?id=47435646" target="_blank">Anchor: Hardware-based authentication using SanDisk USB devices</a>
@@ -696,9 +677,29 @@
               <a href="https://blog.rust-lang.org/2026/03/21/cve-2026-33056/" target="_blank">Security advisory for Cargo</a>
               <div class="meta">🔵 Lobste.rs/security  Sun, 22 Ma</div>
             </div>
+        </div>
+        <div class="topic-card">
+          <div class="topic-header">🎨 Dev Experience <span class="count">6</span></div>
+          
             <div class="article-item">
-              <a href="https://slack.engineering/building-slacks-anomaly-event-response/" target="_blank">Building Slack’s Anomaly Event Response</a>
-              <div class="meta">🔵 Slack Engineering  Thu, 04 Se</div>
+              <a href="https://dev.to/francistrdev/get-started-on-devto-a-beginners-guide-to-engage-with-the-community-4ach" target="_blank">Get Started on Dev.to! A Beginner&#x27;s Guide to Engage with the Community!</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 103</span> 2026-03-20</div>
+            </div>
+            <div class="article-item">
+              <a href="https://dev.to/devteam/top-7-featured-dev-posts-of-the-week-5pn" target="_blank">Top 7 Featured DEV Posts of the Week</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 89</span> 2026-03-17</div>
+            </div>
+            <div class="article-item">
+              <a href="https://dev.to/wynandpieters/weve-seen-this-movie-before-3719" target="_blank">We&#x27;ve Seen This Movie Before</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 52</span> 2026-03-19</div>
+            </div>
+            <div class="article-item">
+              <a href="https://news.ycombinator.com/item?id=47480759" target="_blank">SparkVSR: Video Super-Resolution You Can Control with Keyframes</a>
+              <div class="meta">🟠 Ask HN <span class="badge">⬆ 2</span> Mar 22</div>
+            </div>
+            <div class="article-item">
+              <a href="https://blog.bytebytego.com/p/ep206-git-workflow-essential-commands" target="_blank">EP206: Git Workflow: Essential Commands</a>
+              <div class="meta">🔵 ByteByteGo  Sat, 14 Ma</div>
             </div>
         </div>
         <div class="topic-card">
@@ -706,7 +707,7 @@
           
             <div class="article-item">
               <a href="https://larstofus.com/2026/03/22/the-gold-standard-of-optimization-a-look-under-the-hood-of-rollercoaster-tycoon/" target="_blank">The gold standard of optimization: A look under the hood of RollerCoaster Tycoon</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 151</span> Mar 22</div>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 318</span> Mar 22</div>
             </div>
             <div class="article-item">
               <a href="https://slack.engineering/build-better-software-to-build-software-better/" target="_blank">Build better software to build software better</a>
@@ -733,63 +734,63 @@
           <td class="rank">1</td>
           <td><a href="https://github.com/HKUDS/ClawTeam" target="_blank">HKUDS/ClawTeam — ClawTeam: Agent Swarm Intelligence (One Command → Full Automation)</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">2815</td>
+          <td class="score">2947</td>
           <td>🤖 AI / ML</td>
           <td>2026-03-17</td>
         </tr>
         <tr>
           <td class="rank">2</td>
-          <td><a href="https://github.com/VoltAgent/awesome-codex-subagents" target="_blank">VoltAgent/awesome-codex-subagents — A collection of 130+ specialized Codex subagents covering a wide range of development use cases.</a></td>
+          <td><a href="https://github.com/MiniMax-AI/skills" target="_blank">MiniMax-AI/skills</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">2063</td>
-          <td>🤖 AI / ML</td>
+          <td class="score">2381</td>
+          <td>🔧 Engineering</td>
           <td>2026-03-17</td>
         </tr>
         <tr>
           <td class="rank">3</td>
-          <td><a href="https://github.com/MiniMax-AI/skills" target="_blank">MiniMax-AI/skills</a></td>
+          <td><a href="https://github.com/VoltAgent/awesome-codex-subagents" target="_blank">VoltAgent/awesome-codex-subagents — A collection of 130+ specialized Codex subagents covering a wide range of development use cases.</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1739</td>
-          <td>🔧 Engineering</td>
+          <td class="score">2130</td>
+          <td>🤖 AI / ML</td>
           <td>2026-03-17</td>
         </tr>
         <tr>
           <td class="rank">4</td>
           <td><a href="https://github.com/danveloper/flash-moe" target="_blank">danveloper/flash-moe — Running a big model on a small laptop</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1179</td>
+          <td class="score">1339</td>
           <td>🤖 AI / ML</td>
           <td>2026-03-18</td>
         </tr>
         <tr>
           <td class="rank">5</td>
+          <td><a href="https://github.com/dontbesilent2025/dbskill" target="_blank">dontbesilent2025/dbskill — dontbesilent 的商业诊断 Skills for Claude Code</a></td>
+          <td><span class="source-badge">⚫ GitHub Trending</span></td>
+          <td class="score">1046</td>
+          <td>🤖 AI / ML</td>
+          <td>2026-03-20</td>
+        </tr>
+        <tr>
+          <td class="rank">6</td>
           <td><a href="https://github.com/math-inc/OpenGauss" target="_blank">math-inc/OpenGauss</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1019</td>
+          <td class="score">1029</td>
           <td>🔧 Engineering</td>
           <td>2026-03-19</td>
         </tr>
         <tr>
-          <td class="rank">6</td>
+          <td class="rank">7</td>
           <td><a href="https://github.com/lxf746/any-auto-register" target="_blank">lxf746/any-auto-register</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">976</td>
+          <td class="score">1006</td>
           <td>🔧 Engineering</td>
           <td>2026-03-18</td>
-        </tr>
-        <tr>
-          <td class="rank">7</td>
-          <td><a href="https://github.com/dontbesilent2025/dbskill" target="_blank">dontbesilent2025/dbskill — dontbesilent 的商业诊断 Skills for Claude Code</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">890</td>
-          <td>🤖 AI / ML</td>
-          <td>2026-03-20</td>
         </tr>
         <tr>
           <td class="rank">8</td>
           <td><a href="https://github.com/mattprusak/autoresearch-genealogy" target="_blank">mattprusak/autoresearch-genealogy — Structured prompts, vault templates, and archive guides for AI-assisted genealogy research. Built for Claude Code.</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">877</td>
+          <td class="score">881</td>
           <td>🤖 AI / ML</td>
           <td>2026-03-18</td>
         </tr>
@@ -797,7 +798,7 @@
           <td class="rank">9</td>
           <td><a href="https://github.com/truongduy2611/app-store-preflight-skills" target="_blank">truongduy2611/app-store-preflight-skills — AI agent skill to scan iOS/macOS projects for App Store rejection patterns before submission</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">829</td>
+          <td class="score">868</td>
           <td>🤖 AI / ML</td>
           <td>2026-03-19</td>
         </tr>
@@ -805,7 +806,7 @@
           <td class="rank">10</td>
           <td><a href="https://github.com/frank890417/taiwan-md" target="_blank">frank890417/taiwan-md — 🇹🇼 讓全世界完整認識台灣 | An open-source, AI-friendly knowledge base about Taiwan</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">724</td>
+          <td class="score">728</td>
           <td>🤖 AI / ML</td>
           <td>2026-03-17</td>
         </tr>
@@ -813,7 +814,7 @@
           <td class="rank">11</td>
           <td><a href="https://github.com/ghostty-org/ghostling" target="_blank">ghostty-org/ghostling — A minimum viable terminal emulator built on top of the libghostty C API. Ex minimo, infinita nascuntur. 👻🐣</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">701</td>
+          <td class="score">721</td>
           <td>🔧 Engineering</td>
           <td>2026-03-20</td>
         </tr>
@@ -821,73 +822,73 @@
           <td class="rank">12</td>
           <td><a href="https://github.com/BryanLunduke/DoesItAgeVerify" target="_blank">BryanLunduke/DoesItAgeVerify — The age verification status of Open Source Operating Systems</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">698</td>
+          <td class="score">711</td>
           <td>🔧 Engineering</td>
           <td>2026-03-18</td>
         </tr>
         <tr>
           <td class="rank">13</td>
-          <td><a href="https://github.com/leo-lilinxiao/codex-autoresearch" target="_blank">leo-lilinxiao/codex-autoresearch — Codex Autoresearch Skill — A self-directed iterative system for Codex that continuously cycles through: modify, verify, </a></td>
+          <td><a href="https://github.com/louislva/claude-peers-mcp" target="_blank">louislva/claude-peers-mcp — Allow all your Claude Codes to message each other ad-hoc!</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">617</td>
-          <td>🔧 Engineering</td>
-          <td>2026-03-18</td>
+          <td class="score">686</td>
+          <td>🤖 AI / ML</td>
+          <td>2026-03-21</td>
         </tr>
         <tr>
           <td class="rank">14</td>
           <td><a href="https://github.com/wangziqi06/724-office" target="_blank">wangziqi06/724-office — 7/24 Office — Self-evolving AI Agent system. 26 tools, 3500 lines pure Python, MCP/Skill plugins, three-layer memory, se</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">610</td>
+          <td class="score">631</td>
           <td>🤖 AI / ML</td>
           <td>2026-03-17</td>
         </tr>
         <tr>
           <td class="rank">15</td>
+          <td><a href="https://github.com/leo-lilinxiao/codex-autoresearch" target="_blank">leo-lilinxiao/codex-autoresearch — Codex Autoresearch Skill — A self-directed iterative system for Codex that continuously cycles through: modify, verify, </a></td>
+          <td><span class="source-badge">⚫ GitHub Trending</span></td>
+          <td class="score">629</td>
+          <td>🔧 Engineering</td>
+          <td>2026-03-18</td>
+        </tr>
+        <tr>
+          <td class="rank">16</td>
           <td><a href="https://github.com/lightningpixel/modly" target="_blank">lightningpixel/modly — Desktop app to generate 3D models from images using local AI — runs entirely on your GPU</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">575</td>
+          <td class="score">591</td>
           <td>🤖 AI / ML</td>
           <td>2026-03-17</td>
         </tr>
         <tr>
-          <td class="rank">16</td>
-          <td><a href="https://github.com/louislva/claude-peers-mcp" target="_blank">louislva/claude-peers-mcp — Allow all your Claude Codes to message each other ad-hoc!</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">572</td>
-          <td>🤖 AI / ML</td>
-          <td>2026-03-21</td>
-        </tr>
-        <tr>
           <td class="rank">17</td>
-          <td><a href="https://github.com/KittenML/KittenTTS" target="_blank">Show HN: Three new Kitten TTS models – smallest less than 25MB</a></td>
-          <td><span class="source-badge">🟠 Show HN</span></td>
-          <td class="score">553</td>
-          <td>🤖 AI / ML</td>
-          <td>Mar 19</td>
+          <td><a href="https://github.com/dou-jiang/codex-console" target="_blank">dou-jiang/codex-console — codex-console 是一个集成化控制台项目，支持任务管理、批量处理、数据导出、自动上传、日志查看与打包支持。</a></td>
+          <td><span class="source-badge">⚫ GitHub Trending</span></td>
+          <td class="score">588</td>
+          <td>🔧 Engineering</td>
+          <td>2026-03-21</td>
         </tr>
         <tr>
           <td class="rank">18</td>
-          <td><a href="https://github.com/dou-jiang/codex-console" target="_blank">dou-jiang/codex-console — codex-console 是一个集成化控制台项目，支持任务管理、批量处理、数据导出、自动上传、日志查看与打包支持。</a></td>
+          <td><a href="https://github.com/wong2/weixin-agent-sdk" target="_blank">wong2/weixin-agent-sdk</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">532</td>
-          <td>🔧 Engineering</td>
-          <td>2026-03-21</td>
+          <td class="score">571</td>
+          <td>🤖 AI / ML</td>
+          <td>2026-03-22</td>
         </tr>
         <tr>
           <td class="rank">19</td>
           <td><a href="https://github.com/win4r/ClawTeam-OpenClaw" target="_blank">win4r/ClawTeam-OpenClaw — ClawTeam fork fully adapted for OpenClaw — multi-agent swarm coordination with OpenClaw as the default agent</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">516</td>
+          <td class="score">545</td>
           <td>🤖 AI / ML</td>
           <td>2026-03-18</td>
         </tr>
         <tr>
           <td class="rank">20</td>
-          <td><a href="https://dev.to/the_nortern_dev/i-think-a-lot-of-developers-are-quietly-grieving-the-old-internet-3d8" target="_blank">I Think a Lot of Developers Are Quietly Grieving the Old Internet</a></td>
-          <td><span class="source-badge">🟣 dev.to</span></td>
-          <td class="score">506</td>
-          <td>🔧 Engineering</td>
-          <td>2026-03-16</td>
+          <td><a href="https://github.com/ccbkkb/MicroWARP" target="_blank">ccbkkb/MicroWARP — 🚀 An 800KB RAM ultra-lightweight Cloudflare WARP SOCKS5 proxy in Docker. 仅需 800KB 内存的纯内核态 Cloudflare WARP 代理 - Docker</a></td>
+          <td><span class="source-badge">⚫ GitHub Trending</span></td>
+          <td class="score">513</td>
+          <td>☁️ Cloud / Infra</td>
+          <td>2026-03-21</td>
         </tr></tbody>
   </table>
 
@@ -899,7 +900,7 @@
         </div>
         <div class="source-row">
           <div class="source-label">Hacker News</div>
-          <div class="bar-wrap"><div class="bar" style="width:51%">30</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:50%">29</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">GitHub Trending</div>
@@ -1019,7 +1020,7 @@
         </div></div>
 
 </main>
-<footer>Built with ❤️ at the hackathon · Eng Brand Machine · March 23, 2026 at 00:34</footer>
+<footer>Built with ❤️ at the hackathon · Eng Brand Machine · March 23, 2026 at 06:31</footer>
 
 <script>
 // ── Topic classifier (mirrors Python TOPIC_KEYWORDS) ──────────────────────
