@@ -185,7 +185,7 @@
 
 <header>
   <h1>🚀 Eng Brand Machine</h1>
-  <p class="subtitle">Real-time engineering trends from 31 sources · 337 articles · May 04, 2026 at 12:39</p>
+  <p class="subtitle">Real-time engineering trends from 31 sources · 337 articles · May 04, 2026 at 18:37</p>
   <span class="miro-badge">✦ Miro Developer Brand Intelligence</span>
 </header>
 
@@ -194,7 +194,7 @@
   <div class="stat"><div class="num">31</div><div class="label">Live Sources</div></div>
   <div class="stat"><div class="num">12</div><div class="label">Topics Tracked</div></div>
   <div class="stat"><div class="num">🤖 AI / ML</div><div class="label">Hottest Topic</div></div>
-  <div class="stat"><div class="num">185</div><div class="label">Articles on #1 Topic</div></div>
+  <div class="stat"><div class="num">182</div><div class="label">Articles on #1 Topic</div></div>
 </div>
 
 <main>
@@ -262,7 +262,7 @@
             <span class="rec-format">📄 Blog Post + Template</span>
             <span class="rec-cta">See the Frontend Architecture Template →</span>
           </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>WeritoP/LInjector-FORKED- — 🔨 LInjector. An open-source Luau Script IDE allowing easy integration with diverse purposes. Working version at the webs</li><li>Show HN: Apple&#x27;s SHARP running in the browser via ONNX runtime web</li></ul></div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>WeritoP/LInjector-FORKED- — 🔨 LInjector. An open-source Luau Script IDE allowing easy integration with diverse purposes. Working version at the webs</li><li>nikzad-avasam/downloader — for 🇮🇷 🪄 download files + 🌐 browse websites</li></ul></div>
           <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
           <div class="post-draft">
             <div class="post-hero">
@@ -309,7 +309,7 @@
             <span class="rec-format">📄 Tutorial + Template</span>
             <span class="rec-cta">Grab the K8s Miro Template →</span>
           </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>t8y2/dbx — 15MB，lightweight, cross-platform database client. Supports MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, ClickHouse</li><li>Show HN: Kula – a family health platform that makes sense of your data</li></ul></div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>t8y2/dbx — 15MB，lightweight, cross-platform database client. Supports MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, ClickHouse</li><li>PyInfra 3.8.0 Is Out</li></ul></div>
           <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
           <div class="post-draft">
             <div class="post-hero">
@@ -348,6 +348,54 @@
         </div>
         <div class="rec-card">
           <div class="rec-num">#4</div>
+          <div class="rec-topic">🦀 Languages</div>
+          <div class="rec-title">Rust Ownership &amp; Borrowing, Visualized: Teaching Hard Concepts with Miro</div>
+          <div class="rec-desc">How developer advocates and educators use Miro to turn notoriously complex language concepts (ownership, lifetimes, async) into interactive visual explainers that engineers actually bookmark.</div>
+          <div class="rec-demo"><strong>🎬 Demo:</strong> An animated Miro board stepping through a Rust ownership example — stack frames, heap allocations, and borrow checker rules all drawn out live.</div>
+          <div class="rec-meta">
+            <span class="rec-format">📄 Educational Post + Interactive Board</span>
+            <span class="rec-cta">Open the interactive explainer →</span>
+          </div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>Show HN: Pollen – distributed WASM runtime, no control plane, single binary</li><li>Trillions in Retirement Dollars Flow into Opaque Trusts</li></ul></div>
+          <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
+          <div class="post-draft">
+            <div class="post-hero">
+              <div class="post-hero-label">🎨 Hero Image Prompt (Midjourney / DALL-E)</div>
+              <div class="post-hero-prompt">Rust programming language ownership diagram with stack and heap memory visualized as glowing labeled boxes, ownership arrows moving between scopes, mutable and immutable borrow markers, dark background with rust-orange and steel-blue color scheme</div>
+            </div>
+            <div class="post-tags"><span class="post-tag">#rust</span><span class="post-tag">#programming</span><span class="post-tag">#ownership</span><span class="post-tag">#visualization</span><span class="post-tag">#miro-templates</span><span class="post-tag">#languages</span></div>
+            <div class="post-meta-bar">⏱ 7 min read &nbsp;·&nbsp; 🔍 Teach Rust&#x27;s ownership and borrowing model with interactive Miro visualizations — turn the borrow checker into an approachable, visual concept for your team.</div>
+            <div class="post-body">
+<p>Rust's ownership system is one of the most powerful ideas in systems programming — and one of the most difficult to teach. The borrow checker enforces rules that are logically consistent and learnable, but deeply counterintuitive to engineers who've spent years working in garbage-collected languages. The result: learning Rust takes longer than it should, not because the concepts are inherently hard, but because most learning resources are primarily textual in a domain where visuals make everything click faster.</p>
+
+<h2>Why Text-Based Rust Education Falls Short</h2>
+<p>The Rust book is excellent. The rustlings exercises are well-designed. And yet, engineers routinely report spending days fighting the borrow checker on concepts that, once explained visually, become immediately intuitive. "A value can have only one owner" is an abstract statement. A diagram showing a value moving from one stack frame to another — and disappearing from the first — is a mental model that sticks.</p>
+<p>The problem extends beyond individual learning. Teams adopting Rust need shared mental models: what does it mean to "move" a value in a code review? How do you reason about lifetimes in an API design? When is an <em>Arc&lt;Mutex&lt;T&gt;&gt;</em> the right choice? These conversations are faster and more productive when the team shares a visual vocabulary.</p>
+
+<h2>The Miro Framework: Visualizing Rust Concepts</h2>
+<ol>
+  <li><strong>Ownership diagrams.</strong> For each code example, draw the stack and heap side by side. Show values as labeled boxes. Draw arrows for ownership. When a move happens, redraw the arrow to its new owner and visually erase it from the previous one. The borrow checker's rules become self-evident.</li>
+  <li><strong>Borrow visualizations.</strong> Show immutable borrows as read-only arrows (multiple allowed simultaneously). Show mutable borrows as exclusive arrows (only one at a time, blocks immutable borrows). This visual makes the borrow checker's invariants immediately legible.</li>
+  <li><strong>Lifetime scope diagrams.</strong> Draw scopes as nested boxes. Show a borrow's lifetime as a colored region that must not outlive the value it borrows. Lifetime annotation syntax suddenly makes sense when you can see what the <em>'a</em> represents spatially.</li>
+  <li><strong>Async ownership flow.</strong> For async Rust, draw a timeline showing when ownership moves across await points. Show which values must be Send and why. This is the visualization that unlocks async Rust for engineers who've been stuck.</li>
+  <li><strong>Pattern decision tree.</strong> A flowchart for "which smart pointer should I use?" — from simple owned values through <em>Box</em>, <em>Rc</em>, <em>Arc</em>, <em>Mutex</em> — with decision criteria at each fork. Teams use this in code reviews to align on ownership patterns.</li>
+</ol>
+
+<div class="image-callout">
+  <strong>🎨 Mid-Post Image Suggestion</strong><br>
+  <em>AI prompt:</em> "Rust borrow checker visualization showing stack and heap memory as glowing labeled boxes, ownership transfer arrows between scopes, mutable borrow shown as exclusive red arrow, immutable borrows as shared blue arrows, dark background, rust-orange and steel-blue palette"
+</div>
+
+<h2>Team Adoption: Visual Rust Reviews</h2>
+<p>Engineering teams adopting Rust report that the biggest accelerator isn't better documentation — it's better communication patterns. Starting a "visual Rust review" practice — where complex ownership or lifetime questions get drawn out on the Miro board before being answered in text — dramatically reduces the time senior Rust engineers spend unblocking teammates.</p>
+<p>The board also serves as a growing library. Every time a tricky ownership pattern gets solved visually, the diagram stays on the board as a reference. After six months, you have a custom visual Rust guide tailored to the exact patterns your codebase uses.</p>
+<p>The borrow checker isn't your enemy — it's a collaborator that rewards clear thinking. <em>Open the interactive Rust Ownership Explainer and see the concepts click in a way they never did in a text editor.</em></p>
+</div>
+            <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
+          </div>
+        </div>
+        <div class="rec-card">
+          <div class="rec-num">#5</div>
           <div class="rec-topic">🔐 Security</div>
           <div class="rec-title">Collaborative Threat Modeling on Miro: A Developer&#x27;s Guide</div>
           <div class="rec-desc">Security doesn&#x27;t have to happen in silos. This guide shows dev teams how to run STRIDE threat modeling sessions in Miro — mapping trust boundaries, attack surfaces, and mitigations together in real time.</div>
@@ -356,7 +404,7 @@
             <span class="rec-format">📄 Workshop Guide + Template</span>
             <span class="rec-cta">Run your first threat model session →</span>
           </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>rootsecdev/cve_2026_31431 — Exploit POC for CVE_2026_31431</li><li>watchtowrlabs/watchTowr-vs-cPanel-WHM-AuthBypass-to-RCE.py</li></ul></div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>rootsecdev/cve_2026_31431 — Exploit POC for CVE_2026_31431</li><li>How to Win a Hackathon</li></ul></div>
           <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
           <div class="post-draft">
             <div class="post-hero">
@@ -391,54 +439,6 @@
 <p>The teams that make threat modeling stick don't treat it as a project milestone — they treat it as a recurring sprint ritual. Every time a new feature introduces a data flow, API, or third-party integration, a 45-minute threat modeling session is automatically scheduled. The Miro board template is already there; you just add a new frame for the new feature.</p>
 <p>After three months, something shifts in the team culture: developers start thinking about trust boundaries during design, not after implementation. Security stops being a gate and becomes a design input. And when an auditor asks "how do you manage security risk?", you open the Miro board instead of scrambling for documentation.</p>
 <p>Security built collaboratively is security that actually holds. <em>Run your first STRIDE threat modeling session in Miro — the template takes 5 minutes to set up.</em></p>
-</div>
-            <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
-          </div>
-        </div>
-        <div class="rec-card">
-          <div class="rec-num">#5</div>
-          <div class="rec-topic">🦀 Languages</div>
-          <div class="rec-title">Rust Ownership &amp; Borrowing, Visualized: Teaching Hard Concepts with Miro</div>
-          <div class="rec-desc">How developer advocates and educators use Miro to turn notoriously complex language concepts (ownership, lifetimes, async) into interactive visual explainers that engineers actually bookmark.</div>
-          <div class="rec-demo"><strong>🎬 Demo:</strong> An animated Miro board stepping through a Rust ownership example — stack frames, heap allocations, and borrow checker rules all drawn out live.</div>
-          <div class="rec-meta">
-            <span class="rec-format">📄 Educational Post + Interactive Board</span>
-            <span class="rec-cta">Open the interactive explainer →</span>
-          </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>Show HN: Pollen – distributed WASM runtime, no control plane, single binary</li><li>Ask HN: Those building Swift apps without touching Xcode, what is your workflow?</li></ul></div>
-          <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
-          <div class="post-draft">
-            <div class="post-hero">
-              <div class="post-hero-label">🎨 Hero Image Prompt (Midjourney / DALL-E)</div>
-              <div class="post-hero-prompt">Rust programming language ownership diagram with stack and heap memory visualized as glowing labeled boxes, ownership arrows moving between scopes, mutable and immutable borrow markers, dark background with rust-orange and steel-blue color scheme</div>
-            </div>
-            <div class="post-tags"><span class="post-tag">#rust</span><span class="post-tag">#programming</span><span class="post-tag">#ownership</span><span class="post-tag">#visualization</span><span class="post-tag">#miro-templates</span><span class="post-tag">#languages</span></div>
-            <div class="post-meta-bar">⏱ 7 min read &nbsp;·&nbsp; 🔍 Teach Rust&#x27;s ownership and borrowing model with interactive Miro visualizations — turn the borrow checker into an approachable, visual concept for your team.</div>
-            <div class="post-body">
-<p>Rust's ownership system is one of the most powerful ideas in systems programming — and one of the most difficult to teach. The borrow checker enforces rules that are logically consistent and learnable, but deeply counterintuitive to engineers who've spent years working in garbage-collected languages. The result: learning Rust takes longer than it should, not because the concepts are inherently hard, but because most learning resources are primarily textual in a domain where visuals make everything click faster.</p>
-
-<h2>Why Text-Based Rust Education Falls Short</h2>
-<p>The Rust book is excellent. The rustlings exercises are well-designed. And yet, engineers routinely report spending days fighting the borrow checker on concepts that, once explained visually, become immediately intuitive. "A value can have only one owner" is an abstract statement. A diagram showing a value moving from one stack frame to another — and disappearing from the first — is a mental model that sticks.</p>
-<p>The problem extends beyond individual learning. Teams adopting Rust need shared mental models: what does it mean to "move" a value in a code review? How do you reason about lifetimes in an API design? When is an <em>Arc&lt;Mutex&lt;T&gt;&gt;</em> the right choice? These conversations are faster and more productive when the team shares a visual vocabulary.</p>
-
-<h2>The Miro Framework: Visualizing Rust Concepts</h2>
-<ol>
-  <li><strong>Ownership diagrams.</strong> For each code example, draw the stack and heap side by side. Show values as labeled boxes. Draw arrows for ownership. When a move happens, redraw the arrow to its new owner and visually erase it from the previous one. The borrow checker's rules become self-evident.</li>
-  <li><strong>Borrow visualizations.</strong> Show immutable borrows as read-only arrows (multiple allowed simultaneously). Show mutable borrows as exclusive arrows (only one at a time, blocks immutable borrows). This visual makes the borrow checker's invariants immediately legible.</li>
-  <li><strong>Lifetime scope diagrams.</strong> Draw scopes as nested boxes. Show a borrow's lifetime as a colored region that must not outlive the value it borrows. Lifetime annotation syntax suddenly makes sense when you can see what the <em>'a</em> represents spatially.</li>
-  <li><strong>Async ownership flow.</strong> For async Rust, draw a timeline showing when ownership moves across await points. Show which values must be Send and why. This is the visualization that unlocks async Rust for engineers who've been stuck.</li>
-  <li><strong>Pattern decision tree.</strong> A flowchart for "which smart pointer should I use?" — from simple owned values through <em>Box</em>, <em>Rc</em>, <em>Arc</em>, <em>Mutex</em> — with decision criteria at each fork. Teams use this in code reviews to align on ownership patterns.</li>
-</ol>
-
-<div class="image-callout">
-  <strong>🎨 Mid-Post Image Suggestion</strong><br>
-  <em>AI prompt:</em> "Rust borrow checker visualization showing stack and heap memory as glowing labeled boxes, ownership transfer arrows between scopes, mutable borrow shown as exclusive red arrow, immutable borrows as shared blue arrows, dark background, rust-orange and steel-blue palette"
-</div>
-
-<h2>Team Adoption: Visual Rust Reviews</h2>
-<p>Engineering teams adopting Rust report that the biggest accelerator isn't better documentation — it's better communication patterns. Starting a "visual Rust review" practice — where complex ownership or lifetime questions get drawn out on the Miro board before being answered in text — dramatically reduces the time senior Rust engineers spend unblocking teammates.</p>
-<p>The board also serves as a growing library. Every time a tricky ownership pattern gets solved visually, the diagram stays on the board as a reference. After six months, you have a custom visual Rust guide tailored to the exact patterns your codebase uses.</p>
-<p>The borrow checker isn't your enemy — it's a collaborator that rewards clear thinking. <em>Open the interactive Rust Ownership Explainer and see the concepts click in a way they never did in a text editor.</em></p>
 </div>
             <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
           </div>
@@ -535,51 +535,51 @@
   <div class="topics-grid">
     
         <div class="topic-card">
-          <div class="topic-header">🤖 AI / ML <span class="count">185</span></div>
+          <div class="topic-header">🤖 AI / ML <span class="count">182</span></div>
           
             <div class="article-item">
               <a href="https://github.com/nexu-io/open-design" target="_blank">nexu-io/open-design — 🎨 Local-first, open-source alternative to Anthropic&#x27;s Claude Design. ⚡ 19 Skills · ✨ 71 brand-grade Design Systems 🖼 Gen</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 21931</span> 2026-04-28</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 23199</span> 2026-04-28</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/theori-io/copy-fail-CVE-2026-31431" target="_blank">theori-io/copy-fail-CVE-2026-31431</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 3091</span> 2026-04-29</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 3120</span> 2026-04-29</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/willchen96/mike" target="_blank">willchen96/mike — OSS AI Legal Platform</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1837</span> 2026-04-29</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1957</span> 2026-04-29</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/darrylmorley/whatcable" target="_blank">darrylmorley/whatcable — macOS menu bar app that tells you, in plain English, what each USB-C cable plugged into your Mac can actually do</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1553</span> 2026-05-01</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1628</span> 2026-05-01</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/mattpocock/dictionary-of-ai-coding" target="_blank">mattpocock/dictionary-of-ai-coding — AI coding jargon, explained in plain English.</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 896</span> 2026-05-01</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 945</span> 2026-05-01</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🔧 Engineering <span class="count">66</span></div>
+          <div class="topic-header">🔧 Engineering <span class="count">68</span></div>
           
             <div class="article-item">
               <a href="https://github.com/b-nnett/codex-plusplus" target="_blank">b-nnett/codex-plusplus — Codex++ tweak system for the Codex desktop app</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 869</span> 2026-04-28</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 887</span> 2026-04-28</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/wrongly-cuddly-obsession/NTSB_FOIA_MU5735" target="_blank">wrongly-cuddly-obsession/NTSB_FOIA_MU5735</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 851</span> 2026-04-30</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 876</span> 2026-04-30</div>
             </div>
             <div class="article-item">
-              <a href="https://www.drive.com.au/news/mercedes-benz-commits-to-bringing-back-phycial-buttons/" target="_blank">Mercedes-Benz commits to bringing back physical buttons</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 744</span> May 03</div>
+              <a href="https://thienantran.com/talking-to-35-strangers-at-the-gym/" target="_blank">Talking to 35 Strangers at the Gym</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 738</span> May 04</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/Fokkyp/SoftwareCopyright-Skill" target="_blank">Fokkyp/SoftwareCopyright-Skill — 中国软件著作权申请材料 生成器 Skills，本 Skills 通过阅读本地项目，自动生成全套 .docx 软著申请材料，全开源，无须再付费购买任何软著申请服务</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 686</span> 2026-04-29</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 692</span> 2026-04-29</div>
             </div>
             <div class="article-item">
-              <a href="https://news.ycombinator.com/item?id=47906253" target="_blank">Tell HN: An app is silently installing itself on my iPhone every day</a>
-              <div class="meta">🟠 Ask HN <span class="badge">⬆ 591</span> Apr 26</div>
+              <a href="https://github.com/EvanBacon/serve-sim" target="_blank">EvanBacon/serve-sim — The `npx serve` of Apple Simulators.</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 601</span> 2026-04-29</div>
             </div>
         </div>
         <div class="topic-card">
@@ -590,32 +590,36 @@
               <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 459</span> 2026-05-04</div>
             </div>
             <div class="article-item">
+              <a href="https://github.com/nikzad-avasam/downloader" target="_blank">nikzad-avasam/downloader — for 🇮🇷 🪄 download files + 🌐 browse websites</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 339</span> 2026-04-28</div>
+            </div>
+            <div class="article-item">
               <a href="https://github.com/bring-shrubbery/ml-sharp-web" target="_blank">Show HN: Apple&#x27;s SHARP running in the browser via ONNX runtime web</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 172</span> May 03</div>
+              <div class="meta">🟠 Show HN <span class="badge">⬆ 179</span> May 03</div>
             </div>
             <div class="article-item">
               <a href="https://iesna.eu/?wasm=skyglow_demo" target="_blank">Show HN: Browser-based light pollution simulator using real photometric data</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 41</span> May 02</div>
+              <div class="meta">🟠 Show HN <span class="badge">⬆ 42</span> May 02</div>
             </div>
             <div class="article-item">
               <a href="https://dev.to/juandastic/i-built-a-mobile-app-in-3-days-the-hard-part-was-keeping-it-connected-2fda" target="_blank">I Built a Mobile App in 3 Days. The Hard Part Was Keeping It Connected.</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 10</span> 2026-05-04</div>
-            </div>
-            <div class="article-item">
-              <a href="https://github.com/elliott-diy/DontTrustTitles" target="_blank">Show HN: Triggering anti-cheats with just a browser tab title</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 8</span> May 03</div>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 36</span> 2026-05-04</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">☁️ Cloud / Infra <span class="count">11</span></div>
+          <div class="topic-header">☁️ Cloud / Infra <span class="count">13</span></div>
           
             <div class="article-item">
               <a href="https://github.com/t8y2/dbx" target="_blank">t8y2/dbx — 15MB，lightweight, cross-platform database client. Supports MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, ClickHouse</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 793</span> 2026-04-29</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 824</span> 2026-04-29</div>
+            </div>
+            <div class="article-item">
+              <a href="https://github.com/pyinfra-dev/pyinfra/releases/tag/v3.8.0" target="_blank">PyInfra 3.8.0 Is Out</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 180</span> May 04</div>
             </div>
             <div class="article-item">
               <a href="https://news.ycombinator.com/item?id=48004708" target="_blank">Show HN: Kula – a family health platform that makes sense of your data</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 4</span> May 04</div>
+              <div class="meta">🟠 Show HN <span class="badge">⬆ 6</span> May 04</div>
             </div>
             <div class="article-item">
               <a href="https://blog.cloudflare.com/dynamic-workflows/" target="_blank">Introducing Dynamic Workflows: durable execution that follows the tenant</a>
@@ -625,93 +629,37 @@
               <a href="https://blog.cloudflare.com/q1-2026-internet-disruption-summary/" target="_blank">Shutdowns, power outages, and conflict: a review of Q1 2026 Internet disruptions</a>
               <div class="meta">🔵 Cloudflare Blog  Tue, 28 Ap</div>
             </div>
-            <div class="article-item">
-              <a href="https://engineering.fb.com/2026/04/09/developer-tools/escaping-the-fork-how-meta-modernized-webrtc-across-50-use-cases/" target="_blank">Escaping the Fork: How Meta Modernized WebRTC Across 50+ Use Cases</a>
-              <div class="meta">🔵 Engineering at Meta  Thu, 09 Ap</div>
-            </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🔐 Security <span class="count">9</span></div>
-          
-            <div class="article-item">
-              <a href="https://github.com/rootsecdev/cve_2026_31431" target="_blank">rootsecdev/cve_2026_31431 — Exploit POC for CVE_2026_31431</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 467</span> 2026-04-29</div>
-            </div>
-            <div class="article-item">
-              <a href="https://github.com/watchtowrlabs/watchTowr-vs-cPanel-WHM-AuthBypass-to-RCE.py" target="_blank">watchtowrlabs/watchTowr-vs-cPanel-WHM-AuthBypass-to-RCE.py</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 334</span> 2026-04-29</div>
-            </div>
-            <div class="article-item">
-              <a href="https://citizenlab.ca/research/uncovering-global-telecom-exploitation-by-covert-surveillance-actors/" target="_blank">Bad Connection: Global telecom exploitation by covert surveillance actors</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 164</span> May 03</div>
-            </div>
-            <div class="article-item">
-              <a href="https://dev.to/cloudinary/how-to-win-a-hackathon-1377" target="_blank">How to Win a Hackathon</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 9</span> 2026-05-03</div>
-            </div>
-            <div class="article-item">
-              <a href="https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability/" target="_blank">Securing the git push pipeline: Responding to a critical remote code execution vulnerability</a>
-              <div class="meta">🔵 GitHub Blog  Tue, 28 Ap</div>
-            </div>
-        </div>
-        <div class="topic-card">
-          <div class="topic-header">🦀 Languages <span class="count">9</span></div>
+          <div class="topic-header">🦀 Languages <span class="count">10</span></div>
           
             <div class="article-item">
               <a href="https://github.com/sambigeara/pollen" target="_blank">Show HN: Pollen – distributed WASM runtime, no control plane, single binary</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 129</span> Apr 30</div>
+              <div class="meta">🟠 Show HN <span class="badge">⬆ 130</span> Apr 30</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.bloomberg.com/news/features/2026-05-03/trillions-in-us-retirement-dollars-flow-into-opaque-trusts-that-rival-etfs" target="_blank">Trillions in Retirement Dollars Flow into Opaque Trusts</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 43</span> May 04</div>
             </div>
             <div class="article-item">
               <a href="https://news.ycombinator.com/item?id=47998643" target="_blank">Ask HN: Those building Swift apps without touching Xcode, what is your workflow?</a>
-              <div class="meta">🟠 Ask HN <span class="badge">⬆ 14</span> May 03</div>
+              <div class="meta">🟠 Ask HN <span class="badge">⬆ 15</span> May 03</div>
+            </div>
+            <div class="article-item">
+              <a href="https://news.ycombinator.com/item?id=48009180" target="_blank">Ask HN: Is a hands-off, family-friendly, de-Googled &quot;home lab&quot; feasible?</a>
+              <div class="meta">🟠 Ask HN <span class="badge">⬆ 6</span> May 04</div>
             </div>
             <div class="article-item">
               <a href="https://dev.to/gabrielanhaia/5-typescript-defaults-that-quietly-changed-in-2026-and-why-your-build-is-now-broken-381f" target="_blank">5 TypeScript Defaults That Quietly Changed in 2026 (And Why Your Build Is Now Broken)</a>
               <div class="meta">🟣 dev.to <span class="badge">⬆ 4</span> 2026-05-02</div>
             </div>
-            <div class="article-item">
-              <a href="https://github.com/ItsArnavSh/Tyche" target="_blank">Show HN: Tyche: An experimental distributed trading pipeline in Go Java</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 3</span> May 03</div>
-            </div>
-            <div class="article-item">
-              <a href="https://dev.to/gabrielanhaia/lombok-builder-vs-typescript-why-you-dont-need-a-builder-pattern-1koo" target="_blank">Lombok @Builder vs TypeScript: Why You Don&#x27;t Need a Builder Pattern</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 2</span> 2026-05-03</div>
-            </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🎨 Dev Experience <span class="count">8</span></div>
-          
-            <div class="article-item">
-              <a href="https://github.com/GENEXIS-AI/chromex" target="_blank">GENEXIS-AI/chromex — A Codex-powered Chrome side-panel assistant for page context, tabs, voice, and image workflows.</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 792</span> 2026-04-28</div>
-            </div>
-            <div class="article-item">
-              <a href="https://dev.to/sylwia-lask/is-software-development-just-a-side-quest-a-jira-story-4ng3" target="_blank">Is Software Development Just a Side Quest? A Jira Story</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 287</span> 2026-04-30</div>
-            </div>
-            <div class="article-item">
-              <a href="https://phys.org/news/2026-04-usindian-space-mission-extreme-subsidence.html" target="_blank">US–Indian space mission maps extreme subsidence in Mexico City</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 167</span> May 01</div>
-            </div>
-            <div class="article-item">
-              <a href="https://www.youtube.com/watch?v=8jNQDcpHc68" target="_blank">I recreated the Apple Lisa computer inside an FPGA [video]</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 108</span> May 03</div>
-            </div>
-            <div class="article-item">
-              <a href="https://dev.to/_boweii/what-it-actually-feels-like-to-build-something-youre-proud-of-35mi" target="_blank">What It Actually Feels Like to Build Something You&#x27;re Proud Of</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 95</span> 2026-04-27</div>
-            </div>
-        </div>
-        <div class="topic-card">
-          <div class="topic-header">⚡ Performance <span class="count">8</span></div>
+          <div class="topic-header">⚡ Performance <span class="count">7</span></div>
           
             <div class="article-item">
               <a href="https://github.com/vibeforge1111/keep-codex-fast" target="_blank">vibeforge1111/keep-codex-fast — A backup-first Codex skill for keeping local Codex state fast, clean, and recoverable.</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 604</span> 2026-05-02</div>
-            </div>
-            <div class="article-item">
-              <a href="https://blog.stuffedcow.net/2019/09/hard-disk-geometry-microbenchmarking/" target="_blank">Discovering hard disk physical geometry through microbenchmarking (2019)</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 112</span> Apr 30</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 637</span> 2026-05-02</div>
             </div>
             <div class="article-item">
               <a href="https://news.ycombinator.com/item?id=47971921" target="_blank">SlothDB a 5X Faster Alternative to DuckDB, ClickHouse DB</a>
@@ -719,11 +667,63 @@
             </div>
             <div class="article-item">
               <a href="https://news.ycombinator.com/item?id=47993748" target="_blank">Making Postman load 60% Faster</a>
-              <div class="meta">🟠 Ask HN <span class="badge">⬆ 2</span> May 03</div>
+              <div class="meta">🟠 Ask HN <span class="badge">⬆ 3</span> May 03</div>
             </div>
             <div class="article-item">
               <a href="https://curiouscoding.nl/posts/quickheap/" target="_blank">Quickheap: the fastest comparison-based heap?</a>
               <div class="meta">🔵 Lobste.rs/programming  Sun, 03 Ma</div>
+            </div>
+            <div class="article-item">
+              <a href="https://slack.engineering/build-better-software-to-build-software-better/" target="_blank">Build better software to build software better</a>
+              <div class="meta">🔵 Slack Engineering  Thu, 06 No</div>
+            </div>
+        </div>
+        <div class="topic-card">
+          <div class="topic-header">🔐 Security <span class="count">7</span></div>
+          
+            <div class="article-item">
+              <a href="https://github.com/rootsecdev/cve_2026_31431" target="_blank">rootsecdev/cve_2026_31431 — Exploit POC for CVE_2026_31431</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 477</span> 2026-04-29</div>
+            </div>
+            <div class="article-item">
+              <a href="https://dev.to/cloudinary/how-to-win-a-hackathon-1377" target="_blank">How to Win a Hackathon</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 10</span> 2026-05-03</div>
+            </div>
+            <div class="article-item">
+              <a href="https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability/" target="_blank">Securing the git push pipeline: Responding to a critical remote code execution vulnerability</a>
+              <div class="meta">🔵 GitHub Blog  Tue, 28 Ap</div>
+            </div>
+            <div class="article-item">
+              <a href="https://engineering.fb.com/2026/04/16/security/post-quantum-cryptography-migration-at-meta-framework-lessons-and-takeaways/" target="_blank">Post-Quantum Cryptography Migration at Meta: Framework, Lessons, and Takeaways</a>
+              <div class="meta">🔵 Engineering at Meta  Thu, 16 Ap</div>
+            </div>
+            <div class="article-item">
+              <a href="https://smashingmagazine.com/2026/04/session-timeouts-accessibility-barrier-authentication-design/" target="_blank">Session Timeouts: The Overlooked Accessibility Barrier In Authentication Design</a>
+              <div class="meta">🔵 Smashing Magazine  Mon, 20 Ap</div>
+            </div>
+        </div>
+        <div class="topic-card">
+          <div class="topic-header">🎨 Dev Experience <span class="count">6</span></div>
+          
+            <div class="article-item">
+              <a href="https://github.com/GENEXIS-AI/chromex" target="_blank">GENEXIS-AI/chromex — A Codex-powered Chrome side-panel assistant for page context, tabs, voice, and image workflows.</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 807</span> 2026-04-28</div>
+            </div>
+            <div class="article-item">
+              <a href="https://dev.to/sylwia-lask/is-software-development-just-a-side-quest-a-jira-story-4ng3" target="_blank">Is Software Development Just a Side Quest? A Jira Story</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 296</span> 2026-04-30</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.dayswithoutgithubincident.com/" target="_blank">Days Without GitHub Incidents</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 197</span> May 04</div>
+            </div>
+            <div class="article-item">
+              <a href="https://dev.to/_boweii/what-it-actually-feels-like-to-build-something-youre-proud-of-35mi" target="_blank">What It Actually Feels Like to Build Something You&#x27;re Proud Of</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 95</span> 2026-04-27</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.nber.org/papers/w35117" target="_blank">Does Employment Slow Cognitive Decline? Evidence from Labor Market Shocks</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 92</span> May 04</div>
             </div>
         </div>
   </div>
@@ -738,7 +738,7 @@
           <td class="rank">1</td>
           <td><a href="https://github.com/nexu-io/open-design" target="_blank">nexu-io/open-design — 🎨 Local-first, open-source alternative to Anthropic&#x27;s Claude Design. ⚡ 19 Skills · ✨ 71 brand-grade Design Systems 🖼 Gen</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">21931</td>
+          <td class="score">23199</td>
           <td>🤖 AI / ML</td>
           <td>2026-04-28</td>
         </tr>
@@ -746,7 +746,7 @@
           <td class="rank">2</td>
           <td><a href="https://github.com/theori-io/copy-fail-CVE-2026-31431" target="_blank">theori-io/copy-fail-CVE-2026-31431</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">3091</td>
+          <td class="score">3120</td>
           <td>🤖 AI / ML</td>
           <td>2026-04-29</td>
         </tr>
@@ -754,7 +754,7 @@
           <td class="rank">3</td>
           <td><a href="https://github.com/willchen96/mike" target="_blank">willchen96/mike — OSS AI Legal Platform</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1837</td>
+          <td class="score">1957</td>
           <td>🤖 AI / ML</td>
           <td>2026-04-29</td>
         </tr>
@@ -762,7 +762,7 @@
           <td class="rank">4</td>
           <td><a href="https://github.com/darrylmorley/whatcable" target="_blank">darrylmorley/whatcable — macOS menu bar app that tells you, in plain English, what each USB-C cable plugged into your Mac can actually do</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1553</td>
+          <td class="score">1628</td>
           <td>🤖 AI / ML</td>
           <td>2026-05-01</td>
         </tr>
@@ -770,89 +770,89 @@
           <td class="rank">5</td>
           <td><a href="https://github.com/mattpocock/dictionary-of-ai-coding" target="_blank">mattpocock/dictionary-of-ai-coding — AI coding jargon, explained in plain English.</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">896</td>
+          <td class="score">945</td>
           <td>🤖 AI / ML</td>
           <td>2026-05-01</td>
         </tr>
         <tr>
           <td class="rank">6</td>
+          <td><a href="https://github.com/aattaran/deepclaude" target="_blank">aattaran/deepclaude — Use Claude Code&#x27;s autonomous agent loop with DeepSeek V4 Pro, OpenRouter, or any Anthropic-compatible backend. Same UX, </a></td>
+          <td><span class="source-badge">⚫ GitHub Trending</span></td>
+          <td class="score">906</td>
+          <td>🤖 AI / ML</td>
+          <td>2026-05-03</td>
+        </tr>
+        <tr>
+          <td class="rank">7</td>
           <td><a href="https://github.com/b-nnett/codex-plusplus" target="_blank">b-nnett/codex-plusplus — Codex++ tweak system for the Codex desktop app</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">869</td>
+          <td class="score">887</td>
           <td>🔧 Engineering</td>
           <td>2026-04-28</td>
         </tr>
         <tr>
-          <td class="rank">7</td>
+          <td class="rank">8</td>
           <td><a href="https://github.com/wrongly-cuddly-obsession/NTSB_FOIA_MU5735" target="_blank">wrongly-cuddly-obsession/NTSB_FOIA_MU5735</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">851</td>
+          <td class="score">876</td>
           <td>🔧 Engineering</td>
           <td>2026-04-30</td>
         </tr>
         <tr>
-          <td class="rank">8</td>
+          <td class="rank">9</td>
           <td><a href="https://github.com/t8y2/dbx" target="_blank">t8y2/dbx — 15MB，lightweight, cross-platform database client. Supports MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, ClickHouse</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">793</td>
+          <td class="score">824</td>
           <td>☁️ Cloud / Infra</td>
           <td>2026-04-29</td>
         </tr>
         <tr>
-          <td class="rank">9</td>
+          <td class="rank">10</td>
           <td><a href="https://github.com/GENEXIS-AI/chromex" target="_blank">GENEXIS-AI/chromex — A Codex-powered Chrome side-panel assistant for page context, tabs, voice, and image workflows.</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">792</td>
+          <td class="score">807</td>
           <td>🎨 Dev Experience</td>
           <td>2026-04-28</td>
         </tr>
         <tr>
-          <td class="rank">10</td>
-          <td><a href="https://www.drive.com.au/news/mercedes-benz-commits-to-bringing-back-phycial-buttons/" target="_blank">Mercedes-Benz commits to bringing back physical buttons</a></td>
-          <td><span class="source-badge">🟠 Hacker News</span></td>
-          <td class="score">744</td>
-          <td>🔧 Engineering</td>
-          <td>May 03</td>
-        </tr>
-        <tr>
           <td class="rank">11</td>
-          <td><a href="https://github.com/Fokkyp/SoftwareCopyright-Skill" target="_blank">Fokkyp/SoftwareCopyright-Skill — 中国软件著作权申请材料 生成器 Skills，本 Skills 通过阅读本地项目，自动生成全套 .docx 软著申请材料，全开源，无须再付费购买任何软著申请服务</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">686</td>
+          <td><a href="https://thienantran.com/talking-to-35-strangers-at-the-gym/" target="_blank">Talking to 35 Strangers at the Gym</a></td>
+          <td><span class="source-badge">🟠 Hacker News</span></td>
+          <td class="score">738</td>
           <td>🔧 Engineering</td>
-          <td>2026-04-29</td>
+          <td>May 04</td>
         </tr>
         <tr>
           <td class="rank">12</td>
-          <td><a href="https://github.com/aattaran/deepclaude" target="_blank">aattaran/deepclaude — Use Claude Code&#x27;s autonomous agent loop with DeepSeek V4 Pro, OpenRouter, or any Anthropic-compatible backend. Same UX, </a></td>
+          <td><a href="https://github.com/Fokkyp/SoftwareCopyright-Skill" target="_blank">Fokkyp/SoftwareCopyright-Skill — 中国软件著作权申请材料 生成器 Skills，本 Skills 通过阅读本地项目，自动生成全套 .docx 软著申请材料，全开源，无须再付费购买任何软著申请服务</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">660</td>
-          <td>🤖 AI / ML</td>
-          <td>2026-05-03</td>
+          <td class="score">692</td>
+          <td>🔧 Engineering</td>
+          <td>2026-04-29</td>
         </tr>
         <tr>
           <td class="rank">13</td>
           <td><a href="https://github.com/vibeforge1111/keep-codex-fast" target="_blank">vibeforge1111/keep-codex-fast — A backup-first Codex skill for keeping local Codex state fast, clean, and recoverable.</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">604</td>
+          <td class="score">637</td>
           <td>⚡ Performance</td>
           <td>2026-05-02</td>
         </tr>
         <tr>
           <td class="rank">14</td>
-          <td><a href="https://news.ycombinator.com/item?id=47906253" target="_blank">Tell HN: An app is silently installing itself on my iPhone every day</a></td>
-          <td><span class="source-badge">🟠 Ask HN</span></td>
-          <td class="score">591</td>
+          <td><a href="https://github.com/EvanBacon/serve-sim" target="_blank">EvanBacon/serve-sim — The `npx serve` of Apple Simulators.</a></td>
+          <td><span class="source-badge">⚫ GitHub Trending</span></td>
+          <td class="score">601</td>
           <td>🔧 Engineering</td>
-          <td>Apr 26</td>
+          <td>2026-04-29</td>
         </tr>
         <tr>
           <td class="rank">15</td>
-          <td><a href="https://github.com/EvanBacon/serve-sim" target="_blank">EvanBacon/serve-sim — The `npx serve` of Apple Simulators.</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">584</td>
+          <td><a href="https://news.ycombinator.com/item?id=47906253" target="_blank">Tell HN: An app is silently installing itself on my iPhone every day</a></td>
+          <td><span class="source-badge">🟠 Ask HN</span></td>
+          <td class="score">592</td>
           <td>🔧 Engineering</td>
-          <td>2026-04-29</td>
+          <td>Apr 26</td>
         </tr>
         <tr>
           <td class="rank">16</td>
@@ -864,35 +864,35 @@
         </tr>
         <tr>
           <td class="rank">17</td>
-          <td><a href="https://github.com/aattaran/deepclaude" target="_blank">DeepClaude – Claude Code agent loop with DeepSeek V4 Pro</a></td>
+          <td><a href="https://notepad-plus-plus.org/news/npp-trademark-infringement/" target="_blank">Trademark violation: Fake Notepad++ for Mac</a></td>
           <td><span class="source-badge">🟠 Hacker News</span></td>
-          <td class="score">525</td>
-          <td>🤖 AI / ML</td>
-          <td>May 03</td>
+          <td class="score">522</td>
+          <td>🔧 Engineering</td>
+          <td>May 04</td>
         </tr>
         <tr>
           <td class="rank">18</td>
-          <td><a href="https://github.com/noonghunna/club-3090" target="_blank">noonghunna/club-3090 — Community recipes for serving LLMs on RTX 3090. Multi-engine (vLLM, llama.cpp, SGLang) and model-agnostic. Currently shi</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">468</td>
-          <td>🤖 AI / ML</td>
-          <td>2026-04-28</td>
+          <td><a href="https://www.ecopv-eu.com/en/blog-en/replaceable-smartphone-batteries-2027-eu-regulation/" target="_blank">Removable batteries in smartphones will be mandatory in the EU starting in 2027</a></td>
+          <td><span class="source-badge">🟠 Hacker News</span></td>
+          <td class="score">514</td>
+          <td>🔧 Engineering</td>
+          <td>May 04</td>
         </tr>
         <tr>
           <td class="rank">19</td>
-          <td><a href="https://github.com/rootsecdev/cve_2026_31431" target="_blank">rootsecdev/cve_2026_31431 — Exploit POC for CVE_2026_31431</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">467</td>
-          <td>🔐 Security</td>
-          <td>2026-04-29</td>
+          <td><a href="https://www.bbc.co.uk/news/articles/cn0p8yled1do" target="_blank">GameStop makes $55.5B takeover offer for eBay</a></td>
+          <td><span class="source-badge">🟠 Hacker News</span></td>
+          <td class="score">506</td>
+          <td>🔧 Engineering</td>
+          <td>May 04</td>
         </tr>
         <tr>
           <td class="rank">20</td>
-          <td><a href="https://github.com/WeritoP/LInjector-FORKED-" target="_blank">WeritoP/LInjector-FORKED- — 🔨 LInjector. An open-source Luau Script IDE allowing easy integration with diverse purposes. Working version at the webs</a></td>
+          <td><a href="https://github.com/Tommy-yw/RunbookHermes" target="_blank">Tommy-yw/RunbookHermes — Hermes-native AIOps agent for evidence-driven incident response, approval-gated remediation, and runbook learning.</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">459</td>
-          <td>🌐 Web / Frontend</td>
-          <td>2026-05-04</td>
+          <td class="score">488</td>
+          <td>🤖 AI / ML</td>
+          <td>2026-05-01</td>
         </tr></tbody>
   </table>
 
@@ -900,23 +900,23 @@
   <div class="sources-section">
         <div class="source-row">
           <div class="source-label">dev.to</div>
-          <div class="bar-wrap"><div class="bar" style="width:100%">59</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:100%">58</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">Hacker News</div>
-          <div class="bar-wrap"><div class="bar" style="width:50%">30</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:51%">30</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">GitHub Trending</div>
-          <div class="bar-wrap"><div class="bar" style="width:42%">25</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:43%">25</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">Show HN</div>
-          <div class="bar-wrap"><div class="bar" style="width:33%">20</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:34%">20</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">Ask HN</div>
-          <div class="bar-wrap"><div class="bar" style="width:30%">18</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:32%">19</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">Stack Overflow Blog</div>
@@ -1024,7 +1024,7 @@
         </div></div>
 
 </main>
-<footer>Built with ❤️ at the hackathon · Eng Brand Machine · May 04, 2026 at 12:39</footer>
+<footer>Built with ❤️ at the hackathon · Eng Brand Machine · May 04, 2026 at 18:37</footer>
 
 <script>
 // ── Topic classifier (mirrors Python TOPIC_KEYWORDS) ──────────────────────
