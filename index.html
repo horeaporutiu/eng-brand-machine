@@ -185,16 +185,16 @@
 
 <header>
   <h1>🚀 Eng Brand Machine</h1>
-  <p class="subtitle">Real-time engineering trends from 31 sources · 337 articles · May 13, 2026 at 12:49</p>
+  <p class="subtitle">Real-time engineering trends from 31 sources · 337 articles · May 13, 2026 at 18:42</p>
   <span class="miro-badge">✦ Miro Developer Brand Intelligence</span>
 </header>
 
 <div class="stats-bar">
   <div class="stat"><div class="num">337</div><div class="label">Articles Analyzed</div></div>
   <div class="stat"><div class="num">31</div><div class="label">Live Sources</div></div>
-  <div class="stat"><div class="num">13</div><div class="label">Topics Tracked</div></div>
+  <div class="stat"><div class="num">12</div><div class="label">Topics Tracked</div></div>
   <div class="stat"><div class="num">🤖 AI / ML</div><div class="label">Hottest Topic</div></div>
-  <div class="stat"><div class="num">191</div><div class="label">Articles on #1 Topic</div></div>
+  <div class="stat"><div class="num">188</div><div class="label">Articles on #1 Topic</div></div>
 </div>
 
 <main>
@@ -309,7 +309,7 @@
             <span class="rec-format">📄 Educational Post + Interactive Board</span>
             <span class="rec-cta">Open the interactive explainer →</span>
           </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>vercel-labs/zero-native — Build desktop + mobile apps with Zig and web UI</li><li>Googlebook</li></ul></div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>vercel-labs/zero-native — Build desktop + mobile apps with Zig and web UI</li><li>ywnd1144/Gopay_plus_automatic</li></ul></div>
           <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
           <div class="post-draft">
             <div class="post-hero">
@@ -349,6 +349,53 @@
         </div>
         <div class="rec-card">
           <div class="rec-num">#4</div>
+          <div class="rec-topic">☁️ Cloud / Infra</div>
+          <div class="rec-title">Kubernetes Architecture Diagrams That Actually Stay Up to Date</div>
+          <div class="rec-desc">Most K8s architecture docs go stale in days. This post shows how platform teams use Miro&#x27;s live embed + diagram features to keep cluster topology, service maps, and resource flows always current.</div>
+          <div class="rec-demo"><strong>🎬 Demo:</strong> An interactive Miro board with K8s namespace layout, pod communication, and HPA configs. Arrows update with sticky note annotations from the on-call engineer.</div>
+          <div class="rec-meta">
+            <span class="rec-format">📄 Tutorial + Template</span>
+            <span class="rec-cta">Grab the K8s Miro Template →</span>
+          </div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>grandeurcoredecoder/f95zone — Unofficial Game Updater for the F95Zone platform</li><li>Your AWS bill is lying to you — it shows services, not features</li></ul></div>
+          <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
+          <div class="post-draft">
+            <div class="post-hero">
+              <div class="post-hero-label">🎨 Hero Image Prompt (Midjourney / DALL-E)</div>
+              <div class="post-hero-prompt">Kubernetes cluster architecture diagram with glowing nodes representing pods, services, ingress, and namespaces, floating in a dark space environment, connected by illuminated network paths, technical illustration, teal and blue palette</div>
+            </div>
+            <div class="post-tags"><span class="post-tag">#kubernetes</span><span class="post-tag">#cloud</span><span class="post-tag">#infrastructure</span><span class="post-tag">#k8s</span><span class="post-tag">#miro-templates</span><span class="post-tag">#platform-engineering</span></div>
+            <div class="post-meta-bar">⏱ 5 min read &nbsp;·&nbsp; 🔍 Keep Kubernetes architecture diagrams accurate and up-to-date with Miro — live annotations, team collaboration, and always-current cluster topology.</div>
+            <div class="post-body">
+<p>Kubernetes documentation has a half-life measured in sprint cycles. You update the architecture diagram, merge the PR, and by the time the next on-call rotation starts, three new services have been added, a namespace was restructured, and the HPA configs everyone agreed on last quarter have been quietly changed. The diagram in your wiki is now a liability, not an asset.</p>
+
+<h2>Why Static K8s Docs Always Go Stale</h2>
+<p>The root cause is a mismatch between how Kubernetes moves and how documentation tools work. Wikis and Confluence are document stores — they're great for stable reference material, terrible for representing infrastructure that changes daily. When the cost of updating a diagram is high (find the tool, open the file, re-export, re-upload, update the link), people stop updating it. That's not a discipline problem; it's a tooling problem.</p>
+<p>Additionally, K8s architecture involves multiple stakeholder perspectives simultaneously: cluster topology matters to SREs, service communication maps matter to backend engineers, and resource quota summaries matter to platform teams. No single static diagram serves all three audiences.</p>
+
+<h2>The Miro Framework: Living K8s Architecture in 4 Layers</h2>
+<ol>
+  <li><strong>Layer 1 — Cluster topology.</strong> One frame per cluster (production, staging, dev). Show namespaces as swim lanes, node groups as colored regions. Sticky notes carry current node counts and instance types.</li>
+  <li><strong>Layer 2 — Service communication map.</strong> Draw your services, their ports, and the protocols between them. Color edges by traffic type: internal gRPC, external HTTP, async event streams. Link each service to its Helm chart.</li>
+  <li><strong>Layer 3 — HPA and resource configs.</strong> A simple table frame per namespace: service name, CPU request/limit, memory request/limit, current HPA min/max. Update it in the Miro board, then copy to your YAML. One source of truth.</li>
+  <li><strong>Layer 4 — On-call annotations.</strong> During incidents, on-call engineers drop timestamped sticky notes directly on the affected component. After the post-mortem, those notes become permanent annotations — institutional memory baked into the diagram.</li>
+</ol>
+
+<div class="image-callout">
+  <strong>🎨 Mid-Post Image Suggestion</strong><br>
+  <em>AI prompt:</em> "Kubernetes namespace swim lane layout showing pods, services, ingress controllers and config maps as glowing icons, dark terminal background with teal highlights, real-time annotation sticky notes overlaid on affected components"
+</div>
+
+<h2>Team Adoption: The Friday Update Ritual</h2>
+<p>The platform teams who stick with this approach all share one habit: a recurring 15-minute calendar block every Friday afternoon titled "Update the K8s board." It's not a meeting — it's a solo ritual. The engineer who touched the cluster that week spends 15 minutes reflecting changes in Miro. After three sprints, the board becomes the team's most-visited resource, displacing the wiki entirely.</p>
+<p>Pair this with a Miro board link in your runbook template, and every incident starts with a visual overview of the affected system — not a frantic search for documentation that may or may not be accurate.</p>
+<p>Platform teams spend too much time answering "how does our infrastructure work?" questions. <em>Grab the Kubernetes Architecture Template and let the diagram answer for you.</em></p>
+</div>
+            <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
+          </div>
+        </div>
+        <div class="rec-card">
+          <div class="rec-num">#5</div>
           <div class="rec-topic">🔐 Security</div>
           <div class="rec-title">Collaborative Threat Modeling on Miro: A Developer&#x27;s Guide</div>
           <div class="rec-desc">Security doesn&#x27;t have to happen in silos. This guide shows dev teams how to run STRIDE threat modeling sessions in Miro — mapping trust boundaries, attack surfaces, and mitigations together in real time.</div>
@@ -392,53 +439,6 @@
 <p>The teams that make threat modeling stick don't treat it as a project milestone — they treat it as a recurring sprint ritual. Every time a new feature introduces a data flow, API, or third-party integration, a 45-minute threat modeling session is automatically scheduled. The Miro board template is already there; you just add a new frame for the new feature.</p>
 <p>After three months, something shifts in the team culture: developers start thinking about trust boundaries during design, not after implementation. Security stops being a gate and becomes a design input. And when an auditor asks "how do you manage security risk?", you open the Miro board instead of scrambling for documentation.</p>
 <p>Security built collaboratively is security that actually holds. <em>Run your first STRIDE threat modeling session in Miro — the template takes 5 minutes to set up.</em></p>
-</div>
-            <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
-          </div>
-        </div>
-        <div class="rec-card">
-          <div class="rec-num">#5</div>
-          <div class="rec-topic">☁️ Cloud / Infra</div>
-          <div class="rec-title">Kubernetes Architecture Diagrams That Actually Stay Up to Date</div>
-          <div class="rec-desc">Most K8s architecture docs go stale in days. This post shows how platform teams use Miro&#x27;s live embed + diagram features to keep cluster topology, service maps, and resource flows always current.</div>
-          <div class="rec-demo"><strong>🎬 Demo:</strong> An interactive Miro board with K8s namespace layout, pod communication, and HPA configs. Arrows update with sticky note annotations from the on-call engineer.</div>
-          <div class="rec-meta">
-            <span class="rec-format">📄 Tutorial + Template</span>
-            <span class="rec-cta">Grab the K8s Miro Template →</span>
-          </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>Your AWS bill is lying to you — it shows services, not features</li><li>Show HN: Kunobi 1.0 – A local-first Kubernetes workspace for GitOps teams</li></ul></div>
-          <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
-          <div class="post-draft">
-            <div class="post-hero">
-              <div class="post-hero-label">🎨 Hero Image Prompt (Midjourney / DALL-E)</div>
-              <div class="post-hero-prompt">Kubernetes cluster architecture diagram with glowing nodes representing pods, services, ingress, and namespaces, floating in a dark space environment, connected by illuminated network paths, technical illustration, teal and blue palette</div>
-            </div>
-            <div class="post-tags"><span class="post-tag">#kubernetes</span><span class="post-tag">#cloud</span><span class="post-tag">#infrastructure</span><span class="post-tag">#k8s</span><span class="post-tag">#miro-templates</span><span class="post-tag">#platform-engineering</span></div>
-            <div class="post-meta-bar">⏱ 5 min read &nbsp;·&nbsp; 🔍 Keep Kubernetes architecture diagrams accurate and up-to-date with Miro — live annotations, team collaboration, and always-current cluster topology.</div>
-            <div class="post-body">
-<p>Kubernetes documentation has a half-life measured in sprint cycles. You update the architecture diagram, merge the PR, and by the time the next on-call rotation starts, three new services have been added, a namespace was restructured, and the HPA configs everyone agreed on last quarter have been quietly changed. The diagram in your wiki is now a liability, not an asset.</p>
-
-<h2>Why Static K8s Docs Always Go Stale</h2>
-<p>The root cause is a mismatch between how Kubernetes moves and how documentation tools work. Wikis and Confluence are document stores — they're great for stable reference material, terrible for representing infrastructure that changes daily. When the cost of updating a diagram is high (find the tool, open the file, re-export, re-upload, update the link), people stop updating it. That's not a discipline problem; it's a tooling problem.</p>
-<p>Additionally, K8s architecture involves multiple stakeholder perspectives simultaneously: cluster topology matters to SREs, service communication maps matter to backend engineers, and resource quota summaries matter to platform teams. No single static diagram serves all three audiences.</p>
-
-<h2>The Miro Framework: Living K8s Architecture in 4 Layers</h2>
-<ol>
-  <li><strong>Layer 1 — Cluster topology.</strong> One frame per cluster (production, staging, dev). Show namespaces as swim lanes, node groups as colored regions. Sticky notes carry current node counts and instance types.</li>
-  <li><strong>Layer 2 — Service communication map.</strong> Draw your services, their ports, and the protocols between them. Color edges by traffic type: internal gRPC, external HTTP, async event streams. Link each service to its Helm chart.</li>
-  <li><strong>Layer 3 — HPA and resource configs.</strong> A simple table frame per namespace: service name, CPU request/limit, memory request/limit, current HPA min/max. Update it in the Miro board, then copy to your YAML. One source of truth.</li>
-  <li><strong>Layer 4 — On-call annotations.</strong> During incidents, on-call engineers drop timestamped sticky notes directly on the affected component. After the post-mortem, those notes become permanent annotations — institutional memory baked into the diagram.</li>
-</ol>
-
-<div class="image-callout">
-  <strong>🎨 Mid-Post Image Suggestion</strong><br>
-  <em>AI prompt:</em> "Kubernetes namespace swim lane layout showing pods, services, ingress controllers and config maps as glowing icons, dark terminal background with teal highlights, real-time annotation sticky notes overlaid on affected components"
-</div>
-
-<h2>Team Adoption: The Friday Update Ritual</h2>
-<p>The platform teams who stick with this approach all share one habit: a recurring 15-minute calendar block every Friday afternoon titled "Update the K8s board." It's not a meeting — it's a solo ritual. The engineer who touched the cluster that week spends 15 minutes reflecting changes in Miro. After three sprints, the board becomes the team's most-visited resource, displacing the wiki entirely.</p>
-<p>Pair this with a Miro board link in your runbook template, and every incident starts with a visual overview of the affected system — not a frantic search for documentation that may or may not be accurate.</p>
-<p>Platform teams spend too much time answering "how does our infrastructure work?" questions. <em>Grab the Kubernetes Architecture Template and let the diagram answer for you.</em></p>
 </div>
             <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
           </div>
@@ -535,135 +535,111 @@
   <div class="topics-grid">
     
         <div class="topic-card">
-          <div class="topic-header">🤖 AI / ML <span class="count">191</span></div>
+          <div class="topic-header">🤖 AI / ML <span class="count">188</span></div>
           
             <div class="article-item">
               <a href="https://github.com/V4bel/dirtyfrag" target="_blank">V4bel/dirtyfrag</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 4377</span> 2026-05-07</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 4403</span> 2026-05-07</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/huangserva/3DCellForge" target="_blank">huangserva/3DCellForge — AI-powered interactive 3D cell generation and exploration studio.</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1771</span> 2026-05-10</div>
-            </div>
-            <div class="article-item">
-              <a href="https://www.nair.sh/guides-and-opinions/communicating-your-expertise/why-senior-developers-fail-to-communicate-their-expertise" target="_blank">Why senior developers fail to communicate their expertise</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 643</span> May 12</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1794</span> 2026-05-10</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/haydenbleasel/files-sdk" target="_blank">haydenbleasel/files-sdk — A unified storage SDK for object and blob backends. One small, honest API. Web-standards I/O.</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 617</span> 2026-05-08</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 634</span> 2026-05-08</div>
             </div>
             <div class="article-item">
-              <a href="https://dev.to/devteam/join-the-gemma-4-challenge-3000-prize-pool-for-ten-winners-23in" target="_blank">Join the Gemma 4 Challenge: $3,000 prize pool for TEN winners!</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 543</span> 2026-05-06</div>
+              <a href="https://github.com/cactus-compute/needle" target="_blank">Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 596</span> May 12</div>
+            </div>
+            <div class="article-item">
+              <a href="https://github.com/cactus-compute/needle" target="_blank">Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model</a>
+              <div class="meta">🟠 Show HN <span class="badge">⬆ 596</span> May 12</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🔧 Engineering <span class="count">52</span></div>
+          <div class="topic-header">🔧 Engineering <span class="count">49</span></div>
           
             <div class="article-item">
               <a href="https://github.com/FULU-Foundation/OrcaSlicer-bambulab" target="_blank">FULU-Foundation/OrcaSlicer-bambulab</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 2128</span> 2026-05-11</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 2615</span> 2026-05-11</div>
             </div>
             <div class="article-item">
               <a href="https://news.ycombinator.com/item?id=48037336" target="_blank">Rumors of my death are slightly exaggerated</a>
               <div class="meta">🟠 Ask HN <span class="badge">⬆ 1664</span> May 06</div>
             </div>
             <div class="article-item">
-              <a href="https://blog.maximeheckel.com/posts/on-rendering-the-sky-sunsets-and-planets/" target="_blank">Rendering the Sky, Sunsets, and Planets</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 496</span> May 12</div>
+              <a href="https://monokai.com/articles/how-i-moved-my-digital-stack-to-europe/" target="_blank">I moved my digital stack to Europe</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 722</span> May 13</div>
+            </div>
+            <div class="article-item">
+              <a href="https://github.com/TencentARC/Pixal3D" target="_blank">TencentARC/Pixal3D — [SIGGRAPH 2026] Pixal3D: Pixel-Aligned 3D Generation from Images</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 481</span> 2026-05-10</div>
             </div>
             <div class="article-item">
               <a href="https://news.ycombinator.com/item?id=48060054" target="_blank">Ask HN: We just had an actual UUID v4 collision...</a>
               <div class="meta">🟠 Ask HN <span class="badge">⬆ 469</span> May 08</div>
             </div>
-            <div class="article-item">
-              <a href="https://github.com/TencentARC/Pixal3D" target="_blank">TencentARC/Pixal3D — [SIGGRAPH 2026] Pixal3D: Pixel-Aligned 3D Generation from Images</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 421</span> 2026-05-10</div>
-            </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🌐 Web / Frontend <span class="count">34</span></div>
+          <div class="topic-header">🌐 Web / Frontend <span class="count">33</span></div>
           
             <div class="article-item">
               <a href="https://github.com/FULU-Foundation/OrcaSlicer-bambulab" target="_blank">Restore full BambuNetwork support for Bambu Lab printers</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 509</span> May 12</div>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 625</span> May 12</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/cclank/cell-architecture-studio" target="_blank">cclank/cell-architecture-studio — Interactive 3D cell architecture gallery built with React and Three.js</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 484</span> 2026-05-10</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 500</span> 2026-05-10</div>
             </div>
             <div class="article-item">
-              <a href="https://theindex.fyi" target="_blank">Show HN: An index of indie web/blog indexes</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 147</span> May 10</div>
-            </div>
-            <div class="article-item">
-              <a href="https://dev.to/konark_13/vibe-coding-lessons-nobody-talks-about-44k9" target="_blank">Vibe Coding Lessons Nobody Talks About</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 69</span> 2026-05-06</div>
+              <a href="http://wii.sjmulder.nl/" target="_blank">Web Server on a Nintendo Wii</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 83</span> May 09</div>
             </div>
             <div class="article-item">
               <a href="https://dev.to/aws/embed-these-websites-in-your-blog-today-286p" target="_blank">Embed These Websites In Your Blog Today</a>
               <div class="meta">🟣 dev.to <span class="badge">⬆ 53</span> 2026-05-07</div>
             </div>
+            <div class="article-item">
+              <a href="https://github.com/hoffa/vitree" target="_blank">Show HN: Vim file browser that runs in separate terminal</a>
+              <div class="meta">🟠 Show HN <span class="badge">⬆ 4</span> May 13</div>
+            </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🦀 Languages <span class="count">21</span></div>
+          <div class="topic-header">🦀 Languages <span class="count">24</span></div>
           
             <div class="article-item">
               <a href="https://github.com/vercel-labs/zero-native" target="_blank">vercel-labs/zero-native — Build desktop + mobile apps with Zig and web UI</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 3162</span> 2026-05-08</div>
-            </div>
-            <div class="article-item">
-              <a href="https://googlebook.google/" target="_blank">Googlebook</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 824</span> May 12</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 3235</span> 2026-05-08</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/ywnd1144/Gopay_plus_automatic" target="_blank">ywnd1144/Gopay_plus_automatic</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 687</span> 2026-05-12</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 701</span> 2026-05-12</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/patchfighterway90/cs2-external-overlay" target="_blank">patchfighterway90/cs2-external-overlay — The cs2 external helper tool is a software utility designed for gamers and developers. It provides a set of features to </a>
               <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 533</span> 2026-05-12</div>
             </div>
             <div class="article-item">
-              <a href="https://github.com/nooga/let-go" target="_blank">Show HN: I made a Clojure-like language in Go, boots in 7ms</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 273</span> May 09</div>
+              <a href="https://dev.to/syedahmershah/react-is-overkill-why-python-htmx-is-dominating-in-2026-17ib" target="_blank">React is Overkill: Why Python + HTMX is Dominating in 2026</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 184</span> 2026-05-13</div>
+            </div>
+            <div class="article-item">
+              <a href="https://discuss.python.org/t/reverting-the-incremental-gc-in-python-3-14-and-3-15/107014" target="_blank">Reverting the incremental GC in Python 3.14 and 3.15</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 142</span> May 09</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🔐 Security <span class="count">12</span></div>
+          <div class="topic-header">☁️ Cloud / Infra <span class="count">13</span></div>
           
             <div class="article-item">
-              <a href="https://github.com/Nightmare-Eclipse/YellowKey" target="_blank">Nightmare-Eclipse/YellowKey — YellowKey Bitlocker Bypass Vulnerability</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 664</span> 2026-05-12</div>
+              <a href="https://github.com/grandeurcoredecoder/f95zone" target="_blank">grandeurcoredecoder/f95zone — Unofficial Game Updater for the F95Zone platform</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 416</span> 2026-05-10</div>
             </div>
-            <div class="article-item">
-              <a href="https://github.com/AvenueSleuth/delta-exec" target="_blank">AvenueSleuth/delta-exec — Delta Exec scripting utility</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 455</span> 2026-05-08</div>
-            </div>
-            <div class="article-item">
-              <a href="https://github.com/setube/stackprism" target="_blank">setube/stackprism — StackPrism是一款用于检测网页技术栈的浏览器插件。</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 446</span> 2026-05-08</div>
-            </div>
-            <div class="article-item">
-              <a href="https://lists.thekelleys.org.uk/pipermail/dnsmasq-discuss/2026q2/018471.html" target="_blank">CERT is releasing six CVEs for serious security vulnerabilities in dnsmasq</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 337</span> May 12</div>
-            </div>
-            <div class="article-item">
-              <a href="https://internetcleanup.foundation/2026/05/european-governments-3000-tracking-sites-1000-phpmyadmins-and-99pct-poorly-encrypted-email-introducing-securitybaseline-eu/" target="_blank">SecurityBaseline.eu</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 187</span> May 13</div>
-            </div>
-        </div>
-        <div class="topic-card">
-          <div class="topic-header">☁️ Cloud / Infra <span class="count">12</span></div>
-          
             <div class="article-item">
               <a href="https://dev.to/arpitstack/your-aws-bill-is-lying-to-you-it-shows-services-not-features-5817" target="_blank">Your AWS bill is lying to you — it shows services, not features</a>
               <div class="meta">🟣 dev.to <span class="badge">⬆ 15</span> 2026-05-10</div>
-            </div>
-            <div class="article-item">
-              <a href="https://kunobi.ninja/blog/kunobi-v1" target="_blank">Show HN: Kunobi 1.0 – A local-first Kubernetes workspace for GitOps teams</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 3</span> May 13</div>
             </div>
             <div class="article-item">
               <a href="https://dev.to/aws-builders/how-i-built-a-serverless-power-outage-tracker-for-nigeria-on-aws-part-1-fim" target="_blank">How I Built a Serverless Power Outage Tracker for Nigeria on AWS | Part 1</a>
@@ -679,19 +655,43 @@
             </div>
         </div>
         <div class="topic-card">
+          <div class="topic-header">🔐 Security <span class="count">11</span></div>
+          
+            <div class="article-item">
+              <a href="https://github.com/Nightmare-Eclipse/YellowKey" target="_blank">Nightmare-Eclipse/YellowKey — YellowKey Bitlocker Bypass Vulnerability</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 833</span> 2026-05-12</div>
+            </div>
+            <div class="article-item">
+              <a href="https://github.com/AvenueSleuth/delta-exec" target="_blank">AvenueSleuth/delta-exec — Delta Exec scripting utility</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 475</span> 2026-05-08</div>
+            </div>
+            <div class="article-item">
+              <a href="https://github.com/setube/stackprism" target="_blank">setube/stackprism — StackPrism是一款用于检测网页技术栈的浏览器插件。</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 454</span> 2026-05-08</div>
+            </div>
+            <div class="article-item">
+              <a href="https://dev.to/mlh/how-a-hackathon-will-teach-a-new-developer-what-a-year-of-tutorials-cant-4fn8" target="_blank">How a Hackathon Will Teach a New Developer What a Year of Tutorials Can&#x27;t</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 43</span> 2026-05-07</div>
+            </div>
+            <div class="article-item">
+              <a href="https://dev.to/baltasarq/y-si-python-permitiera-end-como-fin-de-bloque-y-iii-2a2f" target="_blank">¿Y si Python permitiera &#x27;end&#x27; como fin de bloque? (y III)</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 11</span> 2026-05-12</div>
+            </div>
+        </div>
+        <div class="topic-card">
           <div class="topic-header">⚡ Performance <span class="count">5</span></div>
           
             <div class="article-item">
-              <a href="https://blog.cloudflare.com/quic-death-spiral-fix/" target="_blank">When “idle” isn&#x27;t idle: how a Linux kernel optimization became a QUIC bug</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 117</span> May 12</div>
+              <a href="https://www.xda-developers.com/linux-gaming-is-getting-faster-because-windows-apis-are-becoming-linux-kernel-features/" target="_blank">Linux gaming is faster because Windows APIs are becoming Linux kernel features</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 60</span> May 10</div>
+            </div>
+            <div class="article-item">
+              <a href="https://blog.bytebytego.com/p/high-performance-rate-limiting-at" target="_blank">High Performance Rate Limiting at Databricks</a>
+              <div class="meta">🔵 ByteByteGo  Wed, 13 Ma</div>
             </div>
             <div class="article-item">
               <a href="https://blog.bytebytego.com/p/how-figma-upgraded-data-pipeline" target="_blank">How Figma Upgraded Data Pipeline from Multi-Day Latency to Real-Time</a>
               <div class="meta">🔵 ByteByteGo  Tue, 12 Ma</div>
-            </div>
-            <div class="article-item">
-              <a href="https://dzone.com/articles/when-search-breaks-at-scale" target="_blank">When Search Started Breaking at Scale: How We Chose the Right Search Engine</a>
-              <div class="meta">🔵 DZone  Tue, 12 Ma</div>
             </div>
             <div class="article-item">
               <a href="https://slack.engineering/build-better-software-to-build-software-better/" target="_blank">Build better software to build software better</a>
@@ -703,19 +703,27 @@
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🎨 Dev Experience <span class="count">3</span></div>
+          <div class="topic-header">🗄️ Databases <span class="count">5</span></div>
           
             <div class="article-item">
-              <a href="https://github.com/amircloner/g2ray" target="_blank">amircloner/g2ray — Self-hosted proxy setup running inside GitHub Codespaces — for educational purposes only</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 485</span> 2026-05-09</div>
+              <a href="https://www.tryardent.com/" target="_blank">Launch HN: Ardent (YC P26) – Postgres sandboxes in seconds with zero migration</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 33</span> May 13</div>
             </div>
             <div class="article-item">
-              <a href="https://dev.to/stinklewinks/the-case-for-opinionated-systems-and-why-flexibility-is-overrated-4emh" target="_blank">The Case for Opinionated Systems (And Why Flexibility Is Overrated)</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 3</span> 2026-05-12</div>
+              <a href="https://dagraph.com" target="_blank">Show HN: DAGraph – local-first reactive graph from arithmetic to OLAP SQL</a>
+              <div class="meta">🟠 Show HN <span class="badge">⬆ 6</span> May 13</div>
             </div>
             <div class="article-item">
-              <a href="https://dev.to/jtorchia/spring-boot-actuator-in-production-the-endpoints-i-left-open-by-accident-and-how-i-closed-them-2b80" target="_blank">Spring Boot Actuator in Production: The Endpoints I Left Open by Accident and How I Closed Them</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 1</span> 2026-05-11</div>
+              <a href="https://smashingmagazine.com/2026/05/designing-stable-interfaces-streaming-content/" target="_blank">Designing Stable Interfaces For Streaming Content</a>
+              <div class="meta">🔵 Smashing Magazine  Fri, 01 Ma</div>
+            </div>
+            <div class="article-item">
+              <a href="https://charlesleifer.com/blog/redis-and-the-cost-of-ambition/" target="_blank">Redis and the Cost of Ambition</a>
+              <div class="meta">🔵 Lobste.rs  Tue, 12 Ma</div>
+            </div>
+            <div class="article-item">
+              <a href="https://philipotoole.com/how-and-why-rqlite-takes-control-of-the-sqlite-write-ahead-log/" target="_blank">How (and why) rqlite takes control of the SQLite Write-Ahead Log</a>
+              <div class="meta">🔵 Lobste.rs/distributed  Wed, 13 Ma</div>
             </div>
         </div>
   </div>
@@ -730,7 +738,7 @@
           <td class="rank">1</td>
           <td><a href="https://github.com/V4bel/dirtyfrag" target="_blank">V4bel/dirtyfrag</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">4377</td>
+          <td class="score">4403</td>
           <td>🤖 AI / ML</td>
           <td>2026-05-07</td>
         </tr>
@@ -738,7 +746,7 @@
           <td class="rank">2</td>
           <td><a href="https://github.com/vercel-labs/zero-native" target="_blank">vercel-labs/zero-native — Build desktop + mobile apps with Zig and web UI</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">3162</td>
+          <td class="score">3235</td>
           <td>🦀 Languages</td>
           <td>2026-05-08</td>
         </tr>
@@ -746,7 +754,7 @@
           <td class="rank">3</td>
           <td><a href="https://github.com/FULU-Foundation/OrcaSlicer-bambulab" target="_blank">FULU-Foundation/OrcaSlicer-bambulab</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">2128</td>
+          <td class="score">2615</td>
           <td>🔧 Engineering</td>
           <td>2026-05-11</td>
         </tr>
@@ -754,7 +762,7 @@
           <td class="rank">4</td>
           <td><a href="https://github.com/huangserva/3DCellForge" target="_blank">huangserva/3DCellForge — AI-powered interactive 3D cell generation and exploration studio.</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1771</td>
+          <td class="score">1794</td>
           <td>🤖 AI / ML</td>
           <td>2026-05-10</td>
         </tr>
@@ -768,62 +776,86 @@
         </tr>
         <tr>
           <td class="rank">6</td>
-          <td><a href="https://googlebook.google/" target="_blank">Googlebook</a></td>
-          <td><span class="source-badge">🟠 Hacker News</span></td>
-          <td class="score">824</td>
-          <td>🦀 Languages</td>
-          <td>May 12</td>
-        </tr>
-        <tr>
-          <td class="rank">7</td>
-          <td><a href="https://github.com/ywnd1144/Gopay_plus_automatic" target="_blank">ywnd1144/Gopay_plus_automatic</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">687</td>
-          <td>🦀 Languages</td>
-          <td>2026-05-12</td>
-        </tr>
-        <tr>
-          <td class="rank">8</td>
           <td><a href="https://github.com/Nightmare-Eclipse/YellowKey" target="_blank">Nightmare-Eclipse/YellowKey — YellowKey Bitlocker Bypass Vulnerability</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">664</td>
+          <td class="score">833</td>
           <td>🔐 Security</td>
           <td>2026-05-12</td>
         </tr>
         <tr>
-          <td class="rank">9</td>
-          <td><a href="https://www.nair.sh/guides-and-opinions/communicating-your-expertise/why-senior-developers-fail-to-communicate-their-expertise" target="_blank">Why senior developers fail to communicate their expertise</a></td>
+          <td class="rank">7</td>
+          <td><a href="https://monokai.com/articles/how-i-moved-my-digital-stack-to-europe/" target="_blank">I moved my digital stack to Europe</a></td>
           <td><span class="source-badge">🟠 Hacker News</span></td>
-          <td class="score">643</td>
-          <td>🤖 AI / ML</td>
-          <td>May 12</td>
+          <td class="score">722</td>
+          <td>🔧 Engineering</td>
+          <td>May 13</td>
         </tr>
         <tr>
-          <td class="rank">10</td>
+          <td class="rank">8</td>
+          <td><a href="https://github.com/ywnd1144/Gopay_plus_automatic" target="_blank">ywnd1144/Gopay_plus_automatic</a></td>
+          <td><span class="source-badge">⚫ GitHub Trending</span></td>
+          <td class="score">701</td>
+          <td>🦀 Languages</td>
+          <td>2026-05-12</td>
+        </tr>
+        <tr>
+          <td class="rank">9</td>
           <td><a href="https://github.com/haydenbleasel/files-sdk" target="_blank">haydenbleasel/files-sdk — A unified storage SDK for object and blob backends. One small, honest API. Web-standards I/O.</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">617</td>
+          <td class="score">634</td>
           <td>🤖 AI / ML</td>
           <td>2026-05-08</td>
         </tr>
         <tr>
+          <td class="rank">10</td>
+          <td><a href="https://github.com/FULU-Foundation/OrcaSlicer-bambulab" target="_blank">Restore full BambuNetwork support for Bambu Lab printers</a></td>
+          <td><span class="source-badge">🟠 Hacker News</span></td>
+          <td class="score">625</td>
+          <td>🌐 Web / Frontend</td>
+          <td>May 12</td>
+        </tr>
+        <tr>
           <td class="rank">11</td>
+          <td><a href="https://github.com/cactus-compute/needle" target="_blank">Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model</a></td>
+          <td><span class="source-badge">🟠 Hacker News</span></td>
+          <td class="score">596</td>
+          <td>🤖 AI / ML</td>
+          <td>May 12</td>
+        </tr>
+        <tr>
+          <td class="rank">12</td>
+          <td><a href="https://github.com/cactus-compute/needle" target="_blank">Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model</a></td>
+          <td><span class="source-badge">🟠 Show HN</span></td>
+          <td class="score">596</td>
+          <td>🤖 AI / ML</td>
+          <td>May 12</td>
+        </tr>
+        <tr>
+          <td class="rank">13</td>
+          <td><a href="https://github.com/HermannBjorgvin/Clawdmeter" target="_blank">HermannBjorgvin/Clawdmeter — ESP32 desk dashboard that shows Claude Code usage</a></td>
+          <td><span class="source-badge">⚫ GitHub Trending</span></td>
+          <td class="score">592</td>
+          <td>🤖 AI / ML</td>
+          <td>2026-05-11</td>
+        </tr>
+        <tr>
+          <td class="rank">14</td>
           <td><a href="https://dev.to/devteam/join-the-gemma-4-challenge-3000-prize-pool-for-ten-winners-23in" target="_blank">Join the Gemma 4 Challenge: $3,000 prize pool for TEN winners!</a></td>
           <td><span class="source-badge">🟣 dev.to</span></td>
-          <td class="score">543</td>
+          <td class="score">565</td>
           <td>🤖 AI / ML</td>
           <td>2026-05-06</td>
         </tr>
         <tr>
-          <td class="rank">12</td>
+          <td class="rank">15</td>
           <td><a href="https://github.com/thakur-works/DarkGPT" target="_blank">thakur-works/DarkGPT — Darkgpt mod free #chatgpt</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">533</td>
+          <td class="score">534</td>
           <td>🤖 AI / ML</td>
           <td>2026-05-10</td>
         </tr>
         <tr>
-          <td class="rank">13</td>
+          <td class="rank">16</td>
           <td><a href="https://github.com/patchfighterway90/cs2-external-overlay" target="_blank">patchfighterway90/cs2-external-overlay — The cs2 external helper tool is a software utility designed for gamers and developers. It provides a set of features to </a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
           <td class="score">533</td>
@@ -831,7 +863,7 @@
           <td>2026-05-12</td>
         </tr>
         <tr>
-          <td class="rank">14</td>
+          <td class="rank">17</td>
           <td><a href="https://github.com/thakur-works/Velocity-Executor" target="_blank">thakur-works/Velocity-Executor — This repository contains Velocity Executor — a free Roblox script executor for PC built for fast injection, stable perfo</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
           <td class="score">528</td>
@@ -839,7 +871,7 @@
           <td>2026-05-10</td>
         </tr>
         <tr>
-          <td class="rank">15</td>
+          <td class="rank">18</td>
           <td><a href="https://github.com/RadianceToadAmend/Fortnite-Cheats-2026" target="_blank">RadianceToadAmend/Fortnite-Cheats-2026 — ⭐️ Fortnite Cheats 2026 | Aimbot ESP WH | Triggerbot NoRecoil Glow | Skin Changer | AntiAFK Auto Farm Heal | Mod Menu Lo</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
           <td class="score">521</td>
@@ -847,7 +879,7 @@
           <td>2026-05-12</td>
         </tr>
         <tr>
-          <td class="rank">16</td>
+          <td class="rank">19</td>
           <td><a href="https://github.com/RadianceToadAmend/ARC-Raiders-External-Tool" target="_blank">RadianceToadAmend/ARC-Raiders-External-Tool — External overlay tool for ARC Raiders. UE5 memory reader, entity , radar, performance monitor. D3D11 render, no injectio</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
           <td class="score">521</td>
@@ -855,34 +887,10 @@
           <td>2026-05-12</td>
         </tr>
         <tr>
-          <td class="rank">17</td>
-          <td><a href="https://github.com/cactus-compute/needle" target="_blank">Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model</a></td>
-          <td><span class="source-badge">🟠 Hacker News</span></td>
-          <td class="score">516</td>
-          <td>🤖 AI / ML</td>
-          <td>May 12</td>
-        </tr>
-        <tr>
-          <td class="rank">18</td>
-          <td><a href="https://github.com/cactus-compute/needle" target="_blank">Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model</a></td>
-          <td><span class="source-badge">🟠 Show HN</span></td>
-          <td class="score">516</td>
-          <td>🤖 AI / ML</td>
-          <td>May 12</td>
-        </tr>
-        <tr>
-          <td class="rank">19</td>
-          <td><a href="https://github.com/FULU-Foundation/OrcaSlicer-bambulab" target="_blank">Restore full BambuNetwork support for Bambu Lab printers</a></td>
-          <td><span class="source-badge">🟠 Hacker News</span></td>
-          <td class="score">509</td>
-          <td>🌐 Web / Frontend</td>
-          <td>May 12</td>
-        </tr>
-        <tr>
           <td class="rank">20</td>
           <td><a href="https://github.com/alchaincyf/huashu-md-html" target="_blank">alchaincyf/huashu-md-html — md/html 双向流水线 · 三个能力一站式：万物→md / md→精美html / html→md。封装 markitdown + Pandoc + html-to-markdown + trafilatura。4 套反 AI slop</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">504</td>
+          <td class="score">512</td>
           <td>🤖 AI / ML</td>
           <td>2026-05-09</td>
         </tr></tbody>
@@ -1016,7 +1024,7 @@
         </div></div>
 
 </main>
-<footer>Built with ❤️ at the hackathon · Eng Brand Machine · May 13, 2026 at 12:49</footer>
+<footer>Built with ❤️ at the hackathon · Eng Brand Machine · May 13, 2026 at 18:42</footer>
 
 <script>
 // ── Topic classifier (mirrors Python TOPIC_KEYWORDS) ──────────────────────
