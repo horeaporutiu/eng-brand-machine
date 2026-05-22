@@ -4,8 +4,8 @@
 # To make this agent available, merge this file into the default repository branch.
 # For format details, see: https://gh.io/customagents/config
 
-name:
-description:
+name: Miro Architecture Diagram Agent
+description: Each time a new PR is merged, create an architecture diagram of the main components of the codebase and visualize it on a miro board with a diagram, table, doc, and any other things you think may be useful.
 ---
 
 # My Agent
