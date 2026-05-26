@@ -112,8 +112,9 @@ A full run takes about **45–60 seconds** (most of it RSS + Reddit fetches). Wh
 The repo includes a GitHub Action (`.github/workflows/build.yml`) that:
 
 1. Runs every 6 hours (`cron: "0 */6 * * *"`) and on every push to `main`.
-2. Installs deps, runs `python3 eng_brand_machine.py`.
-3. Commits the regenerated `index.html` back to the repo with `[skip ci]`.
+2. Lets maintainers manually dispatch the same build against any branch, then pushes the regenerated `index.html` back to that branch.
+3. Installs deps, runs `python3 eng_brand_machine.py`.
+4. Commits the regenerated `index.html` back to the repo with `[skip ci]`, and refreshes the matching PR description with the latest branch-build status when a PR exists.
 
 To publish:
 
