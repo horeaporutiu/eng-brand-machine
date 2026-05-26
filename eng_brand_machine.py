@@ -7,7 +7,7 @@ Hackathon POC - 2026
 
 import requests
 import feedparser
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
 from collections import defaultdict
 import html as html_lib
 
@@ -594,6 +594,103 @@ DEFAULT_RECS = [
 ]
 
 
+EVENT_TRACKER_LOCATION = "Amsterdam, Netherlands"
+
+AI_CONFERENCE_BLUEPRINTS = [
+    {
+        "name": "Canal AI Summit",
+        "month": 6,
+        "day": 18,
+        "duration_days": 2,
+        "venue": "Beurs van Berlage",
+        "focus": "Applied GenAI for product and platform teams",
+        "format": "Leadership summit",
+        "audience": "Engineering leaders, staff+ ICs, AI PMs",
+        "miro_angle": "Run an AI architecture clinic that maps agent handoffs, human review, and model evaluation in one board.",
+        "watch_for": "Enterprise adoption stories, copilots moving from pilots to production, and platform-team playbooks.",
+        "tags": ["GenAI", "Agents", "Architecture"],
+    },
+    {
+        "name": "Lowlands LLM Builders Week",
+        "month": 7,
+        "day": 9,
+        "duration_days": 3,
+        "venue": "NEMO Science Museum",
+        "focus": "Hands-on LLM tooling, evals, and retrieval systems",
+        "format": "Workshop week",
+        "audience": "Applied ML engineers, developer advocates, startup founders",
+        "miro_angle": "Host collaborative prompt-debugging and eval design sessions directly on Miro canvases.",
+        "watch_for": "Reusable RAG patterns, developer tooling launches, and demand for visual experimentation workflows.",
+        "tags": ["LLM", "Evals", "RAG"],
+    },
+    {
+        "name": "North Sea Responsible AI Forum",
+        "month": 8,
+        "day": 21,
+        "duration_days": 2,
+        "venue": "Muziekgebouw aan 't IJ",
+        "focus": "Governance, compliance, and human-in-the-loop AI systems",
+        "format": "Executive forum",
+        "audience": "Security leads, legal partners, product ops",
+        "miro_angle": "Position Miro as the place teams align policy, architecture, and launch checklists before shipping AI features.",
+        "watch_for": "EU AI Act readiness, approval workflows, and cross-functional review rituals.",
+        "tags": ["Responsible AI", "Governance", "Compliance"],
+    },
+    {
+        "name": "Amsterdam Applied AI Days",
+        "month": 9,
+        "day": 16,
+        "duration_days": 2,
+        "venue": "RAI Amsterdam",
+        "focus": "Production ML, copilots, and AI-native product design",
+        "format": "Conference + expo",
+        "audience": "Product teams, solution architects, founders",
+        "miro_angle": "Demo how product, design, and engineering teams storyboard AI experiences together before implementation.",
+        "watch_for": "AI UX patterns, multimodal feature launches, and partner ecosystem announcements.",
+        "tags": ["Product", "Copilots", "AI UX"],
+    },
+    {
+        "name": "Graph + Agents Europe",
+        "month": 10,
+        "day": 8,
+        "duration_days": 2,
+        "venue": "Pakhuis de Zwijger",
+        "focus": "Knowledge graphs, agent memory, and orchestration",
+        "format": "Technical conference",
+        "audience": "Platform engineers, data engineers, solution architects",
+        "miro_angle": "Show graph-backed agent systems as living diagrams with linked implementation notes and review comments.",
+        "watch_for": "Long-lived agent state, graph retrieval design, and multi-agent operational tooling.",
+        "tags": ["Graphs", "Memory", "Multi-agent"],
+    },
+    {
+        "name": "Tulip City AI Infra Meetup",
+        "month": 11,
+        "day": 13,
+        "duration_days": 1,
+        "venue": "A Lab Amsterdam",
+        "focus": "GPU ops, inference performance, and cost control",
+        "format": "Community meetup",
+        "audience": "Infra teams, DevOps leaders, FinOps stakeholders",
+        "miro_angle": "Pair infra diagrams with budgeting and incident-response workflows on the same board.",
+        "watch_for": "Inference optimization, batch-vs-real-time tradeoffs, and platform cost narratives.",
+        "tags": ["Infra", "Inference", "FinOps"],
+    },
+    {
+        "name": "Winter AI Collaboration Assembly",
+        "month": 12,
+        "day": 4,
+        "duration_days": 2,
+        "venue": "Westergas",
+        "focus": "Team workflows for AI delivery across product, design, and engineering",
+        "format": "Practitioner summit",
+        "audience": "Cross-functional delivery teams, innovation leads",
+        "miro_angle": "Anchor Miro around planning, review, and retrospective rituals for AI product teams.",
+        "watch_for": "Org design for AI teams, operating cadences, and templates that shorten time-to-launch.",
+        "tags": ["Collaboration", "Workflows", "Planning"],
+    },
+]
+
+
 def classify_topic(title, description=""):
     text = (title + " " + description).lower()
     for topic, keywords in TOPIC_KEYWORDS.items():
@@ -807,6 +904,43 @@ def count_topics(articles):
     return sorted(counts.items(), key=lambda x: -x[1])
 
 
+def format_date_range(start_date, end_date):
+    if start_date == end_date:
+        return start_date.strftime("%b %d, %Y")
+    if start_date.year == end_date.year and start_date.month == end_date.month:
+        return f"{start_date.strftime('%b %d')}–{end_date.strftime('%d, %Y')}"
+    if start_date.year == end_date.year:
+        return f"{start_date.strftime('%b %d')}–{end_date.strftime('%b %d, %Y')}"
+    return f"{start_date.strftime('%b %d, %Y')}–{end_date.strftime('%b %d, %Y')}"
+
+
+def build_ai_conference_schedule(location=EVENT_TRACKER_LOCATION, today=None):
+    today = today or datetime.now().date()
+    schedule_year = today.year
+    conferences = _build_ai_conference_schedule_for_year(schedule_year, location)
+    upcoming = [conference for conference in conferences if conference["end_date"] >= today]
+    if upcoming:
+        return upcoming
+    return _build_ai_conference_schedule_for_year(schedule_year + 1, location)
+
+
+def _build_ai_conference_schedule_for_year(year, location):
+    conferences = []
+    for blueprint in AI_CONFERENCE_BLUEPRINTS:
+        start_date = date(year, blueprint["month"], blueprint["day"])
+        end_date = start_date + timedelta(days=blueprint["duration_days"] - 1)
+        conferences.append({
+            **blueprint,
+            "location": location,
+            "start_date": start_date,
+            "end_date": end_date,
+            "date_label": format_date_range(start_date, end_date),
+            "month_label": start_date.strftime("%b").upper(),
+            "day_label": start_date.strftime("%d"),
+        })
+    return conferences
+
+
 def generate_miro_recommendations(articles, topic_counts):
     """Pick top 5 Miro content recommendations based on what's actually trending."""
     by_topic = defaultdict(list)
@@ -834,7 +968,7 @@ def generate_miro_recommendations(articles, topic_counts):
     return recs[:5]
 
 
-def generate_html(articles, topic_counts, miro_recs):
+def generate_html(articles, topic_counts, miro_recs, conferences):
     total = len(articles)
     sources = defaultdict(int)
     for a in articles:
@@ -939,6 +1073,42 @@ def generate_html(articles, topic_counts, miro_recs):
           <div class="bar-wrap"><div class="bar" style="width:{pct}%">{cnt}</div></div>
         </div>'''
 
+    conference_year = conferences[0]["start_date"].year if conferences else datetime.now().year
+    if conference_year == datetime.now().year:
+        conference_timeframe = f"the rest of {conference_year}"
+    else:
+        conference_timeframe = f"the next planning cycle ({conference_year})"
+
+    conference_cards = ""
+    for conf in conferences:
+        tags_html = "".join(
+            f'<span class="event-tag">{html_lib.escape(tag)}</span>'
+            for tag in conf.get("tags", [])
+        )
+        conference_cards += f'''
+        <div class="event-card">
+          <div class="event-date">
+            <span class="event-month">{html_lib.escape(conf["month_label"])}</span>
+            <span class="event-day">{html_lib.escape(conf["day_label"])}</span>
+          </div>
+          <div class="event-copy">
+            <div class="event-kicker">Fictional planning slate · {html_lib.escape(conf["location"])}</div>
+            <div class="event-title">{html_lib.escape(conf["name"])}</div>
+            <div class="event-meta">{html_lib.escape(conf["date_label"])} · {html_lib.escape(conf["venue"])} · {html_lib.escape(conf["format"])}</div>
+            <div class="event-detail"><strong>Focus:</strong> {html_lib.escape(conf["focus"])}</div>
+            <div class="event-detail"><strong>Audience:</strong> {html_lib.escape(conf["audience"])}</div>
+            <div class="event-detail"><strong>Miro play:</strong> {html_lib.escape(conf["miro_angle"])}</div>
+            <div class="event-detail"><strong>Watch for:</strong> {html_lib.escape(conf["watch_for"])}</div>
+            <div class="event-tags">{tags_html}</div>
+          </div>
+        </div>'''
+
+    next_event_label = conferences[0]["date_label"] if conferences else "—"
+    event_summary_html = f'''
+      <div class="event-stat"><div class="num">{len(conferences)}</div><div class="label">Amsterdam Events</div></div>
+      <div class="event-stat"><div class="num">{html_lib.escape(next_event_label)}</div><div class="label">Next Event Window</div></div>
+      <div class="event-stat"><div class="num">{html_lib.escape(EVENT_TRACKER_LOCATION)}</div><div class="label">Default Location</div></div>'''
+
     generated_at = datetime.now().strftime("%B %d, %Y at %H:%M")
 
     return f'''<!DOCTYPE html>
@@ -1037,6 +1207,36 @@ def generate_html(articles, topic_counts, miro_recs):
                     border-radius: 6px; font-size: 0.82rem; font-weight: 700; padding: 8px 16px;
                     cursor: pointer; margin-top: 10px; width: 100%; transition: background .15s; }}
   .copy-draft-btn:hover {{ background: #1f6b3a; }}
+
+  /* ── Conference tracker ── */
+  .events-section {{ background: linear-gradient(135deg, #081924 0%, #0d1117 100%);
+                    border: 1px solid #1f6feb; border-radius: 14px; padding: 28px; margin-bottom: 36px; }}
+  .events-section h2 {{ border-bottom-color: #1f6feb; color: #e6edf3; margin-top: 0; }}
+  .events-summary {{ display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }}
+  .event-stat {{ background: #161b22; border: 1px solid #1f6feb33; border-radius: 10px; padding: 12px 16px;
+                min-width: 180px; }}
+  .event-stat .num {{ color: #79c0ff; font-size: 1rem; font-weight: 700; line-height: 1.35; }}
+  .event-stat .label {{ color: #8b949e; font-size: 0.72rem; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }}
+  .event-callout {{ background: #0f2231; border: 1px solid #1f6feb33; border-left: 3px solid #79c0ff;
+                   border-radius: 8px; padding: 12px 14px; margin-bottom: 18px; color: #9fb3c8; font-size: 0.84rem;
+                   line-height: 1.6; }}
+  .events-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }}
+  .event-card {{ background: #161b22; border: 1px solid #21262d; border-radius: 12px; padding: 16px;
+                display: flex; gap: 14px; align-items: flex-start; transition: border-color .2s, transform .2s; }}
+  .event-card:hover {{ border-color: #79c0ff; transform: translateY(-2px); }}
+  .event-date {{ background: #0f2231; border: 1px solid #1f6feb44; border-radius: 10px; min-width: 68px;
+                text-align: center; padding: 10px 8px; }}
+  .event-month {{ display: block; color: #79c0ff; font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; }}
+  .event-day {{ display: block; color: #e6edf3; font-size: 1.55rem; font-weight: 800; line-height: 1.1; margin-top: 4px; }}
+  .event-copy {{ flex: 1; }}
+  .event-kicker {{ color: #79c0ff; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }}
+  .event-title {{ color: #e6edf3; font-size: 1rem; font-weight: 700; margin-bottom: 8px; }}
+  .event-meta {{ color: #8b949e; font-size: 0.78rem; margin-bottom: 10px; line-height: 1.5; }}
+  .event-detail {{ color: #9fb3c8; font-size: 0.82rem; line-height: 1.55; margin-bottom: 8px; }}
+  .event-detail strong {{ color: #c9d1d9; }}
+  .event-tags {{ display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }}
+  .event-tag {{ background: #1f6feb22; color: #79c0ff; border: 1px solid #1f6feb33; border-radius: 999px;
+               padding: 3px 9px; font-size: 0.72rem; }}
 
   /* ── Topic cards ── */
   .topics-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; margin-bottom: 30px; }}
@@ -1147,6 +1347,20 @@ def generate_html(articles, topic_counts, miro_recs):
     <p class="recs-intro">Generated from {total} articles across {len(sources)} sources — each recommendation is anchored to what engineers are actually reading today.</p>
     <div class="recs-grid">
       {rec_cards}
+    </div>
+  </div>
+
+  <div class="events-section">
+    <h2>📍 Amsterdam AI Conference Tracker</h2>
+    <p class="recs-intro">A fictional planning slate of AI conferences in {EVENT_TRACKER_LOCATION} for {conference_timeframe} — useful for roadmap launches, field marketing, and local community moments.</p>
+    <div class="events-summary">
+      {event_summary_html}
+    </div>
+    <div class="event-callout">
+      These conferences are intentionally made up for planning and demo purposes. Use the slate to pressure-test Miro activations, sponsorship ideas, and content hooks tied to Amsterdam-based AI audiences.
+    </div>
+    <div class="events-grid">
+      {conference_cards}
     </div>
   </div>
 
@@ -1440,11 +1654,16 @@ def main():
     for i, r in enumerate(miro_recs, 1):
         print(f"   {i}. [{r['topic']}] {r['title']}")
 
+    conferences = build_ai_conference_schedule()
+    print(f"\n📍 {EVENT_TRACKER_LOCATION} AI conferences:")
+    for conf in conferences:
+        print(f"   • {conf['date_label']} — {conf['name']}")
+
     reddit_count = len([a for a in all_articles if a["source_icon"] == "🔴"])
     print(f"\n🔴 Reddit posts in dataset: {reddit_count}")
 
     print("\n🎨 Generating HTML...")
-    html = generate_html(all_articles, topic_counts, miro_recs)
+    html = generate_html(all_articles, topic_counts, miro_recs, conferences)
 
     output_path = "index.html"
     with open(output_path, "w", encoding="utf-8") as f:

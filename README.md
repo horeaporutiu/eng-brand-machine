@@ -20,8 +20,9 @@ Most "trend dashboards" stop at *"here are the top links."* This one closes the 
 2. **Classifies** every article into one of 13 engineering topics (AI/ML, Cloud/Infra, Security, Rust, Web/Frontend, etc.) via keyword scoring.
 3. **Recommends** the top 5 Miro-developer-brand content ideas, ranked by what's *actually* trending right now.
 4. **Drafts** the full blog post for each recommendation — title, hero-image prompt, SEO description, tags, body copy, and CTA — all in one click. Anchored to real trending headlines so the drafts feel *of-the-moment*.
-5. **Live Reddit panel** runs entirely client-side: pick subreddits, set a time window, fetch fresh top posts without rebuilding.
-6. **Zero infra.** The output is one HTML file. Open it locally, drop it on S3, or let the bundled GitHub Action publish it on a 6-hour cron.
+5. **Location-aware event tracker.** A built-in conference slate can spotlight upcoming events for a target city — the current demo ships with fictional Amsterdam AI conferences for the rest of the year.
+6. **Live Reddit panel** runs entirely client-side: pick subreddits, set a time window, fetch fresh top posts without rebuilding.
+7. **Zero infra.** The output is one HTML file. Open it locally, drop it on S3, or let the bundled GitHub Action publish it on a 6-hour cron.
 
 It's a complete "developer brand intelligence" loop — input is the open web, output is publishable content briefs — in ~1,500 lines of dependency-light Python.
 
@@ -98,6 +99,7 @@ A full run takes about **45–60 seconds** (most of it RSS + Reddit fetches). Wh
 
 - **Stats bar** — total articles, live sources, topics tracked, hottest topic
 - **Top 5 Miro Content Recommendations** — each with a "📝 View Full Post Draft" button that expands into a full blog draft (hero-image prompt, SEO meta, tags, body, copy-to-clipboard)
+- **Amsterdam AI conference tracker** — a demo slate of fictional local events for the rest of the year, useful for campaign and event planning
 - **Interactive Reddit panel** — pick subreddits, choose `day / week / month / year / all`, click *Fetch Reddit*
 - **Trending Topics grid** — 8 topic cards with the top stories in each bucket
 - **Top 20 hottest stories** ranked across all sources
@@ -134,6 +136,7 @@ Everything tunable lives at the top of `eng_brand_machine.py`:
 | `TOPIC_KEYWORDS` | Topic buckets and the keywords that route into them |
 | `MIRO_CONTENT_TEMPLATES` | The blog-post templates (title, body, hero prompt, tags…) used as recommendations |
 | `DEFAULT_RECS` | Fallback recommendations when no template matches a trending topic |
+| `EVENT_TRACKER_LOCATION` / `AI_CONFERENCE_BLUEPRINTS` | The city and fictional conference slate shown in the event tracker |
 
 The HTML template is inline in `generate_html()` — tweak CSS variables at the top of the `<style>` block to rebrand.
 
