@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Eng Brand Machine — Conference Catalog",
+  "description": "Schema for data/conferences.json. The catalog feeds two dashboard sections: the location-specific event tracker and the global 'AI Conference Pulse' insights panel.",
+  "type": "object",
+  "required": ["default_location", "fictional_local_slate", "major_ai_conferences"],
+  "properties": {
+    "default_location": {
+      "type": "string",
+      "description": "City + country shown above the local event tracker (e.g. 'Amsterdam, Netherlands')."
+    },
+    "fictional_local_slate": {
+      "type": "array",
+      "description": "Demo conference blueprints used to populate the location-aware tracker. Dates are intentionally fictional and rebuilt for the current year at runtime.",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "month",
+          "day",
+          "duration_days",
+          "venue",
+          "focus",
+          "format",
+          "audience",
+          "miro_angle",
+          "watch_for",
+          "tags"
+        ],
+        "properties": {
+          "name": { "type": "string" },
+          "month": { "type": "integer", "minimum": 1, "maximum": 12 },
+          "day": { "type": "integer", "minimum": 1, "maximum": 31 },
+          "duration_days": { "type": "integer", "minimum": 1, "maximum": 14 },
+          "venue": { "type": "string" },
+          "focus": { "type": "string" },
+          "format": { "type": "string" },
+          "audience": { "type": "string" },
+          "miro_angle": { "type": "string" },
+          "watch_for": { "type": "string" },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "major_ai_conferences": {
+      "type": "array",
+      "description": "Real-world AI conferences scanned for mentions inside aggregated articles. Powers the 'AI Conference Pulse' insights panel.",
+      "items": {
+        "type": "object",
+        "required": ["name", "keywords", "cadence", "audience", "miro_angle"],
+        "properties": {
+          "name": { "type": "string" },
+          "long_name": { "type": "string" },
+          "keywords": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" },
+            "description": "Lowercase substrings used to detect mentions in article titles/summaries."
+          },
+          "cadence": { "type": "string" },
+          "audience": { "type": "string" },
+          "miro_angle": { "type": "string" },
+          "signal_topics": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

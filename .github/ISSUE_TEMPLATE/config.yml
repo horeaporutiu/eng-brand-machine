@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📖 Conference tracker documentation
+    url: https://github.com/horeaporutiu/eng-brand-machine/blob/main/docs/CONFERENCE_TRACKER.md
+    about: How the local slate and AI Conference Pulse work, plus how to edit data/conferences.json.

@@ -1,0 +1,216 @@
+{
+  "$schema": "./conferences.schema.json",
+  "default_location": "Amsterdam, Netherlands",
+  "fictional_local_slate": [
+    {
+      "name": "Canal AI Summit",
+      "month": 6,
+      "day": 18,
+      "duration_days": 2,
+      "venue": "Beurs van Berlage",
+      "focus": "Applied GenAI for product and platform teams",
+      "format": "Leadership summit",
+      "audience": "Engineering leaders, staff+ ICs, AI PMs",
+      "miro_angle": "Run an AI architecture clinic that maps agent handoffs, human review, and model evaluation in one board.",
+      "watch_for": "Enterprise adoption stories, copilots moving from pilots to production, and platform-team playbooks.",
+      "tags": ["GenAI", "Agents", "Architecture"]
+    },
+    {
+      "name": "Lowlands LLM Builders Week",
+      "month": 7,
+      "day": 9,
+      "duration_days": 3,
+      "venue": "NEMO Science Museum",
+      "focus": "Hands-on LLM tooling, evals, and retrieval systems",
+      "format": "Workshop week",
+      "audience": "Applied ML engineers, developer advocates, startup founders",
+      "miro_angle": "Host collaborative prompt-debugging and eval design sessions directly on Miro canvases.",
+      "watch_for": "Reusable RAG patterns, developer tooling launches, and demand for visual experimentation workflows.",
+      "tags": ["LLM", "Evals", "RAG"]
+    },
+    {
+      "name": "North Sea Responsible AI Forum",
+      "month": 8,
+      "day": 21,
+      "duration_days": 2,
+      "venue": "Muziekgebouw aan 't IJ",
+      "focus": "Governance, compliance, and human-in-the-loop AI systems",
+      "format": "Executive forum",
+      "audience": "Security leads, legal partners, product ops",
+      "miro_angle": "Position Miro as the place teams align policy, architecture, and launch checklists before shipping AI features.",
+      "watch_for": "EU AI Act readiness, approval workflows, and cross-functional review rituals.",
+      "tags": ["Responsible AI", "Governance", "Compliance"]
+    },
+    {
+      "name": "Amsterdam Applied AI Days",
+      "month": 9,
+      "day": 16,
+      "duration_days": 2,
+      "venue": "RAI Amsterdam",
+      "focus": "Production ML, copilots, and AI-native product design",
+      "format": "Conference + expo",
+      "audience": "Product teams, solution architects, founders",
+      "miro_angle": "Demo how product, design, and engineering teams storyboard AI experiences together before implementation.",
+      "watch_for": "AI UX patterns, multimodal feature launches, and partner ecosystem announcements.",
+      "tags": ["Product", "Copilots", "AI UX"]
+    },
+    {
+      "name": "Graph + Agents Europe",
+      "month": 10,
+      "day": 8,
+      "duration_days": 2,
+      "venue": "Pakhuis de Zwijger",
+      "focus": "Knowledge graphs, agent memory, and orchestration",
+      "format": "Technical conference",
+      "audience": "Platform engineers, data engineers, solution architects",
+      "miro_angle": "Show graph-backed agent systems as living diagrams with linked implementation notes and review comments.",
+      "watch_for": "Long-lived agent state, graph retrieval design, and multi-agent operational tooling.",
+      "tags": ["Graphs", "Memory", "Multi-agent"]
+    },
+    {
+      "name": "Tulip City AI Infra Meetup",
+      "month": 11,
+      "day": 13,
+      "duration_days": 1,
+      "venue": "A Lab Amsterdam",
+      "focus": "GPU ops, inference performance, and cost control",
+      "format": "Community meetup",
+      "audience": "Infra teams, DevOps leaders, FinOps stakeholders",
+      "miro_angle": "Pair infra diagrams with budgeting and incident-response workflows on the same board.",
+      "watch_for": "Inference optimization, batch-vs-real-time tradeoffs, and platform cost narratives.",
+      "tags": ["Infra", "Inference", "FinOps"]
+    },
+    {
+      "name": "Winter AI Collaboration Assembly",
+      "month": 12,
+      "day": 4,
+      "duration_days": 2,
+      "venue": "Westergas",
+      "focus": "Team workflows for AI delivery across product, design, and engineering",
+      "format": "Practitioner summit",
+      "audience": "Cross-functional delivery teams, innovation leads",
+      "miro_angle": "Anchor Miro around planning, review, and retrospective rituals for AI product teams.",
+      "watch_for": "Org design for AI teams, operating cadences, and templates that shorten time-to-launch.",
+      "tags": ["Collaboration", "Workflows", "Planning"]
+    }
+  ],
+  "major_ai_conferences": [
+    {
+      "name": "NeurIPS",
+      "long_name": "Conference on Neural Information Processing Systems",
+      "keywords": ["neurips", "neural information processing systems", "nips"],
+      "cadence": "Annual · December",
+      "audience": "ML researchers, applied scientists, AI platform teams",
+      "miro_angle": "Run a research-roundup board capturing the year's most influential papers, with diagrams linking themes (alignment, agents, multimodality).",
+      "signal_topics": ["foundation models", "alignment", "multimodal", "agents", "evaluation"]
+    },
+    {
+      "name": "ICLR",
+      "long_name": "International Conference on Learning Representations",
+      "keywords": ["iclr", "international conference on learning representations"],
+      "cadence": "Annual · April / May",
+      "audience": "Deep learning researchers, RL practitioners",
+      "miro_angle": "Cluster accepted papers on a Miro board by research theme to spot emerging directions before they hit production.",
+      "signal_topics": ["representation learning", "diffusion", "self-supervised", "reasoning"]
+    },
+    {
+      "name": "ICML",
+      "long_name": "International Conference on Machine Learning",
+      "keywords": ["icml", "international conference on machine learning"],
+      "cadence": "Annual · July",
+      "audience": "ML researchers, ML engineers",
+      "miro_angle": "Capture key tutorials and workshops as visual learning paths for engineering teams ramping on a new ML sub-field.",
+      "signal_topics": ["optimization", "theory", "scaling laws", "robustness"]
+    },
+    {
+      "name": "CVPR",
+      "long_name": "Conference on Computer Vision and Pattern Recognition",
+      "keywords": ["cvpr", "computer vision and pattern recognition"],
+      "cadence": "Annual · June",
+      "audience": "Computer vision researchers, AR/VR teams, multimodal AI",
+      "miro_angle": "Use Miro to storyboard vision-language pipelines and label the human-review steps that surround them.",
+      "signal_topics": ["vision", "multimodal", "generative video", "3d reconstruction"]
+    },
+    {
+      "name": "ACL",
+      "long_name": "Annual Meeting of the Association for Computational Linguistics",
+      "keywords": ["acl 2", "acl conference", "association for computational linguistics"],
+      "cadence": "Annual · July / August",
+      "audience": "NLP researchers, LLM/RAG engineers",
+      "miro_angle": "Map an LLM-application architecture (prompts → retrieval → evals) against ACL's freshest evaluation methodology papers.",
+      "signal_topics": ["llm evals", "reasoning", "retrieval", "agents", "safety"]
+    },
+    {
+      "name": "KDD",
+      "long_name": "ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+      "keywords": ["kdd", "sigkdd", "knowledge discovery and data mining"],
+      "cadence": "Annual · August",
+      "audience": "Data scientists, ML engineers, applied AI teams",
+      "miro_angle": "Translate KDD's applied tracks into delivery-ready Miro playbooks — data prep, training, evaluation, monitoring.",
+      "signal_topics": ["recommender systems", "graph ml", "responsible ai", "industrial ml"]
+    },
+    {
+      "name": "AWS re:Invent",
+      "long_name": "AWS re:Invent",
+      "keywords": ["aws re:invent", "re:invent", "aws reinvent"],
+      "cadence": "Annual · December · Las Vegas",
+      "audience": "Cloud architects, platform engineers, AI infra teams",
+      "miro_angle": "Run a re:Invent diff board that maps new AI infra services onto existing customer architectures.",
+      "signal_topics": ["bedrock", "sagemaker", "agent runtime", "inference infra"]
+    },
+    {
+      "name": "Google I/O",
+      "long_name": "Google I/O",
+      "keywords": ["google i/o", "google io"],
+      "cadence": "Annual · May",
+      "audience": "Product engineers, AI app developers, mobile/web teams",
+      "miro_angle": "Diagram Gemini/Workspace launches against Miro's AI-collaboration story to find integration angles.",
+      "signal_topics": ["gemini", "android ai", "developer tooling", "agents"]
+    },
+    {
+      "name": "Microsoft Build",
+      "long_name": "Microsoft Build",
+      "keywords": ["microsoft build", "msbuild", "ms build"],
+      "cadence": "Annual · May",
+      "audience": "Developer tooling, copilots, enterprise AI buyers",
+      "miro_angle": "Plot Copilot, Azure AI Foundry, and Windows AI announcements as a single platform map on Miro.",
+      "signal_topics": ["copilot", "azure ai", "vs code", "agents"]
+    },
+    {
+      "name": "OpenAI DevDay",
+      "long_name": "OpenAI DevDay",
+      "keywords": ["openai devday", "openai dev day"],
+      "cadence": "Annual · October / November",
+      "audience": "LLM application developers, AI product teams",
+      "miro_angle": "Capture new API surface area on a Miro board and link each capability to a Miro template idea.",
+      "signal_topics": ["openai api", "assistants", "structured outputs", "agents"]
+    },
+    {
+      "name": "GitHub Universe",
+      "long_name": "GitHub Universe",
+      "keywords": ["github universe"],
+      "cadence": "Annual · October / November",
+      "audience": "Developer tooling teams, DevOps, platform engineers",
+      "miro_angle": "Storyboard the developer-loop changes (Copilot, Actions, Issues) and how they show up in collaboration tools.",
+      "signal_topics": ["copilot", "actions", "code review", "developer experience"]
+    },
+    {
+      "name": "QCon",
+      "long_name": "QCon Software Architecture Conference",
+      "keywords": ["qcon", "qcon london", "qcon new york", "qcon plus", "qcon san francisco"],
+      "cadence": "Multiple per year · global",
+      "audience": "Senior engineers, architects, platform leads",
+      "miro_angle": "Distill QCon track keynotes into one Miro 'patterns wall' the whole engineering org can revisit.",
+      "signal_topics": ["architecture", "platform engineering", "ml platforms", "team topologies"]
+    },
+    {
+      "name": "KubeCon",
+      "long_name": "KubeCon + CloudNativeCon",
+      "keywords": ["kubecon", "cloudnativecon"],
+      "cadence": "Twice yearly · NA + EU",
+      "audience": "Platform engineers, SREs, AI infra teams",
+      "miro_angle": "Map AI/ML workloads onto Kubernetes reference architectures using Miro mind maps.",
+      "signal_topics": ["kubernetes", "gpu scheduling", "gitops", "ai platforms"]
+    }
+  ]
+}

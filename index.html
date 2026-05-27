@@ -125,6 +125,38 @@
   .event-tag { background: #1f6feb22; color: #79c0ff; border: 1px solid #1f6feb33; border-radius: 999px;
                padding: 3px 9px; font-size: 0.72rem; }
 
+  /* ── AI Conference Pulse ── */
+  .pulse-section { background: linear-gradient(135deg, #18102a 0%, #0d1117 100%);
+                   border: 1px solid #bc8cff; border-radius: 14px; padding: 28px; margin-bottom: 36px; }
+  .pulse-section h2 { border-bottom-color: #bc8cff; color: #e6edf3; margin-top: 0; }
+  .pulse-section code { font-family: "SFMono-Regular", Consolas, monospace; font-size: 0.78rem;
+                        color: #bc8cff; background: #1a1025; border: 1px solid #6e40c944;
+                        border-radius: 4px; padding: 1px 6px; }
+  .pulse-empty { border-style: dashed; }
+  .pulse-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
+  .pulse-card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 18px;
+                transition: border-color .2s, transform .2s; }
+  .pulse-card:hover { border-color: #bc8cff; transform: translateY(-2px); }
+  .pulse-header { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+  .pulse-name { font-size: 1.05rem; font-weight: 800; color: #e6edf3; }
+  .pulse-count { background: #6e40c9; color: #fff; border-radius: 999px; padding: 2px 10px;
+                 font-size: 0.72rem; font-weight: 700; white-space: nowrap; }
+  .pulse-long-name { font-size: 0.78rem; color: #bc8cff; margin-bottom: 6px; }
+  .pulse-meta { font-size: 0.78rem; color: #8b949e; margin-bottom: 10px; }
+  .pulse-topics { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .pulse-tag { background: #6e40c922; color: #bc8cff; border: 1px solid #6e40c944; border-radius: 999px;
+               padding: 2px 8px; font-size: 0.7rem; }
+  .pulse-miro { font-size: 0.82rem; color: #c9d1d9; background: #1a1025; border-left: 3px solid #bc8cff;
+                border-radius: 4px; padding: 8px 10px; margin-bottom: 12px; line-height: 1.5; }
+  .pulse-miro strong { color: #bc8cff; }
+  .pulse-articles { border-top: 1px solid #21262d; padding-top: 8px; margin-top: 8px; }
+  .pulse-article { padding: 6px 0; border-bottom: 1px dashed #21262d; }
+  .pulse-article:last-child { border-bottom: none; }
+  .pulse-article a { color: #79c0ff; text-decoration: none; font-size: 0.85rem; line-height: 1.45; }
+  .pulse-article a:hover { text-decoration: underline; color: #bc8cff; }
+  .pulse-article-meta { font-size: 0.72rem; color: #8b949e; margin-top: 2px; }
+  .pulse-sources { font-size: 0.72rem; color: #6e7681; margin-top: 10px; font-style: italic; }
+
   /* ── Topic cards ── */
   .topics-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; margin-bottom: 30px; }
   .topic-card { background: #161b22; border: 1px solid #21262d; border-radius: 10px; padding: 16px; transition: border-color .2s; }
@@ -215,23 +247,23 @@
 
 <header>
   <h1>🚀 Eng Brand Machine</h1>
-  <p class="subtitle">Real-time engineering trends from 31 sources · 336 articles · May 26, 2026 at 13:05</p>
+  <p class="subtitle">Real-time engineering trends from 48 sources · 473 articles · May 27, 2026 at 11:57</p>
   <span class="miro-badge">✦ Miro Developer Brand Intelligence</span>
 </header>
 
 <div class="stats-bar">
-  <div class="stat"><div class="num">336</div><div class="label">Articles Analyzed</div></div>
-  <div class="stat"><div class="num">31</div><div class="label">Live Sources</div></div>
+  <div class="stat"><div class="num">473</div><div class="label">Articles Analyzed</div></div>
+  <div class="stat"><div class="num">48</div><div class="label">Live Sources</div></div>
   <div class="stat"><div class="num">12</div><div class="label">Topics Tracked</div></div>
   <div class="stat"><div class="num">🤖 AI / ML</div><div class="label">Hottest Topic</div></div>
-  <div class="stat"><div class="num">185</div><div class="label">Articles on #1 Topic</div></div>
+  <div class="stat"><div class="num">260</div><div class="label">Articles on #1 Topic</div></div>
 </div>
 
 <main>
 
   <div class="recs-section">
     <h2>✦ Top 5 Content Recommendations for Miro&apos;s Developer Brand</h2>
-    <p class="recs-intro">Generated from 336 articles across 31 sources — each recommendation is anchored to what engineers are actually reading today.</p>
+    <p class="recs-intro">Generated from 473 articles across 48 sources — each recommendation is anchored to what engineers are actually reading today.</p>
     <div class="recs-grid">
       
         <div class="rec-card">
@@ -244,7 +276,7 @@
             <span class="rec-format">📄 Blog Post + Free Template</span>
             <span class="rec-cta">Download the AI Architecture Template →</span>
           </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>perplexityai/bumblebee — Read-only developer endpoint scanner for on-disk package, extension, and developer-tool metadata, built to check exposur</li><li>open-gsd/get-shit-done-redux — Getting Shit Done, the Aftermath</li></ul></div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>It finally happened</li><li>I&#x27;m Tired of Talking to AI</li></ul></div>
           <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
           <div class="post-draft">
             <div class="post-hero">
@@ -292,7 +324,7 @@
             <span class="rec-format">📄 Blog Post + Template</span>
             <span class="rec-cta">See the Frontend Architecture Template →</span>
           </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>Show HN: Audiomass – a free, open-source multitrack audio editor for the web</li><li>unprovable/ShadowCat — Single file optical file transfer using a browser</li></ul></div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>Building Drupal at 79 years old</li><li>Show HN: Audiomass – a free, open-source multitrack audio editor for the web</li></ul></div>
           <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
           <div class="post-draft">
             <div class="post-hero">
@@ -339,7 +371,7 @@
             <span class="rec-format">📄 Educational Post + Interactive Board</span>
             <span class="rec-cta">Open the interactive explainer →</span>
           </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>The User Is Visibly Frustrated</li><li>Show HN: Write your BPF programs in Go, not C</li></ul></div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>NVIDIA Removes Gaming Revenue Category From Financial Reports</li><li>Cancelling RingCentral Took Over an Hour and Felt Deliberately Designed to Exhaust Customers</li></ul></div>
           <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
           <div class="post-draft">
             <div class="post-hero">
@@ -387,7 +419,7 @@
             <span class="rec-format">📄 Tutorial + Template</span>
             <span class="rec-cta">Grab the K8s Miro Template →</span>
           </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>Show HN: Freenet, a peer-to-peer platform for decentralized apps</li><li>Managing multiple docker hub accounts using docker-use</li></ul></div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>Heretic has been served a legal notice by Meta, Inc.</li><li>Genuinely hate cyber security teams</li></ul></div>
           <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
           <div class="post-draft">
             <div class="post-hero">
@@ -426,48 +458,49 @@
         </div>
         <div class="rec-card">
           <div class="rec-num">#5</div>
-          <div class="rec-topic">🎨 Dev Experience</div>
-          <div class="rec-title">Developer Onboarding Boards That Don&#x27;t Suck</div>
-          <div class="rec-desc">The best onboarding experience a new engineer can get: a Miro board that maps the entire system, annotated with &#x27;start here&#x27; paths, gotchas, and links to code — built by the team, for the team.</div>
-          <div class="rec-demo"><strong>🎬 Demo:</strong> Day 1 onboarding board: team structure → codebase map → dev environment setup → first PR checklist → who to ask for what.</div>
+          <div class="rec-topic">🔐 Security</div>
+          <div class="rec-title">Collaborative Threat Modeling on Miro: A Developer&#x27;s Guide</div>
+          <div class="rec-desc">Security doesn&#x27;t have to happen in silos. This guide shows dev teams how to run STRIDE threat modeling sessions in Miro — mapping trust boundaries, attack surfaces, and mitigations together in real time.</div>
+          <div class="rec-demo"><strong>🎬 Demo:</strong> Live threat model for a typical SaaS app: user → API gateway → auth service → DB. Each node color-coded by risk level, with mitigation sticky notes.</div>
           <div class="rec-meta">
-            <span class="rec-format">📄 Template + Blog Post</span>
-            <span class="rec-cta">Get the Engineering Onboarding Template →</span>
+            <span class="rec-format">📄 Workshop Guide + Template</span>
+            <span class="rec-cta">Run your first threat model session →</span>
           </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>kageroumado/phosphene — A video wallpaper engine for macOS Tahoe</li><li>bonus-2026/casino-bonus — Casino Bonus guide featuring a $250 USD no deposit welcome reward for new users with promo code DROP. Explore crypto cas</li></ul></div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>so to recap this week: two actively exploited Defender zero-days, an unpatched Exchange spoofing vuln, a BitLocker bypass called &quot;YellowKey&quot;, AND 137 CVEs from Patch Tuesday. this is not a normal week</li><li>Normies v Nerds: The end of an era?</li></ul></div>
           <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
           <div class="post-draft">
             <div class="post-hero">
               <div class="post-hero-label">🎨 Hero Image Prompt (Midjourney / DALL-E)</div>
-              <div class="post-hero-prompt">Developer onboarding board showing team structure, codebase map, and first PR checklist as interconnected glowing nodes, warm amber paths guiding a new engineer through their first week on dark background, welcoming tech visualization</div>
+              <div class="post-hero-prompt">STRIDE threat model diagram on a dark background, nodes representing API gateway, auth service, and database with red threat arrows and green mitigation shields overlaid, security visualization, dark mode, red and green palette</div>
             </div>
-            <div class="post-tags"><span class="post-tag">#developer-experience</span><span class="post-tag">#onboarding</span><span class="post-tag">#dx</span><span class="post-tag">#documentation</span><span class="post-tag">#miro-templates</span><span class="post-tag">#engineering</span></div>
-            <div class="post-meta-bar">⏱ 5 min read &nbsp;·&nbsp; 🔍 Build developer onboarding boards in Miro that new engineers actually use — codebase maps, first-PR checklists, and who-to-ask guides all in one place.</div>
+            <div class="post-tags"><span class="post-tag">#security</span><span class="post-tag">#threat-modeling</span><span class="post-tag">#stride</span><span class="post-tag">#devsecops</span><span class="post-tag">#miro-templates</span><span class="post-tag">#appsec</span></div>
+            <div class="post-meta-bar">⏱ 8 min read &nbsp;·&nbsp; 🔍 Run collaborative STRIDE threat modeling sessions in Miro — map attack surfaces, trust boundaries, and mitigations with your whole engineering team.</div>
             <div class="post-body">
-<p>The first PR a new engineer merges should happen in their first week. In most organizations, it happens in their third. The gap isn't talent — it's friction. Friction from a dev environment setup that requires tribal knowledge to get working. Friction from a codebase with no map. Friction from not knowing which Slack channel to ask for help without feeling like you're bothering someone. Good onboarding eliminates friction. Most onboarding just documents it.</p>
+<p>Security reviews are too often a checkbox at the end of a project — a rushed 30-minute meeting where a security engineer skims an architecture doc they've never seen before and signs off under deadline pressure. The result: real threats get missed, mitigations are bolted on as afterthoughts, and the security team gets blamed when something breaks in production. The problem isn't lack of expertise. It's lack of shared context.</p>
 
-<h2>Why Most Onboarding Documentation Doesn't Work</h2>
-<p>Engineering onboarding docs share a universal failure mode: they're written by senior engineers who've forgotten what it's like to not know things, last updated during a sprint where someone had too much spare time, and structured around what the team thought was important rather than what a new person needs to know first.</p>
-<p>The other failure mode is format. Long markdown docs in a wiki require a level of contextual understanding to parse that the new engineer doesn't yet have. "Set up your local environment by following CONTRIBUTING.md" is useless when you don't know what any of the tools mentioned are or why you need them.</p>
+<h2>Why Siloed Security Reviews Fail</h2>
+<p>Traditional threat modeling — STRIDE, PASTA, attack trees — is powerful on paper and painful in practice. The tools are often heavyweight (dedicated software with steep learning curves), the output is hard to share (dense Word documents nobody reads), and the process is designed for security specialists, not the development teams who need to act on the findings.</p>
+<p>When security happens in a silo, developers see it as a blocker, not a collaborator. Threat models sit in a security team's shared drive, disconnected from the architecture diagrams developers actually use. Mitigations get forgotten. The same vulnerabilities get introduced sprint after sprint.</p>
 
-<h2>The Miro Framework: The Engineering Onboarding Board</h2>
+<h2>The Miro STRIDE Framework: 6 Steps to Collaborative Threat Modeling</h2>
 <ol>
-  <li><strong>The "Start Here" path.</strong> A visual, numbered trail through the board — like a guided tour — that explicitly sequences the information a new engineer needs. Start: team structure and who to ask for what. Then: codebase overview. Then: dev environment setup with screenshots. Then: first PR checklist.</li>
-  <li><strong>The codebase map.</strong> A diagram showing the major repositories, their purposes, and how they relate. Link each box to the actual GitHub repo. Color codes: green = stable/mature, yellow = active development, red = known issues / scheduled for refactor. New engineers instantly know which areas to explore and which to approach with caution.</li>
-  <li><strong>The "who to ask" guide.</strong> A Miro frame with team members, their areas of ownership, and their preferred contact method. Eliminates the anxiety of "am I asking the right person?" that slows down new engineers for their first month.</li>
-  <li><strong>First PR checklist.</strong> A visual checklist of everything needed before opening a PR: linting, tests passing, docs updated, PR template filled out, code review assigned. Interactive checkboxes appreciated.</li>
-  <li><strong>Gotchas and institutional knowledge.</strong> A frame just for "things we wish someone had told us" — the surprising behavior in the deployment pipeline, the Slack channel that sounds unrelated but is actually important, the testing shortcut that saves 20 minutes. Crowdsourced from the whole team.</li>
+  <li><strong>Start with your data flow diagram.</strong> Draw every component, data store, external actor, and trust boundary on a Miro board. This is the shared foundation everyone in the room works from.</li>
+  <li><strong>Apply STRIDE categories.</strong> For each component and data flow, add color-coded sticky notes: Spoofing (red), Tampering (orange), Repudiation (yellow), Information Disclosure (purple), Denial of Service (blue), Elevation of Privilege (pink).</li>
+  <li><strong>Run the async review phase.</strong> Share the board 48 hours before the session. Let engineers, product managers, and the security team add their own threat notes asynchronously. You walk into the meeting with richer input than any single expert could generate alone.</li>
+  <li><strong>Score and prioritize threats.</strong> In the live session, use Miro voting to score threats by likelihood × impact. The board updates in real time, giving you a prioritized risk register by the end of the meeting.</li>
+  <li><strong>Map mitigations to components.</strong> For each high-priority threat, add a green sticky with the mitigation strategy and the engineering owner. This becomes your security backlog.</li>
+  <li><strong>Link to code and tickets.</strong> Connect each mitigation sticky to the relevant Jira ticket or GitHub issue. The threat model stays connected to actual remediation work.</li>
 </ol>
 
 <div class="image-callout">
   <strong>🎨 Mid-Post Image Suggestion</strong><br>
-  <em>AI prompt:</em> "Developer onboarding journey map with numbered stages — team introduction, codebase tour, environment setup, first PR — connected by warm glowing trail on dark background, sticky notes with tips and gotchas attached to each stage, friendly tech illustration"
+  <em>AI prompt:</em> "STRIDE threat model showing SaaS components — API gateway, auth service, user database — with colored threat annotation sticky notes (red, orange, yellow, purple, blue, pink) and green mitigation shields, dark security dashboard aesthetic"
 </div>
 
-<h2>Team Adoption: The Board Built by the Team, for the Team</h2>
-<p>The secret to an onboarding board that stays useful: every new engineer, during their first two weeks, adds at least one thing to the "gotchas" frame that they wish they'd known earlier. This creates a flywheel — the board gets more useful with each hire, and new engineers contribute to the team from their very first week.</p>
-<p>Assign the most recent new engineer as the "onboarding board maintainer." They're best positioned to know what's missing or misleading, and the responsibility gives them ownership of a team artifact from day one.</p>
-<p>The best onboarding experience is one that new engineers wish they'd had at every previous company. <em>Get the Engineering Onboarding Template and give your next hire the start they deserve.</em></p>
+<h2>Team Adoption: Threat Modeling as a Sprint Ritual</h2>
+<p>The teams that make threat modeling stick don't treat it as a project milestone — they treat it as a recurring sprint ritual. Every time a new feature introduces a data flow, API, or third-party integration, a 45-minute threat modeling session is automatically scheduled. The Miro board template is already there; you just add a new frame for the new feature.</p>
+<p>After three months, something shifts in the team culture: developers start thinking about trust boundaries during design, not after implementation. Security stops being a gate and becomes a design input. And when an auditor asks "how do you manage security risk?", you open the Miro board instead of scrambling for documentation.</p>
+<p>Security built collaboratively is security that actually holds. <em>Run your first STRIDE threat modeling session in Miro — the template takes 5 minutes to set up.</em></p>
 </div>
             <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
           </div>
@@ -479,6 +512,7 @@
     <h2>📍 Amsterdam AI Conference Tracker</h2>
     <p class="recs-intro">A fictional planning slate of AI conferences in Amsterdam, Netherlands for the rest of 2026 — useful for roadmap launches, field marketing, and local community moments.</p>
     <div class="events-summary">
+      
       <div class="event-stat"><div class="num">7</div><div class="label">Amsterdam Events</div></div>
       <div class="event-stat"><div class="num">Jun 18–19, 2026</div><div class="label">Next Event Window</div></div>
       <div class="event-stat"><div class="num">Amsterdam, Netherlands</div><div class="label">Default Location</div></div>
@@ -487,100 +521,149 @@
       These conferences are intentionally made up for planning and demo purposes. Use the slate to pressure-test Miro activations, sponsorship ideas, and content hooks tied to Amsterdam-based AI audiences.
     </div>
     <div class="events-grid">
-      <div class="event-card">
-        <div class="event-date"><span class="event-month">JUN</span><span class="event-day">18</span></div>
-        <div class="event-copy">
-          <div class="event-kicker">Fictional planning slate · Amsterdam, Netherlands</div>
-          <div class="event-title">Canal AI Summit</div>
-          <div class="event-meta">Jun 18–19, 2026 · Beurs van Berlage · Leadership summit</div>
-          <div class="event-detail"><strong>Focus:</strong> Applied GenAI for product and platform teams</div>
-          <div class="event-detail"><strong>Audience:</strong> Engineering leaders, staff+ ICs, AI PMs</div>
-          <div class="event-detail"><strong>Miro play:</strong> Run an AI architecture clinic that maps agent handoffs, human review, and model evaluation in one board.</div>
-          <div class="event-detail"><strong>Watch for:</strong> Enterprise adoption stories, copilots moving from pilots to production, and platform-team playbooks.</div>
-          <div class="event-tags"><span class="event-tag">GenAI</span><span class="event-tag">Agents</span><span class="event-tag">Architecture</span></div>
+      
+        <div class="event-card">
+          <div class="event-date">
+            <span class="event-month">JUN</span>
+            <span class="event-day">18</span>
+          </div>
+          <div class="event-copy">
+            <div class="event-kicker">Fictional planning slate · Amsterdam, Netherlands</div>
+            <div class="event-title">Canal AI Summit</div>
+            <div class="event-meta">Jun 18–19, 2026 · Beurs van Berlage · Leadership summit</div>
+            <div class="event-detail"><strong>Focus:</strong> Applied GenAI for product and platform teams</div>
+            <div class="event-detail"><strong>Audience:</strong> Engineering leaders, staff+ ICs, AI PMs</div>
+            <div class="event-detail"><strong>Miro play:</strong> Run an AI architecture clinic that maps agent handoffs, human review, and model evaluation in one board.</div>
+            <div class="event-detail"><strong>Watch for:</strong> Enterprise adoption stories, copilots moving from pilots to production, and platform-team playbooks.</div>
+            <div class="event-tags"><span class="event-tag">GenAI</span><span class="event-tag">Agents</span><span class="event-tag">Architecture</span></div>
+          </div>
         </div>
-      </div>
-      <div class="event-card">
-        <div class="event-date"><span class="event-month">JUL</span><span class="event-day">09</span></div>
-        <div class="event-copy">
-          <div class="event-kicker">Fictional planning slate · Amsterdam, Netherlands</div>
-          <div class="event-title">Lowlands LLM Builders Week</div>
-          <div class="event-meta">Jul 09–11, 2026 · NEMO Science Museum · Workshop week</div>
-          <div class="event-detail"><strong>Focus:</strong> Hands-on LLM tooling, evals, and retrieval systems</div>
-          <div class="event-detail"><strong>Audience:</strong> Applied ML engineers, developer advocates, startup founders</div>
-          <div class="event-detail"><strong>Miro play:</strong> Host collaborative prompt-debugging and eval design sessions directly on Miro canvases.</div>
-          <div class="event-detail"><strong>Watch for:</strong> Reusable RAG patterns, developer tooling launches, and demand for visual experimentation workflows.</div>
-          <div class="event-tags"><span class="event-tag">LLM</span><span class="event-tag">Evals</span><span class="event-tag">RAG</span></div>
+        <div class="event-card">
+          <div class="event-date">
+            <span class="event-month">JUL</span>
+            <span class="event-day">09</span>
+          </div>
+          <div class="event-copy">
+            <div class="event-kicker">Fictional planning slate · Amsterdam, Netherlands</div>
+            <div class="event-title">Lowlands LLM Builders Week</div>
+            <div class="event-meta">Jul 09–11, 2026 · NEMO Science Museum · Workshop week</div>
+            <div class="event-detail"><strong>Focus:</strong> Hands-on LLM tooling, evals, and retrieval systems</div>
+            <div class="event-detail"><strong>Audience:</strong> Applied ML engineers, developer advocates, startup founders</div>
+            <div class="event-detail"><strong>Miro play:</strong> Host collaborative prompt-debugging and eval design sessions directly on Miro canvases.</div>
+            <div class="event-detail"><strong>Watch for:</strong> Reusable RAG patterns, developer tooling launches, and demand for visual experimentation workflows.</div>
+            <div class="event-tags"><span class="event-tag">LLM</span><span class="event-tag">Evals</span><span class="event-tag">RAG</span></div>
+          </div>
         </div>
-      </div>
-      <div class="event-card">
-        <div class="event-date"><span class="event-month">AUG</span><span class="event-day">21</span></div>
-        <div class="event-copy">
-          <div class="event-kicker">Fictional planning slate · Amsterdam, Netherlands</div>
-          <div class="event-title">North Sea Responsible AI Forum</div>
-          <div class="event-meta">Aug 21–22, 2026 · Muziekgebouw aan &apos;t IJ · Executive forum</div>
-          <div class="event-detail"><strong>Focus:</strong> Governance, compliance, and human-in-the-loop AI systems</div>
-          <div class="event-detail"><strong>Audience:</strong> Security leads, legal partners, product ops</div>
-          <div class="event-detail"><strong>Miro play:</strong> Position Miro as the place teams align policy, architecture, and launch checklists before shipping AI features.</div>
-          <div class="event-detail"><strong>Watch for:</strong> EU AI Act readiness, approval workflows, and cross-functional review rituals.</div>
-          <div class="event-tags"><span class="event-tag">Responsible AI</span><span class="event-tag">Governance</span><span class="event-tag">Compliance</span></div>
+        <div class="event-card">
+          <div class="event-date">
+            <span class="event-month">AUG</span>
+            <span class="event-day">21</span>
+          </div>
+          <div class="event-copy">
+            <div class="event-kicker">Fictional planning slate · Amsterdam, Netherlands</div>
+            <div class="event-title">North Sea Responsible AI Forum</div>
+            <div class="event-meta">Aug 21–22, 2026 · Muziekgebouw aan &#x27;t IJ · Executive forum</div>
+            <div class="event-detail"><strong>Focus:</strong> Governance, compliance, and human-in-the-loop AI systems</div>
+            <div class="event-detail"><strong>Audience:</strong> Security leads, legal partners, product ops</div>
+            <div class="event-detail"><strong>Miro play:</strong> Position Miro as the place teams align policy, architecture, and launch checklists before shipping AI features.</div>
+            <div class="event-detail"><strong>Watch for:</strong> EU AI Act readiness, approval workflows, and cross-functional review rituals.</div>
+            <div class="event-tags"><span class="event-tag">Responsible AI</span><span class="event-tag">Governance</span><span class="event-tag">Compliance</span></div>
+          </div>
         </div>
-      </div>
-      <div class="event-card">
-        <div class="event-date"><span class="event-month">SEP</span><span class="event-day">16</span></div>
-        <div class="event-copy">
-          <div class="event-kicker">Fictional planning slate · Amsterdam, Netherlands</div>
-          <div class="event-title">Amsterdam Applied AI Days</div>
-          <div class="event-meta">Sep 16–17, 2026 · RAI Amsterdam · Conference + expo</div>
-          <div class="event-detail"><strong>Focus:</strong> Production ML, copilots, and AI-native product design</div>
-          <div class="event-detail"><strong>Audience:</strong> Product teams, solution architects, founders</div>
-          <div class="event-detail"><strong>Miro play:</strong> Demo how product, design, and engineering teams storyboard AI experiences together before implementation.</div>
-          <div class="event-detail"><strong>Watch for:</strong> AI UX patterns, multimodal feature launches, and partner ecosystem announcements.</div>
-          <div class="event-tags"><span class="event-tag">Product</span><span class="event-tag">Copilots</span><span class="event-tag">AI UX</span></div>
+        <div class="event-card">
+          <div class="event-date">
+            <span class="event-month">SEP</span>
+            <span class="event-day">16</span>
+          </div>
+          <div class="event-copy">
+            <div class="event-kicker">Fictional planning slate · Amsterdam, Netherlands</div>
+            <div class="event-title">Amsterdam Applied AI Days</div>
+            <div class="event-meta">Sep 16–17, 2026 · RAI Amsterdam · Conference + expo</div>
+            <div class="event-detail"><strong>Focus:</strong> Production ML, copilots, and AI-native product design</div>
+            <div class="event-detail"><strong>Audience:</strong> Product teams, solution architects, founders</div>
+            <div class="event-detail"><strong>Miro play:</strong> Demo how product, design, and engineering teams storyboard AI experiences together before implementation.</div>
+            <div class="event-detail"><strong>Watch for:</strong> AI UX patterns, multimodal feature launches, and partner ecosystem announcements.</div>
+            <div class="event-tags"><span class="event-tag">Product</span><span class="event-tag">Copilots</span><span class="event-tag">AI UX</span></div>
+          </div>
         </div>
-      </div>
-      <div class="event-card">
-        <div class="event-date"><span class="event-month">OCT</span><span class="event-day">08</span></div>
-        <div class="event-copy">
-          <div class="event-kicker">Fictional planning slate · Amsterdam, Netherlands</div>
-          <div class="event-title">Graph + Agents Europe</div>
-          <div class="event-meta">Oct 08–09, 2026 · Pakhuis de Zwijger · Technical conference</div>
-          <div class="event-detail"><strong>Focus:</strong> Knowledge graphs, agent memory, and orchestration</div>
-          <div class="event-detail"><strong>Audience:</strong> Platform engineers, data engineers, solution architects</div>
-          <div class="event-detail"><strong>Miro play:</strong> Show graph-backed agent systems as living diagrams with linked implementation notes and review comments.</div>
-          <div class="event-detail"><strong>Watch for:</strong> Long-lived agent state, graph retrieval design, and multi-agent operational tooling.</div>
-          <div class="event-tags"><span class="event-tag">Graphs</span><span class="event-tag">Memory</span><span class="event-tag">Multi-agent</span></div>
+        <div class="event-card">
+          <div class="event-date">
+            <span class="event-month">OCT</span>
+            <span class="event-day">08</span>
+          </div>
+          <div class="event-copy">
+            <div class="event-kicker">Fictional planning slate · Amsterdam, Netherlands</div>
+            <div class="event-title">Graph + Agents Europe</div>
+            <div class="event-meta">Oct 08–09, 2026 · Pakhuis de Zwijger · Technical conference</div>
+            <div class="event-detail"><strong>Focus:</strong> Knowledge graphs, agent memory, and orchestration</div>
+            <div class="event-detail"><strong>Audience:</strong> Platform engineers, data engineers, solution architects</div>
+            <div class="event-detail"><strong>Miro play:</strong> Show graph-backed agent systems as living diagrams with linked implementation notes and review comments.</div>
+            <div class="event-detail"><strong>Watch for:</strong> Long-lived agent state, graph retrieval design, and multi-agent operational tooling.</div>
+            <div class="event-tags"><span class="event-tag">Graphs</span><span class="event-tag">Memory</span><span class="event-tag">Multi-agent</span></div>
+          </div>
         </div>
-      </div>
-      <div class="event-card">
-        <div class="event-date"><span class="event-month">NOV</span><span class="event-day">13</span></div>
-        <div class="event-copy">
-          <div class="event-kicker">Fictional planning slate · Amsterdam, Netherlands</div>
-          <div class="event-title">Tulip City AI Infra Meetup</div>
-          <div class="event-meta">Nov 13, 2026 · A Lab Amsterdam · Community meetup</div>
-          <div class="event-detail"><strong>Focus:</strong> GPU ops, inference performance, and cost control</div>
-          <div class="event-detail"><strong>Audience:</strong> Infra teams, DevOps leaders, FinOps stakeholders</div>
-          <div class="event-detail"><strong>Miro play:</strong> Pair infra diagrams with budgeting and incident-response workflows on the same board.</div>
-          <div class="event-detail"><strong>Watch for:</strong> Inference optimization, batch-vs-real-time tradeoffs, and platform cost narratives.</div>
-          <div class="event-tags"><span class="event-tag">Infra</span><span class="event-tag">Inference</span><span class="event-tag">FinOps</span></div>
+        <div class="event-card">
+          <div class="event-date">
+            <span class="event-month">NOV</span>
+            <span class="event-day">13</span>
+          </div>
+          <div class="event-copy">
+            <div class="event-kicker">Fictional planning slate · Amsterdam, Netherlands</div>
+            <div class="event-title">Tulip City AI Infra Meetup</div>
+            <div class="event-meta">Nov 13, 2026 · A Lab Amsterdam · Community meetup</div>
+            <div class="event-detail"><strong>Focus:</strong> GPU ops, inference performance, and cost control</div>
+            <div class="event-detail"><strong>Audience:</strong> Infra teams, DevOps leaders, FinOps stakeholders</div>
+            <div class="event-detail"><strong>Miro play:</strong> Pair infra diagrams with budgeting and incident-response workflows on the same board.</div>
+            <div class="event-detail"><strong>Watch for:</strong> Inference optimization, batch-vs-real-time tradeoffs, and platform cost narratives.</div>
+            <div class="event-tags"><span class="event-tag">Infra</span><span class="event-tag">Inference</span><span class="event-tag">FinOps</span></div>
+          </div>
         </div>
-      </div>
-      <div class="event-card">
-        <div class="event-date"><span class="event-month">DEC</span><span class="event-day">04</span></div>
-        <div class="event-copy">
-          <div class="event-kicker">Fictional planning slate · Amsterdam, Netherlands</div>
-          <div class="event-title">Winter AI Collaboration Assembly</div>
-          <div class="event-meta">Dec 04–05, 2026 · Westergas · Practitioner summit</div>
-          <div class="event-detail"><strong>Focus:</strong> Team workflows for AI delivery across product, design, and engineering</div>
-          <div class="event-detail"><strong>Audience:</strong> Cross-functional delivery teams, innovation leads</div>
-          <div class="event-detail"><strong>Miro play:</strong> Anchor Miro around planning, review, and retrospective rituals for AI product teams.</div>
-          <div class="event-detail"><strong>Watch for:</strong> Org design for AI teams, operating cadences, and templates that shorten time-to-launch.</div>
-          <div class="event-tags"><span class="event-tag">Collaboration</span><span class="event-tag">Workflows</span><span class="event-tag">Planning</span></div>
+        <div class="event-card">
+          <div class="event-date">
+            <span class="event-month">DEC</span>
+            <span class="event-day">04</span>
+          </div>
+          <div class="event-copy">
+            <div class="event-kicker">Fictional planning slate · Amsterdam, Netherlands</div>
+            <div class="event-title">Winter AI Collaboration Assembly</div>
+            <div class="event-meta">Dec 04–05, 2026 · Westergas · Practitioner summit</div>
+            <div class="event-detail"><strong>Focus:</strong> Team workflows for AI delivery across product, design, and engineering</div>
+            <div class="event-detail"><strong>Audience:</strong> Cross-functional delivery teams, innovation leads</div>
+            <div class="event-detail"><strong>Miro play:</strong> Anchor Miro around planning, review, and retrospective rituals for AI product teams.</div>
+            <div class="event-detail"><strong>Watch for:</strong> Org design for AI teams, operating cadences, and templates that shorten time-to-launch.</div>
+            <div class="event-tags"><span class="event-tag">Collaboration</span><span class="event-tag">Workflows</span><span class="event-tag">Planning</span></div>
+          </div>
         </div>
-      </div>
     </div>
   </div>
 
+  <div class="pulse-section">
+    <h2>🧠 AI Conference Pulse — what's trending in the news</h2>
+    <p class="recs-intro">Real-world AI conferences mentioned across the 473 articles in today's run. Powered by keyword matching against <code>data/conferences.json → major_ai_conferences</code>.</p>
+    <div class="pulse-grid">
+      
+        <div class="pulse-card">
+          <div class="pulse-header">
+            <div class="pulse-name">Google I/O</div>
+            <div class="pulse-count">2 mentions</div>
+          </div>
+          <div class="pulse-long-name">Google I/O</div>
+          <div class="pulse-meta">Annual · May · Product engineers, AI app developers, mobile/web teams</div>
+          <div class="pulse-topics"><span class="pulse-tag">gemini</span><span class="pulse-tag">android ai</span><span class="pulse-tag">developer tooling</span><span class="pulse-tag">agents</span></div>
+          <div class="pulse-miro"><strong>Miro angle:</strong> Diagram Gemini/Workspace launches against Miro&#x27;s AI-collaboration story to find integration angles.</div>
+          <div class="pulse-articles">
+            <div class="pulse-article">
+              <a href="https://frontendfoc.us/issues/742" target="_blank" rel="noopener">Google I/O and the &#x27;era of the agentic web&#x27;.</a>
+              <div class="pulse-article-meta">🔵 Frontend Focus </div>
+            </div>
+            <div class="pulse-article">
+              <a href="https://tldr.tech/tech/2026-05-20" target="_blank" rel="noopener">Google IO 🤖, Karpathy joins Anthropic 💼, SpaceX + Cursor 🚀</a>
+              <div class="pulse-article-meta">🔵 TLDR Newsletter </div>
+            </div></div>
+          <div class="pulse-sources">📡 Surfaced via: Frontend Focus, TLDR Newsletter</div>
+        </div>
+    </div>
+  </div>
   <div class="reddit-section">
     <h2>🔴 Reddit — Interactive Subreddit Feed</h2>
     <p class="recs-intro">Select subreddits, set a time filter, and click Fetch to pull live data directly from Reddit's public API.</p>
@@ -670,191 +753,195 @@
   <div class="topics-grid">
     
         <div class="topic-card">
-          <div class="topic-header">🤖 AI / ML <span class="count">185</span></div>
+          <div class="topic-header">🤖 AI / ML <span class="count">260</span></div>
           
             <div class="article-item">
-              <a href="https://github.com/perplexityai/bumblebee" target="_blank">perplexityai/bumblebee — Read-only developer endpoint scanner for on-disk package, extension, and developer-tool metadata, built to check exposur</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 2842</span> 2026-05-20</div>
+              <a href="https://www.reddit.com/r/webdev/comments/1tjd4ay/it_finally_happened/" target="_blank">It finally happened</a>
+              <div class="meta">🔴 r/webdev <span class="badge">⬆ 2355</span> May 21</div>
+            </div>
+            <div class="article-item">
+              <a href="https://orchidfiles.com/im-tired-of-ai-generated-answers/" target="_blank">I&#x27;m Tired of Talking to AI</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 1753</span> May 27</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/devops/comments/1tj63pz/today_is_why_i_no_longer_have_the_desire_to_work/" target="_blank">Today is why i no longer have the desire to work in IT anymore</a>
+              <div class="meta">🔴 r/devops <span class="badge">⬆ 1746</span> May 20</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/sysadmin/comments/1tjjio7/my_older_coworkers_have_accepted_ai_as_the_source/" target="_blank">My older coworkers have accepted AI as the source of truth</a>
+              <div class="meta">🔴 r/sysadmin <span class="badge">⬆ 1445</span> May 21</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/open-gsd/get-shit-done-redux" target="_blank">open-gsd/get-shit-done-redux — Getting Shit Done, the Aftermath</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 981</span> 2026-05-22</div>
-            </div>
-            <div class="article-item">
-              <a href="https://nolanlawson.com/2026/05/25/using-ai-to-write-better-code-more-slowly/" target="_blank">Using AI to write better code more slowly</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 799</span> May 25</div>
-            </div>
-            <div class="article-item">
-              <a href="https://github.com/MoonshotAI/kimi-code" target="_blank">MoonshotAI/kimi-code — The Starting Point for Next-Gen Agents</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 677</span> 2026-05-22</div>
-            </div>
-            <div class="article-item">
-              <a href="https://github.com/0xSero/codex-shim" target="_blank">0xSero/codex-shim — Local Responses-API shim that exposes Factory BYOK models (and optional ChatGPT GPT-5.5 passthrough) to Codex Desktop.</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 621</span> 2026-05-22</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1304</span> 2026-05-22</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🔧 Engineering <span class="count">47</span></div>
+          <div class="topic-header">🔧 Engineering <span class="count">57</span></div>
           
             <div class="article-item">
-              <a href="https://github.com/thananon/9arm-skills" target="_blank">thananon/9arm-skills</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 2310</span> 2026-05-20</div>
-            </div>
-            <div class="article-item">
-              <a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html" target="_blank">Magnifica Humanitas</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 1483</span> May 25</div>
-            </div>
-            <div class="article-item">
-              <a href="https://www.tomshardware.com/software/linux/california-moves-to-exempt-linux-from-its-upcoming-age-verification-law-after-backlash-over-forcing-operating-systems-to-collect-users-ages-amendment-proposed-by-the-same-lawmaker-who-wrote-the-original-law" target="_blank">California moves to exempt Linux from its age-verification law after backlash</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 933</span> May 25</div>
-            </div>
-            <div class="article-item">
               <a href="https://github.com/Tong89/smartNode" target="_blank">Tong89/smartNode</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 926</span> 2026-05-21</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1451</span> 2026-05-21</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/run-liyi/wechatpay" target="_blank">run-liyi/wechatpay — 微信账单分析工具 - 基于Electron的可视化账单分析应用</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 675</span> 2026-05-21</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 984</span> 2026-05-21</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/sysadmin/comments/1tp10i5/why_are_developers_some_of_the_most_it_inept_users/" target="_blank">Why are developers some of the most IT inept users?</a>
+              <div class="meta">🔴 r/sysadmin <span class="badge">⬆ 772</span> May 27</div>
+            </div>
+            <div class="article-item">
+              <a href="https://github.com/zhaoyue4810/pianke" target="_blank">zhaoyue4810/pianke</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 495</span> 2026-05-22</div>
+            </div>
+            <div class="article-item">
+              <a href="https://developer.chrome.com/blog/declarative-partial-updates" target="_blank">Chrome proposes new APIs: Declarative partial updates</a>
+              <div class="meta">🔴 r/programming <span class="badge">⬆ 435</span> May 23</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🌐 Web / Frontend <span class="count">41</span></div>
+          <div class="topic-header">🌐 Web / Frontend <span class="count">42</span></div>
           
             <div class="article-item">
+              <a href="https://www.reddit.com/r/webdev/comments/1tkcath/building_drupal_at_79_years_old/" target="_blank">Building Drupal at 79 years old</a>
+              <div class="meta">🔴 r/webdev <span class="badge">⬆ 585</span> May 22</div>
+            </div>
+            <div class="article-item">
               <a href="https://audiomass.co/?multitrack=1" target="_blank">Show HN: Audiomass – a free, open-source multitrack audio editor for the web</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 523</span> May 24</div>
+              <div class="meta">🟠 Show HN <span class="badge">⬆ 542</span> May 24</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/gallery/1tkgwo5" target="_blank">Took me a decade to turn quantum computing into what programmers can easily learn, big announcement</a>
+              <div class="meta">🔴 r/softwarearchitecture <span class="badge">⬆ 298</span> May 22</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/unprovable/ShadowCat" target="_blank">unprovable/ShadowCat — Single file optical file transfer using a browser</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 278</span> 2026-05-22</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 294</span> 2026-05-22</div>
             </div>
             <div class="article-item">
-              <a href="https://uvic-aurora.github.io/acav-manual/index.html" target="_blank">Show HN: Anyone interested in a tool helps to explore C++ ASTs</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 48</span> May 21</div>
-            </div>
-            <div class="article-item">
-              <a href="https://dev.to/andyhaskell/accessibility-this-looks-like-a-job-for-a-developer-advocate-2a12" target="_blank">Accessibility - This looks like a job for a developer advocate!</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 45</span> 2026-05-21</div>
-            </div>
-            <div class="article-item">
-              <a href="https://news.ycombinator.com/item?id=48248141" target="_blank">Ask HN: Do you have a colophon for your personal website?</a>
-              <div class="meta">🟠 Ask HN <span class="badge">⬆ 10</span> May 23</div>
+              <a href="https://www.reddit.com/r/sysadmin/comments/1tojcxw/update_i_applied_for_a_sysadmin_position_im/" target="_blank">UPDATE: I applied for a sysadmin position. I&#x27;m terrified.</a>
+              <div class="meta">🔴 r/sysadmin <span class="badge">⬆ 291</span> May 26</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🦀 Languages <span class="count">16</span></div>
+          <div class="topic-header">🦀 Languages <span class="count">38</span></div>
           
             <div class="article-item">
-              <a href="https://pscanf.com/s/354/" target="_blank">The User Is Visibly Frustrated</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 195</span> May 26</div>
+              <a href="https://www.guru3d.com/story/nvidia-removes-gaming-revenue-category-from-financial-reports/" target="_blank">NVIDIA Removes Gaming Revenue Category From Financial Reports</a>
+              <div class="meta">🔴 r/LocalLLaMA <span class="badge">⬆ 762</span> May 22</div>
             </div>
             <div class="article-item">
-              <a href="https://github.com/boratanrikulu/gobee" target="_blank">Show HN: Write your BPF programs in Go, not C</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 97</span> May 21</div>
+              <a href="https://www.reddit.com/r/sysadmin/comments/1todfk7/cancelling_ringcentral_took_over_an_hour_and_felt/" target="_blank">Cancelling RingCentral Took Over an Hour and Felt Deliberately Designed to Exhaust Customers</a>
+              <div class="meta">🔴 r/sysadmin <span class="badge">⬆ 592</span> May 26</div>
             </div>
             <div class="article-item">
-              <a href="https://github.com/boratanrikulu/gobee" target="_blank">Show HN: Write your BPF programs in Go, not C</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 97</span> May 21</div>
+              <a href="https://www.reddit.com/r/sysadmin/comments/1tksxs4/how_do_you_deal_with_the_gutwrenching_offboarding/" target="_blank">How do you deal with the gutwrenching offboarding requests?</a>
+              <div class="meta">🔴 r/sysadmin <span class="badge">⬆ 569</span> May 22</div>
             </div>
             <div class="article-item">
-              <a href="https://dev.to/orestesgaolin/jnigen-and-swiftgen-in-2026-some-lessons-learned-16ni" target="_blank">jnigen and swiftgen in 2026 - some lessons learned</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 45</span> 2026-05-20</div>
+              <a href="https://corrode.dev/podcast/s06e04-rust4linux/" target="_blank">&quot;Rust is going to save Linux&quot;: Greg Kroah-Hartman and Alice Ryhl on Rust for Linux (live at RustWeek 2026)</a>
+              <div class="meta">🔴 r/rust <span class="badge">⬆ 514</span> May 21</div>
             </div>
             <div class="article-item">
-              <a href="https://dev.to/gde/google-antigravity-10-to-20ide-quick-migration-guide-35p5" target="_blank">Google Antigravity 1.0 to 2.0/IDE Quick Migration Guide</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 28</span> 2026-05-22</div>
+              <a href="https://www.reddit.com/r/sysadmin/comments/1tjochk/vibecoded_app_deployment_requests_from_end_users/" target="_blank">Vibe-coded app deployment requests from end users</a>
+              <div class="meta">🔴 r/sysadmin <span class="badge">⬆ 309</span> May 21</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">☁️ Cloud / Infra <span class="count">13</span></div>
+          <div class="topic-header">☁️ Cloud / Infra <span class="count">23</span></div>
           
             <div class="article-item">
-              <a href="https://freenet.org/" target="_blank">Show HN: Freenet, a peer-to-peer platform for decentralized apps</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 383</span> May 21</div>
+              <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tjmvx6/heretic_has_been_served_a_legal_notice_by_meta_inc/" target="_blank">Heretic has been served a legal notice by Meta, Inc.</a>
+              <div class="meta">🔴 r/LocalLLaMA <span class="badge">⬆ 2236</span> May 21</div>
             </div>
             <div class="article-item">
-              <a href="https://dev.to/chiragagg5k/managing-multiple-docker-hub-accounts-using-docker-use-b6p" target="_blank">Managing multiple docker hub accounts using docker-use</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 9</span> 2026-05-25</div>
+              <a href="https://www.reddit.com/r/sysadmin/comments/1tp0rc8/genuinely_hate_cyber_security_teams/" target="_blank">Genuinely hate cyber security teams</a>
+              <div class="meta">🔴 r/sysadmin <span class="badge">⬆ 376</span> May 27</div>
             </div>
             <div class="article-item">
-              <a href="https://dev.to/k08200/mcp-probe-v140-contract-assertions-for-production-mcp-servers-4ig9" target="_blank">mcp-probe v1.4.0: Contract assertions for production MCP servers</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 5</span> 2026-05-23</div>
+              <a href="https://developers.cloudflare.com/flagship/" target="_blank">Cloudflare Flagship</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 328</span> May 26</div>
             </div>
             <div class="article-item">
-              <a href="https://news.ycombinator.com/item?id=48269493" target="_blank">S there room for a VPN with zero Five Eyes servers and RAM-only infrastructure?</a>
-              <div class="meta">🟠 Ask HN <span class="badge">⬆ 4</span> May 25</div>
+              <a href="https://i.redd.it/yjt7veekrl3h1.png" target="_blank">13K Lines of Rust Later: From Toy Compiler to Production Runtime in 90 Days</a>
+              <div class="meta">🔴 r/rust <span class="badge">⬆ 302</span> May 26</div>
             </div>
             <div class="article-item">
-              <a href="https://dev.to/aws-builders/ebpf-from-scratch-from-the-ebpf-vm-to-writing-your-own-tools-tested-on-a-live-cilium-cluster-3373" target="_blank">eBPF From Scratch: from the eBPF VM to writing your own tools (tested on a live Cilium cluster)</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 3</span> 2026-05-24</div>
+              <a href="https://www.reddit.com/r/kubernetes/comments/1tlogih/kubernetes_interview_gone_really_bad/" target="_blank">Kubernetes interview gone really bad</a>
+              <div class="meta">🔴 r/kubernetes <span class="badge">⬆ 133</span> May 23</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🎨 Dev Experience <span class="count">11</span></div>
+          <div class="topic-header">🔐 Security <span class="count">19</span></div>
           
             <div class="article-item">
-              <a href="https://github.com/kageroumado/phosphene" target="_blank">kageroumado/phosphene — A video wallpaper engine for macOS Tahoe</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 681</span> 2026-05-20</div>
+              <a href="https://www.reddit.com/r/sysadmin/comments/1tnd43o/so_to_recap_this_week_two_actively_exploited/" target="_blank">so to recap this week: two actively exploited Defender zero-days, an unpatched Exchange spoofing vuln, a BitLocker bypass called &quot;YellowKey&quot;, AND 137 CVEs from Patch Tuesday. this is not a normal week</a>
+              <div class="meta">🔴 r/sysadmin <span class="badge">⬆ 763</span> May 25</div>
             </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/sysadmin/comments/1tlbqf1/normies_v_nerds_the_end_of_an_era/" target="_blank">Normies v Nerds: The end of an era?</a>
+              <div class="meta">🔴 r/sysadmin <span class="badge">⬆ 454</span> May 23</div>
+            </div>
+            <div class="article-item">
+              <a href="https://i.redd.it/ggm2q1c2zh2h1.gif" target="_blank">ghcitty: a fast, friendly Haskell REPL written in Rust 🐈⚡ Syntax highlighting, tab+ghost completions, easy multiline, Vi-mode, Hoogle integration</a>
+              <div class="meta">🔴 r/rust <span class="badge">⬆ 259</span> May 21</div>
+            </div>
+            <div class="article-item">
+              <a href="https://arstechnica.com/security/2026/05/google-publishes-exploit-code-threatening-millions-of-chromium-users/" target="_blank">Google publishes exploit code threatening millions of Chromium users</a>
+              <div class="meta">🔴 r/programming <span class="badge">⬆ 253</span> May 20</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/webdev/comments/1tlyxoh/if_you_could_start_over_in_tech_today_what_would/" target="_blank">If you could start over in tech today, what would you learn?</a>
+              <div class="meta">🔴 r/webdev <span class="badge">⬆ 141</span> May 23</div>
+            </div>
+        </div>
+        <div class="topic-card">
+          <div class="topic-header">⚡ Performance <span class="count">13</span></div>
+          
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/rust/comments/1tnbm3q/spent_an_afternoon_on_a_perf_issue_that_56_bytes/" target="_blank">Spent an afternoon on a perf issue that 56 bytes of padding fixed</a>
+              <div class="meta">🔴 r/rust <span class="badge">⬆ 416</span> May 25</div>
+            </div>
+            <div class="article-item">
+              <a href="https://raw.githubusercontent.com/yugr/rust-slides/main/EN.pdf" target="_blank">Performance of Rust language</a>
+              <div class="meta">🔴 r/rust <span class="badge">⬆ 279</span> May 23</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/rust/comments/1tlzdtw/wild_linker_090_released/" target="_blank">Wild Linker 0.9.0 released</a>
+              <div class="meta">🔴 r/rust <span class="badge">⬆ 276</span> May 23</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/reactjs/comments/1tjbf4a/most_react_performance_advice_is_stuck_in_2023/" target="_blank">Most React performance advice is stuck in 2023. Here&#x27;s what actually matters now</a>
+              <div class="meta">🔴 r/reactjs <span class="badge">⬆ 224</span> May 20</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.reddit.com/r/golang/comments/1tms9tv/i_started_building_a_game_in_go_but_ended_up/" target="_blank">I started building a game in Go, but ended up writing my own high-performance ECS framework (GOKe)</a>
+              <div class="meta">🔴 r/golang <span class="badge">⬆ 145</span> May 24</div>
+            </div>
+        </div>
+        <div class="topic-card">
+          <div class="topic-header">🎨 Dev Experience <span class="count">9</span></div>
+          
             <div class="article-item">
               <a href="https://github.com/bonus-2026/casino-bonus" target="_blank">bonus-2026/casino-bonus — Casino Bonus guide featuring a $250 USD no deposit welcome reward for new users with promo code DROP. Explore crypto cas</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 300</span> 2026-05-23</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 302</span> 2026-05-23</div>
             </div>
             <div class="article-item">
-              <a href="https://github.com/Simbastack-hq/framedex" target="_blank">Simbastack-hq/framedex — Framedex — a queryable knowledge base for your video archive</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 255</span> 2026-05-21</div>
+              <a href="https://www.githubstatus.com/incidents/xy1tt3hs572m" target="_blank">Incident with Pull Requests, Issues, Git Operations and API Requests</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 211</span> May 27</div>
+            </div>
+            <div class="article-item">
+              <a href="https://dev.to/devteam/top-7-featured-dev-posts-of-the-week-45na" target="_blank">Top 7 Featured DEV Posts of the Week</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 92</span> 2026-05-26</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/tantara/openbrief" target="_blank">Show HN: OpenBrief – Local-first video downloader/summarizer</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 73</span> May 25</div>
+              <div class="meta">🟠 Show HN <span class="badge">⬆ 90</span> May 25</div>
             </div>
             <div class="article-item">
-              <a href="https://blog.0patch.com/2018/01/bringing-abandoned-equation-editor-back.html" target="_blank">Micropatching Brings the Abandoned Equation Editor Back to Life (2018)</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 37</span> May 21</div>
-            </div>
-        </div>
-        <div class="topic-card">
-          <div class="topic-header">🔐 Security <span class="count">11</span></div>
-          
-            <div class="article-item">
-              <a href="https://github.com/Unclecheng-li/poc-lab" target="_blank">Unclecheng-li/poc-lab — Recent CVE PoC &amp; reproduction scripts. Focused on high-severity vulnerabilities across Linux kernel, Windows, macOS and </a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 373</span> 2026-05-20</div>
-            </div>
-            <div class="article-item">
-              <a href="https://thefrontpage.dev/" target="_blank">Hacker News front page as a site</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 320</span> May 25</div>
-            </div>
-            <div class="article-item">
-              <a href="https://dev.to/gnomeman4201/i-found-a-coordinated-github-follow-botnet-hiding-in-my-followers-kgl" target="_blank">Found a Coordinated GitHub Follow Botnet Hiding in My Followers?</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 68</span> 2026-05-19</div>
-            </div>
-            <div class="article-item">
-              <a href="https://news.ycombinator.com/item?id=48257711" target="_blank">Is a Claw driven Hacker News user a problem?</a>
-              <div class="meta">🟠 Ask HN <span class="badge">⬆ 7</span> May 24</div>
-            </div>
-            <div class="article-item">
-              <a href="https://stackoverflow.blog/2026/05/19/your-fridge-could-be-a-threat-to-national-security/" target="_blank">Your fridge could be a threat to national security</a>
-              <div class="meta">🔵 Stack Overflow Blog  Tue, 19 Ma</div>
-            </div>
-        </div>
-        <div class="topic-card">
-          <div class="topic-header">🗄️ Databases <span class="count">4</span></div>
-          
-            <div class="article-item">
-              <a href="https://news.ycombinator.com/item?id=48271934" target="_blank">Sqlit – A lazygit-style TUI for SQL databases</a>
-              <div class="meta">🟠 Ask HN <span class="badge">⬆ 18</span> May 25</div>
-            </div>
-            <div class="article-item">
-              <a href="https://github.com/lucasfrederico/pgcraft" target="_blank">Show HN: Pgcraft – a lazygit-style TUI for Postgres</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 6</span> May 26</div>
-            </div>
-            <div class="article-item">
-              <a href="https://smashingmagazine.com/2026/05/designing-stable-interfaces-streaming-content/" target="_blank">Designing Stable Interfaces For Streaming Content</a>
-              <div class="meta">🔵 Smashing Magazine  Fri, 01 Ma</div>
-            </div>
-            <div class="article-item">
-              <a href="https://marc-bowes.com/dsql-adjudicator.html" target="_blank">Aurora DSQL: The Adjudicator</a>
-              <div class="meta">🔵 Lobste.rs/distributed  Sat, 23 Ma</div>
+              <a href="https://i.redd.it/8m6yvqz3gw2h1.jpeg" target="_blank">I finally finished building a tool that ID’s potential insider trading for prediction market bets</a>
+              <div class="meta">🔴 r/datascience <span class="badge">⬆ 56</span> May 23</div>
             </div>
         </div>
   </div>
@@ -867,271 +954,319 @@
     <tbody>
         <tr>
           <td class="rank">1</td>
-          <td><a href="https://github.com/perplexityai/bumblebee" target="_blank">perplexityai/bumblebee — Read-only developer endpoint scanner for on-disk package, extension, and developer-tool metadata, built to check exposur</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">2842</td>
+          <td><a href="https://www.reddit.com/r/webdev/comments/1tjd4ay/it_finally_happened/" target="_blank">It finally happened</a></td>
+          <td><span class="source-badge">🔴 r/webdev</span></td>
+          <td class="score">2355</td>
           <td>🤖 AI / ML</td>
-          <td>2026-05-20</td>
+          <td>May 21</td>
         </tr>
         <tr>
           <td class="rank">2</td>
-          <td><a href="https://github.com/thananon/9arm-skills" target="_blank">thananon/9arm-skills</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">2310</td>
-          <td>🔧 Engineering</td>
-          <td>2026-05-20</td>
+          <td><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tjmvx6/heretic_has_been_served_a_legal_notice_by_meta_inc/" target="_blank">Heretic has been served a legal notice by Meta, Inc.</a></td>
+          <td><span class="source-badge">🔴 r/LocalLLaMA</span></td>
+          <td class="score">2236</td>
+          <td>☁️ Cloud / Infra</td>
+          <td>May 21</td>
         </tr>
         <tr>
           <td class="rank">3</td>
-          <td><a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html" target="_blank">Magnifica Humanitas</a></td>
+          <td><a href="https://orchidfiles.com/im-tired-of-ai-generated-answers/" target="_blank">I&#x27;m Tired of Talking to AI</a></td>
           <td><span class="source-badge">🟠 Hacker News</span></td>
-          <td class="score">1483</td>
-          <td>🔧 Engineering</td>
-          <td>May 25</td>
+          <td class="score">1753</td>
+          <td>🤖 AI / ML</td>
+          <td>May 27</td>
         </tr>
         <tr>
           <td class="rank">4</td>
-          <td><a href="https://github.com/open-gsd/get-shit-done-redux" target="_blank">open-gsd/get-shit-done-redux — Getting Shit Done, the Aftermath</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">981</td>
+          <td><a href="https://www.reddit.com/r/devops/comments/1tj63pz/today_is_why_i_no_longer_have_the_desire_to_work/" target="_blank">Today is why i no longer have the desire to work in IT anymore</a></td>
+          <td><span class="source-badge">🔴 r/devops</span></td>
+          <td class="score">1746</td>
           <td>🤖 AI / ML</td>
-          <td>2026-05-22</td>
+          <td>May 20</td>
         </tr>
         <tr>
           <td class="rank">5</td>
-          <td><a href="https://www.tomshardware.com/software/linux/california-moves-to-exempt-linux-from-its-upcoming-age-verification-law-after-backlash-over-forcing-operating-systems-to-collect-users-ages-amendment-proposed-by-the-same-lawmaker-who-wrote-the-original-law" target="_blank">California moves to exempt Linux from its age-verification law after backlash</a></td>
-          <td><span class="source-badge">🟠 Hacker News</span></td>
-          <td class="score">933</td>
-          <td>🔧 Engineering</td>
+          <td><a href="https://bugs.mysql.com/bug.php?id=11472" target="_blank">The infamous 20 year old MySQL Bug #11472 has been fixed.</a></td>
+          <td><span class="source-badge">🔴 r/programming</span></td>
+          <td class="score">1701</td>
+          <td>🗄️ Databases</td>
           <td>May 25</td>
         </tr>
         <tr>
           <td class="rank">6</td>
           <td><a href="https://github.com/Tong89/smartNode" target="_blank">Tong89/smartNode</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">926</td>
+          <td class="score">1451</td>
           <td>🔧 Engineering</td>
           <td>2026-05-21</td>
         </tr>
         <tr>
           <td class="rank">7</td>
-          <td><a href="https://nolanlawson.com/2026/05/25/using-ai-to-write-better-code-more-slowly/" target="_blank">Using AI to write better code more slowly</a></td>
-          <td><span class="source-badge">🟠 Hacker News</span></td>
-          <td class="score">799</td>
+          <td><a href="https://www.reddit.com/r/sysadmin/comments/1tjjio7/my_older_coworkers_have_accepted_ai_as_the_source/" target="_blank">My older coworkers have accepted AI as the source of truth</a></td>
+          <td><span class="source-badge">🔴 r/sysadmin</span></td>
+          <td class="score">1445</td>
           <td>🤖 AI / ML</td>
-          <td>May 25</td>
+          <td>May 21</td>
         </tr>
         <tr>
           <td class="rank">8</td>
-          <td><a href="https://github.com/kageroumado/phosphene" target="_blank">kageroumado/phosphene — A video wallpaper engine for macOS Tahoe</a></td>
+          <td><a href="https://github.com/open-gsd/get-shit-done-redux" target="_blank">open-gsd/get-shit-done-redux — Getting Shit Done, the Aftermath</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">681</td>
-          <td>🎨 Dev Experience</td>
-          <td>2026-05-20</td>
+          <td class="score">1304</td>
+          <td>🤖 AI / ML</td>
+          <td>2026-05-22</td>
         </tr>
         <tr>
           <td class="rank">9</td>
-          <td><a href="https://github.com/MoonshotAI/kimi-code" target="_blank">MoonshotAI/kimi-code — The Starting Point for Next-Gen Agents</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">677</td>
+          <td><a href="https://i.redd.it/g5uabdvdic2h1.jpeg" target="_blank">Qwen will release another 27B with high probability</a></td>
+          <td><span class="source-badge">🔴 r/LocalLLaMA</span></td>
+          <td class="score">1252</td>
           <td>🤖 AI / ML</td>
-          <td>2026-05-22</td>
+          <td>May 20</td>
         </tr>
         <tr>
           <td class="rank">10</td>
-          <td><a href="https://github.com/run-liyi/wechatpay" target="_blank">run-liyi/wechatpay — 微信账单分析工具 - 基于Electron的可视化账单分析应用</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">675</td>
-          <td>🔧 Engineering</td>
-          <td>2026-05-21</td>
+          <td><a href="https://www.reddit.com/r/ExperiencedDevs/comments/1tlcfq2/agent_use_is_gonna_drop_off_a_cliff_once_its_all/" target="_blank">Agent Use is gonna drop off a cliff once its all usage based</a></td>
+          <td><span class="source-badge">🔴 r/ExperiencedDevs</span></td>
+          <td class="score">1134</td>
+          <td>🤖 AI / ML</td>
+          <td>May 23</td>
         </tr>
         <tr>
           <td class="rank">11</td>
-          <td><a href="https://github.com/0xSero/codex-shim" target="_blank">0xSero/codex-shim — Local Responses-API shim that exposes Factory BYOK models (and optional ChatGPT GPT-5.5 passthrough) to Codex Desktop.</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">621</td>
+          <td><a href="https://www.reddit.com/r/ExperiencedDevs/comments/1towli9/today_i_announced_that_i_wont_be_reviewing_ai/" target="_blank">Today I announced that I won&#x27;t be reviewing AI generated PRs at company meeting</a></td>
+          <td><span class="source-badge">🔴 r/ExperiencedDevs</span></td>
+          <td class="score">1118</td>
           <td>🤖 AI / ML</td>
-          <td>2026-05-22</td>
+          <td>May 26</td>
         </tr>
         <tr>
           <td class="rank">12</td>
-          <td><a href="https://audiomass.co/?multitrack=1" target="_blank">Show HN: Audiomass – a free, open-source multitrack audio editor for the web</a></td>
-          <td><span class="source-badge">🟠 Show HN</span></td>
-          <td class="score">523</td>
-          <td>🌐 Web / Frontend</td>
-          <td>May 24</td>
-        </tr>
-        <tr>
-          <td class="rank">13</td>
-          <td><a href="https://dev.to/sylwia-lask/every-developer-is-lying-about-something-and-ai-wont-fix-it-4im0" target="_blank">Every Developer Is Lying About Something — And AI Won’t Fix It</a></td>
-          <td><span class="source-badge">🟣 dev.to</span></td>
-          <td class="score">478</td>
-          <td>🤖 AI / ML</td>
+          <td><a href="https://github.com/run-liyi/wechatpay" target="_blank">run-liyi/wechatpay — 微信账单分析工具 - 基于Electron的可视化账单分析应用</a></td>
+          <td><span class="source-badge">⚫ GitHub Trending</span></td>
+          <td class="score">984</td>
+          <td>🔧 Engineering</td>
           <td>2026-05-21</td>
         </tr>
         <tr>
+          <td class="rank">13</td>
+          <td><a href="https://www.reddit.com/r/sysadmin/comments/1tlem88/had_an_interview_yesterday/" target="_blank">Had an interview yesterday. . .</a></td>
+          <td><span class="source-badge">🔴 r/sysadmin</span></td>
+          <td class="score">903</td>
+          <td>🤖 AI / ML</td>
+          <td>May 23</td>
+        </tr>
+        <tr>
           <td class="rank">14</td>
-          <td><a href="https://github.com/zhaoyue4810/pianke" target="_blank">zhaoyue4810/pianke</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">423</td>
-          <td>🔧 Engineering</td>
-          <td>2026-05-22</td>
+          <td><a href="https://www.reddit.com/r/programming/comments/1tlh5aj/announcement_weve_updated_the_rules_and_april_is/" target="_blank">Announcement: We&#x27;ve Updated The Rules, and April Is Finally Over</a></td>
+          <td><span class="source-badge">🔴 r/programming</span></td>
+          <td class="score">886</td>
+          <td>🤖 AI / ML</td>
+          <td>May 23</td>
         </tr>
         <tr>
           <td class="rank">15</td>
-          <td><a href="https://mullvad.net/en/help/exit-ip-vpn-servers-mitigation-rollout" target="_blank">Exit IP VPN servers mitigation rollout</a></td>
-          <td><span class="source-badge">🟠 Hacker News</span></td>
-          <td class="score">383</td>
-          <td>🔧 Engineering</td>
+          <td><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tna22m/the_financial_times_has_published_an_article/" target="_blank">The Financial Times has published an article about Heretic</a></td>
+          <td><span class="source-badge">🔴 r/LocalLLaMA</span></td>
+          <td class="score">883</td>
+          <td>🤖 AI / ML</td>
           <td>May 25</td>
         </tr>
         <tr>
           <td class="rank">16</td>
-          <td><a href="https://freenet.org/" target="_blank">Show HN: Freenet, a peer-to-peer platform for decentralized apps</a></td>
-          <td><span class="source-badge">🟠 Show HN</span></td>
-          <td class="score">383</td>
-          <td>☁️ Cloud / Infra</td>
-          <td>May 21</td>
+          <td><a href="https://github.com/MoonshotAI/kimi-code" target="_blank">MoonshotAI/kimi-code — The Starting Point for Next-Gen Agents</a></td>
+          <td><span class="source-badge">⚫ GitHub Trending</span></td>
+          <td class="score">859</td>
+          <td>🤖 AI / ML</td>
+          <td>2026-05-22</td>
         </tr>
         <tr>
           <td class="rank">17</td>
-          <td><a href="https://www.apa.org/news/press/releases/2014/04/creativity-walk" target="_blank">Taking a walk may lead to more creativity than sitting, study finds (2014)</a></td>
-          <td><span class="source-badge">🟠 Hacker News</span></td>
-          <td class="score">380</td>
-          <td>🔧 Engineering</td>
-          <td>May 25</td>
+          <td><a href="https://i.redd.it/j8qkty82qj2h1.png" target="_blank">Waiting for Qwen 3.7 open weight... The new King has arrived...</a></td>
+          <td><span class="source-badge">🔴 r/LocalLLaMA</span></td>
+          <td class="score">822</td>
+          <td>🤖 AI / ML</td>
+          <td>May 21</td>
         </tr>
         <tr>
           <td class="rank">18</td>
-          <td><a href="https://dev.to/devteam/join-the-github-finish-up-a-thon-challenge-3000-prize-pool-f41" target="_blank">Join the GitHub Finish-Up-A-Thon Challenge: $3,000 Prize Pool!</a></td>
-          <td><span class="source-badge">🟣 dev.to</span></td>
-          <td class="score">375</td>
+          <td><a href="https://www.reddit.com/r/sysadmin/comments/1tp10i5/why_are_developers_some_of_the_most_it_inept_users/" target="_blank">Why are developers some of the most IT inept users?</a></td>
+          <td><span class="source-badge">🔴 r/sysadmin</span></td>
+          <td class="score">772</td>
           <td>🔧 Engineering</td>
-          <td>2026-05-21</td>
+          <td>May 27</td>
         </tr>
         <tr>
           <td class="rank">19</td>
-          <td><a href="https://github.com/Unclecheng-li/poc-lab" target="_blank">Unclecheng-li/poc-lab — Recent CVE PoC &amp; reproduction scripts. Focused on high-severity vulnerabilities across Linux kernel, Windows, macOS and </a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">373</td>
+          <td><a href="https://www.reddit.com/r/sysadmin/comments/1tnd43o/so_to_recap_this_week_two_actively_exploited/" target="_blank">so to recap this week: two actively exploited Defender zero-days, an unpatched Exchange spoofing vuln, a BitLocker bypass called &quot;YellowKey&quot;, AND 137 CVEs from Patch Tuesday. this is not a normal week</a></td>
+          <td><span class="source-badge">🔴 r/sysadmin</span></td>
+          <td class="score">763</td>
           <td>🔐 Security</td>
-          <td>2026-05-20</td>
+          <td>May 25</td>
         </tr>
         <tr>
           <td class="rank">20</td>
-          <td><a href="https://github.com/KNG7-P/Se7en-Pro" target="_blank">KNG7-P/Se7en-Pro</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">368</td>
-          <td>🔧 Engineering</td>
-          <td>2026-05-20</td>
+          <td><a href="https://www.guru3d.com/story/nvidia-removes-gaming-revenue-category-from-financial-reports/" target="_blank">NVIDIA Removes Gaming Revenue Category From Financial Reports</a></td>
+          <td><span class="source-badge">🔴 r/LocalLLaMA</span></td>
+          <td class="score">762</td>
+          <td>🦀 Languages</td>
+          <td>May 22</td>
         </tr></tbody>
   </table>
 
-  <h2>📡 Source Coverage (31 sources)</h2>
+  <h2>📡 Source Coverage (48 sources)</h2>
   <div class="sources-section">
         <div class="source-row">
           <div class="source-label">dev.to</div>
-          <div class="bar-wrap"><div class="bar" style="width:100%">56</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:100%">53</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">Hacker News</div>
-          <div class="bar-wrap"><div class="bar" style="width:53%">30</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:54%">29</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">GitHub Trending</div>
-          <div class="bar-wrap"><div class="bar" style="width:44%">25</div></div>
-        </div>
-        <div class="source-row">
-          <div class="source-label">Ask HN</div>
-          <div class="bar-wrap"><div class="bar" style="width:35%">20</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:47%">25</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">Show HN</div>
-          <div class="bar-wrap"><div class="bar" style="width:35%">20</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:37%">20</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">Ask HN</div>
+          <div class="bar-wrap"><div class="bar" style="width:28%">15</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/programming</div>
+          <div class="bar-wrap"><div class="bar" style="width:28%">15</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/webdev</div>
+          <div class="bar-wrap"><div class="bar" style="width:28%">15</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/rust</div>
+          <div class="bar-wrap"><div class="bar" style="width:28%">15</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/ExperiencedDevs</div>
+          <div class="bar-wrap"><div class="bar" style="width:28%">15</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/sysadmin</div>
+          <div class="bar-wrap"><div class="bar" style="width:28%">15</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/LocalLLaMA</div>
+          <div class="bar-wrap"><div class="bar" style="width:24%">13</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/devops</div>
+          <div class="bar-wrap"><div class="bar" style="width:18%">10</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/golang</div>
+          <div class="bar-wrap"><div class="bar" style="width:18%">10</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/datascience</div>
+          <div class="bar-wrap"><div class="bar" style="width:16%">9</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">Stack Overflow Blog</div>
-          <div class="bar-wrap"><div class="bar" style="width:14%">8</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:15%">8</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">GitHub Blog</div>
-          <div class="bar-wrap"><div class="bar" style="width:14%">8</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:15%">8</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">Cloudflare Blog</div>
-          <div class="bar-wrap"><div class="bar" style="width:14%">8</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:15%">8</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">Engineering at Meta</div>
-          <div class="bar-wrap"><div class="bar" style="width:14%">8</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:15%">8</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">Martin Fowler</div>
-          <div class="bar-wrap"><div class="bar" style="width:14%">8</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:15%">8</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">ByteByteGo</div>
-          <div class="bar-wrap"><div class="bar" style="width:14%">8</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:15%">8</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">InfoQ</div>
-          <div class="bar-wrap"><div class="bar" style="width:14%">8</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:15%">8</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">The New Stack</div>
-          <div class="bar-wrap"><div class="bar" style="width:14%">8</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:15%">8</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">DZone</div>
-          <div class="bar-wrap"><div class="bar" style="width:14%">8</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:15%">8</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">Smashing Magazine</div>
-          <div class="bar-wrap"><div class="bar" style="width:14%">8</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:15%">8</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">Lobste.rs</div>
-          <div class="bar-wrap"><div class="bar" style="width:14%">8</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:15%">8</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">Lobste.rs/programming</div>
-          <div class="bar-wrap"><div class="bar" style="width:14%">8</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:15%">8</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">Lobste.rs/security</div>
-          <div class="bar-wrap"><div class="bar" style="width:14%">8</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:15%">8</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">Lobste.rs/distributed</div>
-          <div class="bar-wrap"><div class="bar" style="width:14%">8</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:15%">8</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">CSS-Tricks</div>
-          <div class="bar-wrap"><div class="bar" style="width:14%">8</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:15%">8</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">Slack Engineering</div>
-          <div class="bar-wrap"><div class="bar" style="width:14%">8</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:15%">8</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">AWS Blog</div>
-          <div class="bar-wrap"><div class="bar" style="width:14%">8</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:15%">8</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">HashiCorp Blog</div>
-          <div class="bar-wrap"><div class="bar" style="width:14%">8</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:15%">8</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">Pragmatic Engineer</div>
-          <div class="bar-wrap"><div class="bar" style="width:14%">8</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:15%">8</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">TLDR Newsletter</div>
-          <div class="bar-wrap"><div class="bar" style="width:14%">8</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:15%">8</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/kubernetes</div>
+          <div class="bar-wrap"><div class="bar" style="width:15%">8</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/MachineLearning</div>
+          <div class="bar-wrap"><div class="bar" style="width:11%">6</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">Spotify Engineering</div>
-          <div class="bar-wrap"><div class="bar" style="width:8%">5</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:9%">5</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/softwarearchitecture</div>
+          <div class="bar-wrap"><div class="bar" style="width:9%">5</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">JavaScript Weekly</div>
@@ -1152,10 +1287,30 @@
         <div class="source-row">
           <div class="source-label">Golang Weekly</div>
           <div class="bar-wrap"><div class="bar" style="width:7%">4</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/netsec</div>
+          <div class="bar-wrap"><div class="bar" style="width:5%">3</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/aws</div>
+          <div class="bar-wrap"><div class="bar" style="width:5%">3</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/reactjs</div>
+          <div class="bar-wrap"><div class="bar" style="width:3%">2</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/Python</div>
+          <div class="bar-wrap"><div class="bar" style="width:1%">1</div></div>
+        </div>
+        <div class="source-row">
+          <div class="source-label">r/frontend</div>
+          <div class="bar-wrap"><div class="bar" style="width:1%">1</div></div>
         </div></div>
 
 </main>
-<footer>Built with ❤️ at the hackathon · Eng Brand Machine · May 26, 2026 at 13:05</footer>
+<footer>Built with ❤️ at the hackathon · Eng Brand Machine · May 27, 2026 at 11:57</footer>
 
 <script>
 // ── Topic classifier (mirrors Python TOPIC_KEYWORDS) ──────────────────────

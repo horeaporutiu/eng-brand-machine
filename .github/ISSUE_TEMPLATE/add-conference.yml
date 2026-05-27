@@ -1,0 +1,100 @@
+name: "📅 Suggest an AI conference"
+description: "Propose a new conference for the local tracker or the AI Conference Pulse."
+title: "[Conference] <conference name>"
+labels: ["conference-suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a conference! Pick the section it belongs to below
+        and fill in as much of the metadata as you can. A maintainer (or you,
+        with a quick PR) will append it to `data/conferences.json`.
+
+        See [docs/CONFERENCE_TRACKER.md](../blob/main/docs/CONFERENCE_TRACKER.md)
+        for the field reference and a worked example.
+
+  - type: dropdown
+    id: section
+    attributes:
+      label: Which catalog section?
+      description: |
+        - **Local slate** = upcoming Amsterdam (or current `default_location`) events on the dashboard.
+        - **Major AI conference** = a global conference whose coverage should bubble up in the AI Conference Pulse.
+      options:
+        - "Local slate (fictional_local_slate)"
+        - "Major AI conference (major_ai_conferences)"
+      default: 0
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: Conference name
+      placeholder: "e.g. Amsterdam Applied AI Days"
+    validations:
+      required: true
+
+  - type: input
+    id: long_name
+    attributes:
+      label: Long / official name
+      placeholder: "e.g. Conference on Neural Information Processing Systems"
+
+  - type: input
+    id: cadence_or_date
+    attributes:
+      label: Cadence or date
+      description: For local events use a concrete date like `Jun 15–17`. For global conferences use something like `Annual · December`.
+      placeholder: "Annual · December · Vancouver"
+    validations:
+      required: true
+
+  - type: input
+    id: venue
+    attributes:
+      label: Venue (local events only)
+      placeholder: "Beurs van Berlage"
+
+  - type: input
+    id: audience
+    attributes:
+      label: Audience
+      placeholder: "ML researchers, applied scientists, AI platform teams"
+    validations:
+      required: true
+
+  - type: textarea
+    id: focus
+    attributes:
+      label: Focus / topics covered
+      placeholder: "Applied GenAI for product and platform teams"
+
+  - type: textarea
+    id: miro_angle
+    attributes:
+      label: Miro angle
+      description: "How should Miro show up alongside this event? (One sentence is fine.)"
+      placeholder: "Run an AI architecture clinic that maps agent handoffs and human review on one Miro board."
+    validations:
+      required: true
+
+  - type: textarea
+    id: keywords
+    attributes:
+      label: Pulse keywords (major conferences only)
+      description: "Comma-separated lowercase substrings used to detect mentions in articles. Add variations so casual mentions still match."
+      placeholder: "neurips, nips, neural information processing systems"
+
+  - type: textarea
+    id: tags_or_signals
+    attributes:
+      label: Tags / signal topics
+      description: "Comma-separated descriptors. Used as the visual tags on the dashboard."
+      placeholder: "GenAI, Agents, Architecture"
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else?
+      description: "Links, why it matters, prior coverage, sponsorship ideas, etc."

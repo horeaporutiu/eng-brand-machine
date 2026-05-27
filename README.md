@@ -20,9 +20,10 @@ Most "trend dashboards" stop at *"here are the top links."* This one closes the 
 2. **Classifies** every article into one of 13 engineering topics (AI/ML, Cloud/Infra, Security, Rust, Web/Frontend, etc.) via keyword scoring.
 3. **Recommends** the top 5 Miro-developer-brand content ideas, ranked by what's *actually* trending right now.
 4. **Drafts** the full blog post for each recommendation — title, hero-image prompt, SEO description, tags, body copy, and CTA — all in one click. Anchored to real trending headlines so the drafts feel *of-the-moment*.
-5. **Location-aware event tracker.** A built-in conference slate can spotlight upcoming events for a target city — the current demo ships with fictional Amsterdam AI conferences for the rest of the year.
-6. **Live Reddit panel** runs entirely client-side: pick subreddits, set a time window, fetch fresh top posts without rebuilding.
-7. **Zero infra.** The output is one HTML file. Open it locally, drop it on S3, or let the bundled GitHub Action publish it on a 6-hour cron.
+5. **Location-aware event tracker.** A built-in conference slate can spotlight upcoming events for a target city — the current demo ships with fictional Amsterdam AI conferences for the rest of the year. The slate lives in [`data/conferences.json`](data/conferences.json) so editors don't have to touch Python.
+6. **AI Conference Pulse.** Scans every article in the run for mentions of real-world AI conferences (NeurIPS, ICLR, ICML, CVPR, KDD, AWS re:Invent, GitHub Universe, KubeCon, …) and surfaces what the AI conference circuit is talking about *today* — no extra fetches, just the existing article pool.
+7. **Live Reddit panel** runs entirely client-side: pick subreddits, set a time window, fetch fresh top posts without rebuilding.
+8. **Zero infra.** The output is one HTML file. Open it locally, drop it on S3, or let the bundled GitHub Action publish it on a 6-hour cron.
 
 It's a complete "developer brand intelligence" loop — input is the open web, output is publishable content briefs — in ~1,500 lines of dependency-light Python.
 
@@ -100,6 +101,7 @@ A full run takes about **45–60 seconds** (most of it RSS + Reddit fetches). Wh
 - **Stats bar** — total articles, live sources, topics tracked, hottest topic
 - **Top 5 Miro Content Recommendations** — each with a "📝 View Full Post Draft" button that expands into a full blog draft (hero-image prompt, SEO meta, tags, body, copy-to-clipboard)
 - **Amsterdam AI conference tracker** — a demo slate of fictional local events for the rest of the year, useful for campaign and event planning
+- **AI Conference Pulse** — real-world AI conferences (NeurIPS, ICLR, re:Invent, …) mentioned in the day's article pool, ranked by mention count, with the top stories surfaced per conference
 - **Interactive Reddit panel** — pick subreddits, choose `day / week / month / year / all`, click *Fetch Reddit*
 - **Trending Topics grid** — 8 topic cards with the top stories in each bucket
 - **Top 20 hottest stories** ranked across all sources
@@ -128,18 +130,33 @@ That's a fully automated, free, always-fresh developer-trends site with no serve
 
 ## Customizing
 
-Everything tunable lives at the top of `eng_brand_machine.py`:
+Everything tunable lives at the top of `eng_brand_machine.py` — except the conference catalog, which is broken out into JSON so editors can update it without touching Python:
 
-| Section | What to edit |
+| Section | Where to edit |
 | --- | --- |
-| `RSS_FEEDS` | Add/remove engineering blogs and newsletters |
-| `SUBREDDITS` | Subreddits the Reddit panel ships with checked |
-| `TOPIC_KEYWORDS` | Topic buckets and the keywords that route into them |
-| `MIRO_CONTENT_TEMPLATES` | The blog-post templates (title, body, hero prompt, tags…) used as recommendations |
-| `DEFAULT_RECS` | Fallback recommendations when no template matches a trending topic |
-| `EVENT_TRACKER_LOCATION` / `AI_CONFERENCE_BLUEPRINTS` | The city and fictional conference slate shown in the event tracker |
+| `RSS_FEEDS` | `eng_brand_machine.py` — add/remove engineering blogs and newsletters |
+| `SUBREDDITS` | `eng_brand_machine.py` — subreddits the Reddit panel ships with checked |
+| `TOPIC_KEYWORDS` | `eng_brand_machine.py` — topic buckets and the keywords that route into them |
+| `MIRO_CONTENT_TEMPLATES` | `eng_brand_machine.py` — the blog-post templates used as recommendations |
+| `DEFAULT_RECS` | `eng_brand_machine.py` — fallback recommendations when no template matches |
+| Local conference slate (city + events) | [`data/conferences.json`](data/conferences.json) → `default_location` and `fictional_local_slate` |
+| Conferences scanned for the AI Pulse panel | [`data/conferences.json`](data/conferences.json) → `major_ai_conferences` |
+
+Full reference and a worked example for both conference sections live in [`docs/CONFERENCE_TRACKER.md`](docs/CONFERENCE_TRACKER.md). The matching JSON Schema is at [`data/conferences.schema.json`](data/conferences.schema.json) for editor autocomplete and validation.
 
 The HTML template is inline in `generate_html()` — tweak CSS variables at the top of the `<style>` block to rebrand.
+
+### Sanity-checking conference changes
+
+```bash
+# Run the conference-tracker unit tests
+python3 -m unittest tests.test_conferences -v
+
+# Print the catalog without running the full pipeline
+python3 scripts/list_conferences.py --type all
+python3 scripts/list_conferences.py --type local --location "Berlin, Germany"
+python3 scripts/list_conferences.py --type global --format json | jq '.global[] | .name'
+```
 
 ---
 
@@ -151,7 +168,17 @@ eng-brand-machine/
 ├── requirements.txt            # requests, feedparser
 ├── index.html                  # Generated output — committed for GitHub Pages
 ├── screenshot.png              # Dashboard preview (this README)
+├── data/
+│   ├── conferences.json        # Conference catalog (local slate + global AI confs)
+│   └── conferences.schema.json # JSON Schema for editor validation
+├── scripts/
+│   └── list_conferences.py     # CLI helper over data/conferences.json
+├── tests/
+│   └── test_conferences.py     # unittest coverage for the conference features
+├── docs/
+│   └── CONFERENCE_TRACKER.md   # How both conference sections work + how to edit
 └── .github/
+    ├── ISSUE_TEMPLATE/         # "Suggest an AI conference" template + config
     ├── workflows/build.yml     # 6-hourly rebuild + auto-commit
     └── agents/my-agent.agent.md
 ```

@@ -10,6 +10,8 @@ import feedparser
 from datetime import date, datetime, timedelta
 from collections import defaultdict
 import html as html_lib
+import json
+import os
 
 # ─── CONFIG ────────────────────────────────────────────────────────────────────
 
@@ -594,101 +596,57 @@ DEFAULT_RECS = [
 ]
 
 
-EVENT_TRACKER_LOCATION = "Amsterdam, Netherlands"
+# ─── Conference catalog ────────────────────────────────────────────────────────
+# Curated in data/conferences.json so non-Python folks (or the GitHub issue
+# template) can suggest new conferences without touching the generator.
 
-AI_CONFERENCE_BLUEPRINTS = [
-    {
-        "name": "Canal AI Summit",
-        "month": 6,
-        "day": 18,
-        "duration_days": 2,
-        "venue": "Beurs van Berlage",
-        "focus": "Applied GenAI for product and platform teams",
-        "format": "Leadership summit",
-        "audience": "Engineering leaders, staff+ ICs, AI PMs",
-        "miro_angle": "Run an AI architecture clinic that maps agent handoffs, human review, and model evaluation in one board.",
-        "watch_for": "Enterprise adoption stories, copilots moving from pilots to production, and platform-team playbooks.",
-        "tags": ["GenAI", "Agents", "Architecture"],
-    },
-    {
-        "name": "Lowlands LLM Builders Week",
-        "month": 7,
-        "day": 9,
-        "duration_days": 3,
-        "venue": "NEMO Science Museum",
-        "focus": "Hands-on LLM tooling, evals, and retrieval systems",
-        "format": "Workshop week",
-        "audience": "Applied ML engineers, developer advocates, startup founders",
-        "miro_angle": "Host collaborative prompt-debugging and eval design sessions directly on Miro canvases.",
-        "watch_for": "Reusable RAG patterns, developer tooling launches, and demand for visual experimentation workflows.",
-        "tags": ["LLM", "Evals", "RAG"],
-    },
-    {
-        "name": "North Sea Responsible AI Forum",
-        "month": 8,
-        "day": 21,
-        "duration_days": 2,
-        "venue": "Muziekgebouw aan 't IJ",
-        "focus": "Governance, compliance, and human-in-the-loop AI systems",
-        "format": "Executive forum",
-        "audience": "Security leads, legal partners, product ops",
-        "miro_angle": "Position Miro as the place teams align policy, architecture, and launch checklists before shipping AI features.",
-        "watch_for": "EU AI Act readiness, approval workflows, and cross-functional review rituals.",
-        "tags": ["Responsible AI", "Governance", "Compliance"],
-    },
-    {
-        "name": "Amsterdam Applied AI Days",
-        "month": 9,
-        "day": 16,
-        "duration_days": 2,
-        "venue": "RAI Amsterdam",
-        "focus": "Production ML, copilots, and AI-native product design",
-        "format": "Conference + expo",
-        "audience": "Product teams, solution architects, founders",
-        "miro_angle": "Demo how product, design, and engineering teams storyboard AI experiences together before implementation.",
-        "watch_for": "AI UX patterns, multimodal feature launches, and partner ecosystem announcements.",
-        "tags": ["Product", "Copilots", "AI UX"],
-    },
-    {
-        "name": "Graph + Agents Europe",
-        "month": 10,
-        "day": 8,
-        "duration_days": 2,
-        "venue": "Pakhuis de Zwijger",
-        "focus": "Knowledge graphs, agent memory, and orchestration",
-        "format": "Technical conference",
-        "audience": "Platform engineers, data engineers, solution architects",
-        "miro_angle": "Show graph-backed agent systems as living diagrams with linked implementation notes and review comments.",
-        "watch_for": "Long-lived agent state, graph retrieval design, and multi-agent operational tooling.",
-        "tags": ["Graphs", "Memory", "Multi-agent"],
-    },
-    {
-        "name": "Tulip City AI Infra Meetup",
-        "month": 11,
-        "day": 13,
-        "duration_days": 1,
-        "venue": "A Lab Amsterdam",
-        "focus": "GPU ops, inference performance, and cost control",
-        "format": "Community meetup",
-        "audience": "Infra teams, DevOps leaders, FinOps stakeholders",
-        "miro_angle": "Pair infra diagrams with budgeting and incident-response workflows on the same board.",
-        "watch_for": "Inference optimization, batch-vs-real-time tradeoffs, and platform cost narratives.",
-        "tags": ["Infra", "Inference", "FinOps"],
-    },
-    {
-        "name": "Winter AI Collaboration Assembly",
-        "month": 12,
-        "day": 4,
-        "duration_days": 2,
-        "venue": "Westergas",
-        "focus": "Team workflows for AI delivery across product, design, and engineering",
-        "format": "Practitioner summit",
-        "audience": "Cross-functional delivery teams, innovation leads",
-        "miro_angle": "Anchor Miro around planning, review, and retrospective rituals for AI product teams.",
-        "watch_for": "Org design for AI teams, operating cadences, and templates that shorten time-to-launch.",
-        "tags": ["Collaboration", "Workflows", "Planning"],
-    },
-]
+CONFERENCES_JSON_PATH = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    "data",
+    "conferences.json",
+)
+
+# Minimal in-file fallback so the script still produces a dashboard if the JSON
+# file is missing (e.g. partial checkout) — keeps the demo bulletproof.
+_FALLBACK_CONFERENCES = {
+    "default_location": "Amsterdam, Netherlands",
+    "fictional_local_slate": [
+        {
+            "name": "Canal AI Summit",
+            "month": 6,
+            "day": 18,
+            "duration_days": 2,
+            "venue": "Beurs van Berlage",
+            "focus": "Applied GenAI for product and platform teams",
+            "format": "Leadership summit",
+            "audience": "Engineering leaders, staff+ ICs, AI PMs",
+            "miro_angle": "Run an AI architecture clinic that maps agent handoffs, human review, and model evaluation in one board.",
+            "watch_for": "Enterprise adoption stories, copilots moving from pilots to production, and platform-team playbooks.",
+            "tags": ["GenAI", "Agents", "Architecture"],
+        },
+    ],
+    "major_ai_conferences": [],
+}
+
+
+def load_conferences_catalog(path=CONFERENCES_JSON_PATH):
+    """Load the conference catalog from JSON, falling back to a tiny built-in slate."""
+    try:
+        with open(path, "r", encoding="utf-8") as handle:
+            catalog = json.load(handle)
+    except (FileNotFoundError, json.JSONDecodeError) as err:
+        print(f"⚠️  Could not load {path} ({err}); using fallback catalog.")
+        catalog = _FALLBACK_CONFERENCES
+    catalog.setdefault("default_location", "Amsterdam, Netherlands")
+    catalog.setdefault("fictional_local_slate", [])
+    catalog.setdefault("major_ai_conferences", [])
+    return catalog
+
+
+_CONFERENCE_CATALOG = load_conferences_catalog()
+EVENT_TRACKER_LOCATION = _CONFERENCE_CATALOG["default_location"]
+AI_CONFERENCE_BLUEPRINTS = _CONFERENCE_CATALOG["fictional_local_slate"]
+MAJOR_AI_CONFERENCES = _CONFERENCE_CATALOG["major_ai_conferences"]
 
 
 def classify_topic(title, description=""):
@@ -941,6 +899,57 @@ def _build_ai_conference_schedule_for_year(year, location):
     return conferences
 
 
+def extract_conference_insights(articles, conferences=None, max_articles_per_conf=4):
+    """Scan aggregated articles for mentions of major AI conferences.
+
+    Returns a list of conference insight dicts, sorted by number of mentions, so
+    the dashboard can surface 'what's the AI conference world talking about right
+    now?' without any extra data fetches — purely re-using the existing article
+    pool.
+    """
+    conferences = conferences if conferences is not None else MAJOR_AI_CONFERENCES
+    if not conferences or not articles:
+        return []
+
+    insights = []
+    for conf in conferences:
+        keywords = [kw.lower() for kw in conf.get("keywords", []) if kw]
+        if not keywords:
+            continue
+
+        matched = []
+        for article in articles:
+            haystack = (
+                (article.get("title", "") or "") + " " +
+                (article.get("description", "") or "") + " " +
+                (article.get("source", "") or "")
+            ).lower()
+            if any(kw in haystack for kw in keywords):
+                matched.append(article)
+
+        if not matched:
+            continue
+
+        matched.sort(key=lambda a: -a.get("score", 0))
+        top_articles = matched[:max_articles_per_conf]
+        top_sources = sorted({a.get("source", "") for a in matched if a.get("source")})
+
+        insights.append({
+            "name": conf.get("name", "Unknown"),
+            "long_name": conf.get("long_name", ""),
+            "cadence": conf.get("cadence", ""),
+            "audience": conf.get("audience", ""),
+            "miro_angle": conf.get("miro_angle", ""),
+            "signal_topics": conf.get("signal_topics", []),
+            "mention_count": len(matched),
+            "top_articles": top_articles,
+            "top_sources": top_sources[:5],
+        })
+
+    insights.sort(key=lambda c: -c["mention_count"])
+    return insights
+
+
 def generate_miro_recommendations(articles, topic_counts):
     """Pick top 5 Miro content recommendations based on what's actually trending."""
     by_topic = defaultdict(list)
@@ -968,7 +977,7 @@ def generate_miro_recommendations(articles, topic_counts):
     return recs[:5]
 
 
-def generate_html(articles, topic_counts, miro_recs, conferences):
+def generate_html(articles, topic_counts, miro_recs, conferences, conference_insights=None):
     total = len(articles)
     sources = defaultdict(int)
     for a in articles:
@@ -1109,6 +1118,59 @@ def generate_html(articles, topic_counts, miro_recs, conferences):
       <div class="event-stat"><div class="num">{html_lib.escape(next_event_label)}</div><div class="label">Next Event Window</div></div>
       <div class="event-stat"><div class="num">{html_lib.escape(EVENT_TRACKER_LOCATION)}</div><div class="label">Default Location</div></div>'''
 
+    # ── AI Conference Pulse: insights from the article pool ────────────────
+    conference_insights = conference_insights or []
+    pulse_cards = ""
+    for insight in conference_insights:
+        topics_html = "".join(
+            f'<span class="pulse-tag">{html_lib.escape(t)}</span>'
+            for t in insight.get("signal_topics", [])
+        )
+        sources_label = ", ".join(insight.get("top_sources", [])) or "Multiple sources"
+        article_items = ""
+        for art in insight.get("top_articles", []):
+            safe_title = html_lib.escape(art.get("title", "") or "(untitled)")
+            safe_url = html_lib.escape(art.get("url", "") or "#")
+            score_badge = (
+                f'<span class="badge">⬆ {art["score"]}</span>'
+                if art.get("score", 0) > 0 else ""
+            )
+            article_items += f'''
+            <div class="pulse-article">
+              <a href="{safe_url}" target="_blank" rel="noopener">{safe_title}</a>
+              <div class="pulse-article-meta">{art.get("source_icon", "")} {html_lib.escape(art.get("source", ""))} {score_badge}</div>
+            </div>'''
+        pulse_cards += f'''
+        <div class="pulse-card">
+          <div class="pulse-header">
+            <div class="pulse-name">{html_lib.escape(insight["name"])}</div>
+            <div class="pulse-count">{insight["mention_count"]} mentions</div>
+          </div>
+          <div class="pulse-long-name">{html_lib.escape(insight.get("long_name", ""))}</div>
+          <div class="pulse-meta">{html_lib.escape(insight.get("cadence", ""))} · {html_lib.escape(insight.get("audience", ""))}</div>
+          <div class="pulse-topics">{topics_html}</div>
+          <div class="pulse-miro"><strong>Miro angle:</strong> {html_lib.escape(insight.get("miro_angle", ""))}</div>
+          <div class="pulse-articles">{article_items}</div>
+          <div class="pulse-sources">📡 Surfaced via: {html_lib.escape(sources_label)}</div>
+        </div>'''
+
+    pulse_section_html = ""
+    if pulse_cards:
+        pulse_section_html = f'''
+  <div class="pulse-section">
+    <h2>🧠 AI Conference Pulse — what's trending in the news</h2>
+    <p class="recs-intro">Real-world AI conferences mentioned across the {total} articles in today's run. Powered by keyword matching against <code>data/conferences.json → major_ai_conferences</code>.</p>
+    <div class="pulse-grid">
+      {pulse_cards}
+    </div>
+  </div>'''
+    else:
+        pulse_section_html = f'''
+  <div class="pulse-section pulse-empty">
+    <h2>🧠 AI Conference Pulse</h2>
+    <p class="recs-intro">No major AI conferences (NeurIPS, ICLR, re:Invent, etc.) were mentioned in today's article pool. Update <code>data/conferences.json</code> to track different conferences, or re-run when a conference week is in full swing.</p>
+  </div>'''
+
     generated_at = datetime.now().strftime("%B %d, %Y at %H:%M")
 
     return f'''<!DOCTYPE html>
@@ -1238,6 +1300,38 @@ def generate_html(articles, topic_counts, miro_recs, conferences):
   .event-tag {{ background: #1f6feb22; color: #79c0ff; border: 1px solid #1f6feb33; border-radius: 999px;
                padding: 3px 9px; font-size: 0.72rem; }}
 
+  /* ── AI Conference Pulse ── */
+  .pulse-section {{ background: linear-gradient(135deg, #18102a 0%, #0d1117 100%);
+                   border: 1px solid #bc8cff; border-radius: 14px; padding: 28px; margin-bottom: 36px; }}
+  .pulse-section h2 {{ border-bottom-color: #bc8cff; color: #e6edf3; margin-top: 0; }}
+  .pulse-section code {{ font-family: "SFMono-Regular", Consolas, monospace; font-size: 0.78rem;
+                        color: #bc8cff; background: #1a1025; border: 1px solid #6e40c944;
+                        border-radius: 4px; padding: 1px 6px; }}
+  .pulse-empty {{ border-style: dashed; }}
+  .pulse-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }}
+  .pulse-card {{ background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 18px;
+                transition: border-color .2s, transform .2s; }}
+  .pulse-card:hover {{ border-color: #bc8cff; transform: translateY(-2px); }}
+  .pulse-header {{ display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-bottom: 4px; }}
+  .pulse-name {{ font-size: 1.05rem; font-weight: 800; color: #e6edf3; }}
+  .pulse-count {{ background: #6e40c9; color: #fff; border-radius: 999px; padding: 2px 10px;
+                 font-size: 0.72rem; font-weight: 700; white-space: nowrap; }}
+  .pulse-long-name {{ font-size: 0.78rem; color: #bc8cff; margin-bottom: 6px; }}
+  .pulse-meta {{ font-size: 0.78rem; color: #8b949e; margin-bottom: 10px; }}
+  .pulse-topics {{ display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }}
+  .pulse-tag {{ background: #6e40c922; color: #bc8cff; border: 1px solid #6e40c944; border-radius: 999px;
+               padding: 2px 8px; font-size: 0.7rem; }}
+  .pulse-miro {{ font-size: 0.82rem; color: #c9d1d9; background: #1a1025; border-left: 3px solid #bc8cff;
+                border-radius: 4px; padding: 8px 10px; margin-bottom: 12px; line-height: 1.5; }}
+  .pulse-miro strong {{ color: #bc8cff; }}
+  .pulse-articles {{ border-top: 1px solid #21262d; padding-top: 8px; margin-top: 8px; }}
+  .pulse-article {{ padding: 6px 0; border-bottom: 1px dashed #21262d; }}
+  .pulse-article:last-child {{ border-bottom: none; }}
+  .pulse-article a {{ color: #79c0ff; text-decoration: none; font-size: 0.85rem; line-height: 1.45; }}
+  .pulse-article a:hover {{ text-decoration: underline; color: #bc8cff; }}
+  .pulse-article-meta {{ font-size: 0.72rem; color: #8b949e; margin-top: 2px; }}
+  .pulse-sources {{ font-size: 0.72rem; color: #6e7681; margin-top: 10px; font-style: italic; }}
+
   /* ── Topic cards ── */
   .topics-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; margin-bottom: 30px; }}
   .topic-card {{ background: #161b22; border: 1px solid #21262d; border-radius: 10px; padding: 16px; transition: border-color .2s; }}
@@ -1363,7 +1457,7 @@ def generate_html(articles, topic_counts, miro_recs, conferences):
       {conference_cards}
     </div>
   </div>
-
+{pulse_section_html}
   <div class="reddit-section">
     <h2>🔴 Reddit — Interactive Subreddit Feed</h2>
     <p class="recs-intro">Select subreddits, set a time filter, and click Fetch to pull live data directly from Reddit's public API.</p>
@@ -1659,11 +1753,25 @@ def main():
     for conf in conferences:
         print(f"   • {conf['date_label']} — {conf['name']}")
 
+    conference_insights = extract_conference_insights(all_articles)
+    if conference_insights:
+        print("\n🧠 AI Conference Pulse (mentions in today's articles):")
+        for insight in conference_insights:
+            print(f"   • {insight['name']}: {insight['mention_count']} mentions")
+    else:
+        print("\n🧠 AI Conference Pulse: no major AI conferences mentioned in today's pool.")
+
     reddit_count = len([a for a in all_articles if a["source_icon"] == "🔴"])
     print(f"\n🔴 Reddit posts in dataset: {reddit_count}")
 
     print("\n🎨 Generating HTML...")
-    html = generate_html(all_articles, topic_counts, miro_recs, conferences)
+    html = generate_html(
+        all_articles,
+        topic_counts,
+        miro_recs,
+        conferences,
+        conference_insights=conference_insights,
+    )
 
     output_path = "index.html"
     with open(output_path, "w", encoding="utf-8") as f:
