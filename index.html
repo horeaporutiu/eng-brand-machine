@@ -185,7 +185,7 @@
 
 <header>
   <h1>🚀 Eng Brand Machine</h1>
-  <p class="subtitle">Real-time engineering trends from 31 sources · 332 articles · June 02, 2026 at 13:22</p>
+  <p class="subtitle">Real-time engineering trends from 31 sources · 332 articles · June 02, 2026 at 19:19</p>
   <span class="miro-badge">✦ Miro Developer Brand Intelligence</span>
 </header>
 
@@ -194,7 +194,7 @@
   <div class="stat"><div class="num">31</div><div class="label">Live Sources</div></div>
   <div class="stat"><div class="num">11</div><div class="label">Topics Tracked</div></div>
   <div class="stat"><div class="num">🤖 AI / ML</div><div class="label">Hottest Topic</div></div>
-  <div class="stat"><div class="num">200</div><div class="label">Articles on #1 Topic</div></div>
+  <div class="stat"><div class="num">196</div><div class="label">Articles on #1 Topic</div></div>
 </div>
 
 <main>
@@ -262,7 +262,7 @@
             <span class="rec-format">📄 Blog Post + Template</span>
             <span class="rec-cta">See the Frontend Architecture Template →</span>
           </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>Show HN: A CSS 3D Engine (no WebGL)</li><li>CSS-Native Parallax Effect</li></ul></div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>CSS-Native Parallax Effect</li><li>Show HN: A CSS 3D Engine (no WebGL)</li></ul></div>
           <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
           <div class="post-draft">
             <div class="post-hero">
@@ -301,55 +301,6 @@
         </div>
         <div class="rec-card">
           <div class="rec-num">#3</div>
-          <div class="rec-topic">🔐 Security</div>
-          <div class="rec-title">Collaborative Threat Modeling on Miro: A Developer&#x27;s Guide</div>
-          <div class="rec-desc">Security doesn&#x27;t have to happen in silos. This guide shows dev teams how to run STRIDE threat modeling sessions in Miro — mapping trust boundaries, attack surfaces, and mitigations together in real time.</div>
-          <div class="rec-demo"><strong>🎬 Demo:</strong> Live threat model for a typical SaaS app: user → API gateway → auth service → DB. Each node color-coded by risk level, with mitigation sticky notes.</div>
-          <div class="rec-meta">
-            <span class="rec-format">📄 Workshop Guide + Template</span>
-            <span class="rec-cta">Run your first threat model session →</span>
-          </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>The newest Instagram “exploit” is the goofiest I&#x27;ve seen</li><li>Show HN: Open-source private home security camera system (end-to-end encryption)</li></ul></div>
-          <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
-          <div class="post-draft">
-            <div class="post-hero">
-              <div class="post-hero-label">🎨 Hero Image Prompt (Midjourney / DALL-E)</div>
-              <div class="post-hero-prompt">STRIDE threat model diagram on a dark background, nodes representing API gateway, auth service, and database with red threat arrows and green mitigation shields overlaid, security visualization, dark mode, red and green palette</div>
-            </div>
-            <div class="post-tags"><span class="post-tag">#security</span><span class="post-tag">#threat-modeling</span><span class="post-tag">#stride</span><span class="post-tag">#devsecops</span><span class="post-tag">#miro-templates</span><span class="post-tag">#appsec</span></div>
-            <div class="post-meta-bar">⏱ 8 min read &nbsp;·&nbsp; 🔍 Run collaborative STRIDE threat modeling sessions in Miro — map attack surfaces, trust boundaries, and mitigations with your whole engineering team.</div>
-            <div class="post-body">
-<p>Security reviews are too often a checkbox at the end of a project — a rushed 30-minute meeting where a security engineer skims an architecture doc they've never seen before and signs off under deadline pressure. The result: real threats get missed, mitigations are bolted on as afterthoughts, and the security team gets blamed when something breaks in production. The problem isn't lack of expertise. It's lack of shared context.</p>
-
-<h2>Why Siloed Security Reviews Fail</h2>
-<p>Traditional threat modeling — STRIDE, PASTA, attack trees — is powerful on paper and painful in practice. The tools are often heavyweight (dedicated software with steep learning curves), the output is hard to share (dense Word documents nobody reads), and the process is designed for security specialists, not the development teams who need to act on the findings.</p>
-<p>When security happens in a silo, developers see it as a blocker, not a collaborator. Threat models sit in a security team's shared drive, disconnected from the architecture diagrams developers actually use. Mitigations get forgotten. The same vulnerabilities get introduced sprint after sprint.</p>
-
-<h2>The Miro STRIDE Framework: 6 Steps to Collaborative Threat Modeling</h2>
-<ol>
-  <li><strong>Start with your data flow diagram.</strong> Draw every component, data store, external actor, and trust boundary on a Miro board. This is the shared foundation everyone in the room works from.</li>
-  <li><strong>Apply STRIDE categories.</strong> For each component and data flow, add color-coded sticky notes: Spoofing (red), Tampering (orange), Repudiation (yellow), Information Disclosure (purple), Denial of Service (blue), Elevation of Privilege (pink).</li>
-  <li><strong>Run the async review phase.</strong> Share the board 48 hours before the session. Let engineers, product managers, and the security team add their own threat notes asynchronously. You walk into the meeting with richer input than any single expert could generate alone.</li>
-  <li><strong>Score and prioritize threats.</strong> In the live session, use Miro voting to score threats by likelihood × impact. The board updates in real time, giving you a prioritized risk register by the end of the meeting.</li>
-  <li><strong>Map mitigations to components.</strong> For each high-priority threat, add a green sticky with the mitigation strategy and the engineering owner. This becomes your security backlog.</li>
-  <li><strong>Link to code and tickets.</strong> Connect each mitigation sticky to the relevant Jira ticket or GitHub issue. The threat model stays connected to actual remediation work.</li>
-</ol>
-
-<div class="image-callout">
-  <strong>🎨 Mid-Post Image Suggestion</strong><br>
-  <em>AI prompt:</em> "STRIDE threat model showing SaaS components — API gateway, auth service, user database — with colored threat annotation sticky notes (red, orange, yellow, purple, blue, pink) and green mitigation shields, dark security dashboard aesthetic"
-</div>
-
-<h2>Team Adoption: Threat Modeling as a Sprint Ritual</h2>
-<p>The teams that make threat modeling stick don't treat it as a project milestone — they treat it as a recurring sprint ritual. Every time a new feature introduces a data flow, API, or third-party integration, a 45-minute threat modeling session is automatically scheduled. The Miro board template is already there; you just add a new frame for the new feature.</p>
-<p>After three months, something shifts in the team culture: developers start thinking about trust boundaries during design, not after implementation. Security stops being a gate and becomes a design input. And when an auditor asks "how do you manage security risk?", you open the Miro board instead of scrambling for documentation.</p>
-<p>Security built collaboratively is security that actually holds. <em>Run your first STRIDE threat modeling session in Miro — the template takes 5 minutes to set up.</em></p>
-</div>
-            <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
-          </div>
-        </div>
-        <div class="rec-card">
-          <div class="rec-num">#4</div>
           <div class="rec-topic">🦀 Languages</div>
           <div class="rec-title">Rust Ownership &amp; Borrowing, Visualized: Teaching Hard Concepts with Miro</div>
           <div class="rec-desc">How developer advocates and educators use Miro to turn notoriously complex language concepts (ownership, lifetimes, async) into interactive visual explainers that engineers actually bookmark.</div>
@@ -358,7 +309,7 @@
             <span class="rec-format">📄 Educational Post + Interactive Board</span>
             <span class="rec-cta">Open the interactive explainer →</span>
           </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>I Thought Coding Was The Job</li><li>CQL: Categorical Databases</li></ul></div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>b-nnett/goose — Goose Swift proof-of-concept README</li><li>I Thought Coding Was The Job</li></ul></div>
           <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
           <div class="post-draft">
             <div class="post-hero">
@@ -397,7 +348,7 @@
           </div>
         </div>
         <div class="rec-card">
-          <div class="rec-num">#5</div>
+          <div class="rec-num">#4</div>
           <div class="rec-topic">☁️ Cloud / Infra</div>
           <div class="rec-title">Kubernetes Architecture Diagrams That Actually Stay Up to Date</div>
           <div class="rec-desc">Most K8s architecture docs go stale in days. This post shows how platform teams use Miro&#x27;s live embed + diagram features to keep cluster topology, service maps, and resource flows always current.</div>
@@ -406,7 +357,7 @@
             <span class="rec-format">📄 Tutorial + Template</span>
             <span class="rec-cta">Grab the K8s Miro Template →</span>
           </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>Gloridust/WechatOnCloud — 云微WOC，云微信，自由连接</li><li>Git for GitHub: How to use simple Git commands to manage a GitHub repository</li></ul></div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>Gloridust/WechatOnCloud — 云微WOC，云微信，自由连接</li><li>A walking tour of surveillance infrastructure in Seattle</li></ul></div>
           <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
           <div class="post-draft">
             <div class="post-hero">
@@ -439,6 +390,55 @@
 <p>The platform teams who stick with this approach all share one habit: a recurring 15-minute calendar block every Friday afternoon titled "Update the K8s board." It's not a meeting — it's a solo ritual. The engineer who touched the cluster that week spends 15 minutes reflecting changes in Miro. After three sprints, the board becomes the team's most-visited resource, displacing the wiki entirely.</p>
 <p>Pair this with a Miro board link in your runbook template, and every incident starts with a visual overview of the affected system — not a frantic search for documentation that may or may not be accurate.</p>
 <p>Platform teams spend too much time answering "how does our infrastructure work?" questions. <em>Grab the Kubernetes Architecture Template and let the diagram answer for you.</em></p>
+</div>
+            <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
+          </div>
+        </div>
+        <div class="rec-card">
+          <div class="rec-num">#5</div>
+          <div class="rec-topic">🔐 Security</div>
+          <div class="rec-title">Collaborative Threat Modeling on Miro: A Developer&#x27;s Guide</div>
+          <div class="rec-desc">Security doesn&#x27;t have to happen in silos. This guide shows dev teams how to run STRIDE threat modeling sessions in Miro — mapping trust boundaries, attack surfaces, and mitigations together in real time.</div>
+          <div class="rec-demo"><strong>🎬 Demo:</strong> Live threat model for a typical SaaS app: user → API gateway → auth service → DB. Each node color-coded by risk level, with mitigation sticky notes.</div>
+          <div class="rec-meta">
+            <span class="rec-format">📄 Workshop Guide + Template</span>
+            <span class="rec-cta">Run your first threat model session →</span>
+          </div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>Modern Web Security Attacks Every Developer Must Know (2026 Guide) Clickjacking</li><li>Ask HN: What Hacker News comments have you bookmarked?</li></ul></div>
+          <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
+          <div class="post-draft">
+            <div class="post-hero">
+              <div class="post-hero-label">🎨 Hero Image Prompt (Midjourney / DALL-E)</div>
+              <div class="post-hero-prompt">STRIDE threat model diagram on a dark background, nodes representing API gateway, auth service, and database with red threat arrows and green mitigation shields overlaid, security visualization, dark mode, red and green palette</div>
+            </div>
+            <div class="post-tags"><span class="post-tag">#security</span><span class="post-tag">#threat-modeling</span><span class="post-tag">#stride</span><span class="post-tag">#devsecops</span><span class="post-tag">#miro-templates</span><span class="post-tag">#appsec</span></div>
+            <div class="post-meta-bar">⏱ 8 min read &nbsp;·&nbsp; 🔍 Run collaborative STRIDE threat modeling sessions in Miro — map attack surfaces, trust boundaries, and mitigations with your whole engineering team.</div>
+            <div class="post-body">
+<p>Security reviews are too often a checkbox at the end of a project — a rushed 30-minute meeting where a security engineer skims an architecture doc they've never seen before and signs off under deadline pressure. The result: real threats get missed, mitigations are bolted on as afterthoughts, and the security team gets blamed when something breaks in production. The problem isn't lack of expertise. It's lack of shared context.</p>
+
+<h2>Why Siloed Security Reviews Fail</h2>
+<p>Traditional threat modeling — STRIDE, PASTA, attack trees — is powerful on paper and painful in practice. The tools are often heavyweight (dedicated software with steep learning curves), the output is hard to share (dense Word documents nobody reads), and the process is designed for security specialists, not the development teams who need to act on the findings.</p>
+<p>When security happens in a silo, developers see it as a blocker, not a collaborator. Threat models sit in a security team's shared drive, disconnected from the architecture diagrams developers actually use. Mitigations get forgotten. The same vulnerabilities get introduced sprint after sprint.</p>
+
+<h2>The Miro STRIDE Framework: 6 Steps to Collaborative Threat Modeling</h2>
+<ol>
+  <li><strong>Start with your data flow diagram.</strong> Draw every component, data store, external actor, and trust boundary on a Miro board. This is the shared foundation everyone in the room works from.</li>
+  <li><strong>Apply STRIDE categories.</strong> For each component and data flow, add color-coded sticky notes: Spoofing (red), Tampering (orange), Repudiation (yellow), Information Disclosure (purple), Denial of Service (blue), Elevation of Privilege (pink).</li>
+  <li><strong>Run the async review phase.</strong> Share the board 48 hours before the session. Let engineers, product managers, and the security team add their own threat notes asynchronously. You walk into the meeting with richer input than any single expert could generate alone.</li>
+  <li><strong>Score and prioritize threats.</strong> In the live session, use Miro voting to score threats by likelihood × impact. The board updates in real time, giving you a prioritized risk register by the end of the meeting.</li>
+  <li><strong>Map mitigations to components.</strong> For each high-priority threat, add a green sticky with the mitigation strategy and the engineering owner. This becomes your security backlog.</li>
+  <li><strong>Link to code and tickets.</strong> Connect each mitigation sticky to the relevant Jira ticket or GitHub issue. The threat model stays connected to actual remediation work.</li>
+</ol>
+
+<div class="image-callout">
+  <strong>🎨 Mid-Post Image Suggestion</strong><br>
+  <em>AI prompt:</em> "STRIDE threat model showing SaaS components — API gateway, auth service, user database — with colored threat annotation sticky notes (red, orange, yellow, purple, blue, pink) and green mitigation shields, dark security dashboard aesthetic"
+</div>
+
+<h2>Team Adoption: Threat Modeling as a Sprint Ritual</h2>
+<p>The teams that make threat modeling stick don't treat it as a project milestone — they treat it as a recurring sprint ritual. Every time a new feature introduces a data flow, API, or third-party integration, a 45-minute threat modeling session is automatically scheduled. The Miro board template is already there; you just add a new frame for the new feature.</p>
+<p>After three months, something shifts in the team culture: developers start thinking about trust boundaries during design, not after implementation. Security stops being a gate and becomes a design input. And when an auditor asks "how do you manage security risk?", you open the Miro board instead of scrambling for documentation.</p>
+<p>Security built collaboratively is security that actually holds. <em>Run your first STRIDE threat modeling session in Miro — the template takes 5 minutes to set up.</em></p>
 </div>
             <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
           </div>
@@ -535,67 +535,67 @@
   <div class="topics-grid">
     
         <div class="topic-card">
-          <div class="topic-header">🤖 AI / ML <span class="count">200</span></div>
+          <div class="topic-header">🤖 AI / ML <span class="count">196</span></div>
           
             <div class="article-item">
               <a href="https://github.com/pewdiepie-archdaemon/odysseus" target="_blank">pewdiepie-archdaemon/odysseus — Self-hosted AI workspace. </a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 26245</span> 2026-05-31</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 30775</span> 2026-05-31</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/op7418/guizang-social-card-skill" target="_blank">op7418/guizang-social-card-skill — 🪧 Claude Code / Codex skill — generate Xiaohongshu carousels &amp; WeChat 21:9+1:1 cover pairs. Editorial × Swiss visual sys</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 2537</span> 2026-05-27</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 2573</span> 2026-05-27</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/helloianneo/ian-xiaohei-illustrations" target="_blank">helloianneo/ian-xiaohei-illustrations — 中文小黑怪诞正文配图生成 Skill | 16:9 白底手绘 | 少量红橙蓝批注 | Codex Skill</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1710</span> 2026-05-27</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1731</span> 2026-05-27</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/GordenSun/GordenPPTSkill" target="_blank">GordenSun/GordenPPTSkill — AI-friendly PPT builder skill: 17 hand-polished Chinese PPTX templates + non-destructive text-only editing tools (python</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1528</span> 2026-05-27</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1549</span> 2026-05-27</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/Sophomoresty/gemini-web2api" target="_blank">Sophomoresty/gemini-web2api — Convert Google Gemini web into OpenAI-compatible API. Zero auth, cross-platform, single file.</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1196</span> 2026-05-28</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1228</span> 2026-05-28</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🔧 Engineering <span class="count">50</span></div>
+          <div class="topic-header">🔧 Engineering <span class="count">56</span></div>
           
             <div class="article-item">
-              <a href="https://github.com/QwenLM/Qwen-VLA" target="_blank">QwenLM/Qwen-VLA — The official repository of Qwen-VLA</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 415</span> 2026-05-28</div>
+              <a href="https://news.ycombinator.com/item?id=48370330" target="_blank">Please don&#x27;t spam people looking for employment. It&#x27;s just cruel</a>
+              <div class="meta">🟠 Ask HN <span class="badge">⬆ 834</span> Jun 02</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/anomalyco/rift" target="_blank">anomalyco/rift</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 411</span> 2026-05-31</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 427</span> 2026-05-31</div>
             </div>
             <div class="article-item">
-              <a href="https://github.com/garnix-io/garnix-ci" target="_blank">garnix-io/garnix-ci — CI and hosting for nix-based, flakified github repos</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 376</span> 2026-05-27</div>
+              <a href="https://github.com/QwenLM/Qwen-VLA" target="_blank">QwenLM/Qwen-VLA — The official repository of Qwen-VLA</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 421</span> 2026-05-28</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/qiuqiubuchongle-cloud/chokepoint-atlas" target="_blank">qiuqiubuchongle-cloud/chokepoint-atlas</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 364</span> 2026-06-01</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 401</span> 2026-06-01</div>
             </div>
             <div class="article-item">
-              <a href="https://github.com/BoundingBoxSoftware/CharacterController" target="_blank">BoundingBoxSoftware/CharacterController — A character controller for Unity that covers many edge cases.</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 314</span> 2026-05-27</div>
+              <a href="https://ianthehenry.com/posts/why-janet/" target="_blank">Why Janet? (2023)</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 386</span> Jun 02</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🌐 Web / Frontend <span class="count">34</span></div>
+          <div class="topic-header">🌐 Web / Frontend <span class="count">37</span></div>
           
+            <div class="article-item">
+              <a href="https://dan-webnotes.com/posts/2026-06-02-css-native-parallax-effect/" target="_blank">CSS-Native Parallax Effect</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 115</span> Jun 02</div>
+            </div>
             <div class="article-item">
               <a href="https://github.com/LayoutitStudio/polycss" target="_blank">Show HN: A CSS 3D Engine (no WebGL)</a>
               <div class="meta">🟠 Show HN <span class="badge">⬆ 74</span> Jun 01</div>
             </div>
             <div class="article-item">
-              <a href="https://dan-webnotes.com/posts/2026-06-02-css-native-parallax-effect/" target="_blank">CSS-Native Parallax Effect</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 57</span> Jun 02</div>
-            </div>
-            <div class="article-item">
-              <a href="https://www.openfov.com/" target="_blank">Webcam head tracking, webcam to control in‑game FOV</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 24</span> May 30</div>
+              <a href="https://droplock.apitman.com/" target="_blank">Show HN: DropLock – E2EE secret sharing web app with no backend</a>
+              <div class="meta">🟠 Show HN <span class="badge">⬆ 10</span> Jun 02</div>
             </div>
             <div class="article-item">
               <a href="https://github.blog/open-source/gaming/beyond-the-engine-10-open-source-projects-shaping-how-games-actually-get-made/" target="_blank">Beyond the engine: 10 open source projects shaping how games actually get made</a>
@@ -607,51 +607,27 @@
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🔐 Security <span class="count">11</span></div>
+          <div class="topic-header">🦀 Languages <span class="count">10</span></div>
           
             <div class="article-item">
-              <a href="https://www.0xsid.com/blog/meta-account-takeover-fiasco" target="_blank">The newest Instagram “exploit” is the goofiest I&#x27;ve seen</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 1935</span> Jun 01</div>
+              <a href="https://github.com/b-nnett/goose" target="_blank">b-nnett/goose — Goose Swift proof-of-concept README</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 516</span> 2026-06-02</div>
             </div>
-            <div class="article-item">
-              <a href="https://github.com/secluso/core" target="_blank">Show HN: Open-source private home security camera system (end-to-end encryption)</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 132</span> May 29</div>
-            </div>
-            <div class="article-item">
-              <a href="https://dev.to/homayounmmdy/modern-web-security-attacks-every-developer-must-know-2026-guide-clickjacking-onc" target="_blank">Modern Web Security Attacks Every Developer Must Know (2026 Guide) Clickjacking</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 22</span> 2026-05-31</div>
-            </div>
-            <div class="article-item">
-              <a href="https://news.ycombinator.com/item?id=48367946" target="_blank">Ask HN: What Hacker News comments have you bookmarked?</a>
-              <div class="meta">🟠 Ask HN <span class="badge">⬆ 5</span> Jun 02</div>
-            </div>
-            <div class="article-item">
-              <a href="https://dev.to/constanza_diaz_dev/security-by-design-keeping-api-tokens-out-of-git-with-a-3-layer-setup-5ake" target="_blank">Security by Design: Keeping API Tokens Out of Git with a 3-Layer Setup</a>
-              <div class="meta">🟣 dev.to  2026-06-01</div>
-            </div>
-        </div>
-        <div class="topic-card">
-          <div class="topic-header">🦀 Languages <span class="count">11</span></div>
-          
             <div class="article-item">
               <a href="https://dev.to/itsugo/i-thought-coding-was-the-job-4bo7" target="_blank">I Thought Coding Was The Job</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 246</span> 2026-05-28</div>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 267</span> 2026-05-28</div>
             </div>
             <div class="article-item">
-              <a href="https://categoricaldata.net/" target="_blank">CQL: Categorical Databases</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 63</span> May 30</div>
+              <a href="https://dev.to/shubhradev/nextjs-16-broke-my-app-in-4-places-and-none-of-them-threw-an-error-51mn" target="_blank">Next.js 16 Broke My App in 4 Places and None of Them Threw an Error</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 58</span> 2026-05-27</div>
             </div>
             <div class="article-item">
-              <a href="https://dev.to/trojanmocx/i-updated-my-github-auto-commit-desktop-app-318o" target="_blank">I Updated My GitHub Auto-Commit Desktop App</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 33</span> 2026-05-30</div>
+              <a href="https://hoplang.com" target="_blank">Show HN: Hop – JSX for Rust</a>
+              <div class="meta">🟠 Show HN <span class="badge">⬆ 8</span> Jun 02</div>
             </div>
             <div class="article-item">
-              <a href="https://news.ycombinator.com/item?id=48325208" target="_blank">Ask HN: Any advice on how to learn good software architecture practices?</a>
-              <div class="meta">🟠 Ask HN <span class="badge">⬆ 17</span> May 29</div>
-            </div>
-            <div class="article-item">
-              <a href="https://www.bunniestudios.com/blog/2026/on-reading-srams-in-ir-images-and-establishing-bounds-on-trust/" target="_blank">On Reading SRAMs in IR Images, and Establishing Bounds on Trust</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 11</span> May 31</div>
+              <a href="https://github.blog/news-insights/company-news/still-a-developer-just-outside-our-latest-github-shop-collection-is-here/" target="_blank">Still a developer. Just outside. Our latest GitHub Shop collection is here.</a>
+              <div class="meta">🔵 GitHub Blog  Thu, 28 Ma</div>
             </div>
         </div>
         <div class="topic-card">
@@ -659,55 +635,31 @@
           
             <div class="article-item">
               <a href="https://github.com/Gloridust/WechatOnCloud" target="_blank">Gloridust/WechatOnCloud — 云微WOC，云微信，自由连接</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1071</span> 2026-05-29</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1296</span> 2026-05-29</div>
             </div>
             <div class="article-item">
-              <a href="https://dev.to/thetylern/git-for-github-how-to-use-simple-git-commands-to-manage-a-github-repository-435g" target="_blank">Git for GitHub: How to use simple Git commands to manage a GitHub repository</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 24</span> 2026-05-28</div>
+              <a href="https://coveillance.org/a-walking-tour-of-surveillance-infrastructure-in-seattle/" target="_blank">A walking tour of surveillance infrastructure in Seattle</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 289</span> Jun 02</div>
             </div>
             <div class="article-item">
               <a href="https://dev.to/omdongaonkar03/how-i-built-a-permanent-testing-server-using-cloudflare-tunnel-4ef7" target="_blank">How I Built a Permanent Testing Server Using Cloudflare Tunnel</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 8</span> 2026-05-31</div>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 10</span> 2026-05-31</div>
             </div>
             <div class="article-item">
               <a href="https://dev.to/aws-builders/if-data-survives-in-deployments-why-do-we-need-statefulsets-31km" target="_blank">🤔 If Data Survives in Deployments, Why Do We Need StatefulSets?</a>
               <div class="meta">🟣 dev.to <span class="badge">⬆ 6</span> 2026-06-01</div>
             </div>
             <div class="article-item">
-              <a href="https://check.jibaoproxy.com" target="_blank">Show HN: See the JA3 TLS fingerprint your scraper sends to Cloudflare</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 3</span> Jun 02</div>
+              <a href="https://dev.to/vultr/deploying-kafka-distributed-event-streaming-on-ubuntu-2404-48ak" target="_blank">Deploying Kafka Distributed Event Streaming on Ubuntu 24.04</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 5</span> 2026-06-02</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🎨 Dev Experience <span class="count">6</span></div>
-          
-            <div class="article-item">
-              <a href="https://github.com/Michaelliv/pi-dynamic-workflows" target="_blank">Michaelliv/pi-dynamic-workflows</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 729</span> 2026-05-28</div>
-            </div>
-            <div class="article-item">
-              <a href="https://github.com/zgwl/chinese-buy-us-stock-guide" target="_blank">zgwl/chinese-buy-us-stock-guide — 美股指南</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 256</span> 2026-05-30</div>
-            </div>
-            <div class="article-item">
-              <a href="https://dev.to/devteam/top-7-featured-dev-posts-of-the-week-45na" target="_blank">Top 7 Featured DEV Posts of the Week</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 138</span> 2026-05-26</div>
-            </div>
-            <div class="article-item">
-              <a href="https://kenforthewin.github.io/atomic-editor/" target="_blank">Show HN: Atomic Editor – Obsidian-style live preview for CodeMirror 6</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 67</span> May 31</div>
-            </div>
-            <div class="article-item">
-              <a href="https://news.ycombinator.com/item?id=48347180" target="_blank">$100 to a Debian Developer who can get Fresh Editor into Trixie</a>
-              <div class="meta">🟠 Ask HN <span class="badge">⬆ 27</span> May 31</div>
-            </div>
-        </div>
-        <div class="topic-card">
-          <div class="topic-header">⚡ Performance <span class="count">5</span></div>
+          <div class="topic-header">⚡ Performance <span class="count">7</span></div>
           
             <div class="article-item">
               <a href="https://github.com/ikeda042/PhenoPixel" target="_blank">ikeda042/PhenoPixel — PhenoPixel: A web application for single-cell microscopy image analysis (deployed at Hiroshima University).</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 331</span> 2026-05-27</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 330</span> 2026-05-27</div>
             </div>
             <div class="article-item">
               <a href="https://news.ycombinator.com/item?id=48366907" target="_blank">Tell HN: In the old days, computers used to get constantly faster and cheaper</a>
@@ -718,12 +670,60 @@
               <div class="meta">🟠 Ask HN <span class="badge">⬆ 5</span> May 31</div>
             </div>
             <div class="article-item">
-              <a href="https://slack.engineering/build-better-software-to-build-software-better/" target="_blank">Build better software to build software better</a>
-              <div class="meta">🔵 Slack Engineering  Thu, 06 No</div>
+              <a href="https://dev.to/vultr/deploying-cassandra-distributed-nosql-database-on-ubuntu-2404-3pf0" target="_blank">Deploying Cassandra Distributed NoSQL Database on Ubuntu 24.04</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 5</span> 2026-06-02</div>
             </div>
             <div class="article-item">
-              <a href="https://www.hashicorp.com/blog/consul-20-improves-flexibility-control-and-scalability" target="_blank">Consul 2.0 improves flexibility, control, and scalability</a>
-              <div class="meta">🔵 HashiCorp Blog  </div>
+              <a href="https://dev.to/vultr/deploying-redis-in-memory-data-store-on-ubuntu-2404-5hd5" target="_blank">Deploying Redis In-Memory Data Store on Ubuntu 24.04</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 5</span> 2026-06-02</div>
+            </div>
+        </div>
+        <div class="topic-card">
+          <div class="topic-header">🔐 Security <span class="count">7</span></div>
+          
+            <div class="article-item">
+              <a href="https://dev.to/homayounmmdy/modern-web-security-attacks-every-developer-must-know-2026-guide-clickjacking-onc" target="_blank">Modern Web Security Attacks Every Developer Must Know (2026 Guide) Clickjacking</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 22</span> 2026-05-31</div>
+            </div>
+            <div class="article-item">
+              <a href="https://news.ycombinator.com/item?id=48367946" target="_blank">Ask HN: What Hacker News comments have you bookmarked?</a>
+              <div class="meta">🟠 Ask HN <span class="badge">⬆ 7</span> Jun 02</div>
+            </div>
+            <div class="article-item">
+              <a href="https://github.blog/security/investigating-unauthorized-access-to-githubs-internal-repositories/" target="_blank">Investigation update: GitHub Enterprise Server signing key rotation</a>
+              <div class="meta">🔵 GitHub Blog  Wed, 20 Ma</div>
+            </div>
+            <div class="article-item">
+              <a href="https://engineering.fb.com/2026/04/16/security/post-quantum-cryptography-migration-at-meta-framework-lessons-and-takeaways/" target="_blank">Post-Quantum Cryptography Migration at Meta: Framework, Lessons, and Takeaways</a>
+              <div class="meta">🔵 Engineering at Meta  Thu, 16 Ap</div>
+            </div>
+            <div class="article-item">
+              <a href="https://www.0xsid.com/blog/meta-account-takeover-fiasco" target="_blank">The Newest Instagram &quot;Exploit&quot; is the Goofiest I&#x27;ve Seen</a>
+              <div class="meta">🔵 Lobste.rs/security  Mon, 01 Ju</div>
+            </div>
+        </div>
+        <div class="topic-card">
+          <div class="topic-header">🎨 Dev Experience <span class="count">6</span></div>
+          
+            <div class="article-item">
+              <a href="https://github.com/Michaelliv/pi-dynamic-workflows" target="_blank">Michaelliv/pi-dynamic-workflows</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 734</span> 2026-05-28</div>
+            </div>
+            <div class="article-item">
+              <a href="https://dev.to/devteam/top-7-featured-dev-posts-of-the-week-45na" target="_blank">Top 7 Featured DEV Posts of the Week</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 138</span> 2026-05-26</div>
+            </div>
+            <div class="article-item">
+              <a href="https://news.ycombinator.com/item?id=48347180" target="_blank">$100 to a Debian Developer who can get Fresh Editor into Trixie</a>
+              <div class="meta">🟠 Ask HN <span class="badge">⬆ 27</span> May 31</div>
+            </div>
+            <div class="article-item">
+              <a href="https://dev.to/ingosteinke/learning-lessons-from-gaming-1jgm" target="_blank">Learning Lessons from Gaming</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 12</span> 2026-06-02</div>
+            </div>
+            <div class="article-item">
+              <a href="https://dev.to/tegos/php-generics-already-exist-theyre-just-hidden-in-phpdoc-2l0c" target="_blank">PHP Generics Already Exist: They&#x27;re Just Hidden in PHPDoc</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 4</span> 2026-06-02</div>
             </div>
         </div>
   </div>
@@ -738,7 +738,7 @@
           <td class="rank">1</td>
           <td><a href="https://github.com/pewdiepie-archdaemon/odysseus" target="_blank">pewdiepie-archdaemon/odysseus — Self-hosted AI workspace. </a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">26245</td>
+          <td class="score">30775</td>
           <td>🤖 AI / ML</td>
           <td>2026-05-31</td>
         </tr>
@@ -746,71 +746,71 @@
           <td class="rank">2</td>
           <td><a href="https://github.com/op7418/guizang-social-card-skill" target="_blank">op7418/guizang-social-card-skill — 🪧 Claude Code / Codex skill — generate Xiaohongshu carousels &amp; WeChat 21:9+1:1 cover pairs. Editorial × Swiss visual sys</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">2537</td>
+          <td class="score">2573</td>
           <td>🤖 AI / ML</td>
           <td>2026-05-27</td>
         </tr>
         <tr>
           <td class="rank">3</td>
-          <td><a href="https://www.0xsid.com/blog/meta-account-takeover-fiasco" target="_blank">The newest Instagram “exploit” is the goofiest I&#x27;ve seen</a></td>
-          <td><span class="source-badge">🟠 Hacker News</span></td>
-          <td class="score">1935</td>
-          <td>🔐 Security</td>
-          <td>Jun 01</td>
+          <td><a href="https://github.com/helloianneo/ian-xiaohei-illustrations" target="_blank">helloianneo/ian-xiaohei-illustrations — 中文小黑怪诞正文配图生成 Skill | 16:9 白底手绘 | 少量红橙蓝批注 | Codex Skill</a></td>
+          <td><span class="source-badge">⚫ GitHub Trending</span></td>
+          <td class="score">1731</td>
+          <td>🤖 AI / ML</td>
+          <td>2026-05-27</td>
         </tr>
         <tr>
           <td class="rank">4</td>
-          <td><a href="https://github.com/helloianneo/ian-xiaohei-illustrations" target="_blank">helloianneo/ian-xiaohei-illustrations — 中文小黑怪诞正文配图生成 Skill | 16:9 白底手绘 | 少量红橙蓝批注 | Codex Skill</a></td>
+          <td><a href="https://github.com/GordenSun/GordenPPTSkill" target="_blank">GordenSun/GordenPPTSkill — AI-friendly PPT builder skill: 17 hand-polished Chinese PPTX templates + non-destructive text-only editing tools (python</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1710</td>
+          <td class="score">1549</td>
           <td>🤖 AI / ML</td>
           <td>2026-05-27</td>
         </tr>
         <tr>
           <td class="rank">5</td>
-          <td><a href="https://github.com/GordenSun/GordenPPTSkill" target="_blank">GordenSun/GordenPPTSkill — AI-friendly PPT builder skill: 17 hand-polished Chinese PPTX templates + non-destructive text-only editing tools (python</a></td>
+          <td><a href="https://github.com/Gloridust/WechatOnCloud" target="_blank">Gloridust/WechatOnCloud — 云微WOC，云微信，自由连接</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1528</td>
-          <td>🤖 AI / ML</td>
-          <td>2026-05-27</td>
+          <td class="score">1296</td>
+          <td>☁️ Cloud / Infra</td>
+          <td>2026-05-29</td>
         </tr>
         <tr>
           <td class="rank">6</td>
           <td><a href="https://github.com/Sophomoresty/gemini-web2api" target="_blank">Sophomoresty/gemini-web2api — Convert Google Gemini web into OpenAI-compatible API. Zero auth, cross-platform, single file.</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1196</td>
+          <td class="score">1228</td>
           <td>🤖 AI / ML</td>
           <td>2026-05-28</td>
         </tr>
         <tr>
           <td class="rank">7</td>
-          <td><a href="https://github.com/Gloridust/WechatOnCloud" target="_blank">Gloridust/WechatOnCloud — 云微WOC，云微信，自由连接</a></td>
+          <td><a href="https://github.com/asz798838958/aBaiAutoplus" target="_blank">asz798838958/aBaiAutoplus — 多平台 AI 账号自动注册与管理 · 协议化付款一键开通 ChatGPT Plus</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1071</td>
-          <td>☁️ Cloud / Infra</td>
-          <td>2026-05-29</td>
+          <td class="score">952</td>
+          <td>🤖 AI / ML</td>
+          <td>2026-05-31</td>
         </tr>
         <tr>
           <td class="rank">8</td>
           <td><a href="https://github.com/MatinSenPai/SenPaiScanner" target="_blank">MatinSenPai/SenPaiScanner — A light-weight scanner for Cloudflare IPs, written in Golang</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">880</td>
+          <td class="score">893</td>
           <td>🤖 AI / ML</td>
           <td>2026-05-28</td>
         </tr>
         <tr>
           <td class="rank">9</td>
-          <td><a href="https://github.com/asz798838958/aBaiAutoplus" target="_blank">asz798838958/aBaiAutoplus — 多平台 AI 账号自动注册与管理 · 协议化付款一键开通 ChatGPT Plus</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">835</td>
-          <td>🤖 AI / ML</td>
-          <td>2026-05-31</td>
+          <td><a href="https://news.ycombinator.com/item?id=48370330" target="_blank">Please don&#x27;t spam people looking for employment. It&#x27;s just cruel</a></td>
+          <td><span class="source-badge">🟠 Ask HN</span></td>
+          <td class="score">834</td>
+          <td>🔧 Engineering</td>
+          <td>Jun 02</td>
         </tr>
         <tr>
           <td class="rank">10</td>
           <td><a href="https://github.com/Michaelliv/pi-dynamic-workflows" target="_blank">Michaelliv/pi-dynamic-workflows</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">729</td>
+          <td class="score">734</td>
           <td>🎨 Dev Experience</td>
           <td>2026-05-28</td>
         </tr>
@@ -818,7 +818,7 @@
           <td class="rank">11</td>
           <td><a href="https://github.com/withkynam/vibecode-pro-max-kit" target="_blank">withkynam/vibecode-pro-max-kit — Your AI forgets. This remembers. Spec-driven coding harness for vibecoders, product owners, CEOs and real builders — sel</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">712</td>
+          <td class="score">716</td>
           <td>🤖 AI / ML</td>
           <td>2026-05-27</td>
         </tr>
@@ -826,28 +826,52 @@
           <td class="rank">12</td>
           <td><a href="https://github.com/2aronS/Duel-Agents" target="_blank">2aronS/Duel-Agents — CLI, SDK, and IDE plugins for Duel Agents</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">660</td>
+          <td class="score">673</td>
           <td>🤖 AI / ML</td>
           <td>2026-05-28</td>
         </tr>
         <tr>
           <td class="rank">13</td>
-          <td><a href="https://dev.to/sylwia-lask/how-are-developers-actually-using-ai-at-work-4g9c" target="_blank">How Are Developers Actually Using AI At Work?</a></td>
-          <td><span class="source-badge">🟣 dev.to</span></td>
-          <td class="score">616</td>
-          <td>🤖 AI / ML</td>
-          <td>2026-05-27</td>
-        </tr>
-        <tr>
-          <td class="rank">14</td>
-          <td><a href="https://cs336.stanford.edu/" target="_blank">CS336: Language Modeling from Scratch</a></td>
+          <td><a href="https://www.economist.com/finance-and-economics/2026/06/01/can-the-stockmarket-swallow-anthropic-spacex-and-openai" target="_blank">Can the stockmarket swallow Anthropic, SpaceX and OpenAI?</a></td>
           <td><span class="source-badge">🟠 Hacker News</span></td>
-          <td class="score">502</td>
+          <td class="score">643</td>
           <td>🤖 AI / ML</td>
           <td>Jun 01</td>
         </tr>
         <tr>
+          <td class="rank">14</td>
+          <td><a href="https://dev.to/sylwia-lask/how-are-developers-actually-using-ai-at-work-4g9c" target="_blank">How Are Developers Actually Using AI At Work?</a></td>
+          <td><span class="source-badge">🟣 dev.to</span></td>
+          <td class="score">620</td>
+          <td>🤖 AI / ML</td>
+          <td>2026-05-27</td>
+        </tr>
+        <tr>
           <td class="rank">15</td>
+          <td><a href="https://github.com/ClaudioDrews/memory-os" target="_blank">ClaudioDrews/memory-os — A 7-layer memory operating system for Hermes Agent — persistent memory with Qdrant, structured facts, fabric recall, aut</a></td>
+          <td><span class="source-badge">⚫ GitHub Trending</span></td>
+          <td class="score">560</td>
+          <td>🤖 AI / ML</td>
+          <td>2026-05-31</td>
+        </tr>
+        <tr>
+          <td class="rank">16</td>
+          <td><a href="https://github.com/b-nnett/goose" target="_blank">b-nnett/goose — Goose Swift proof-of-concept README</a></td>
+          <td><span class="source-badge">⚫ GitHub Trending</span></td>
+          <td class="score">516</td>
+          <td>🦀 Languages</td>
+          <td>2026-06-02</td>
+        </tr>
+        <tr>
+          <td class="rank">17</td>
+          <td><a href="https://blog.adafruit.com/" target="_blank">Adafruit Receives Demand Letter from Fenwick Legal Counsel on Behalf of Flux.ai</a></td>
+          <td><span class="source-badge">🟠 Hacker News</span></td>
+          <td class="score">502</td>
+          <td>🤖 AI / ML</td>
+          <td>Jun 02</td>
+        </tr>
+        <tr>
+          <td class="rank">18</td>
           <td><a href="https://github.com/liyue-aigc/female-portrait-director" target="_blank">liyue-aigc/female-portrait-director — A modular Codex Skill for directing and expanding detailed AI female portrait prompts.</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
           <td class="score">482</td>
@@ -855,42 +879,18 @@
           <td>2026-05-30</td>
         </tr>
         <tr>
-          <td class="rank">16</td>
-          <td><a href="https://www.economist.com/finance-and-economics/2026/06/01/can-the-stockmarket-swallow-anthropic-spacex-and-openai" target="_blank">Can the stockmarket swallow Anthropic, SpaceX and OpenAI?</a></td>
-          <td><span class="source-badge">🟠 Hacker News</span></td>
-          <td class="score">465</td>
-          <td>🤖 AI / ML</td>
-          <td>Jun 01</td>
-        </tr>
-        <tr>
-          <td class="rank">17</td>
-          <td><a href="https://github.com/stanford-cs336/assignment1-basics/blob/main/CLAUDE.md" target="_blank">AI Agent Guidelines for CS336 at Stanford</a></td>
-          <td><span class="source-badge">🟠 Hacker News</span></td>
-          <td class="score">445</td>
-          <td>🤖 AI / ML</td>
-          <td>Jun 01</td>
-        </tr>
-        <tr>
-          <td class="rank">18</td>
+          <td class="rank">19</td>
           <td><a href="https://github.com/jdevalk/specification.website" target="_blank">jdevalk/specification.website — Website specification — HTML, accessibility, security, SEO, agent-readiness. Platform-agnostic, sourced, MIT.</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">430</td>
+          <td class="score">443</td>
           <td>🤖 AI / ML</td>
           <td>2026-05-29</td>
-        </tr>
-        <tr>
-          <td class="rank">19</td>
-          <td><a href="https://github.com/QwenLM/Qwen-VLA" target="_blank">QwenLM/Qwen-VLA — The official repository of Qwen-VLA</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">415</td>
-          <td>🔧 Engineering</td>
-          <td>2026-05-28</td>
         </tr>
         <tr>
           <td class="rank">20</td>
           <td><a href="https://github.com/anomalyco/rift" target="_blank">anomalyco/rift</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">411</td>
+          <td class="score">427</td>
           <td>🔧 Engineering</td>
           <td>2026-05-31</td>
         </tr></tbody>
@@ -1024,7 +1024,7 @@
         </div></div>
 
 </main>
-<footer>Built with ❤️ at the hackathon · Eng Brand Machine · June 02, 2026 at 13:22</footer>
+<footer>Built with ❤️ at the hackathon · Eng Brand Machine · June 02, 2026 at 19:19</footer>
 
 <script>
 // ── Topic classifier (mirrors Python TOPIC_KEYWORDS) ──────────────────────
