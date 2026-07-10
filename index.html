@@ -185,23 +185,23 @@
 
 <header>
   <h1>🚀 Eng Brand Machine</h1>
-  <p class="subtitle">Real-time engineering trends from 32 sources · 336 articles · July 10, 2026 at 00:42</p>
+  <p class="subtitle">Real-time engineering trends from 32 sources · 337 articles · July 10, 2026 at 07:15</p>
   <span class="miro-badge">✦ Miro Developer Brand Intelligence</span>
 </header>
 
 <div class="stats-bar">
-  <div class="stat"><div class="num">336</div><div class="label">Articles Analyzed</div></div>
+  <div class="stat"><div class="num">337</div><div class="label">Articles Analyzed</div></div>
   <div class="stat"><div class="num">32</div><div class="label">Live Sources</div></div>
-  <div class="stat"><div class="num">11</div><div class="label">Topics Tracked</div></div>
+  <div class="stat"><div class="num">10</div><div class="label">Topics Tracked</div></div>
   <div class="stat"><div class="num">🤖 AI / ML</div><div class="label">Hottest Topic</div></div>
-  <div class="stat"><div class="num">199</div><div class="label">Articles on #1 Topic</div></div>
+  <div class="stat"><div class="num">207</div><div class="label">Articles on #1 Topic</div></div>
 </div>
 
 <main>
 
   <div class="recs-section">
     <h2>✦ Top 5 Content Recommendations for Miro&apos;s Developer Brand</h2>
-    <p class="recs-intro">Generated from 336 articles across 32 sources — each recommendation is anchored to what engineers are actually reading today.</p>
+    <p class="recs-intro">Generated from 337 articles across 32 sources — each recommendation is anchored to what engineers are actually reading today.</p>
     <div class="recs-grid">
       
         <div class="rec-card">
@@ -214,7 +214,7 @@
             <span class="rec-format">📄 Blog Post + Free Template</span>
             <span class="rec-cta">Download the AI Architecture Template →</span>
           </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>GPT-5.6</li><li>simonlin1212/Vibe-Research — Vibe-Research: Your Personal Trading Research Agent · A股/美股/港股 的个人投研 Agent：每日复盘、资讯雷达、个股数据、板块中心、我的持仓、研究记录。Vibe-Research 把</li></ul></div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>John Deere owners will get the right to repair equipment under FTC settlement</li><li>GPT-5.6</li></ul></div>
           <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
           <div class="post-draft">
             <div class="post-hero">
@@ -254,6 +254,53 @@
         </div>
         <div class="rec-card">
           <div class="rec-num">#2</div>
+          <div class="rec-topic">🌐 Web / Frontend</div>
+          <div class="rec-title">Frontend Architecture Maps: How to Onboard Engineers in Half the Time</div>
+          <div class="rec-desc">Miro as the missing layer between your code and your docs — showing how frontend teams map component hierarchies, data flow, and routing so new engineers hit the ground running.</div>
+          <div class="rec-demo"><strong>🎬 Demo:</strong> React app architecture: routing tree, state management layers (Zustand/Redux), API boundaries — all in one scrollable Miro board with code links.</div>
+          <div class="rec-meta">
+            <span class="rec-format">📄 Blog Post + Template</span>
+            <span class="rec-cta">See the Frontend Architecture Template →</span>
+          </div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>Shpigford/knockoff — Chrome extension that filters pseudo-brand junk out of Amazon. Buy from real, established brands.</li><li>A possible future for Damn Interesting</li></ul></div>
+          <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
+          <div class="post-draft">
+            <div class="post-hero">
+              <div class="post-hero-label">🎨 Hero Image Prompt (Midjourney / DALL-E)</div>
+              <div class="post-hero-prompt">React frontend architecture map showing component hierarchy tree, state management layers, and API boundaries as glowing connected nodes on dark background, colorful lines connecting components, modern web development visualization</div>
+            </div>
+            <div class="post-tags"><span class="post-tag">#frontend</span><span class="post-tag">#react</span><span class="post-tag">#architecture</span><span class="post-tag">#onboarding</span><span class="post-tag">#miro-templates</span><span class="post-tag">#web-development</span></div>
+            <div class="post-meta-bar">⏱ 6 min read &nbsp;·&nbsp; 🔍 Cut frontend onboarding time in half with a Miro architecture map — component hierarchies, data flow, and routing all in one collaborative board.</div>
+            <div class="post-body">
+<p>The first week for a new frontend engineer follows a predictable arc: clone the repo, spend two hours getting the dev environment running, then spend two more hours trying to understand why there are four different state management patterns in the same codebase, who owns which components, and where the API calls actually live. By day three, they're productive. By week two, they're slowing down senior engineers with questions that a good architecture map would have answered immediately.</p>
+
+<h2>Why Frontend Architecture Is Hardest to Document</h2>
+<p>Backend systems have decades of tooling for architecture visualization — ERDs, service maps, flow diagrams. Frontend architecture has almost none, despite being just as complex. A modern React application involves routing trees, state management layers, component hierarchies, API boundaries, and build pipeline configuration — and the relationships between all of these are implicit in the code, not visible anywhere else.</p>
+<p>The result: frontend architecture lives entirely in senior engineers' heads. When they leave, the knowledge leaves with them. When you hire, onboarding takes weeks that should take days. And when you need a significant refactor, you're flying blind — unable to see the full blast radius before making the change.</p>
+
+<h2>The Miro Framework: Frontend Architecture in 4 Views</h2>
+<ol>
+  <li><strong>The routing tree.</strong> Draw every route in your application as a tree. Mark which routes are public vs. authenticated, which are lazy-loaded, and which share layouts. New engineers can see the entire navigation structure at a glance.</li>
+  <li><strong>State management topology.</strong> Map your state: global store (Zustand, Redux, Jotai), server state (React Query, SWR), local component state, and URL state. Draw which components read from and write to each state source. This is the view that prevents the "why is this component re-rendering?" debug session.</li>
+  <li><strong>API boundaries and data flow.</strong> Show which components fetch data, which transform it, and which display it. Draw the API endpoints they call. This view is gold during onboarding and indispensable during debugging.</li>
+  <li><strong>Component ownership map.</strong> Organize components by team or feature area. Mark which are shared design system components, which are feature-specific, and which are currently being refactored. Prevents accidental coupling between feature teams.</li>
+</ol>
+
+<div class="image-callout">
+  <strong>🎨 Mid-Post Image Suggestion</strong><br>
+  <em>AI prompt:</em> "React application architecture map with component hierarchy tree on the left, state management topology in the center, and API boundary diagram on the right, connected by glowing data flow arrows, dark mode visualization, blue and purple palette"
+</div>
+
+<h2>Team Adoption: The Living Frontend Docs Habit</h2>
+<p>Frontend architecture boards work best when updated continuously rather than in big batches. The habit to build: any PR that adds a new route, introduces a new state pattern, or changes a major component boundary includes a Miro board update in the PR checklist. It takes five minutes per PR and means the board is always accurate.</p>
+<p>Use the board in sprint planning to identify coupling risks before they become bugs. Use it in architecture reviews to give stakeholders a visual before committing to a refactor. And use it in onboarding — new frontend engineers report that a good architecture board cuts their ramp-up time in half.</p>
+<p>Great frontend teams build great documentation habits. <em>Get the Frontend Architecture Template and give your next new hire the map they wish they had on day one.</em></p>
+</div>
+            <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
+          </div>
+        </div>
+        <div class="rec-card">
+          <div class="rec-num">#3</div>
           <div class="rec-topic">🦀 Languages</div>
           <div class="rec-title">Rust Ownership &amp; Borrowing, Visualized: Teaching Hard Concepts with Miro</div>
           <div class="rec-desc">How developer advocates and educators use Miro to turn notoriously complex language concepts (ownership, lifetimes, async) into interactive visual explainers that engineers actually bookmark.</div>
@@ -301,53 +348,6 @@
           </div>
         </div>
         <div class="rec-card">
-          <div class="rec-num">#3</div>
-          <div class="rec-topic">🌐 Web / Frontend</div>
-          <div class="rec-title">Frontend Architecture Maps: How to Onboard Engineers in Half the Time</div>
-          <div class="rec-desc">Miro as the missing layer between your code and your docs — showing how frontend teams map component hierarchies, data flow, and routing so new engineers hit the ground running.</div>
-          <div class="rec-demo"><strong>🎬 Demo:</strong> React app architecture: routing tree, state management layers (Zustand/Redux), API boundaries — all in one scrollable Miro board with code links.</div>
-          <div class="rec-meta">
-            <span class="rec-format">📄 Blog Post + Template</span>
-            <span class="rec-cta">See the Frontend Architecture Template →</span>
-          </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>Shpigford/knockoff — Chrome extension that filters pseudo-brand junk out of Amazon. Buy from real, established brands.</li><li>A possible future for Damn Interesting</li></ul></div>
-          <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
-          <div class="post-draft">
-            <div class="post-hero">
-              <div class="post-hero-label">🎨 Hero Image Prompt (Midjourney / DALL-E)</div>
-              <div class="post-hero-prompt">React frontend architecture map showing component hierarchy tree, state management layers, and API boundaries as glowing connected nodes on dark background, colorful lines connecting components, modern web development visualization</div>
-            </div>
-            <div class="post-tags"><span class="post-tag">#frontend</span><span class="post-tag">#react</span><span class="post-tag">#architecture</span><span class="post-tag">#onboarding</span><span class="post-tag">#miro-templates</span><span class="post-tag">#web-development</span></div>
-            <div class="post-meta-bar">⏱ 6 min read &nbsp;·&nbsp; 🔍 Cut frontend onboarding time in half with a Miro architecture map — component hierarchies, data flow, and routing all in one collaborative board.</div>
-            <div class="post-body">
-<p>The first week for a new frontend engineer follows a predictable arc: clone the repo, spend two hours getting the dev environment running, then spend two more hours trying to understand why there are four different state management patterns in the same codebase, who owns which components, and where the API calls actually live. By day three, they're productive. By week two, they're slowing down senior engineers with questions that a good architecture map would have answered immediately.</p>
-
-<h2>Why Frontend Architecture Is Hardest to Document</h2>
-<p>Backend systems have decades of tooling for architecture visualization — ERDs, service maps, flow diagrams. Frontend architecture has almost none, despite being just as complex. A modern React application involves routing trees, state management layers, component hierarchies, API boundaries, and build pipeline configuration — and the relationships between all of these are implicit in the code, not visible anywhere else.</p>
-<p>The result: frontend architecture lives entirely in senior engineers' heads. When they leave, the knowledge leaves with them. When you hire, onboarding takes weeks that should take days. And when you need a significant refactor, you're flying blind — unable to see the full blast radius before making the change.</p>
-
-<h2>The Miro Framework: Frontend Architecture in 4 Views</h2>
-<ol>
-  <li><strong>The routing tree.</strong> Draw every route in your application as a tree. Mark which routes are public vs. authenticated, which are lazy-loaded, and which share layouts. New engineers can see the entire navigation structure at a glance.</li>
-  <li><strong>State management topology.</strong> Map your state: global store (Zustand, Redux, Jotai), server state (React Query, SWR), local component state, and URL state. Draw which components read from and write to each state source. This is the view that prevents the "why is this component re-rendering?" debug session.</li>
-  <li><strong>API boundaries and data flow.</strong> Show which components fetch data, which transform it, and which display it. Draw the API endpoints they call. This view is gold during onboarding and indispensable during debugging.</li>
-  <li><strong>Component ownership map.</strong> Organize components by team or feature area. Mark which are shared design system components, which are feature-specific, and which are currently being refactored. Prevents accidental coupling between feature teams.</li>
-</ol>
-
-<div class="image-callout">
-  <strong>🎨 Mid-Post Image Suggestion</strong><br>
-  <em>AI prompt:</em> "React application architecture map with component hierarchy tree on the left, state management topology in the center, and API boundary diagram on the right, connected by glowing data flow arrows, dark mode visualization, blue and purple palette"
-</div>
-
-<h2>Team Adoption: The Living Frontend Docs Habit</h2>
-<p>Frontend architecture boards work best when updated continuously rather than in big batches. The habit to build: any PR that adds a new route, introduces a new state pattern, or changes a major component boundary includes a Miro board update in the PR checklist. It takes five minutes per PR and means the board is always accurate.</p>
-<p>Use the board in sprint planning to identify coupling risks before they become bugs. Use it in architecture reviews to give stakeholders a visual before committing to a refactor. And use it in onboarding — new frontend engineers report that a good architecture board cuts their ramp-up time in half.</p>
-<p>Great frontend teams build great documentation habits. <em>Get the Frontend Architecture Template and give your next new hire the map they wish they had on day one.</em></p>
-</div>
-            <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
-          </div>
-        </div>
-        <div class="rec-card">
           <div class="rec-num">#4</div>
           <div class="rec-topic">☁️ Cloud / Infra</div>
           <div class="rec-title">Kubernetes Architecture Diagrams That Actually Stay Up to Date</div>
@@ -357,7 +357,7 @@
             <span class="rec-format">📄 Tutorial + Template</span>
             <span class="rec-cta">Grab the K8s Miro Template →</span>
           </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>wouterdebie/davit — A native macOS UI for Apple&#x27;s platform</li><li>The Pod That Lied: A Kubernetes Readiness Probe War Story</li></ul></div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>wouterdebie/davit — A native macOS UI for Apple&#x27;s platform</li><li>Deploy a Dockerfile on Vercel</li></ul></div>
           <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
           <div class="post-draft">
             <div class="post-hero">
@@ -404,7 +404,7 @@
             <span class="rec-format">📄 Workshop Guide + Template</span>
             <span class="rec-cta">Run your first threat model session →</span>
           </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>Show HN: Sighthound - open-source vulnerability scanner for source code</li><li>Ask HN: Any good replacements for &quot;Refined Hacker News?&quot;</li></ul></div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>Build your own vulnerability harness</li><li>Show HN: Sighthound - open-source vulnerability scanner for source code</li></ul></div>
           <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
           <div class="post-draft">
             <div class="post-hero">
@@ -535,75 +535,51 @@
   <div class="topics-grid">
     
         <div class="topic-card">
-          <div class="topic-header">🤖 AI / ML <span class="count">199</span></div>
+          <div class="topic-header">🤖 AI / ML <span class="count">207</span></div>
           
             <div class="article-item">
+              <a href="https://apnews.com/article/john-deere-right-to-repair-agriculture-equipment-cb7514ffedb95c130a976af661f2bc02" target="_blank">John Deere owners will get the right to repair equipment under FTC settlement</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 1310</span> Jul 08</div>
+            </div>
+            <div class="article-item">
               <a href="https://openai.com/index/gpt-5-6/" target="_blank">GPT-5.6</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 1014</span> Jul 09</div>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 1203</span> Jul 09</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/simonlin1212/Vibe-Research" target="_blank">simonlin1212/Vibe-Research — Vibe-Research: Your Personal Trading Research Agent · A股/美股/港股 的个人投研 Agent：每日复盘、资讯雷达、个股数据、板块中心、我的持仓、研究记录。Vibe-Research 把</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 588</span> 2026-07-05</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 604</span> 2026-07-05</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/Robbyant/lingbot-video" target="_blank">Robbyant/lingbot-video — Scaling Mixture-of-Experts Video Pretraining for Embodied Intelligence</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 551</span> 2026-07-08</div>
-            </div>
-            <div class="article-item">
-              <a href="https://github.com/nagisanzenin/engram" target="_blank">nagisanzenin/engram — Evidence-based learning engine for Claude Code — first-principles curricula, free-recall verification with receipts, FSR</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 481</span> 2026-07-05</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 601</span> 2026-07-08</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/op7418/guizang-material-illustration" target="_blank">op7418/guizang-material-illustration — 归藏的材质插画 skill：生成带字解释图、图表美化和参考辅助配图。</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 466</span> 2026-07-07</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 495</span> 2026-07-07</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🔧 Engineering <span class="count">57</span></div>
+          <div class="topic-header">🔧 Engineering <span class="count">52</span></div>
           
             <div class="article-item">
               <a href="https://github.com/x4gKing/X4G" target="_blank">x4gKing/X4G</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 3391</span> 2026-07-04</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 3461</span> 2026-07-04</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/withmarbleapp/os-taxonomy" target="_blank">withmarbleapp/os-taxonomy</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1384</span> 2026-07-08</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1666</span> 2026-07-08</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/MaximeRivest/riddle" target="_blank">MaximeRivest/riddle — The diary of Tom Riddle for the reMarkable Paper Pro — write with your pen, the page drinks your ink and answers in a fl</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1281</span> 2026-07-05</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1294</span> 2026-07-05</div>
             </div>
             <div class="article-item">
               <a href="https://www.patrick-breyer.de/en/eu-parliament-greenlights-chat-control-1-0-breyer-our-children-lose-out/" target="_blank">EU Parliament greenlights Chat Control 1.0</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 959</span> Jul 09</div>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 1256</span> Jul 09</div>
             </div>
             <div class="article-item">
               <a href="https://18words.com/" target="_blank">Show HN: 18 Words</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 798</span> Jul 09</div>
-            </div>
-        </div>
-        <div class="topic-card">
-          <div class="topic-header">🦀 Languages <span class="count">26</span></div>
-          
-            <div class="article-item">
-              <a href="https://github.com/514-labs/dnsglobe" target="_blank">514-labs/dnsglobe — Global DNS propagation checker TUI — watch a DNS record propagate across 34 public resolvers worldwide, on a world map i</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 774</span> 2026-07-05</div>
-            </div>
-            <div class="article-item">
-              <a href="https://github.com/malisper/pgrust" target="_blank">Postgres rewritten in Rust, now passing 100% of the Postgres regression tests</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 334</span> Jul 09</div>
-            </div>
-            <div class="article-item">
-              <a href="https://dev.to/dannwaneri/you-stopped-reading-the-docs-now-you-dont-understand-the-systems-go1" target="_blank">you stopped reading the docs. now you don&#x27;t understand the systems.</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 158</span> 2026-07-07</div>
-            </div>
-            <div class="article-item">
-              <a href="https://alexalejandre.com/programming/interview-with-mitchell-hashimoto/" target="_blank">Interview with Mitchell Hashimoto about Ghostty and Zig</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 90</span> Jul 09</div>
-            </div>
-            <div class="article-item">
-              <a href="https://dev.to/jarvisscript/what-are-your-goals-for-the-week-158-1clo" target="_blank">What are your goals for the week? #186</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 71</span> 2026-07-06</div>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 949</span> Jul 09</div>
             </div>
         </div>
         <div class="topic-card">
@@ -611,15 +587,15 @@
           
             <div class="article-item">
               <a href="https://github.com/Shpigford/knockoff" target="_blank">Shpigford/knockoff — Chrome extension that filters pseudo-brand junk out of Amazon. Buy from real, established brands.</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1568</span> 2026-07-06</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1593</span> 2026-07-06</div>
             </div>
             <div class="article-item">
               <a href="https://www.damninteresting.com/a-possible-future/" target="_blank">A possible future for Damn Interesting</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 218</span> Jul 09</div>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 270</span> Jul 09</div>
             </div>
             <div class="article-item">
               <a href="https://www.context.dev" target="_blank">Launch HN: Context.dev (YC S26) – API to get structured data from any website</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 70</span> Jul 09</div>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 89</span> Jul 09</div>
             </div>
             <div class="article-item">
               <a href="https://dev.to/safdarali25/how-i-structure-large-nextjs-projects-folder-architecture-guide-2f2i" target="_blank">How I Structure Large Next.js Projects — Folder Architecture Guide</a>
@@ -631,15 +607,39 @@
             </div>
         </div>
         <div class="topic-card">
+          <div class="topic-header">🦀 Languages <span class="count">23</span></div>
+          
+            <div class="article-item">
+              <a href="https://github.com/514-labs/dnsglobe" target="_blank">514-labs/dnsglobe — Global DNS propagation checker TUI — watch a DNS record propagate across 34 public resolvers worldwide, on a world map i</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 776</span> 2026-07-05</div>
+            </div>
+            <div class="article-item">
+              <a href="https://github.com/malisper/pgrust" target="_blank">Postgres rewritten in Rust, now passing 100% of the Postgres regression tests</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 592</span> Jul 09</div>
+            </div>
+            <div class="article-item">
+              <a href="https://alexalejandre.com/programming/interview-with-mitchell-hashimoto/" target="_blank">Interview with Mitchell Hashimoto about Ghostty and Zig</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 207</span> Jul 09</div>
+            </div>
+            <div class="article-item">
+              <a href="https://dev.to/dannwaneri/you-stopped-reading-the-docs-now-you-dont-understand-the-systems-go1" target="_blank">you stopped reading the docs. now you don&#x27;t understand the systems.</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 158</span> 2026-07-07</div>
+            </div>
+            <div class="article-item">
+              <a href="https://dev.to/jarvisscript/what-are-your-goals-for-the-week-158-1clo" target="_blank">What are your goals for the week? #186</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 76</span> 2026-07-06</div>
+            </div>
+        </div>
+        <div class="topic-card">
           <div class="topic-header">☁️ Cloud / Infra <span class="count">8</span></div>
           
             <div class="article-item">
               <a href="https://github.com/wouterdebie/davit" target="_blank">wouterdebie/davit — A native macOS UI for Apple&#x27;s platform</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 716</span> 2026-07-04</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 757</span> 2026-07-04</div>
             </div>
             <div class="article-item">
-              <a href="https://dev.to/devopsaitoolkit/the-pod-that-lied-a-kubernetes-readiness-probe-war-story-4kfg" target="_blank">The Pod That Lied: A Kubernetes Readiness Probe War Story</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 3</span> 2026-07-07</div>
+              <a href="https://dev.to/pradumnasaraf/deploy-a-dockerfile-on-vercel-5abn" target="_blank">Deploy a Dockerfile on Vercel</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 21</span> 2026-07-10</div>
             </div>
             <div class="article-item">
               <a href="https://blog.cloudflare.com/meerkat-introduction/" target="_blank">Introducing Meerkat: an experiment in global consensus</a>
@@ -655,11 +655,15 @@
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">⚡ Performance <span class="count">6</span></div>
+          <div class="topic-header">⚡ Performance <span class="count">7</span></div>
           
             <div class="article-item">
               <a href="https://dev.to/georgekobaidze/a-new-personal-best-what-six-months-of-locking-in-can-do-p3k" target="_blank">A New Personal Best: What Six Months of Locking In Can Do</a>
               <div class="meta">🟣 dev.to <span class="badge">⬆ 205</span> 2026-07-04</div>
+            </div>
+            <div class="article-item">
+              <a href="https://debasishg.github.io/blog/part1-cache-conscious-data-layout-in-rust/" target="_blank">Cache-Conscious Data Layout in Rust: Field Zoning, False Sharing, 128-Byte Rule</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 21</span> Jul 07</div>
             </div>
             <div class="article-item">
               <a href="https://github.blog/news-insights/policy-news-and-insights/q1-2026-innovation-graph-update-open-source-collaboration-is-accelerating-worldwide/" target="_blank">Q1 2026 Innovation Graph update: Open source collaboration is accelerating worldwide</a>
@@ -673,17 +677,17 @@
               <a href="https://smashingmagazine.com/2026/07/kirki-wordpress-visual-builder-infinite-canvas/" target="_blank">Meet Kirki: WordPress’s First Visual Builder With An Infinite Canvas</a>
               <div class="meta">🔵 Smashing Magazine  Tue, 07 Ju</div>
             </div>
-            <div class="article-item">
-              <a href="https://join.piefed.social/2026/07/03/piefed-v1-7-is-released-following-users-faster-browsing-smarter-moderation/" target="_blank">PieFed v1.7 is released: Following Users, Faster Browsing &amp; Smarter Moderation</a>
-              <div class="meta">🔵 Lobste.rs/distributed  Fri, 03 Ju</div>
-            </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🔐 Security <span class="count">5</span></div>
+          <div class="topic-header">🔐 Security <span class="count">6</span></div>
           
             <div class="article-item">
+              <a href="https://blog.cloudflare.com/build-your-own-vulnerability-harness/" target="_blank">Build your own vulnerability harness</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 39</span> Jul 10</div>
+            </div>
+            <div class="article-item">
               <a href="https://github.com/Corgea/Sighthound" target="_blank">Show HN: Sighthound - open-source vulnerability scanner for source code</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 10</span> Jul 09</div>
+              <div class="meta">🟠 Show HN <span class="badge">⬆ 14</span> Jul 09</div>
             </div>
             <div class="article-item">
               <a href="https://news.ycombinator.com/item?id=48845676" target="_blank">Ask HN: Any good replacements for &quot;Refined Hacker News?&quot;</a>
@@ -697,25 +701,21 @@
               <a href="https://github.blog/security/application-security/how-github-used-secret-scanning-to-reach-inbox-zero/" target="_blank">How GitHub used secret scanning to reach inbox zero</a>
               <div class="meta">🔵 GitHub Blog  Thu, 02 Ju</div>
             </div>
-            <div class="article-item">
-              <a href="https://nvd.nist.gov/vuln/detail/cve-2026-57589" target="_blank">OpenBSD through 7.9 has a use-after-free allowing local privilege escalation to root (CVE-2026-57589)</a>
-              <div class="meta">🔵 Lobste.rs/security  Tue, 07 Ju</div>
-            </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🎨 Dev Experience <span class="count">3</span></div>
+          <div class="topic-header">📱 Mobile <span class="count">3</span></div>
           
             <div class="article-item">
-              <a href="https://dev.to/devteam/top-7-featured-dev-posts-of-the-week-144b" target="_blank">Top 7 Featured DEV Posts of the Week</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 151</span> 2026-07-07</div>
+              <a href="https://github.com/ammaarreshi/Generals-Mac-iOS-iPad" target="_blank">ammaarreshi/Generals-Mac-iOS-iPad — Command &amp; Conquer Generals: Zero Hour running natively on macOS, iPhone &amp; iPad — real engine (EA GPL v3 source, via Gene</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1396</span> 2026-07-04</div>
             </div>
             <div class="article-item">
-              <a href="https://davidoks.blog/p/why-american-ambulance-rides-are" target="_blank">Why American ambulance rides are so expensive</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 64</span> Jul 09</div>
+              <a href="https://dynomight.net/hazard-ratios/" target="_blank">Life with Hazard Ratios</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 27</span> Jul 06</div>
             </div>
             <div class="article-item">
-              <a href="https://github.com/aatishb/patterncollider" target="_blank">Patterncollider: Generate and explore quasiperiodic tiling patterns</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 15</span> Jul 06</div>
+              <a href="https://slack.engineering/android-vpat-journey/" target="_blank">Android VPAT journey</a>
+              <div class="meta">🔵 Slack Engineering  Wed, 19 No</div>
             </div>
         </div>
   </div>
@@ -730,161 +730,161 @@
           <td class="rank">1</td>
           <td><a href="https://github.com/x4gKing/X4G" target="_blank">x4gKing/X4G</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">3391</td>
+          <td class="score">3461</td>
           <td>🔧 Engineering</td>
           <td>2026-07-04</td>
         </tr>
         <tr>
           <td class="rank">2</td>
-          <td><a href="https://github.com/Shpigford/knockoff" target="_blank">Shpigford/knockoff — Chrome extension that filters pseudo-brand junk out of Amazon. Buy from real, established brands.</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1568</td>
-          <td>🌐 Web / Frontend</td>
-          <td>2026-07-06</td>
-        </tr>
-        <tr>
-          <td class="rank">3</td>
-          <td><a href="https://github.com/ammaarreshi/Generals-Mac-iOS-iPad" target="_blank">ammaarreshi/Generals-Mac-iOS-iPad — Command &amp; Conquer Generals: Zero Hour running natively on macOS, iPhone &amp; iPad — real engine (EA GPL v3 source, via Gene</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1393</td>
-          <td>📱 Mobile</td>
-          <td>2026-07-04</td>
-        </tr>
-        <tr>
-          <td class="rank">4</td>
           <td><a href="https://github.com/withmarbleapp/os-taxonomy" target="_blank">withmarbleapp/os-taxonomy</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1384</td>
+          <td class="score">1666</td>
           <td>🔧 Engineering</td>
           <td>2026-07-08</td>
         </tr>
         <tr>
-          <td class="rank">5</td>
-          <td><a href="https://github.com/MaximeRivest/riddle" target="_blank">MaximeRivest/riddle — The diary of Tom Riddle for the reMarkable Paper Pro — write with your pen, the page drinks your ink and answers in a fl</a></td>
+          <td class="rank">3</td>
+          <td><a href="https://github.com/Shpigford/knockoff" target="_blank">Shpigford/knockoff — Chrome extension that filters pseudo-brand junk out of Amazon. Buy from real, established brands.</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1281</td>
-          <td>🔧 Engineering</td>
-          <td>2026-07-05</td>
+          <td class="score">1593</td>
+          <td>🌐 Web / Frontend</td>
+          <td>2026-07-06</td>
+        </tr>
+        <tr>
+          <td class="rank">4</td>
+          <td><a href="https://github.com/ammaarreshi/Generals-Mac-iOS-iPad" target="_blank">ammaarreshi/Generals-Mac-iOS-iPad — Command &amp; Conquer Generals: Zero Hour running natively on macOS, iPhone &amp; iPad — real engine (EA GPL v3 source, via Gene</a></td>
+          <td><span class="source-badge">⚫ GitHub Trending</span></td>
+          <td class="score">1396</td>
+          <td>📱 Mobile</td>
+          <td>2026-07-04</td>
+        </tr>
+        <tr>
+          <td class="rank">5</td>
+          <td><a href="https://apnews.com/article/john-deere-right-to-repair-agriculture-equipment-cb7514ffedb95c130a976af661f2bc02" target="_blank">John Deere owners will get the right to repair equipment under FTC settlement</a></td>
+          <td><span class="source-badge">🟠 Hacker News</span></td>
+          <td class="score">1310</td>
+          <td>🤖 AI / ML</td>
+          <td>Jul 08</td>
         </tr>
         <tr>
           <td class="rank">6</td>
-          <td><a href="https://openai.com/index/gpt-5-6/" target="_blank">GPT-5.6</a></td>
-          <td><span class="source-badge">🟠 Hacker News</span></td>
-          <td class="score">1014</td>
-          <td>🤖 AI / ML</td>
-          <td>Jul 09</td>
+          <td><a href="https://github.com/MaximeRivest/riddle" target="_blank">MaximeRivest/riddle — The diary of Tom Riddle for the reMarkable Paper Pro — write with your pen, the page drinks your ink and answers in a fl</a></td>
+          <td><span class="source-badge">⚫ GitHub Trending</span></td>
+          <td class="score">1294</td>
+          <td>🔧 Engineering</td>
+          <td>2026-07-05</td>
         </tr>
         <tr>
           <td class="rank">7</td>
           <td><a href="https://www.patrick-breyer.de/en/eu-parliament-greenlights-chat-control-1-0-breyer-our-children-lose-out/" target="_blank">EU Parliament greenlights Chat Control 1.0</a></td>
           <td><span class="source-badge">🟠 Hacker News</span></td>
-          <td class="score">959</td>
+          <td class="score">1256</td>
           <td>🔧 Engineering</td>
           <td>Jul 09</td>
         </tr>
         <tr>
           <td class="rank">8</td>
-          <td><a href="https://18words.com/" target="_blank">Show HN: 18 Words</a></td>
+          <td><a href="https://openai.com/index/gpt-5-6/" target="_blank">GPT-5.6</a></td>
           <td><span class="source-badge">🟠 Hacker News</span></td>
-          <td class="score">798</td>
-          <td>🔧 Engineering</td>
+          <td class="score">1203</td>
+          <td>🤖 AI / ML</td>
           <td>Jul 09</td>
         </tr>
         <tr>
           <td class="rank">9</td>
           <td><a href="https://18words.com/" target="_blank">Show HN: 18 Words</a></td>
-          <td><span class="source-badge">🟠 Show HN</span></td>
-          <td class="score">798</td>
+          <td><span class="source-badge">🟠 Hacker News</span></td>
+          <td class="score">949</td>
           <td>🔧 Engineering</td>
           <td>Jul 09</td>
         </tr>
         <tr>
           <td class="rank">10</td>
+          <td><a href="https://18words.com/" target="_blank">Show HN: 18 Words</a></td>
+          <td><span class="source-badge">🟠 Show HN</span></td>
+          <td class="score">949</td>
+          <td>🔧 Engineering</td>
+          <td>Jul 09</td>
+        </tr>
+        <tr>
+          <td class="rank">11</td>
           <td><a href="https://github.com/514-labs/dnsglobe" target="_blank">514-labs/dnsglobe — Global DNS propagation checker TUI — watch a DNS record propagate across 34 public resolvers worldwide, on a world map i</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">774</td>
+          <td class="score">776</td>
           <td>🦀 Languages</td>
           <td>2026-07-05</td>
         </tr>
         <tr>
-          <td class="rank">11</td>
+          <td class="rank">12</td>
           <td><a href="https://github.com/wouterdebie/davit" target="_blank">wouterdebie/davit — A native macOS UI for Apple&#x27;s platform</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">716</td>
+          <td class="score">757</td>
           <td>☁️ Cloud / Infra</td>
           <td>2026-07-04</td>
         </tr>
         <tr>
-          <td class="rank">12</td>
+          <td class="rank">13</td>
           <td><a href="https://github.com/yynxxxxx/Codex-X" target="_blank">yynxxxxx/Codex-X — Codex Switch &amp; Instruct desktop manager</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">687</td>
+          <td class="score">718</td>
           <td>🔧 Engineering</td>
           <td>2026-07-04</td>
         </tr>
         <tr>
-          <td class="rank">13</td>
-          <td><a href="https://github.com/simonlin1212/Vibe-Research" target="_blank">simonlin1212/Vibe-Research — Vibe-Research: Your Personal Trading Research Agent · A股/美股/港股 的个人投研 Agent：每日复盘、资讯雷达、个股数据、板块中心、我的持仓、研究记录。Vibe-Research 把</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">588</td>
-          <td>🤖 AI / ML</td>
-          <td>2026-07-05</td>
-        </tr>
-        <tr>
           <td class="rank">14</td>
-          <td><a href="https://github.com/Robbyant/lingbot-vision" target="_blank">Robbyant/lingbot-vision — Self-supervised learning for spatial perception</a></td>
+          <td><a href="https://github.com/Robbyant/lingbot-world-v2" target="_blank">Robbyant/lingbot-world-v2 — Infinite Worlds with Versatile Interactions</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">577</td>
+          <td class="score">636</td>
           <td>🔧 Engineering</td>
-          <td>2026-07-06</td>
+          <td>2026-07-08</td>
         </tr>
         <tr>
           <td class="rank">15</td>
-          <td><a href="https://github.com/Robbyant/lingbot-world-v2" target="_blank">Robbyant/lingbot-world-v2 — Infinite Worlds with Versatile Interactions</a></td>
+          <td><a href="https://github.com/simonlin1212/Vibe-Research" target="_blank">simonlin1212/Vibe-Research — Vibe-Research: Your Personal Trading Research Agent · A股/美股/港股 的个人投研 Agent：每日复盘、资讯雷达、个股数据、板块中心、我的持仓、研究记录。Vibe-Research 把</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">566</td>
-          <td>🔧 Engineering</td>
-          <td>2026-07-08</td>
+          <td class="score">604</td>
+          <td>🤖 AI / ML</td>
+          <td>2026-07-05</td>
         </tr>
         <tr>
           <td class="rank">16</td>
           <td><a href="https://github.com/Robbyant/lingbot-video" target="_blank">Robbyant/lingbot-video — Scaling Mixture-of-Experts Video Pretraining for Embodied Intelligence</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">551</td>
+          <td class="score">601</td>
           <td>🤖 AI / ML</td>
           <td>2026-07-08</td>
         </tr>
         <tr>
           <td class="rank">17</td>
-          <td><a href="https://github.com/nagisanzenin/engram" target="_blank">nagisanzenin/engram — Evidence-based learning engine for Claude Code — first-principles curricula, free-recall verification with receipts, FSR</a></td>
+          <td><a href="https://github.com/Robbyant/lingbot-vision" target="_blank">Robbyant/lingbot-vision — Self-supervised learning for spatial perception</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">481</td>
-          <td>🤖 AI / ML</td>
-          <td>2026-07-05</td>
-        </tr>
-        <tr>
-          <td class="rank">18</td>
-          <td><a href="https://github.com/op7418/guizang-material-illustration" target="_blank">op7418/guizang-material-illustration — 归藏的材质插画 skill：生成带字解释图、图表美化和参考辅助配图。</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">466</td>
-          <td>🤖 AI / ML</td>
-          <td>2026-07-07</td>
-        </tr>
-        <tr>
-          <td class="rank">19</td>
-          <td><a href="https://github.com/V4bel/Januscape" target="_blank">V4bel/Januscape</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">439</td>
+          <td class="score">594</td>
           <td>🔧 Engineering</td>
           <td>2026-07-06</td>
         </tr>
         <tr>
+          <td class="rank">18</td>
+          <td><a href="https://github.com/malisper/pgrust" target="_blank">Postgres rewritten in Rust, now passing 100% of the Postgres regression tests</a></td>
+          <td><span class="source-badge">🟠 Hacker News</span></td>
+          <td class="score">592</td>
+          <td>🦀 Languages</td>
+          <td>Jul 09</td>
+        </tr>
+        <tr>
+          <td class="rank">19</td>
+          <td><a href="https://github.com/JustVugg/colibri" target="_blank">Show HN: Getting GLM 5.2 running on my slow computer</a></td>
+          <td><span class="source-badge">🟠 Hacker News</span></td>
+          <td class="score">568</td>
+          <td>🔧 Engineering</td>
+          <td>Jul 09</td>
+        </tr>
+        <tr>
           <td class="rank">20</td>
-          <td><a href="https://github.com/oso95/scroll-world" target="_blank">oso95/scroll-world — Claude Code skill/plugin: immersive scroll-scrubbed &#x27;fly through the world&#x27; landing pages generated with Higgsfield (Emo</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">438</td>
-          <td>🤖 AI / ML</td>
-          <td>2026-07-06</td>
+          <td><a href="https://github.com/JustVugg/colibri" target="_blank">Show HN: Getting GLM 5.2 running on my slow computer</a></td>
+          <td><span class="source-badge">🟠 Show HN</span></td>
+          <td class="score">568</td>
+          <td>🔧 Engineering</td>
+          <td>Jul 09</td>
         </tr></tbody>
   </table>
 
@@ -896,7 +896,7 @@
         </div>
         <div class="source-row">
           <div class="source-label">Hacker News</div>
-          <div class="bar-wrap"><div class="bar" style="width:59%">29</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:61%">30</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">GitHub Trending</div>
@@ -1020,7 +1020,7 @@
         </div></div>
 
 </main>
-<footer>Built with ❤️ at the hackathon · Eng Brand Machine · July 10, 2026 at 00:42</footer>
+<footer>Built with ❤️ at the hackathon · Eng Brand Machine · July 10, 2026 at 07:15</footer>
 
 <script>
 // ── Topic classifier (mirrors Python TOPIC_KEYWORDS) ──────────────────────
