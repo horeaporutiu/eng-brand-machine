@@ -185,23 +185,23 @@
 
 <header>
   <h1>🚀 Eng Brand Machine</h1>
-  <p class="subtitle">Real-time engineering trends from 31 sources · 331 articles · July 17, 2026 at 06:51</p>
+  <p class="subtitle">Real-time engineering trends from 32 sources · 340 articles · July 17, 2026 at 12:29</p>
   <span class="miro-badge">✦ Miro Developer Brand Intelligence</span>
 </header>
 
 <div class="stats-bar">
-  <div class="stat"><div class="num">331</div><div class="label">Articles Analyzed</div></div>
-  <div class="stat"><div class="num">31</div><div class="label">Live Sources</div></div>
+  <div class="stat"><div class="num">340</div><div class="label">Articles Analyzed</div></div>
+  <div class="stat"><div class="num">32</div><div class="label">Live Sources</div></div>
   <div class="stat"><div class="num">12</div><div class="label">Topics Tracked</div></div>
   <div class="stat"><div class="num">🤖 AI / ML</div><div class="label">Hottest Topic</div></div>
-  <div class="stat"><div class="num">193</div><div class="label">Articles on #1 Topic</div></div>
+  <div class="stat"><div class="num">200</div><div class="label">Articles on #1 Topic</div></div>
 </div>
 
 <main>
 
   <div class="recs-section">
     <h2>✦ Top 5 Content Recommendations for Miro&apos;s Developer Brand</h2>
-    <p class="recs-intro">Generated from 331 articles across 31 sources — each recommendation is anchored to what engineers are actually reading today.</p>
+    <p class="recs-intro">Generated from 340 articles across 32 sources — each recommendation is anchored to what engineers are actually reading today.</p>
     <div class="recs-grid">
       
         <div class="rec-card">
@@ -254,6 +254,53 @@
         </div>
         <div class="rec-card">
           <div class="rec-num">#2</div>
+          <div class="rec-topic">🌐 Web / Frontend</div>
+          <div class="rec-title">Frontend Architecture Maps: How to Onboard Engineers in Half the Time</div>
+          <div class="rec-desc">Miro as the missing layer between your code and your docs — showing how frontend teams map component hierarchies, data flow, and routing so new engineers hit the ground running.</div>
+          <div class="rec-demo"><strong>🎬 Demo:</strong> React app architecture: routing tree, state management layers (Zustand/Redux), API boundaries — all in one scrollable Miro board with code links.</div>
+          <div class="rec-meta">
+            <span class="rec-format">📄 Blog Post + Template</span>
+            <span class="rec-cta">See the Frontend Architecture Template →</span>
+          </div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>pixel-point/aval — A new open-source format for interactive video on the web, with a built-in state machine, frame-accurate transitions, an</li><li>my-take-dev/inspired-mino-design-skills — ミノ駆動氏のWebに掲載されている資料から作成した開発スキル</li></ul></div>
+          <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
+          <div class="post-draft">
+            <div class="post-hero">
+              <div class="post-hero-label">🎨 Hero Image Prompt (Midjourney / DALL-E)</div>
+              <div class="post-hero-prompt">React frontend architecture map showing component hierarchy tree, state management layers, and API boundaries as glowing connected nodes on dark background, colorful lines connecting components, modern web development visualization</div>
+            </div>
+            <div class="post-tags"><span class="post-tag">#frontend</span><span class="post-tag">#react</span><span class="post-tag">#architecture</span><span class="post-tag">#onboarding</span><span class="post-tag">#miro-templates</span><span class="post-tag">#web-development</span></div>
+            <div class="post-meta-bar">⏱ 6 min read &nbsp;·&nbsp; 🔍 Cut frontend onboarding time in half with a Miro architecture map — component hierarchies, data flow, and routing all in one collaborative board.</div>
+            <div class="post-body">
+<p>The first week for a new frontend engineer follows a predictable arc: clone the repo, spend two hours getting the dev environment running, then spend two more hours trying to understand why there are four different state management patterns in the same codebase, who owns which components, and where the API calls actually live. By day three, they're productive. By week two, they're slowing down senior engineers with questions that a good architecture map would have answered immediately.</p>
+
+<h2>Why Frontend Architecture Is Hardest to Document</h2>
+<p>Backend systems have decades of tooling for architecture visualization — ERDs, service maps, flow diagrams. Frontend architecture has almost none, despite being just as complex. A modern React application involves routing trees, state management layers, component hierarchies, API boundaries, and build pipeline configuration — and the relationships between all of these are implicit in the code, not visible anywhere else.</p>
+<p>The result: frontend architecture lives entirely in senior engineers' heads. When they leave, the knowledge leaves with them. When you hire, onboarding takes weeks that should take days. And when you need a significant refactor, you're flying blind — unable to see the full blast radius before making the change.</p>
+
+<h2>The Miro Framework: Frontend Architecture in 4 Views</h2>
+<ol>
+  <li><strong>The routing tree.</strong> Draw every route in your application as a tree. Mark which routes are public vs. authenticated, which are lazy-loaded, and which share layouts. New engineers can see the entire navigation structure at a glance.</li>
+  <li><strong>State management topology.</strong> Map your state: global store (Zustand, Redux, Jotai), server state (React Query, SWR), local component state, and URL state. Draw which components read from and write to each state source. This is the view that prevents the "why is this component re-rendering?" debug session.</li>
+  <li><strong>API boundaries and data flow.</strong> Show which components fetch data, which transform it, and which display it. Draw the API endpoints they call. This view is gold during onboarding and indispensable during debugging.</li>
+  <li><strong>Component ownership map.</strong> Organize components by team or feature area. Mark which are shared design system components, which are feature-specific, and which are currently being refactored. Prevents accidental coupling between feature teams.</li>
+</ol>
+
+<div class="image-callout">
+  <strong>🎨 Mid-Post Image Suggestion</strong><br>
+  <em>AI prompt:</em> "React application architecture map with component hierarchy tree on the left, state management topology in the center, and API boundary diagram on the right, connected by glowing data flow arrows, dark mode visualization, blue and purple palette"
+</div>
+
+<h2>Team Adoption: The Living Frontend Docs Habit</h2>
+<p>Frontend architecture boards work best when updated continuously rather than in big batches. The habit to build: any PR that adds a new route, introduces a new state pattern, or changes a major component boundary includes a Miro board update in the PR checklist. It takes five minutes per PR and means the board is always accurate.</p>
+<p>Use the board in sprint planning to identify coupling risks before they become bugs. Use it in architecture reviews to give stakeholders a visual before committing to a refactor. And use it in onboarding — new frontend engineers report that a good architecture board cuts their ramp-up time in half.</p>
+<p>Great frontend teams build great documentation habits. <em>Get the Frontend Architecture Template and give your next new hire the map they wish they had on day one.</em></p>
+</div>
+            <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
+          </div>
+        </div>
+        <div class="rec-card">
+          <div class="rec-num">#3</div>
           <div class="rec-topic">🦀 Languages</div>
           <div class="rec-title">Rust Ownership &amp; Borrowing, Visualized: Teaching Hard Concepts with Miro</div>
           <div class="rec-desc">How developer advocates and educators use Miro to turn notoriously complex language concepts (ownership, lifetimes, async) into interactive visual explainers that engineers actually bookmark.</div>
@@ -301,53 +348,6 @@
           </div>
         </div>
         <div class="rec-card">
-          <div class="rec-num">#3</div>
-          <div class="rec-topic">🌐 Web / Frontend</div>
-          <div class="rec-title">Frontend Architecture Maps: How to Onboard Engineers in Half the Time</div>
-          <div class="rec-desc">Miro as the missing layer between your code and your docs — showing how frontend teams map component hierarchies, data flow, and routing so new engineers hit the ground running.</div>
-          <div class="rec-demo"><strong>🎬 Demo:</strong> React app architecture: routing tree, state management layers (Zustand/Redux), API boundaries — all in one scrollable Miro board with code links.</div>
-          <div class="rec-meta">
-            <span class="rec-format">📄 Blog Post + Template</span>
-            <span class="rec-cta">See the Frontend Architecture Template →</span>
-          </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>pixel-point/aval — A new open-source format for interactive video on the web, with a built-in state machine, frame-accurate transitions, an</li><li>my-take-dev/inspired-mino-design-skills — ミノ駆動氏のWebに掲載されている資料から作成した開発スキル</li></ul></div>
-          <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
-          <div class="post-draft">
-            <div class="post-hero">
-              <div class="post-hero-label">🎨 Hero Image Prompt (Midjourney / DALL-E)</div>
-              <div class="post-hero-prompt">React frontend architecture map showing component hierarchy tree, state management layers, and API boundaries as glowing connected nodes on dark background, colorful lines connecting components, modern web development visualization</div>
-            </div>
-            <div class="post-tags"><span class="post-tag">#frontend</span><span class="post-tag">#react</span><span class="post-tag">#architecture</span><span class="post-tag">#onboarding</span><span class="post-tag">#miro-templates</span><span class="post-tag">#web-development</span></div>
-            <div class="post-meta-bar">⏱ 6 min read &nbsp;·&nbsp; 🔍 Cut frontend onboarding time in half with a Miro architecture map — component hierarchies, data flow, and routing all in one collaborative board.</div>
-            <div class="post-body">
-<p>The first week for a new frontend engineer follows a predictable arc: clone the repo, spend two hours getting the dev environment running, then spend two more hours trying to understand why there are four different state management patterns in the same codebase, who owns which components, and where the API calls actually live. By day three, they're productive. By week two, they're slowing down senior engineers with questions that a good architecture map would have answered immediately.</p>
-
-<h2>Why Frontend Architecture Is Hardest to Document</h2>
-<p>Backend systems have decades of tooling for architecture visualization — ERDs, service maps, flow diagrams. Frontend architecture has almost none, despite being just as complex. A modern React application involves routing trees, state management layers, component hierarchies, API boundaries, and build pipeline configuration — and the relationships between all of these are implicit in the code, not visible anywhere else.</p>
-<p>The result: frontend architecture lives entirely in senior engineers' heads. When they leave, the knowledge leaves with them. When you hire, onboarding takes weeks that should take days. And when you need a significant refactor, you're flying blind — unable to see the full blast radius before making the change.</p>
-
-<h2>The Miro Framework: Frontend Architecture in 4 Views</h2>
-<ol>
-  <li><strong>The routing tree.</strong> Draw every route in your application as a tree. Mark which routes are public vs. authenticated, which are lazy-loaded, and which share layouts. New engineers can see the entire navigation structure at a glance.</li>
-  <li><strong>State management topology.</strong> Map your state: global store (Zustand, Redux, Jotai), server state (React Query, SWR), local component state, and URL state. Draw which components read from and write to each state source. This is the view that prevents the "why is this component re-rendering?" debug session.</li>
-  <li><strong>API boundaries and data flow.</strong> Show which components fetch data, which transform it, and which display it. Draw the API endpoints they call. This view is gold during onboarding and indispensable during debugging.</li>
-  <li><strong>Component ownership map.</strong> Organize components by team or feature area. Mark which are shared design system components, which are feature-specific, and which are currently being refactored. Prevents accidental coupling between feature teams.</li>
-</ol>
-
-<div class="image-callout">
-  <strong>🎨 Mid-Post Image Suggestion</strong><br>
-  <em>AI prompt:</em> "React application architecture map with component hierarchy tree on the left, state management topology in the center, and API boundary diagram on the right, connected by glowing data flow arrows, dark mode visualization, blue and purple palette"
-</div>
-
-<h2>Team Adoption: The Living Frontend Docs Habit</h2>
-<p>Frontend architecture boards work best when updated continuously rather than in big batches. The habit to build: any PR that adds a new route, introduces a new state pattern, or changes a major component boundary includes a Miro board update in the PR checklist. It takes five minutes per PR and means the board is always accurate.</p>
-<p>Use the board in sprint planning to identify coupling risks before they become bugs. Use it in architecture reviews to give stakeholders a visual before committing to a refactor. And use it in onboarding — new frontend engineers report that a good architecture board cuts their ramp-up time in half.</p>
-<p>Great frontend teams build great documentation habits. <em>Get the Frontend Architecture Template and give your next new hire the map they wish they had on day one.</em></p>
-</div>
-            <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
-          </div>
-        </div>
-        <div class="rec-card">
           <div class="rec-num">#4</div>
           <div class="rec-topic">☁️ Cloud / Infra</div>
           <div class="rec-title">Kubernetes Architecture Diagrams That Actually Stay Up to Date</div>
@@ -357,7 +357,7 @@
             <span class="rec-format">📄 Tutorial + Template</span>
             <span class="rec-cta">Grab the K8s Miro Template →</span>
           </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>Ask HN: Are AWS Certs worth getting for experienced Devs?</li><li>Improving Smart Tiered Cache for Public Cloud Regions</li></ul></div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>Just got an AWS billing alert projecting my monthly cost at $140B</li><li>AWS: Inaccurate Estimated Billing Data - $1.7 BILLION</li></ul></div>
           <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
           <div class="post-draft">
             <div class="post-hero">
@@ -535,151 +535,127 @@
   <div class="topics-grid">
     
         <div class="topic-card">
-          <div class="topic-header">🤖 AI / ML <span class="count">193</span></div>
+          <div class="topic-header">🤖 AI / ML <span class="count">200</span></div>
           
             <div class="article-item">
               <a href="https://github.com/xai-org/grok-build" target="_blank">xai-org/grok-build — SpaceXAI&#x27;s coding agent harness and TUI. Fullscreen, mouse interactive, extensible.</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 13594</span> 2026-07-14</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 14729</span> 2026-07-14</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/MDX-Tom/gpt-5.6-instruct" target="_blank">MDX-Tom/gpt-5.6-instruct — A Codex CLI jailbreak prompt and test pack for gpt-5.6-sol. 针对 gpt-5.6 系列的 Codex CLI 破甲提示词与测试包。</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1755</span> 2026-07-11</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1824</span> 2026-07-11</div>
             </div>
             <div class="article-item">
               <a href="https://news.ycombinator.com/item?id=48886741" target="_blank">Ask HN: Add flag for AI-generated articles</a>
-              <div class="meta">🟠 Ask HN <span class="badge">⬆ 1086</span> Jul 13</div>
+              <div class="meta">🟠 Ask HN <span class="badge">⬆ 1087</span> Jul 13</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/mereyabdenbekuly-ctrl/clodex-ide" target="_blank">mereyabdenbekuly-ctrl/clodex-ide — Local-first, zero-trust agentic IDE for verifiable autonomous software development.</a>
               <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 831</span> 2026-07-12</div>
             </div>
             <div class="article-item">
-              <a href="https://github.com/oil-oil/beautify-github-readme" target="_blank">oil-oil/beautify-github-readme — Design clear, theme-specific GitHub README homepages with SVG titles, real proof, and maintainable Markdown</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 707</span> 2026-07-13</div>
+              <a href="https://github.com/tandpfun/wardrobe" target="_blank">tandpfun/wardrobe — Your clothes, extracted and organized with gpt-image.</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 783</span> 2026-07-16</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🔧 Engineering <span class="count">59</span></div>
+          <div class="topic-header">🔧 Engineering <span class="count">53</span></div>
           
             <div class="article-item">
               <a href="https://github.com/Fei-Away/Codex-Dream-Skin" target="_blank">Fei-Away/Codex-Dream-Skin — Codex Dream Skin</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 7079</span> 2026-07-15</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 8175</span> 2026-07-15</div>
             </div>
             <div class="article-item">
               <a href="https://www.kimi.com/blog/kimi-k3" target="_blank">Kimi K3: Open Frontier Intelligence</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 1474</span> Jul 16</div>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 1737</span> Jul 16</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/CluvexStudio/Aether" target="_blank">CluvexStudio/Aether</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 960</span> 2026-07-14</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1010</span> 2026-07-14</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/x4gKing/Marzban-Panel" target="_blank">x4gKing/Marzban-Panel</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 854</span> 2026-07-12</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 872</span> 2026-07-12</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/x4gKing/Marzban-Node" target="_blank">x4gKing/Marzban-Node</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 733</span> 2026-07-12</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 744</span> 2026-07-12</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🦀 Languages <span class="count">20</span></div>
-          
-            <div class="article-item">
-              <a href="https://github.com/littledivy/mimic" target="_blank">littledivy/mimic — Intercept any app, then call it from Python like a library</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1114</span> 2026-07-13</div>
-            </div>
-            <div class="article-item">
-              <a href="https://github.com/MatinSenPai/Aether-GUI" target="_blank">MatinSenPai/Aether-GUI — One-click desktop GUI for the Aether censorship-circumvention tunnel — Tauri v2, React 19, Rust</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 490</span> 2026-07-14</div>
-            </div>
-            <div class="article-item">
-              <a href="https://rtfeldman.com/rust-to-zig" target="_blank">How Our Rust-to-Zig Rewrite Is Going</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 480</span> Jul 16</div>
-            </div>
-            <div class="article-item">
-              <a href="https://github.com/WAYLON/ashare-quant-strategies" target="_blank">WAYLON/ashare-quant-strategies — A-share quant strategies research corpus: 119 Python strategy articles for learning</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 293</span> 2026-07-13</div>
-            </div>
-            <div class="article-item">
-              <a href="https://developer.puter.com/labs/firefox-wasm/" target="_blank">Show HN: Firefox in WebAssembly</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 246</span> Jul 15</div>
-            </div>
-        </div>
-        <div class="topic-card">
-          <div class="topic-header">🌐 Web / Frontend <span class="count">20</span></div>
+          <div class="topic-header">🌐 Web / Frontend <span class="count">26</span></div>
           
             <div class="article-item">
               <a href="https://github.com/pixel-point/aval" target="_blank">pixel-point/aval — A new open-source format for interactive video on the web, with a built-in state machine, frame-accurate transitions, an</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1092</span> 2026-07-13</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1127</span> 2026-07-13</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/my-take-dev/inspired-mino-design-skills" target="_blank">my-take-dev/inspired-mino-design-skills — ミノ駆動氏のWebに掲載されている資料から作成した開発スキル</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 285</span> 2026-07-15</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 288</span> 2026-07-15</div>
             </div>
             <div class="article-item">
               <a href="https://dev.to/hemapriya_kanagala/i-finally-built-the-dev-opportunity-radar-website-1dpi" target="_blank">I Finally Built the Dev Opportunity Radar Website ❤️</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 194</span> 2026-07-13</div>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 195</span> 2026-07-13</div>
             </div>
             <div class="article-item">
-              <a href="https://justif.lyall.co/" target="_blank">Show HN: Justif – publication-grade text justification for the web</a>
+              <a href="https://om-intelligence.ch/projects/vocal-notation/vocal-notation.html" target="_blank">Turn your singing voice into printable notes (in the browser)</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 42</span> Jul 14</div>
+            </div>
+            <div class="article-item">
+              <a href="https://github.com/Deadbytes101/DEADWIRE-HTTPD" target="_blank">Show HN: Deadwire-HTTPD A triple-threaded x86-64 assembly static server</a>
               <div class="meta">🟠 Show HN <span class="badge">⬆ 4</span> Jul 17</div>
             </div>
+        </div>
+        <div class="topic-card">
+          <div class="topic-header">🦀 Languages <span class="count">19</span></div>
+          
             <div class="article-item">
-              <a href="https://opensource.microsoft.com/blog/2026/07/16/microsoft-comic-chat-is-now-open-source/" target="_blank">Microsoft Comic Chat is now open source</a>
-              <div class="meta">🔵 Lobste.rs  Thu, 16 Ju</div>
+              <a href="https://github.com/littledivy/mimic" target="_blank">littledivy/mimic — Intercept any app, then call it from Python like a library</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1125</span> 2026-07-13</div>
+            </div>
+            <div class="article-item">
+              <a href="https://github.com/MatinSenPai/Aether-GUI" target="_blank">MatinSenPai/Aether-GUI — One-click desktop GUI for the Aether censorship-circumvention tunnel — Tauri v2, React 19, Rust</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 507</span> 2026-07-14</div>
+            </div>
+            <div class="article-item">
+              <a href="https://github.com/WAYLON/ashare-quant-strategies" target="_blank">WAYLON/ashare-quant-strategies — A-share quant strategies research corpus: 119 Python strategy articles for learning</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 295</span> 2026-07-13</div>
+            </div>
+            <div class="article-item">
+              <a href="https://developer.puter.com/labs/firefox-wasm/" target="_blank">Show HN: Firefox in WebAssembly</a>
+              <div class="meta">🟠 Show HN <span class="badge">⬆ 251</span> Jul 15</div>
+            </div>
+            <div class="article-item">
+              <a href="https://solod.dev" target="_blank">Solod: Go can be a better C</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 155</span> Jul 13</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">☁️ Cloud / Infra <span class="count">11</span></div>
+          <div class="topic-header">☁️ Cloud / Infra <span class="count">15</span></div>
           
+            <div class="article-item">
+              <a href="https://news.ycombinator.com/item?id=48945606" target="_blank">Just got an AWS billing alert projecting my monthly cost at $140B</a>
+              <div class="meta">🟠 Ask HN <span class="badge">⬆ 71</span> Jul 17</div>
+            </div>
+            <div class="article-item">
+              <a href="https://news.ycombinator.com/item?id=48945241" target="_blank">AWS: Inaccurate Estimated Billing Data - $1.7 BILLION</a>
+              <div class="meta">🟠 Ask HN <span class="badge">⬆ 44</span> Jul 17</div>
+            </div>
+            <div class="article-item">
+              <a href="https://news.ycombinator.com/item?id=48945681" target="_blank">Ask HN: Any AWS billing issues known? Amazon forecast of 3 billion dollars</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 36</span> Jul 17</div>
+            </div>
+            <div class="article-item">
+              <a href="https://news.ycombinator.com/item?id=48945681" target="_blank">Ask HN: Any AWS billing issues known? Amazon forecast of 3 billion dollars</a>
+              <div class="meta">🟠 Ask HN <span class="badge">⬆ 36</span> Jul 17</div>
+            </div>
             <div class="article-item">
               <a href="https://news.ycombinator.com/item?id=48925128" target="_blank">Ask HN: Are AWS Certs worth getting for experienced Devs?</a>
-              <div class="meta">🟠 Ask HN <span class="badge">⬆ 10</span> Jul 15</div>
-            </div>
-            <div class="article-item">
-              <a href="https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds/" target="_blank">Improving Smart Tiered Cache for Public Cloud Regions</a>
-              <div class="meta">🔵 Cloudflare Blog  Fri, 10 Ju</div>
-            </div>
-            <div class="article-item">
-              <a href="https://blog.cloudflare.com/meerkat-introduction/" target="_blank">Introducing Meerkat: an experiment in global consensus</a>
-              <div class="meta">🔵 Cloudflare Blog  Wed, 08 Ju</div>
-            </div>
-            <div class="article-item">
-              <a href="https://blog.cloudflare.com/attribution-business-insights/" target="_blank">Unmasking the crawls with Attribution Business Insights</a>
-              <div class="meta">🔵 Cloudflare Blog  Wed, 01 Ju</div>
-            </div>
-            <div class="article-item">
-              <a href="https://www.infoq.com/news/2026/07/cloud-workbench-vscode-extension/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank">Google Cloud Workbench Notebooks Extension Connects VS Code to Google Cloud&#x27;s Jupyter Notebooks</a>
-              <div class="meta">🔵 InfoQ  Tue, 14 Ju</div>
+              <div class="meta">🟠 Ask HN <span class="badge">⬆ 11</span> Jul 15</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🔐 Security <span class="count">8</span></div>
-          
-            <div class="article-item">
-              <a href="https://github.com/Git-creat7/grokRegister-cpa" target="_blank">Git-creat7/grokRegister-cpa — Grok 自动注册机 — 注册成功后自动入库 CLIProxyAPI (CPA)：支持本地 auth 目录与远程 Management API 上传</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 349</span> 2026-07-11</div>
-            </div>
-            <div class="article-item">
-              <a href="https://dev.to/akhourianmolkumar/i-stopped-trusting-my-own-apps-encryption-so-i-rebuilt-it-atlock-v4-is-here-426a" target="_blank">I stopped trusting my own app&#x27;s encryption, so I rebuilt it — ATLOCK v4 is Here.</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 18</span> 2026-07-16</div>
-            </div>
-            <div class="article-item">
-              <a href="https://dev.to/kielltampubolon/we-planted-10-vulnerabilities-to-test-free-semgrep-it-reported-3-1k6j" target="_blank">We Planted 10 Vulnerabilities to Test Free Semgrep. It Reported 3.</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 13</span> 2026-07-16</div>
-            </div>
-            <div class="article-item">
-              <a href="https://news.ycombinator.com/item?id=48932993" target="_blank">Ask HN: What are you using for authn/authz and payments?</a>
-              <div class="meta">🟠 Ask HN <span class="badge">⬆ 3</span> Jul 16</div>
-            </div>
-            <div class="article-item">
-              <a href="https://github.blog/security/application-security/how-github-gave-every-repository-a-durable-owner/" target="_blank">How GitHub gave every repository a durable owner</a>
-              <div class="meta">🔵 GitHub Blog  Thu, 09 Ju</div>
-            </div>
-        </div>
-        <div class="topic-card">
-          <div class="topic-header">⚡ Performance <span class="count">8</span></div>
+          <div class="topic-header">⚡ Performance <span class="count">9</span></div>
           
             <div class="article-item">
               <a href="https://github.com/welcome-to-the-sunny-side/misa77" target="_blank">Show HN: misa77 - a codec that decodes 2x faster than LZ4 (at better ratios)</a>
@@ -694,32 +670,52 @@
               <div class="meta">🟣 dev.to <span class="badge">⬆ 17</span> 2026-07-15</div>
             </div>
             <div class="article-item">
+              <a href="https://dev.to/gde/my-benchmarks-python-column-was-na-for-a-year-cpythons-4300-digit-limit-and-eight-other-bugs-1hgk" target="_blank">My benchmark&#x27;s Python column was N/A for a year — CPython&#x27;s 4300-digit limit, and eight other bugs</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 14</span> 2026-07-15</div>
+            </div>
+            <div class="article-item">
               <a href="https://dev.to/stefanofago73/double-bigdecimal-or-fixed-point-2hp" target="_blank">double, BigDecimal, or Fixed-Point?</a>
               <div class="meta">🟣 dev.to <span class="badge">⬆ 7</span> 2026-07-14</div>
             </div>
+        </div>
+        <div class="topic-card">
+          <div class="topic-header">🔐 Security <span class="count">7</span></div>
+          
             <div class="article-item">
-              <a href="https://dev.to/haowang604/i-built-a-blazing-fast-openapi-mock-server-in-rust-starts-in-milliseconds-zero-config-dynamic-jmd" target="_blank">I built a blazing-fast OpenAPI mock server in Rust — starts in milliseconds, zero config, dynamic fake data</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 1</span> 2026-07-15</div>
+              <a href="https://github.com/Git-creat7/grokRegister-cpa" target="_blank">Git-creat7/grokRegister-cpa — Grok 自动注册机 — 注册成功后自动入库 CLIProxyAPI (CPA)：支持本地 auth 目录与远程 Management API 上传</a>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 354</span> 2026-07-11</div>
+            </div>
+            <div class="article-item">
+              <a href="https://dev.to/akhourianmolkumar/i-stopped-trusting-my-own-apps-encryption-so-i-rebuilt-it-atlock-v4-is-here-426a" target="_blank">I stopped trusting my own app&#x27;s encryption, so I rebuilt it — ATLOCK v4 is Here.</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 25</span> 2026-07-16</div>
+            </div>
+            <div class="article-item">
+              <a href="https://dev.to/kielltampubolon/we-planted-10-vulnerabilities-to-test-free-semgrep-it-reported-3-1k6j" target="_blank">We Planted 10 Vulnerabilities to Test Free Semgrep. It Reported 3.</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 13</span> 2026-07-16</div>
+            </div>
+            <div class="article-item">
+              <a href="https://github.blog/security/application-security/how-github-gave-every-repository-a-durable-owner/" target="_blank">How GitHub gave every repository a durable owner</a>
+              <div class="meta">🔵 GitHub Blog  Thu, 09 Ju</div>
+            </div>
+            <div class="article-item">
+              <a href="https://github.blog/security/application-security/how-github-used-secret-scanning-to-reach-inbox-zero/" target="_blank">How GitHub used secret scanning to reach inbox zero</a>
+              <div class="meta">🔵 GitHub Blog  Thu, 02 Ju</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🎨 Dev Experience <span class="count">5</span></div>
+          <div class="topic-header">🎨 Dev Experience <span class="count">4</span></div>
           
             <div class="article-item">
               <a href="https://github.com/Kappaemme-git/codex-first-customer-finder-skill" target="_blank">Kappaemme-git/codex-first-customer-finder-skill — A Codex skill that finds evidence-backed potential first customers from recent public signals.</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 765</span> 2026-07-12</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 773</span> 2026-07-12</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/KubeezMedia/kubeez-scroll-world-video" target="_blank">KubeezMedia/kubeez-scroll-world-video — Scroll-scrubbed &#x27;fly through the world&#x27; burger demo, generated with Kubeez. Live: meepcastana.github.io/kubeez-scroll-wo</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 609</span> 2026-07-13</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 625</span> 2026-07-13</div>
             </div>
             <div class="article-item">
               <a href="https://www.ti.com/lit/eb/slyy228/slyy228.pdf?ts=1759892558029" target="_blank">An Engineer&#x27;s Guide to USB Typе-С (2024)</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 115</span> Jul 10</div>
-            </div>
-            <div class="article-item">
-              <a href="https://news.ycombinator.com/item?id=48934733" target="_blank">Ask HN: Assistive Tech Ideas for Dementia</a>
-              <div class="meta">🟠 Ask HN <span class="badge">⬆ 5</span> Jul 16</div>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 203</span> Jul 10</div>
             </div>
             <div class="article-item">
               <a href="https://smashingmagazine.com/2026/07/how-turn-brand-strategy-into-visual-direction/" target="_blank">From Kickoff To First Concept: How To Turn Brand Strategy Into Visual Direction</a>
@@ -738,7 +734,7 @@
           <td class="rank">1</td>
           <td><a href="https://github.com/xai-org/grok-build" target="_blank">xai-org/grok-build — SpaceXAI&#x27;s coding agent harness and TUI. Fullscreen, mouse interactive, extensible.</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">13594</td>
+          <td class="score">14729</td>
           <td>🤖 AI / ML</td>
           <td>2026-07-14</td>
         </tr>
@@ -746,7 +742,7 @@
           <td class="rank">2</td>
           <td><a href="https://github.com/Fei-Away/Codex-Dream-Skin" target="_blank">Fei-Away/Codex-Dream-Skin — Codex Dream Skin</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">7079</td>
+          <td class="score">8175</td>
           <td>🔧 Engineering</td>
           <td>2026-07-15</td>
         </tr>
@@ -754,7 +750,7 @@
           <td class="rank">3</td>
           <td><a href="https://github.com/MDX-Tom/gpt-5.6-instruct" target="_blank">MDX-Tom/gpt-5.6-instruct — A Codex CLI jailbreak prompt and test pack for gpt-5.6-sol. 针对 gpt-5.6 系列的 Codex CLI 破甲提示词与测试包。</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1755</td>
+          <td class="score">1824</td>
           <td>🤖 AI / ML</td>
           <td>2026-07-11</td>
         </tr>
@@ -762,31 +758,31 @@
           <td class="rank">4</td>
           <td><a href="https://www.kimi.com/blog/kimi-k3" target="_blank">Kimi K3: Open Frontier Intelligence</a></td>
           <td><span class="source-badge">🟠 Hacker News</span></td>
-          <td class="score">1474</td>
+          <td class="score">1737</td>
           <td>🔧 Engineering</td>
           <td>Jul 16</td>
         </tr>
         <tr>
           <td class="rank">5</td>
-          <td><a href="https://github.com/littledivy/mimic" target="_blank">littledivy/mimic — Intercept any app, then call it from Python like a library</a></td>
+          <td><a href="https://github.com/pixel-point/aval" target="_blank">pixel-point/aval — A new open-source format for interactive video on the web, with a built-in state machine, frame-accurate transitions, an</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1114</td>
-          <td>🦀 Languages</td>
+          <td class="score">1127</td>
+          <td>🌐 Web / Frontend</td>
           <td>2026-07-13</td>
         </tr>
         <tr>
           <td class="rank">6</td>
-          <td><a href="https://github.com/pixel-point/aval" target="_blank">pixel-point/aval — A new open-source format for interactive video on the web, with a built-in state machine, frame-accurate transitions, an</a></td>
+          <td><a href="https://github.com/littledivy/mimic" target="_blank">littledivy/mimic — Intercept any app, then call it from Python like a library</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1092</td>
-          <td>🌐 Web / Frontend</td>
+          <td class="score">1125</td>
+          <td>🦀 Languages</td>
           <td>2026-07-13</td>
         </tr>
         <tr>
           <td class="rank">7</td>
           <td><a href="https://news.ycombinator.com/item?id=48886741" target="_blank">Ask HN: Add flag for AI-generated articles</a></td>
           <td><span class="source-badge">🟠 Ask HN</span></td>
-          <td class="score">1086</td>
+          <td class="score">1087</td>
           <td>🤖 AI / ML</td>
           <td>Jul 13</td>
         </tr>
@@ -794,7 +790,7 @@
           <td class="rank">8</td>
           <td><a href="https://github.com/CluvexStudio/Aether" target="_blank">CluvexStudio/Aether</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">960</td>
+          <td class="score">1010</td>
           <td>🔧 Engineering</td>
           <td>2026-07-14</td>
         </tr>
@@ -802,7 +798,7 @@
           <td class="rank">9</td>
           <td><a href="https://github.com/x4gKing/Marzban-Panel" target="_blank">x4gKing/Marzban-Panel</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">854</td>
+          <td class="score">872</td>
           <td>🔧 Engineering</td>
           <td>2026-07-12</td>
         </tr>
@@ -816,41 +812,41 @@
         </tr>
         <tr>
           <td class="rank">11</td>
+          <td><a href="https://github.com/tandpfun/wardrobe" target="_blank">tandpfun/wardrobe — Your clothes, extracted and organized with gpt-image.</a></td>
+          <td><span class="source-badge">⚫ GitHub Trending</span></td>
+          <td class="score">783</td>
+          <td>🤖 AI / ML</td>
+          <td>2026-07-16</td>
+        </tr>
+        <tr>
+          <td class="rank">12</td>
           <td><a href="https://github.com/Kappaemme-git/codex-first-customer-finder-skill" target="_blank">Kappaemme-git/codex-first-customer-finder-skill — A Codex skill that finds evidence-backed potential first customers from recent public signals.</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">765</td>
+          <td class="score">773</td>
           <td>🎨 Dev Experience</td>
           <td>2026-07-12</td>
         </tr>
         <tr>
-          <td class="rank">12</td>
+          <td class="rank">13</td>
           <td><a href="https://github.com/x4gKing/Marzban-Node" target="_blank">x4gKing/Marzban-Node</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">733</td>
+          <td class="score">744</td>
           <td>🔧 Engineering</td>
           <td>2026-07-12</td>
         </tr>
         <tr>
-          <td class="rank">13</td>
+          <td class="rank">14</td>
           <td><a href="https://github.com/oil-oil/beautify-github-readme" target="_blank">oil-oil/beautify-github-readme — Design clear, theme-specific GitHub README homepages with SVG titles, real proof, and maintainable Markdown</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">707</td>
+          <td class="score">731</td>
           <td>🤖 AI / ML</td>
           <td>2026-07-13</td>
-        </tr>
-        <tr>
-          <td class="rank">14</td>
-          <td><a href="https://github.com/tandpfun/wardrobe" target="_blank">tandpfun/wardrobe — Your clothes, extracted and organized with gpt-image.</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">706</td>
-          <td>🤖 AI / ML</td>
-          <td>2026-07-16</td>
         </tr>
         <tr>
           <td class="rank">15</td>
           <td><a href="https://opensource.microsoft.com/blog/2026/07/16/microsoft-comic-chat-is-now-open-source/" target="_blank">Microsoft Comic Chat is now open source</a></td>
           <td><span class="source-badge">🟠 Hacker News</span></td>
-          <td class="score">629</td>
+          <td class="score">713</td>
           <td>🔧 Engineering</td>
           <td>Jul 16</td>
         </tr>
@@ -858,7 +854,7 @@
           <td class="rank">16</td>
           <td><a href="https://github.com/KubeezMedia/kubeez-scroll-world-video" target="_blank">KubeezMedia/kubeez-scroll-world-video — Scroll-scrubbed &#x27;fly through the world&#x27; burger demo, generated with Kubeez. Live: meepcastana.github.io/kubeez-scroll-wo</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">609</td>
+          <td class="score">625</td>
           <td>🎨 Dev Experience</td>
           <td>2026-07-13</td>
         </tr>
@@ -866,7 +862,7 @@
           <td class="rank">17</td>
           <td><a href="https://www.mixfont.com/experiments/decoy-font" target="_blank">Decoy Font</a></td>
           <td><span class="source-badge">🟠 Hacker News</span></td>
-          <td class="score">499</td>
+          <td class="score">590</td>
           <td>🔧 Engineering</td>
           <td>Jul 16</td>
         </tr>
@@ -874,49 +870,49 @@
           <td class="rank">18</td>
           <td><a href="https://github.com/MatinSenPai/Aether-GUI" target="_blank">MatinSenPai/Aether-GUI — One-click desktop GUI for the Aether censorship-circumvention tunnel — Tauri v2, React 19, Rust</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">490</td>
+          <td class="score">507</td>
           <td>🦀 Languages</td>
           <td>2026-07-14</td>
         </tr>
         <tr>
           <td class="rank">19</td>
-          <td><a href="https://rtfeldman.com/rust-to-zig" target="_blank">How Our Rust-to-Zig Rewrite Is Going</a></td>
-          <td><span class="source-badge">🟠 Hacker News</span></td>
-          <td class="score">480</td>
-          <td>🦀 Languages</td>
-          <td>Jul 16</td>
+          <td><a href="https://github.com/PengZhang64/circuit-framework" target="_blank">PengZhang64/circuit-framework — Circuit Framework — multi-agent LLM trading research system</a></td>
+          <td><span class="source-badge">⚫ GitHub Trending</span></td>
+          <td class="score">444</td>
+          <td>🤖 AI / ML</td>
+          <td>2026-07-16</td>
         </tr>
         <tr>
           <td class="rank">20</td>
-          <td><a href="https://github.com/PengZhang64/circuit-framework" target="_blank">PengZhang64/circuit-framework — Circuit Framework — multi-agent LLM trading research system</a></td>
+          <td><a href="https://github.com/Blueturboguy07/cue" target="_blank">Blueturboguy07/cue — Open-source macOS AI copilot that floats over your screen, sees/hears your meetings, and stays hidden from screen shares</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">379</td>
+          <td class="score">417</td>
           <td>🤖 AI / ML</td>
-          <td>2026-07-16</td>
+          <td>2026-07-15</td>
         </tr></tbody>
   </table>
 
-  <h2>📡 Source Coverage (31 sources)</h2>
+  <h2>📡 Source Coverage (32 sources)</h2>
   <div class="sources-section">
         <div class="source-row">
           <div class="source-label">dev.to</div>
-          <div class="bar-wrap"><div class="bar" style="width:100%">51</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:100%">52</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">Hacker News</div>
-          <div class="bar-wrap"><div class="bar" style="width:58%">30</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:57%">30</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">GitHub Trending</div>
-          <div class="bar-wrap"><div class="bar" style="width:49%">25</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:48%">25</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">Ask HN</div>
-          <div class="bar-wrap"><div class="bar" style="width:39%">20</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:38%">20</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">Show HN</div>
-          <div class="bar-wrap"><div class="bar" style="width:39%">20</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:38%">20</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">Stack Overflow Blog</div>
@@ -979,6 +975,10 @@
           <div class="bar-wrap"><div class="bar" style="width:15%">8</div></div>
         </div>
         <div class="source-row">
+          <div class="source-label">CSS-Tricks</div>
+          <div class="bar-wrap"><div class="bar" style="width:15%">8</div></div>
+        </div>
+        <div class="source-row">
           <div class="source-label">Slack Engineering</div>
           <div class="bar-wrap"><div class="bar" style="width:15%">8</div></div>
         </div>
@@ -1024,7 +1024,7 @@
         </div></div>
 
 </main>
-<footer>Built with ❤️ at the hackathon · Eng Brand Machine · July 17, 2026 at 06:51</footer>
+<footer>Built with ❤️ at the hackathon · Eng Brand Machine · July 17, 2026 at 12:29</footer>
 
 <script>
 // ── Topic classifier (mirrors Python TOPIC_KEYWORDS) ──────────────────────
