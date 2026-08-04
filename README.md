@@ -1,5 +1,9 @@
 # Eng Brand Machine
 
+
+<iframe width="768" height="640" src="https://miro.com/app/live-embed/uXjVH1JKpQo=/?focusWidget=3458764679895421942&embedMode=view_only_without_ui&embedId=208909457516" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
+
+
 ### [→ View the live dashboard](https://horeaporutiu.github.io/eng-brand-machine/)
 
 > Real-time engineering trends + automatic Miro content recommendations, in a single self-hosted dashboard.
