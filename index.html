@@ -185,23 +185,23 @@
 
 <header>
   <h1>🚀 Eng Brand Machine</h1>
-  <p class="subtitle">Real-time engineering trends from 32 sources · 344 articles · August 18, 2026 at 12:09</p>
+  <p class="subtitle">Real-time engineering trends from 32 sources · 345 articles · August 18, 2026 at 18:09</p>
   <span class="miro-badge">✦ Miro Developer Brand Intelligence</span>
 </header>
 
 <div class="stats-bar">
-  <div class="stat"><div class="num">344</div><div class="label">Articles Analyzed</div></div>
+  <div class="stat"><div class="num">345</div><div class="label">Articles Analyzed</div></div>
   <div class="stat"><div class="num">32</div><div class="label">Live Sources</div></div>
-  <div class="stat"><div class="num">12</div><div class="label">Topics Tracked</div></div>
+  <div class="stat"><div class="num">11</div><div class="label">Topics Tracked</div></div>
   <div class="stat"><div class="num">🤖 AI / ML</div><div class="label">Hottest Topic</div></div>
-  <div class="stat"><div class="num">216</div><div class="label">Articles on #1 Topic</div></div>
+  <div class="stat"><div class="num">217</div><div class="label">Articles on #1 Topic</div></div>
 </div>
 
 <main>
 
   <div class="recs-section">
     <h2>✦ Top 5 Content Recommendations for Miro&apos;s Developer Brand</h2>
-    <p class="recs-intro">Generated from 344 articles across 32 sources — each recommendation is anchored to what engineers are actually reading today.</p>
+    <p class="recs-intro">Generated from 345 articles across 32 sources — each recommendation is anchored to what engineers are actually reading today.</p>
     <div class="recs-grid">
       
         <div class="rec-card">
@@ -301,6 +301,54 @@
         </div>
         <div class="rec-card">
           <div class="rec-num">#3</div>
+          <div class="rec-topic">🦀 Languages</div>
+          <div class="rec-title">Rust Ownership &amp; Borrowing, Visualized: Teaching Hard Concepts with Miro</div>
+          <div class="rec-desc">How developer advocates and educators use Miro to turn notoriously complex language concepts (ownership, lifetimes, async) into interactive visual explainers that engineers actually bookmark.</div>
+          <div class="rec-demo"><strong>🎬 Demo:</strong> An animated Miro board stepping through a Rust ownership example — stack frames, heap allocations, and borrow checker rules all drawn out live.</div>
+          <div class="rec-meta">
+            <span class="rec-format">📄 Educational Post + Interactive Board</span>
+            <span class="rec-cta">Open the interactive explainer →</span>
+          </div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>Ask HN: GitHub employees what&#x27;s going on? Why?</li><li>Ask HN: GitHub employees what&#x27;s going on? Why?</li></ul></div>
+          <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
+          <div class="post-draft">
+            <div class="post-hero">
+              <div class="post-hero-label">🎨 Hero Image Prompt (Midjourney / DALL-E)</div>
+              <div class="post-hero-prompt">Rust programming language ownership diagram with stack and heap memory visualized as glowing labeled boxes, ownership arrows moving between scopes, mutable and immutable borrow markers, dark background with rust-orange and steel-blue color scheme</div>
+            </div>
+            <div class="post-tags"><span class="post-tag">#rust</span><span class="post-tag">#programming</span><span class="post-tag">#ownership</span><span class="post-tag">#visualization</span><span class="post-tag">#miro-templates</span><span class="post-tag">#languages</span></div>
+            <div class="post-meta-bar">⏱ 7 min read &nbsp;·&nbsp; 🔍 Teach Rust&#x27;s ownership and borrowing model with interactive Miro visualizations — turn the borrow checker into an approachable, visual concept for your team.</div>
+            <div class="post-body">
+<p>Rust's ownership system is one of the most powerful ideas in systems programming — and one of the most difficult to teach. The borrow checker enforces rules that are logically consistent and learnable, but deeply counterintuitive to engineers who've spent years working in garbage-collected languages. The result: learning Rust takes longer than it should, not because the concepts are inherently hard, but because most learning resources are primarily textual in a domain where visuals make everything click faster.</p>
+
+<h2>Why Text-Based Rust Education Falls Short</h2>
+<p>The Rust book is excellent. The rustlings exercises are well-designed. And yet, engineers routinely report spending days fighting the borrow checker on concepts that, once explained visually, become immediately intuitive. "A value can have only one owner" is an abstract statement. A diagram showing a value moving from one stack frame to another — and disappearing from the first — is a mental model that sticks.</p>
+<p>The problem extends beyond individual learning. Teams adopting Rust need shared mental models: what does it mean to "move" a value in a code review? How do you reason about lifetimes in an API design? When is an <em>Arc&lt;Mutex&lt;T&gt;&gt;</em> the right choice? These conversations are faster and more productive when the team shares a visual vocabulary.</p>
+
+<h2>The Miro Framework: Visualizing Rust Concepts</h2>
+<ol>
+  <li><strong>Ownership diagrams.</strong> For each code example, draw the stack and heap side by side. Show values as labeled boxes. Draw arrows for ownership. When a move happens, redraw the arrow to its new owner and visually erase it from the previous one. The borrow checker's rules become self-evident.</li>
+  <li><strong>Borrow visualizations.</strong> Show immutable borrows as read-only arrows (multiple allowed simultaneously). Show mutable borrows as exclusive arrows (only one at a time, blocks immutable borrows). This visual makes the borrow checker's invariants immediately legible.</li>
+  <li><strong>Lifetime scope diagrams.</strong> Draw scopes as nested boxes. Show a borrow's lifetime as a colored region that must not outlive the value it borrows. Lifetime annotation syntax suddenly makes sense when you can see what the <em>'a</em> represents spatially.</li>
+  <li><strong>Async ownership flow.</strong> For async Rust, draw a timeline showing when ownership moves across await points. Show which values must be Send and why. This is the visualization that unlocks async Rust for engineers who've been stuck.</li>
+  <li><strong>Pattern decision tree.</strong> A flowchart for "which smart pointer should I use?" — from simple owned values through <em>Box</em>, <em>Rc</em>, <em>Arc</em>, <em>Mutex</em> — with decision criteria at each fork. Teams use this in code reviews to align on ownership patterns.</li>
+</ol>
+
+<div class="image-callout">
+  <strong>🎨 Mid-Post Image Suggestion</strong><br>
+  <em>AI prompt:</em> "Rust borrow checker visualization showing stack and heap memory as glowing labeled boxes, ownership transfer arrows between scopes, mutable borrow shown as exclusive red arrow, immutable borrows as shared blue arrows, dark background, rust-orange and steel-blue palette"
+</div>
+
+<h2>Team Adoption: Visual Rust Reviews</h2>
+<p>Engineering teams adopting Rust report that the biggest accelerator isn't better documentation — it's better communication patterns. Starting a "visual Rust review" practice — where complex ownership or lifetime questions get drawn out on the Miro board before being answered in text — dramatically reduces the time senior Rust engineers spend unblocking teammates.</p>
+<p>The board also serves as a growing library. Every time a tricky ownership pattern gets solved visually, the diagram stays on the board as a reference. After six months, you have a custom visual Rust guide tailored to the exact patterns your codebase uses.</p>
+<p>The borrow checker isn't your enemy — it's a collaborator that rewards clear thinking. <em>Open the interactive Rust Ownership Explainer and see the concepts click in a way they never did in a text editor.</em></p>
+</div>
+            <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
+          </div>
+        </div>
+        <div class="rec-card">
+          <div class="rec-num">#4</div>
           <div class="rec-topic">☁️ Cloud / Infra</div>
           <div class="rec-title">Kubernetes Architecture Diagrams That Actually Stay Up to Date</div>
           <div class="rec-desc">Most K8s architecture docs go stale in days. This post shows how platform teams use Miro&#x27;s live embed + diagram features to keep cluster topology, service maps, and resource flows always current.</div>
@@ -347,98 +395,49 @@
           </div>
         </div>
         <div class="rec-card">
-          <div class="rec-num">#4</div>
-          <div class="rec-topic">🦀 Languages</div>
-          <div class="rec-title">Rust Ownership &amp; Borrowing, Visualized: Teaching Hard Concepts with Miro</div>
-          <div class="rec-desc">How developer advocates and educators use Miro to turn notoriously complex language concepts (ownership, lifetimes, async) into interactive visual explainers that engineers actually bookmark.</div>
-          <div class="rec-demo"><strong>🎬 Demo:</strong> An animated Miro board stepping through a Rust ownership example — stack frames, heap allocations, and borrow checker rules all drawn out live.</div>
-          <div class="rec-meta">
-            <span class="rec-format">📄 Educational Post + Interactive Board</span>
-            <span class="rec-cta">Open the interactive explainer →</span>
-          </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>Los Puesteros, solitary men who look after ranches and livestock in Patagonia</li><li>Ask HN: GitHub employees what&#x27;s going on? Why?</li></ul></div>
-          <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
-          <div class="post-draft">
-            <div class="post-hero">
-              <div class="post-hero-label">🎨 Hero Image Prompt (Midjourney / DALL-E)</div>
-              <div class="post-hero-prompt">Rust programming language ownership diagram with stack and heap memory visualized as glowing labeled boxes, ownership arrows moving between scopes, mutable and immutable borrow markers, dark background with rust-orange and steel-blue color scheme</div>
-            </div>
-            <div class="post-tags"><span class="post-tag">#rust</span><span class="post-tag">#programming</span><span class="post-tag">#ownership</span><span class="post-tag">#visualization</span><span class="post-tag">#miro-templates</span><span class="post-tag">#languages</span></div>
-            <div class="post-meta-bar">⏱ 7 min read &nbsp;·&nbsp; 🔍 Teach Rust&#x27;s ownership and borrowing model with interactive Miro visualizations — turn the borrow checker into an approachable, visual concept for your team.</div>
-            <div class="post-body">
-<p>Rust's ownership system is one of the most powerful ideas in systems programming — and one of the most difficult to teach. The borrow checker enforces rules that are logically consistent and learnable, but deeply counterintuitive to engineers who've spent years working in garbage-collected languages. The result: learning Rust takes longer than it should, not because the concepts are inherently hard, but because most learning resources are primarily textual in a domain where visuals make everything click faster.</p>
-
-<h2>Why Text-Based Rust Education Falls Short</h2>
-<p>The Rust book is excellent. The rustlings exercises are well-designed. And yet, engineers routinely report spending days fighting the borrow checker on concepts that, once explained visually, become immediately intuitive. "A value can have only one owner" is an abstract statement. A diagram showing a value moving from one stack frame to another — and disappearing from the first — is a mental model that sticks.</p>
-<p>The problem extends beyond individual learning. Teams adopting Rust need shared mental models: what does it mean to "move" a value in a code review? How do you reason about lifetimes in an API design? When is an <em>Arc&lt;Mutex&lt;T&gt;&gt;</em> the right choice? These conversations are faster and more productive when the team shares a visual vocabulary.</p>
-
-<h2>The Miro Framework: Visualizing Rust Concepts</h2>
-<ol>
-  <li><strong>Ownership diagrams.</strong> For each code example, draw the stack and heap side by side. Show values as labeled boxes. Draw arrows for ownership. When a move happens, redraw the arrow to its new owner and visually erase it from the previous one. The borrow checker's rules become self-evident.</li>
-  <li><strong>Borrow visualizations.</strong> Show immutable borrows as read-only arrows (multiple allowed simultaneously). Show mutable borrows as exclusive arrows (only one at a time, blocks immutable borrows). This visual makes the borrow checker's invariants immediately legible.</li>
-  <li><strong>Lifetime scope diagrams.</strong> Draw scopes as nested boxes. Show a borrow's lifetime as a colored region that must not outlive the value it borrows. Lifetime annotation syntax suddenly makes sense when you can see what the <em>'a</em> represents spatially.</li>
-  <li><strong>Async ownership flow.</strong> For async Rust, draw a timeline showing when ownership moves across await points. Show which values must be Send and why. This is the visualization that unlocks async Rust for engineers who've been stuck.</li>
-  <li><strong>Pattern decision tree.</strong> A flowchart for "which smart pointer should I use?" — from simple owned values through <em>Box</em>, <em>Rc</em>, <em>Arc</em>, <em>Mutex</em> — with decision criteria at each fork. Teams use this in code reviews to align on ownership patterns.</li>
-</ol>
-
-<div class="image-callout">
-  <strong>🎨 Mid-Post Image Suggestion</strong><br>
-  <em>AI prompt:</em> "Rust borrow checker visualization showing stack and heap memory as glowing labeled boxes, ownership transfer arrows between scopes, mutable borrow shown as exclusive red arrow, immutable borrows as shared blue arrows, dark background, rust-orange and steel-blue palette"
-</div>
-
-<h2>Team Adoption: Visual Rust Reviews</h2>
-<p>Engineering teams adopting Rust report that the biggest accelerator isn't better documentation — it's better communication patterns. Starting a "visual Rust review" practice — where complex ownership or lifetime questions get drawn out on the Miro board before being answered in text — dramatically reduces the time senior Rust engineers spend unblocking teammates.</p>
-<p>The board also serves as a growing library. Every time a tricky ownership pattern gets solved visually, the diagram stays on the board as a reference. After six months, you have a custom visual Rust guide tailored to the exact patterns your codebase uses.</p>
-<p>The borrow checker isn't your enemy — it's a collaborator that rewards clear thinking. <em>Open the interactive Rust Ownership Explainer and see the concepts click in a way they never did in a text editor.</em></p>
-</div>
-            <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
-          </div>
-        </div>
-        <div class="rec-card">
           <div class="rec-num">#5</div>
-          <div class="rec-topic">🔐 Security</div>
-          <div class="rec-title">Collaborative Threat Modeling on Miro: A Developer&#x27;s Guide</div>
-          <div class="rec-desc">Security doesn&#x27;t have to happen in silos. This guide shows dev teams how to run STRIDE threat modeling sessions in Miro — mapping trust boundaries, attack surfaces, and mitigations together in real time.</div>
-          <div class="rec-demo"><strong>🎬 Demo:</strong> Live threat model for a typical SaaS app: user → API gateway → auth service → DB. Each node color-coded by risk level, with mitigation sticky notes.</div>
+          <div class="rec-topic">🧪 Testing / QA</div>
+          <div class="rec-title">Test Coverage Maps: Visualize What You&#x27;re Actually Testing</div>
+          <div class="rec-desc">Beyond line coverage percentages — how engineering teams map their test pyramid, identify blind spots, and align QA strategy using Miro boards in sprint planning.</div>
+          <div class="rec-demo"><strong>🎬 Demo:</strong> A test pyramid in Miro: unit → integration → e2e, with color-coded coverage by feature area and links to failing test suites.</div>
           <div class="rec-meta">
-            <span class="rec-format">📄 Workshop Guide + Template</span>
-            <span class="rec-cta">Run your first threat model session →</span>
+            <span class="rec-format">📄 Blog Post + Workshop Template</span>
+            <span class="rec-cta">Map your test coverage in Miro →</span>
           </div>
-          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>How We Increased Shannon Entropy Throughput in Go by 41% Using a Lookup Table.</li><li>Weaponizing And Defending The React Flight Protocol: Deserialization Sinks In RSCs</li></ul></div>
+          <div class="inspired"><strong>Inspired by trending:</strong><ul><li>Anyone need an installer?</li><li>Show HN: Openleetcode – local LeetCode runner where tests live in the repo</li></ul></div>
           <button class="view-draft-btn" onclick="toggleDraft(this)">📝 View Full Post Draft ↓</button>
           <div class="post-draft">
             <div class="post-hero">
               <div class="post-hero-label">🎨 Hero Image Prompt (Midjourney / DALL-E)</div>
-              <div class="post-hero-prompt">STRIDE threat model diagram on a dark background, nodes representing API gateway, auth service, and database with red threat arrows and green mitigation shields overlaid, security visualization, dark mode, red and green palette</div>
+              <div class="post-hero-prompt">Test pyramid visualization on dark background, three glowing tiers representing unit tests at base, integration tests in middle, and end-to-end tests at apex, color-coded coverage grid showing feature areas in green yellow and red, QA engineering illustration</div>
             </div>
-            <div class="post-tags"><span class="post-tag">#security</span><span class="post-tag">#threat-modeling</span><span class="post-tag">#stride</span><span class="post-tag">#devsecops</span><span class="post-tag">#miro-templates</span><span class="post-tag">#appsec</span></div>
-            <div class="post-meta-bar">⏱ 8 min read &nbsp;·&nbsp; 🔍 Run collaborative STRIDE threat modeling sessions in Miro — map attack surfaces, trust boundaries, and mitigations with your whole engineering team.</div>
+            <div class="post-tags"><span class="post-tag">#testing</span><span class="post-tag">#qa</span><span class="post-tag">#test-pyramid</span><span class="post-tag">#coverage</span><span class="post-tag">#miro-templates</span><span class="post-tag">#quality-engineering</span></div>
+            <div class="post-meta-bar">⏱ 5 min read &nbsp;·&nbsp; 🔍 Visualize your test pyramid and identify coverage blind spots in Miro — map unit, integration, and e2e tests by feature area with your whole team.</div>
             <div class="post-body">
-<p>Security reviews are too often a checkbox at the end of a project — a rushed 30-minute meeting where a security engineer skims an architecture doc they've never seen before and signs off under deadline pressure. The result: real threats get missed, mitigations are bolted on as afterthoughts, and the security team gets blamed when something breaks in production. The problem isn't lack of expertise. It's lack of shared context.</p>
+<p>Your team has 87% line coverage. The dashboard is green. Then a critical user flow breaks in production because nobody was testing the integration between the payment service and the notification system — a gap that would have been obvious on a test coverage map, but invisible in a coverage percentage. Line coverage metrics tell you what percentage of your code is executed during tests. They don't tell you whether you're testing the right things.</p>
 
-<h2>Why Siloed Security Reviews Fail</h2>
-<p>Traditional threat modeling — STRIDE, PASTA, attack trees — is powerful on paper and painful in practice. The tools are often heavyweight (dedicated software with steep learning curves), the output is hard to share (dense Word documents nobody reads), and the process is designed for security specialists, not the development teams who need to act on the findings.</p>
-<p>When security happens in a silo, developers see it as a blocker, not a collaborator. Threat models sit in a security team's shared drive, disconnected from the architecture diagrams developers actually use. Mitigations get forgotten. The same vulnerabilities get introduced sprint after sprint.</p>
+<h2>Why Coverage Numbers Lie</h2>
+<p>The coverage number is a proxy metric that the industry has elevated to a north star metric, often to its detriment. Teams optimize for the number — hitting 80%, then 90% — without asking whether the tests they're writing actually protect against the failures that matter. Unit tests on pure functions are cheap to write and inflate coverage metrics without adding much protection. Tests on complex integration paths are hard to write but prevent the failures that actually wake up on-call engineers.</p>
+<p>The deeper problem: without a visual map, it's impossible to answer the question "what are we not testing?" You can see coverage per file, per function, per line — but you can't see which user journeys, which integration paths, or which risk areas have no test coverage at all.</p>
 
-<h2>The Miro STRIDE Framework: 6 Steps to Collaborative Threat Modeling</h2>
+<h2>The Miro Framework: Building a Test Coverage Map</h2>
 <ol>
-  <li><strong>Start with your data flow diagram.</strong> Draw every component, data store, external actor, and trust boundary on a Miro board. This is the shared foundation everyone in the room works from.</li>
-  <li><strong>Apply STRIDE categories.</strong> For each component and data flow, add color-coded sticky notes: Spoofing (red), Tampering (orange), Repudiation (yellow), Information Disclosure (purple), Denial of Service (blue), Elevation of Privilege (pink).</li>
-  <li><strong>Run the async review phase.</strong> Share the board 48 hours before the session. Let engineers, product managers, and the security team add their own threat notes asynchronously. You walk into the meeting with richer input than any single expert could generate alone.</li>
-  <li><strong>Score and prioritize threats.</strong> In the live session, use Miro voting to score threats by likelihood × impact. The board updates in real time, giving you a prioritized risk register by the end of the meeting.</li>
-  <li><strong>Map mitigations to components.</strong> For each high-priority threat, add a green sticky with the mitigation strategy and the engineering owner. This becomes your security backlog.</li>
-  <li><strong>Link to code and tickets.</strong> Connect each mitigation sticky to the relevant Jira ticket or GitHub issue. The threat model stays connected to actual remediation work.</li>
+  <li><strong>Draw the test pyramid.</strong> Three tiers: unit tests at the base (fast, isolated, many), integration tests in the middle (testing component interactions), end-to-end tests at the apex (complete user flows, fewer). This shared model aligns your whole team on testing philosophy.</li>
+  <li><strong>Map coverage by feature area.</strong> Divide your application into feature areas (auth, payment flow, notifications, data export) and assign each a column. For each feature × test tier intersection, assess coverage: green (well-covered), yellow (partial), red (minimal or none).</li>
+  <li><strong>Identify the critical paths.</strong> Mark the user journeys that, if broken, would cause the most user pain or business impact. These are your highest-priority coverage targets regardless of what the line coverage number says.</li>
+  <li><strong>Add test suite health notes.</strong> For each area, sticky notes capture: flaky tests (name them!), tests that are slow, tests not updated since a major refactor. This is your technical debt backlog for the testing layer.</li>
+  <li><strong>Link to failing tests.</strong> Connect red areas to CI dashboard links and open tickets. The map becomes an actionable backlog, not just a diagnostic.</li>
 </ol>
 
 <div class="image-callout">
   <strong>🎨 Mid-Post Image Suggestion</strong><br>
-  <em>AI prompt:</em> "STRIDE threat model showing SaaS components — API gateway, auth service, user database — with colored threat annotation sticky notes (red, orange, yellow, purple, blue, pink) and green mitigation shields, dark security dashboard aesthetic"
+  <em>AI prompt:</em> "Test coverage grid visualization showing feature areas as columns and test pyramid tiers as rows, green cells for well-covered areas, yellow for partial, red for gaps, glowing on dark background, QA engineering dashboard aesthetic with clean typography"
 </div>
 
-<h2>Team Adoption: Threat Modeling as a Sprint Ritual</h2>
-<p>The teams that make threat modeling stick don't treat it as a project milestone — they treat it as a recurring sprint ritual. Every time a new feature introduces a data flow, API, or third-party integration, a 45-minute threat modeling session is automatically scheduled. The Miro board template is already there; you just add a new frame for the new feature.</p>
-<p>After three months, something shifts in the team culture: developers start thinking about trust boundaries during design, not after implementation. Security stops being a gate and becomes a design input. And when an auditor asks "how do you manage security risk?", you open the Miro board instead of scrambling for documentation.</p>
-<p>Security built collaboratively is security that actually holds. <em>Run your first STRIDE threat modeling session in Miro — the template takes 5 minutes to set up.</em></p>
+<h2>Team Adoption: Coverage Review in Sprint Planning</h2>
+<p>The most effective use of a test coverage map is in sprint planning. Before committing to new feature work, spend 10 minutes reviewing the map: "Are we adding tests for the new feature? What existing coverage gaps does this sprint create the opportunity to close?"</p>
+<p>Pair the coverage map with a "testing debt" sprint story every three sprints — a dedicated allocation for closing the highest-priority coverage gaps. Teams that do this see fewer production incidents and faster debugging when incidents do happen, because the test suite reliably narrows the search space.</p>
+<p>Testing strategy deserves the same architectural rigor as system design. <em>Map your test coverage in Miro and finally answer the question: what are we not testing?</em></p>
 </div>
             <button class="copy-draft-btn" onclick="copyDraft(this)">📋 Copy Draft to Clipboard</button>
           </div>
@@ -535,51 +534,51 @@
   <div class="topics-grid">
     
         <div class="topic-card">
-          <div class="topic-header">🤖 AI / ML <span class="count">216</span></div>
+          <div class="topic-header">🤖 AI / ML <span class="count">217</span></div>
           
             <div class="article-item">
               <a href="https://github.com/deepseek-ai/deepseek-harness" target="_blank">deepseek-ai/deepseek-harness — DeepSeek Harness: Everything is a Plugin.</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 157600</span> 2026-08-13</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 159601</span> 2026-08-13</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/xiaobright/dsh-anchored-standard" target="_blank">xiaobright/dsh-anchored-standard — Two-phase DeepSeek Harness preset: Minimal-aligned bootstrap, then full Standard tools (Project2 98/99)</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 3521</span> 2026-08-14</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 3548</span> 2026-08-14</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/dmmulroy/anti-slop" target="_blank">dmmulroy/anti-slop — Opinionated Oxlint rules for rejecting low-evidence TypeScript and JavaScript patterns</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 2515</span> 2026-08-12</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 2589</span> 2026-08-12</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/yetone/cumora" target="_blank">yetone/cumora — Where agent teams gather. Cross-platform team chat where AI agents are first-class teammates — with cloud or bring-your-</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 2118</span> 2026-08-17</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 2312</span> 2026-08-17</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/ccch1mneyyy/dsh-TUI" target="_blank">ccch1mneyyy/dsh-TUI — DSH 官方公众号收录的 TUI 补位插件：Claude Code 风，鲸鱼顶栏/实时状态/流式思考/双击 Esc 回滚/上下文进度+TPS。npm 一键装。  DSH official WeChat featured TUI plugin</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1935</span> 2026-08-13</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1961</span> 2026-08-13</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🔧 Engineering <span class="count">52</span></div>
+          <div class="topic-header">🔧 Engineering <span class="count">49</span></div>
           
             <div class="article-item">
               <a href="https://github.com/anywhere-labs/deepseek-harness-desktop" target="_blank">anywhere-labs/deepseek-harness-desktop — 为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 13126</span> 2026-08-13</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 13512</span> 2026-08-13</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/awesome-dsh-plugin/awesome-dsh-plugin" target="_blank">awesome-dsh-plugin/awesome-dsh-plugin — A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 8346</span> 2026-08-13</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 8746</span> 2026-08-13</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/yjh051108/dsh-routing-suite" target="_blank">yjh051108/dsh-routing-suite — dsh-routing-suite — injector + router-standard kit: install the runtime injector first, then the task-aware reasoning-mo</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 5866</span> 2026-08-14</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 5997</span> 2026-08-14</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/cordiverse/paper" target="_blank">cordiverse/paper — A Programming Paradigm for Spatiotemporal Composability</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 2230</span> 2026-08-13</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 2270</span> 2026-08-13</div>
             </div>
             <div class="article-item">
               <a href="https://github.com/xoreaxeaxeax/skitter-creek-bath-salts" target="_blank">xoreaxeaxeax/skitter-creek-bath-salts — Unlocking _everything_ on the CPU with DRAM scrambling</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1797</span> 2026-08-13</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 1809</span> 2026-08-13</div>
             </div>
         </div>
         <div class="topic-card">
@@ -587,39 +586,59 @@
           
             <div class="article-item">
               <a href="https://github.com/zhu1090093659/dsh-web-ui" target="_blank">zhu1090093659/dsh-web-ui — Plugin and skin collection for DeepSeek Harness (DSH) Web UI - task board, git graph, right-side panel, remote mobile UI</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 4463</span> 2026-08-12</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 4548</span> 2026-08-12</div>
             </div>
             <div class="article-item">
               <a href="https://dev.to/gamya_m/ichiraku-ramen-a-cozy-japanese-restaurant-landing-page-3pb8" target="_blank">Ichiraku Ramen — A Cozy Japanese Restaurant Landing Page 🍜🌸</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 100</span> 2026-08-16</div>
-            </div>
-            <div class="article-item">
-              <a href="https://classify.stylometry.net/" target="_blank">Show HN: Classifier and browser extension to detect rule violating HN comments</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 10</span> Aug 17</div>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 108</span> 2026-08-16</div>
             </div>
             <div class="article-item">
               <a href="https://github.blog/news-insights/company-news/your-guide-to-github-universe-2026-is-here-the-schedule-just-launched/" target="_blank">Your guide to GitHub Universe 2026 is here: The schedule just launched!</a>
               <div class="meta">🔵 GitHub Blog  Thu, 13 Au</div>
             </div>
             <div class="article-item">
-              <a href="https://www.infoq.com/news/2026/08/shadcn-conversational-primitives/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank">shadcn Brings Conversational Primitives to shadcn/ui with New Chat Components</a>
-              <div class="meta">🔵 InfoQ  Mon, 17 Au</div>
+              <a href="https://thenewstack.io/darryl-taft-technology-journalist/" target="_blank">TNS journalist Darryl K. Taft leaves a legacy of respected work and quiet integrity</a>
+              <div class="meta">🔵 The New Stack  Mon, 17 Au</div>
+            </div>
+            <div class="article-item">
+              <a href="https://dzone.com/articles/pavan-belagatti-member-spotlight" target="_blank">Member Spotlight: Pavan Belagatti</a>
+              <div class="meta">🔵 DZone  Tue, 18 Au</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">☁️ Cloud / Infra <span class="count">15</span></div>
+          <div class="topic-header">🦀 Languages <span class="count">16</span></div>
+          
+            <div class="article-item">
+              <a href="https://news.ycombinator.com/item?id=49332495" target="_blank">Ask HN: GitHub employees what&#x27;s going on? Why?</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 130</span> Aug 17</div>
+            </div>
+            <div class="article-item">
+              <a href="https://news.ycombinator.com/item?id=49332495" target="_blank">Ask HN: GitHub employees what&#x27;s going on? Why?</a>
+              <div class="meta">🟠 Ask HN <span class="badge">⬆ 130</span> Aug 17</div>
+            </div>
+            <div class="article-item">
+              <a href="https://opensource.posit.co/resources/cheatsheets/polars/" target="_blank">Python Polars Cheatsheet (based on our O&#x27;Reilly book)</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 100</span> Aug 18</div>
+            </div>
+            <div class="article-item">
+              <a href="https://dev.to/sylwia-lask/7-productivity-tips-that-sound-wrong-but-actually-work-5602" target="_blank">7 Productivity Tips That Sound Wrong (But Actually Work)</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 87</span> 2026-08-18</div>
+            </div>
+            <div class="article-item">
+              <a href="https://dev.to/soumyadeepdey/your-dog-cant-tell-you-where-it-hurts-matchrecognize-in-snowflake-can-1pan" target="_blank">Your Dog Can&#x27;t Tell You Where It Hurts. MATCH_RECOGNIZE in Snowflake Can.</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 49</span> 2026-08-16</div>
+            </div>
+        </div>
+        <div class="topic-card">
+          <div class="topic-header">☁️ Cloud / Infra <span class="count">16</span></div>
           
             <div class="article-item">
               <a href="https://github.com/ZSvirt/zsvirt" target="_blank">ZSvirt/zsvirt — Core IaaS engine and cloud infrastructure foundation of ZSvirt</a>
-              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 863</span> 2026-08-14</div>
+              <div class="meta">⚫ GitHub Trending <span class="badge">⬆ 916</span> 2026-08-14</div>
             </div>
             <div class="article-item">
               <a href="https://news.ycombinator.com/item?id=49322107" target="_blank">Tell HN: Cloudflare silently injects its analytics when you switch nameservers</a>
-              <div class="meta">🟠 Ask HN <span class="badge">⬆ 631</span> Aug 16</div>
-            </div>
-            <div class="article-item">
-              <a href="https://timmarinin.net/2026/bluesky-screenshots/" target="_blank">How Bluesky draws its logo on screenshots</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 570</span> Aug 17</div>
+              <div class="meta">🟠 Ask HN <span class="badge">⬆ 637</span> Aug 16</div>
             </div>
             <div class="article-item">
               <a href="https://dev.to/ishacodes/why-i-joined-devto--5c63" target="_blank">My (not so pretty) journey in tech</a>
@@ -629,57 +648,37 @@
               <a href="https://dev.to/gde/reviving-open-source-giants-how-i-brought-weave-scope-back-with-multi-platform-docker-support-in-cmo" target="_blank">Reviving Open Source Giants: How I Brought Weave Scope Back with Multi-Platform Docker Support in One Afternoon Using Antigravity</a>
               <div class="meta">🟣 dev.to <span class="badge">⬆ 29</span> 2026-08-14</div>
             </div>
+            <div class="article-item">
+              <a href="https://dev.to/ssukhpinder/microsofttestingplatform-crash-resilient-trx-keep-evidence-when-the-host-dies-4b73" target="_blank">Microsoft.Testing.Platform Crash-Resilient TRX: Keep Evidence When the Host Dies</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 5</span> 2026-08-16</div>
+            </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🦀 Languages <span class="count">12</span></div>
+          <div class="topic-header">🧪 Testing / QA <span class="count">5</span></div>
           
             <div class="article-item">
-              <a href="https://www.newyorker.com/culture/photo-booth/the-lonely-men-at-the-end-of-the-world" target="_blank">Los Puesteros, solitary men who look after ranches and livestock in Patagonia</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 153</span> Aug 17</div>
+              <a href="https://dev.to/unitbuilds/anyone-need-an-installer-5c8b" target="_blank">Anyone need an installer?</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 19</span> 2026-08-17</div>
             </div>
             <div class="article-item">
-              <a href="https://news.ycombinator.com/item?id=49332495" target="_blank">Ask HN: GitHub employees what&#x27;s going on? Why?</a>
-              <div class="meta">🟠 Ask HN <span class="badge">⬆ 104</span> Aug 17</div>
+              <a href="https://github.com/therepanic/openleetcode" target="_blank">Show HN: Openleetcode – local LeetCode runner where tests live in the repo</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 9</span> Aug 18</div>
             </div>
             <div class="article-item">
-              <a href="https://dev.to/soumyadeepdey/your-dog-cant-tell-you-where-it-hurts-matchrecognize-in-snowflake-can-1pan" target="_blank">Your Dog Can&#x27;t Tell You Where It Hurts. MATCH_RECOGNIZE in Snowflake Can.</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 48</span> 2026-08-16</div>
+              <a href="https://github.com/therepanic/openleetcode" target="_blank">Show HN: Openleetcode – local LeetCode runner where tests live in the repo</a>
+              <div class="meta">🟠 Show HN <span class="badge">⬆ 9</span> Aug 18</div>
             </div>
             <div class="article-item">
-              <a href="https://dev.to/sylwia-lask/7-productivity-tips-that-sound-wrong-but-actually-work-5602" target="_blank">7 Productivity Tips That Sound Wrong (But Actually Work)</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 46</span> 2026-08-18</div>
+              <a href="https://dev.to/ssukhpinder/xunit-4-parallelmodeall-protect-shared-state-from-test-races-58jj" target="_blank">xUnit 4 ParallelMode.All: Protect Shared State from Test Races</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 7</span> 2026-08-18</div>
             </div>
             <div class="article-item">
-              <a href="https://dev.to/boris_zhguchev_c13ea7f707/what-zig-felt-like-coming-from-rust-2bg9" target="_blank">What Zig felt like, coming from Rust</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 1</span> 2026-08-16</div>
+              <a href="https://dev.to/achiya-automation/i-found-code-in-my-repo-id-never-seen-all-82-tests-passed-i-quarantined-it-for-three-days-anyway-33go" target="_blank">I found code in my repo I&#x27;d never seen. All 82 tests passed. I quarantined it for three days anyway.</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 1</span> 2026-08-17</div>
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">⚡ Performance <span class="count">8</span></div>
-          
-            <div class="article-item">
-              <a href="https://pixelcluster.dev/VRAM-Overcommit/" target="_blank">Linux 7.3 improves performance when running out of vRAM</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 236</span> Aug 18</div>
-            </div>
-            <div class="article-item">
-              <a href="https://arxiv.org/abs/2608.13759" target="_blank">GPU Offload in Rust: Portable, Safe, and Fast</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 227</span> Aug 17</div>
-            </div>
-            <div class="article-item">
-              <a href="https://danluu.com/benchpocalypse/" target="_blank">The Benchmarkpocalypse</a>
-              <div class="meta">🟠 Hacker News <span class="badge">⬆ 128</span> Aug 18</div>
-            </div>
-            <div class="article-item">
-              <a href="https://dev.to/sushyam_nagallapati/morning-on-a-banana-leaf-a-south-indian-breakfast-still-life-in-css-c3g" target="_blank">Morning on a Banana Leaf: A South Indian Breakfast Still Life in CSS</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 69</span> 2026-08-13</div>
-            </div>
-            <div class="article-item">
-              <a href="https://github.com/liventruth/UL-SMF-Cache-Compression" target="_blank">Show HN: UL-SMF – Open-source linear-complexity ~300x KV-cache compression</a>
-              <div class="meta">🟠 Show HN <span class="badge">⬆ 12</span> Aug 17</div>
-            </div>
-        </div>
-        <div class="topic-card">
-          <div class="topic-header">🔐 Security <span class="count">4</span></div>
+          <div class="topic-header">🔐 Security <span class="count">5</span></div>
           
             <div class="article-item">
               <a href="https://dev.to/muslimkh09/how-we-increased-shannon-entropy-throughput-in-go-by-41-using-a-lookup-table-3bmc" target="_blank">How We Increased Shannon Entropy Throughput in Go by 41% Using a Lookup Table.</a>
@@ -688,6 +687,10 @@
             <div class="article-item">
               <a href="https://smashingmagazine.com/2026/07/weaponizing-defending-react-flight-protocol/" target="_blank">Weaponizing And Defending The React Flight Protocol: Deserialization Sinks In RSCs</a>
               <div class="meta">🔵 Smashing Magazine  Tue, 21 Ju</div>
+            </div>
+            <div class="article-item">
+              <a href="https://simonkoeck.com/writeups/n8n-gsuiteadmin-prototype-pollution-rce" target="_blank">CVE-2026-33696: From a Schema Name to RCE in n8n</a>
+              <div class="meta">🔵 Lobste.rs/security  Sun, 16 Au</div>
             </div>
             <div class="article-item">
               <a href="https://owasp.org/www-project-top-10-ci-cd-security-risks/" target="_blank">OWASP Top 10 CI/CD Security Risks</a>
@@ -699,19 +702,23 @@
             </div>
         </div>
         <div class="topic-card">
-          <div class="topic-header">🧪 Testing / QA <span class="count">3</span></div>
+          <div class="topic-header">⚡ Performance <span class="count">4</span></div>
           
             <div class="article-item">
-              <a href="https://dev.to/unitbuilds/anyone-need-an-installer-5c8b" target="_blank">Anyone need an installer?</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 19</span> 2026-08-17</div>
+              <a href="https://pixelcluster.dev/VRAM-Overcommit/" target="_blank">Linux 7.3 improves performance when running out of vRAM</a>
+              <div class="meta">🟠 Hacker News <span class="badge">⬆ 425</span> Aug 18</div>
             </div>
             <div class="article-item">
-              <a href="https://dev.to/ssukhpinder/xunit-4-parallelmodeall-protect-shared-state-from-test-races-58jj" target="_blank">xUnit 4 ParallelMode.All: Protect Shared State from Test Races</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 5</span> 2026-08-18</div>
+              <a href="https://dev.to/sushyam_nagallapati/morning-on-a-banana-leaf-a-south-indian-breakfast-still-life-in-css-c3g" target="_blank">Morning on a Banana Leaf: A South Indian Breakfast Still Life in CSS</a>
+              <div class="meta">🟣 dev.to <span class="badge">⬆ 76</span> 2026-08-13</div>
             </div>
             <div class="article-item">
-              <a href="https://dev.to/achiya-automation/i-found-code-in-my-repo-id-never-seen-all-82-tests-passed-i-quarantined-it-for-three-days-anyway-33go" target="_blank">I found code in my repo I&#x27;d never seen. All 82 tests passed. I quarantined it for three days anyway.</a>
-              <div class="meta">🟣 dev.to <span class="badge">⬆ 1</span> 2026-08-17</div>
+              <a href="https://www.allthingsdistributed.com/2026/08/on-building-scalable-control-planes.html" target="_blank">On building scalable control planes</a>
+              <div class="meta">🔵 Lobste.rs/distributed  Thu, 06 Au</div>
+            </div>
+            <div class="article-item">
+              <a href="https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries/" target="_blank">Indexing the Data Lake for Online Point Queries</a>
+              <div class="meta">🔵 Spotify Engineering  Mon, 27 Ju</div>
             </div>
         </div>
   </div>
@@ -726,7 +733,7 @@
           <td class="rank">1</td>
           <td><a href="https://github.com/deepseek-ai/deepseek-harness" target="_blank">deepseek-ai/deepseek-harness — DeepSeek Harness: Everything is a Plugin.</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">157600</td>
+          <td class="score">159601</td>
           <td>🤖 AI / ML</td>
           <td>2026-08-13</td>
         </tr>
@@ -734,7 +741,7 @@
           <td class="rank">2</td>
           <td><a href="https://github.com/anywhere-labs/deepseek-harness-desktop" target="_blank">anywhere-labs/deepseek-harness-desktop — 为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">13126</td>
+          <td class="score">13512</td>
           <td>🔧 Engineering</td>
           <td>2026-08-13</td>
         </tr>
@@ -742,7 +749,7 @@
           <td class="rank">3</td>
           <td><a href="https://github.com/awesome-dsh-plugin/awesome-dsh-plugin" target="_blank">awesome-dsh-plugin/awesome-dsh-plugin — A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">8346</td>
+          <td class="score">8746</td>
           <td>🔧 Engineering</td>
           <td>2026-08-13</td>
         </tr>
@@ -750,7 +757,7 @@
           <td class="rank">4</td>
           <td><a href="https://github.com/yjh051108/dsh-routing-suite" target="_blank">yjh051108/dsh-routing-suite — dsh-routing-suite — injector + router-standard kit: install the runtime injector first, then the task-aware reasoning-mo</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">5866</td>
+          <td class="score">5997</td>
           <td>🔧 Engineering</td>
           <td>2026-08-14</td>
         </tr>
@@ -758,7 +765,7 @@
           <td class="rank">5</td>
           <td><a href="https://github.com/zhu1090093659/dsh-web-ui" target="_blank">zhu1090093659/dsh-web-ui — Plugin and skin collection for DeepSeek Harness (DSH) Web UI - task board, git graph, right-side panel, remote mobile UI</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">4463</td>
+          <td class="score">4548</td>
           <td>🌐 Web / Frontend</td>
           <td>2026-08-12</td>
         </tr>
@@ -766,7 +773,7 @@
           <td class="rank">6</td>
           <td><a href="https://github.com/xiaobright/dsh-anchored-standard" target="_blank">xiaobright/dsh-anchored-standard — Two-phase DeepSeek Harness preset: Minimal-aligned bootstrap, then full Standard tools (Project2 98/99)</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">3521</td>
+          <td class="score">3548</td>
           <td>🤖 AI / ML</td>
           <td>2026-08-14</td>
         </tr>
@@ -774,31 +781,31 @@
           <td class="rank">7</td>
           <td><a href="https://github.com/dmmulroy/anti-slop" target="_blank">dmmulroy/anti-slop — Opinionated Oxlint rules for rejecting low-evidence TypeScript and JavaScript patterns</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">2515</td>
+          <td class="score">2589</td>
           <td>🤖 AI / ML</td>
           <td>2026-08-12</td>
         </tr>
         <tr>
           <td class="rank">8</td>
-          <td><a href="https://github.com/cordiverse/paper" target="_blank">cordiverse/paper — A Programming Paradigm for Spatiotemporal Composability</a></td>
+          <td><a href="https://github.com/yetone/cumora" target="_blank">yetone/cumora — Where agent teams gather. Cross-platform team chat where AI agents are first-class teammates — with cloud or bring-your-</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">2230</td>
-          <td>🔧 Engineering</td>
-          <td>2026-08-13</td>
+          <td class="score">2312</td>
+          <td>🤖 AI / ML</td>
+          <td>2026-08-17</td>
         </tr>
         <tr>
           <td class="rank">9</td>
-          <td><a href="https://github.com/yetone/cumora" target="_blank">yetone/cumora — Where agent teams gather. Cross-platform team chat where AI agents are first-class teammates — with cloud or bring-your-</a></td>
+          <td><a href="https://github.com/cordiverse/paper" target="_blank">cordiverse/paper — A Programming Paradigm for Spatiotemporal Composability</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">2118</td>
-          <td>🤖 AI / ML</td>
-          <td>2026-08-17</td>
+          <td class="score">2270</td>
+          <td>🔧 Engineering</td>
+          <td>2026-08-13</td>
         </tr>
         <tr>
           <td class="rank">10</td>
           <td><a href="https://github.com/ccch1mneyyy/dsh-TUI" target="_blank">ccch1mneyyy/dsh-TUI — DSH 官方公众号收录的 TUI 补位插件：Claude Code 风，鲸鱼顶栏/实时状态/流式思考/双击 Esc 回滚/上下文进度+TPS。npm 一键装。  DSH official WeChat featured TUI plugin</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1935</td>
+          <td class="score">1961</td>
           <td>🤖 AI / ML</td>
           <td>2026-08-13</td>
         </tr>
@@ -806,7 +813,7 @@
           <td class="rank">11</td>
           <td><a href="https://github.com/xoreaxeaxeax/skitter-creek-bath-salts" target="_blank">xoreaxeaxeax/skitter-creek-bath-salts — Unlocking _everything_ on the CPU with DRAM scrambling</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1797</td>
+          <td class="score">1809</td>
           <td>🔧 Engineering</td>
           <td>2026-08-13</td>
         </tr>
@@ -814,7 +821,7 @@
           <td class="rank">12</td>
           <td><a href="https://github.com/Small-tailqwq/dsh-deep-whale" target="_blank">Small-tailqwq/dsh-deep-whale — DSH Web 鲸鱼娘皮肤系列(深海女仆工坊 maid-atelier)——CC BY-NC-SA 4.0</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1320</td>
+          <td class="score">1363</td>
           <td>🤖 AI / ML</td>
           <td>2026-08-13</td>
         </tr>
@@ -822,7 +829,7 @@
           <td class="rank">13</td>
           <td><a href="https://github.com/Hisn00w/ASu-skills" target="_blank">Hisn00w/ASu-skills — 简历包装</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1311</td>
+          <td class="score">1347</td>
           <td>🔧 Engineering</td>
           <td>2026-08-12</td>
         </tr>
@@ -836,51 +843,51 @@
         </tr>
         <tr>
           <td class="rank">15</td>
-          <td><a href="https://github.com/alchaincyf/deepseek-harness-orange-book" target="_blank">alchaincyf/deepseek-harness-orange-book — DeepSeek Harness橙皮书《从开机到拆开》：完整系统提示词、129行启动清单、三份原始会话日志——官方文档没有的一手实测。PDF/EPUB/HTML免费下载</a></td>
-          <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">1001</td>
-          <td>🤖 AI / ML</td>
-          <td>2026-08-14</td>
-        </tr>
-        <tr>
-          <td class="rank">16</td>
           <td><a href="https://github.com/dsh-market/dsh-market" target="_blank">dsh-market/dsh-market — The plugin market inside DeepSeek Harness — browse, search, one-click install · DSH 可视化插件市场</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">971</td>
+          <td class="score">1030</td>
           <td>🎨 Dev Experience</td>
           <td>2026-08-14</td>
         </tr>
         <tr>
-          <td class="rank">17</td>
-          <td><a href="https://www.rickmanelius.com/p/aidr-ai-didnt-read" target="_blank">AI;DR (AI; Didn&#x27;t Read)</a></td>
-          <td><span class="source-badge">🟠 Hacker News</span></td>
-          <td class="score">937</td>
+          <td class="rank">16</td>
+          <td><a href="https://github.com/alchaincyf/deepseek-harness-orange-book" target="_blank">alchaincyf/deepseek-harness-orange-book — DeepSeek Harness橙皮书《从开机到拆开》：完整系统提示词、129行启动清单、三份原始会话日志——官方文档没有的一手实测。PDF/EPUB/HTML免费下载</a></td>
+          <td><span class="source-badge">⚫ GitHub Trending</span></td>
+          <td class="score">1016</td>
           <td>🤖 AI / ML</td>
-          <td>Aug 17</td>
+          <td>2026-08-14</td>
+        </tr>
+        <tr>
+          <td class="rank">17</td>
+          <td><a href="https://github.com/Tiger3807861189/DeepSeek-V4-J-Space-Capability-Realization-Report" target="_blank">Tiger3807861189/DeepSeek-V4-J-Space-Capability-Realization-Report — DeepSeek V4 × J-Space capability realization report — benchmark evidence that J-Space reduces capability-realization los</a></td>
+          <td><span class="source-badge">⚫ GitHub Trending</span></td>
+          <td class="score">964</td>
+          <td>🤖 AI / ML</td>
+          <td>2026-08-16</td>
         </tr>
         <tr>
           <td class="rank">18</td>
           <td><a href="https://github.com/dataelement/dsh-desktop" target="_blank">dataelement/dsh-desktop — DeepSeek Harness Desktop</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">897</td>
+          <td class="score">926</td>
           <td>🤖 AI / ML</td>
           <td>2026-08-13</td>
         </tr>
         <tr>
           <td class="rank">19</td>
-          <td><a href="https://github.com/vercel-labs/eve-software-factory-template" target="_blank">vercel-labs/eve-software-factory-template — Meet Foreman, an eve Software Factory.</a></td>
+          <td><a href="https://github.com/ZSvirt/zsvirt" target="_blank">ZSvirt/zsvirt — Core IaaS engine and cloud infrastructure foundation of ZSvirt</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">891</td>
-          <td>🤖 AI / ML</td>
-          <td>2026-08-12</td>
+          <td class="score">916</td>
+          <td>☁️ Cloud / Infra</td>
+          <td>2026-08-14</td>
         </tr>
         <tr>
           <td class="rank">20</td>
-          <td><a href="https://github.com/ZSvirt/zsvirt" target="_blank">ZSvirt/zsvirt — Core IaaS engine and cloud infrastructure foundation of ZSvirt</a></td>
+          <td><a href="https://github.com/vercel-labs/eve-software-factory-template" target="_blank">vercel-labs/eve-software-factory-template — Meet Foreman, an eve Software Factory.</a></td>
           <td><span class="source-badge">⚫ GitHub Trending</span></td>
-          <td class="score">863</td>
-          <td>☁️ Cloud / Infra</td>
-          <td>2026-08-14</td>
+          <td class="score">901</td>
+          <td>🤖 AI / ML</td>
+          <td>2026-08-12</td>
         </tr></tbody>
   </table>
 
@@ -888,15 +895,15 @@
   <div class="sources-section">
         <div class="source-row">
           <div class="source-label">dev.to</div>
-          <div class="bar-wrap"><div class="bar" style="width:100%">56</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:100%">57</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">Hacker News</div>
-          <div class="bar-wrap"><div class="bar" style="width:53%">30</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:52%">30</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">GitHub Trending</div>
-          <div class="bar-wrap"><div class="bar" style="width:44%">25</div></div>
+          <div class="bar-wrap"><div class="bar" style="width:43%">25</div></div>
         </div>
         <div class="source-row">
           <div class="source-label">Ask HN</div>
@@ -1016,7 +1023,7 @@
         </div></div>
 
 </main>
-<footer>Built with ❤️ at the hackathon · Eng Brand Machine · August 18, 2026 at 12:09</footer>
+<footer>Built with ❤️ at the hackathon · Eng Brand Machine · August 18, 2026 at 18:09</footer>
 
 <script>
 // ── Topic classifier (mirrors Python TOPIC_KEYWORDS) ──────────────────────
